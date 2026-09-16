@@ -310,7 +310,83 @@
                                 </div>
                             </div>
 
-                            <!-- Khối 1: NỘI DUNG HTML Mẫu 1 -->
+                                                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-accordion1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Inter (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-accordion1">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Phiên bản 5.3.2) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. Bootstrap Icons (Phiên bản 1.11.1) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Tính năng đóng mở phụ thuộc trực tiếp vào thuộc tính <code>data-bs-toggle="collapse"</code> của <strong>Bootstrap JS Bundle</strong>. Nếu dev chỉ copy HTML và CSS mà quên nhúng <code>bootstrap.bundle.min.js</code>, khi click vào thanh Task sẽ hoàn toàn <strong>KHÔNG THU GỌN / MỞ RỘNG</strong> được.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_accordion1.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-accordion1', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-accordion1">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Accordion 1&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="accordion1.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán nội dung accordion1.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+<!-- Khối 1: NỘI DUNG HTML Mẫu 1 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
                                     <div class="text-warning fw-bold small d-flex align-items-center gap-2">
@@ -422,7 +498,83 @@
                                 </div>
                             </div>
 
-                            <!-- Khối 1: NỘI DUNG HTML Mẫu 2 -->
+                                                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-accordion2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Inter (Khuyên dùng)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-accordion2">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Phiên bản 5.3.2) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. Bootstrap Icons (Phiên bản 1.11.1) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Nút bánh răng Settings (<code>.btn-settings</code>) có sự kiện inline <code>onclick="event.stopPropagation();"</code> để tránh vô tình kích hoạt đóng/mở Accordion khi người dùng muốn bấm cấu hình. Bắt buộc có <code>bootstrap.bundle.min.js</code> để đóng mở Collapse.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_accordion2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-accordion2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-accordion2">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Accordion 2&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="accordion2.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light d-flex justify-content-center"&gt;
+    &lt;!-- Dán nội dung accordion2.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+<!-- Khối 1: NỘI DUNG HTML Mẫu 2 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
                                     <div class="text-warning fw-bold small d-flex align-items-center gap-2">
@@ -554,6 +706,71 @@
                             </div>
                         </div>
 
+                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                        <div class="dependency-card mb-4">
+                            <div class="dependency-header">
+                                <div class="dependency-title">
+                                    <i class="bi bi-box-seam text-primary fs-5"></i>
+                                    <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    onclick="copyCode('dep-code-badge', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                </button>
+                            </div>
+                            <div class="dependency-body">
+                                <div class="dep-badges-wrap">
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                    <span class="dep-badge-pill dep-badge-none"><i class="bi bi-x-circle"></i> Thuần HTML &amp; CSS (Không cần JS)</span>
+                                </div>
+
+                                <div class="dep-code-box">
+                                    <pre><code id="dep-code-badge">&lt;!-- 1. Bootstrap 5 CSS (Cung cấp .badge, .rounded-pill, position...) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap Icons (Dùng cho toàn bộ icon trạng thái) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;</code></pre>
+                                </div>
+
+                                <div class="dep-note-box alert-info-soft">
+                                    <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
+                                    <div>
+                                        <strong>Lưu ý quan trọng cho Dev:</strong> Component hoàn toàn thuần CSS, <strong>KHÔNG cần bất kỳ file JS nào</strong>. Dev chỉ cần nhúng Bootstrap CSS + Bootstrap Icons là sử dụng được ngay.
+                                    </div>
+                                </div>
+
+                                <details class="dep-template-details mt-2">
+                                    <summary class="d-flex align-items-center gap-1">
+                                        <i class="bi bi-file-earmark-code text-secondary"></i>
+                                        <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                        <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                    </summary>
+                                    <div class="dep-template-box mt-2">
+                                        <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                            <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_badge.html</span>
+                                            <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-badge', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy Template
+                                            </button>
+                                        </div>
+                                        <pre><code id="template-badge">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Badge&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="badge.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán nội dung badge.html vào đây --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
                         <!-- Khối 1: NỘI DUNG HTML -->
                         <div class="code-card mb-4">
                             <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
@@ -657,7 +874,86 @@
                                 </div>
                             </div>
 
-                            <!-- HTML Mẫu 1 -->
+                                                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-toasts1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-fa"><i class="bi bi-exclamation-circle-fill"></i> Font Awesome 6 (BẮT BUỘC)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File toasts1.js (Bắt buộc)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-toasts1">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. Font Awesome 6 (BẮT BUỘC: cho fa-solid fa-shield-halved, fa-clock) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"&gt;
+
+&lt;!-- 4. Bootstrap 5 JS Bundle &amp; toasts1.js (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="toasts1.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> BẮT BUỘC dùng <strong>Font Awesome 6</strong> (sử dụng <code>fa-solid fa-shield-halved</code> và <code>fa-regular fa-clock</code>). Nếu nhầm sang Bootstrap Icons thì icon sẽ bị mất/trắng. Cần <code>bootstrap.bundle.min.js</code> vì toasts1.js gọi <code>new bootstrap.Toast(...)</code>. Mặc định toast được ghim ở góc dưới phải màn hình (<code>.position-fixed bottom-0 end-0</code>).
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_toasts1.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-toasts1', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-toasts1">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Toast 1&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;!-- Bắt buộc Font Awesome 6 --&gt;
+    &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"&gt;
+    &lt;link rel="stylesheet" href="toasts1.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-secondary bg-opacity-10"&gt;
+    &lt;!-- Dán nội dung toasts1.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="toasts1.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+<!-- HTML Mẫu 1 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
                                     <div class="text-warning fw-bold small d-flex align-items-center gap-2">
@@ -766,7 +1062,79 @@
                                 </div>
                             </div>
 
-                            <!-- HTML Mẫu 2 -->
+                                                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-toasts2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File toasts2.js (Pure JS)</span>
+                                        <span class="dep-badge-pill dep-badge-none"><i class="bi bi-x-circle"></i> Không cần Bootstrap JS</span>
+                                        <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-image"></i> Cần ảnh Avatar</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-toasts2">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. toasts2.js (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="toasts2.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-info-soft">
+                                        <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Toasts 2 chạy bằng <strong>Pure JavaScript độc lập</strong> trong <code>toasts2.js</code> (tự động ẩn sau 5 giây và xử lý nút Close), không bắt buộc gọi API bootstrap.Toast. Dev có thể dùng ảnh trực tuyến hoặc ảnh local thay thế link ảnh Flowbite trong HTML.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_toasts2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-toasts2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-toasts2">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Toast 2&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="toasts2.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán nội dung toasts2.html vào đây --&gt;
+    &lt;script src="toasts2.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+<!-- HTML Mẫu 2 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
                                     <div class="text-warning fw-bold small d-flex align-items-center gap-2">
@@ -885,7 +1253,81 @@
                                 </div>
                             </div>
 
-                            <!-- HTML Mẫu 3 -->
+                                                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-toasts3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File toasts3.js (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-none"><i class="bi bi-code-slash"></i> Dùng SVG Inline (Không cần icon ngoài)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-toasts3">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. Bootstrap 5 JS Bundle &amp; toasts3.js (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="toasts3.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-info-soft">
+                                        <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Đã sử dụng thẻ SVG Inline tích hợp sẵn trong HTML nên <strong>không cần nhúng thư viện font icon ngoài</strong>. Cần <code>bootstrap.bundle.min.js</code> vì <code>toasts3.js</code> gọi <code>new bootstrap.Toast(...)</code> để hiển thị toast, đồng thời file <code>toasts3.js</code> xử lý chạy giả lập thanh tiến trình % upload từ 0% đến 100%.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_toasts3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-toasts3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-toasts3">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Toast 3&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="toasts3.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán nội dung toasts3.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="toasts3.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+<!-- HTML Mẫu 3 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
                                     <div class="text-warning fw-bold small d-flex align-items-center gap-2">
@@ -991,7 +1433,81 @@
                                 </div>
                             </div>
 
-                            <!-- HTML Mẫu 4 -->
+                                                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-toasts4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File toasts4.js (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-none"><i class="bi bi-code-slash"></i> Dùng SVG Inline (Không cần icon ngoài)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-toasts4">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. Bootstrap 5 JS Bundle &amp; toasts4.js (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="toasts4.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-info-soft">
+                                        <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Component dùng <code>bootstrap.Toast.getOrCreateInstance()</code> và file <code>toasts4.js</code> để quản lý đồng hồ đếm ngược 5 giây, nút Undo và tự động đóng khi hết giờ. Nếu người dùng bấm 'Undo', JS sẽ hủy timer và hoàn tác hành động. Icon tích hợp sẵn SVG Inline.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_toasts4.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-toasts4', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-toasts4">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Toast 4&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="toasts4.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán nội dung toasts4.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="toasts4.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+<!-- HTML Mẫu 4 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
                                     <div class="text-warning fw-bold small d-flex align-items-center gap-2">
@@ -1208,6 +1724,71 @@
                             </div>
                         </div>
 
+                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                        <div class="dependency-card mb-4">
+                            <div class="dependency-header">
+                                <div class="dependency-title">
+                                    <i class="bi bi-box-seam text-primary fs-5"></i>
+                                    <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    onclick="copyCode('dep-code-alert', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                </button>
+                            </div>
+                            <div class="dependency-body">
+                                <div class="dep-badges-wrap">
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                    <span class="dep-badge-pill dep-badge-fa"><i class="bi bi-exclamation-octagon-fill"></i> Khối SVG Symbols (CỰC KỲ QUAN TRỌNG)</span>
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                    <span class="dep-badge-pill dep-badge-none"><i class="bi bi-check"></i> Không cần file CSS riêng</span>
+                                </div>
+
+                                <div class="dep-code-box">
+                                    <pre><code id="dep-code-alert">&lt;!-- 1. Bootstrap 5 CSS (Cung cấp các lớp .alert, .alert-primary...) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 JavaScript Bundle (Bắt buộc để đóng mượt alert qua nút 'X' .btn-close) (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+
+                                <div class="dep-note-box alert-danger-soft">
+                                    <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-danger"></i>
+                                    <div>
+                                        <strong>CỰC KỲ QUAN TRỌNG:</strong> Trong <code>alert.html</code> có khối <code>&lt;svg style="display:none"&gt;</code> định nghĩa các symbol (<code>#info-fill, #check-circle-fill, #exclamation-triangle-fill, #star-fill, #bell-fill, #gear-fill</code>). Rất nhiều dev khi copy chỉ copy từng thẻ <code>&lt;div class="alert"&gt;</code> mà quên khối <code>&lt;svg&gt;</code> này dẫn đến việc <strong>mất sạch icon</strong>. <strong>Phải copy cả khối SVG biểu tượng và thẻ alert!</strong>
+                                    </div>
+                                </div>
+
+                                <details class="dep-template-details mt-2">
+                                    <summary class="d-flex align-items-center gap-1">
+                                        <i class="bi bi-file-earmark-code text-secondary"></i>
+                                        <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                        <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                    </summary>
+                                    <div class="dep-template-box mt-2">
+                                        <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                            <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_alert.html</span>
+                                            <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-alert', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy Template
+                                            </button>
+                                        </div>
+                                        <pre><code id="template-alert">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Alert&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán toàn bộ file alert.html (gồm cả khối &lt;svg style="display:none"&gt; và các thẻ alert) vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
                         <!-- Khối 1: NỘI DUNG HTML -->
                         <div class="code-card mb-4">
                             <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
@@ -1339,7 +1920,83 @@
                             </div>
                         </div>
 
-                        <!-- Khối Mã Nguồn Mẫu 1 -->
+                                                <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                        <div class="dependency-card mb-4">
+                            <div class="dependency-header">
+                                <div class="dependency-title">
+                                    <i class="bi bi-box-seam text-primary fs-5"></i>
+                                    <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    onclick="copyCode('dep-code-carousel1', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                </button>
+                            </div>
+                            <div class="dependency-body">
+                                <div class="dep-badges-wrap">
+                                    <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Dùng cho layout)</span>
+                                    <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Inter (Khuyên dùng)</span>
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File carousel1.js (Pure JS)</span>
+                                    <span class="dep-badge-pill dep-badge-none"><i class="bi bi-x-circle"></i> Không cần icon ngoài</span>
+                                </div>
+
+                                <div class="dep-code-box">
+                                    <pre><code id="dep-code-carousel1">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Dùng cho .container-fluid, px-4, ...) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. carousel1.js (Pure JS xử lý kéo thả chuột &amp; đồng bộ thanh progressBar) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="carousel1.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+
+                                <div class="dep-note-box alert-warning-soft">
+                                    <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                    <div>
+                                        <strong>LƯU Ý QUAN TRỌNG VỀ CSS:</strong> Trong file <code>carousel1.css</code> dòng 4 có định nghĩa <code>min-height: 100vh;</code>. Khi test riêng biệt thì rất đẹp, nhưng nếu dev nhúng vào một khung nhỏ trong web CRM, cần ghi đè <code>.dark-section { min-height: auto !important; }</code> để component không chiếm trọn màn hình.
+                                    </div>
+                                </div>
+
+                                <details class="dep-template-details mt-2">
+                                    <summary class="d-flex align-items-center gap-1">
+                                        <i class="bi bi-file-earmark-code text-secondary"></i>
+                                        <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                        <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                    </summary>
+                                    <div class="dep-template-box mt-2">
+                                        <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                            <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_carousel1.html</span>
+                                            <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-carousel1', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy Template
+                                            </button>
+                                        </div>
+                                        <pre><code id="template-carousel1">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Carousel 1&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="carousel1.css"&gt;
+    &lt;style&gt;
+        /* Nếu muốn giới hạn chiều cao khi nhúng vào khung nhỏ */
+        /* .dark-section { min-height: auto !important; padding: 2rem 0 !important; } */
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class="bg-dark"&gt;
+    &lt;!-- Dán nội dung carousel1.html vào đây --&gt;
+    &lt;script src="carousel1.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+<!-- Khối Mã Nguồn Mẫu 1 -->
                         <div class="row mb-5">
                             <div class="col-lg-4 mb-3">
                                 <div class="code-card h-100">
@@ -1494,7 +2151,75 @@
                             </div>
                         </div>
 
-                        <!-- Khối Mã Nguồn Mẫu 2 -->
+                                                <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                        <div class="dependency-card mb-4">
+                            <div class="dependency-header">
+                                <div class="dependency-title">
+                                    <i class="bi bi-box-seam text-primary fs-5"></i>
+                                    <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    onclick="copyCode('dep-code-carousel2', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                </button>
+                            </div>
+                            <div class="dependency-body">
+                                <div class="dep-badges-wrap">
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File carousel2.js (Pure JS)</span>
+                                    <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Inter (Khuyên dùng)</span>
+                                    <span class="dep-badge-pill dep-badge-none"><i class="bi bi-x-circle"></i> Không phụ thuộc Bootstrap CSS/JS</span>
+                                    <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-image"></i> Ảnh mẫu (Unsplash / Local)</span>
+                                </div>
+
+                                <div class="dep-code-box">
+                                    <pre><code id="dep-code-carousel2">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. carousel2.js (Quản lý 3D Card &amp; Auto-play) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="carousel2.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+
+                                <div class="dep-note-box alert-danger-soft">
+                                    <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-danger"></i>
+                                    <div>
+                                        <strong>CẢNH BÁO XUNG ĐỘT CSS TOÀN CỤC:</strong> Trong <code>carousel2.css</code> các dòng 1-10 có định nghĩa trực tiếp <code>body { background: linear-gradient(...); min-height: 100vh; display: flex; ... }</code>. Nếu dev nhúng thẳng file <code>carousel2.css</code> vào dự án chung sẽ làm vỡ layout của trang web chính. <strong>Khuyên dev nên sửa selector <code>body</code> trong CSS thành class cụ thể như <code>.carousel-section</code> hoặc bọc ngoài.</strong>
+                                    </div>
+                                </div>
+
+                                <details class="dep-template-details mt-2">
+                                    <summary class="d-flex align-items-center gap-1">
+                                        <i class="bi bi-file-earmark-code text-secondary"></i>
+                                        <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                        <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                    </summary>
+                                    <div class="dep-template-box mt-2">
+                                        <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                            <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_carousel2.html</span>
+                                            <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-carousel2', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy Template
+                                            </button>
+                                        </div>
+                                        <pre><code id="template-carousel2">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Carousel 2&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="carousel2.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Dán nội dung carousel2.html vào đây --&gt;
+    &lt;script src="carousel2.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+<!-- Khối Mã Nguồn Mẫu 2 -->
                         <div class="row mb-5">
                             <div class="col-lg-4 mb-3">
                                 <div class="code-card h-100">
@@ -1637,7 +2362,79 @@
                             </div>
                         </div>
 
-                        <!-- Khối Mã Nguồn Mẫu 3 -->
+                                                <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                        <div class="dependency-card mb-4">
+                            <div class="dependency-header">
+                                <div class="dependency-title">
+                                    <i class="bi bi-box-seam text-primary fs-5"></i>
+                                    <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    onclick="copyCode('dep-code-carousel3', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                </button>
+                            </div>
+                            <div class="dependency-body">
+                                <div class="dep-badges-wrap">
+                                    <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Dùng cho .container)</span>
+                                    <span class="dep-badge-pill dep-badge-rec"><i class="bi bi-info-circle"></i> Google Font Inter (Khuyên dùng)</span>
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File carousel3.js (Pure JS)</span>
+                                    <span class="dep-badge-pill dep-badge-none"><i class="bi bi-code-slash"></i> SVG Inline (Icon Play/Pause)</span>
+                                </div>
+
+                                <div class="dep-code-box">
+                                    <pre><code id="dep-code-carousel3">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS (Dùng cho lớp .container) (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 3. carousel3.js (Quản lý nút bấm bật/tắt cuộn) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="carousel3.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+
+                                <div class="dep-note-box alert-warning-soft">
+                                    <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                    <div>
+                                        <strong>Lưu ý quan trọng cho Dev:</strong> Trong <code>carousel3.css</code> có <code>body { padding: 5rem 0; background-color: #f8f9fa; }</code>, cần chú ý ghi đè khi đưa vào layout trang web chính. Đã tích hợp sẵn 2 thẻ SVG inline cho nút Play/Pause, không cần thư viện font icon ngoài.
+                                    </div>
+                                </div>
+
+                                <details class="dep-template-details mt-2">
+                                    <summary class="d-flex align-items-center gap-1">
+                                        <i class="bi bi-file-earmark-code text-secondary"></i>
+                                        <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                        <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                    </summary>
+                                    <div class="dep-template-box mt-2">
+                                        <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                            <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_carousel3.html</span>
+                                            <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-carousel3', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy Template
+                                            </button>
+                                        </div>
+                                        <pre><code id="template-carousel3">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Carousel 3&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="carousel3.css"&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Dán nội dung carousel3.html vào đây --&gt;
+    &lt;script src="carousel3.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+<!-- Khối Mã Nguồn Mẫu 3 -->
                         <div class="row mb-4">
                             <div class="col-lg-4 mb-3">
                                 <div class="code-card h-100">
