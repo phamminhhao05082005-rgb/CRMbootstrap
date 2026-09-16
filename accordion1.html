@@ -1,0 +1,126 @@
+<div class="task-card">
+
+    <div class="task-header" data-bs-toggle="collapse" data-bs-target="#taskBody" aria-expanded="false" aria-controls="taskBody">
+        <div class="d-flex justify-content-between align-items-start w-100">
+            <div class="w-100">
+
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                    <div class="d-flex align-items-center gap-2">
+                        <i class="bi bi-chevron-right toggle-icon text-dark"></i>
+                        <h6 class="mb-0 fw-bold fs-6">Task</h6>
+                    </div>
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="actions-link text-dark fw-bold align-items-center gap-1" style="font-size: 0.85rem;">
+                            Actions <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                        </span>
+                        <span class="text-secondary d-flex align-items-center gap-1" style="font-size: 0.85rem;">
+                            <i class="bi bi-calendar"></i> Overdue: Sep 6, 2026 at 11:15 AM GMT+7
+                        </span>
+                    </div>
+                </div>
+
+
+                <div class="collapsed-summary d-flex align-items-center gap-2 ps-4">
+                    <div class="status-circle"><i class="bi bi-check2"></i></div>
+                    <span class="text-dark" style="font-size: 0.95rem;">(Sample task) Follow up with Brian</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="taskBody" class="collapse">
+        <div class="card-body pt-1 pb-4">
+
+
+            <div class="d-flex align-items-center gap-2 ps-4 mb-4">
+                <div class="status-circle"><i class="bi bi-check2"></i></div>
+                <div class="input-group task-input-group w-100">
+                    <input type="text" class="form-control border-0 shadow-none text-dark" value="(Sample task) Follow up with Brian">
+                    <span class="input-group-text"><i class="bi bi-pencil text-secondary"></i></span>
+                </div>
+            </div>
+
+
+            <div class="row ps-4 mb-4">
+                <div class="col-auto pe-4">
+                    <div class="prop-label">Due date</div>
+                    <div class="d-flex gap-2">
+                        <div class="input-group input-group-sm date-input-group" style="width: 140px;">
+                            <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                            <input type="text" class="form-control shadow-none" value="09/06/2026">
+                        </div>
+                        <div class="input-group input-group-sm date-input-group" style="width: 120px;">
+                            <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                            <input type="text" class="form-control shadow-none" value="11:15 AM">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-auto">
+                    <div class="prop-label">Reminder</div>
+                    <div class="prop-value d-flex align-items-center gap-1 mt-1 cursor-pointer">
+                        No reminder <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex align-items-center gap-2 ps-4 mb-3">
+                <input class="form-check-input mt-0 border-secondary shadow-none" type="checkbox" style="width: 18px; height: 18px; border-radius: 4px;">
+                <span class="text-secondary" style="font-size: 0.95rem;">Set to repeat</span>
+                <i class="bi bi-info-circle text-secondary" style="font-size: 0.9rem;"></i>
+            </div>
+
+            <hr class="border-secondary opacity-25 mx-4 my-4">
+
+
+            <div class="row ps-4 pe-2 mb-4">
+                <div class="col">
+                    <div class="prop-label">Task stage</div>
+                    <button class="btn-stage d-flex align-items-center gap-1">
+                        Not Started <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                    </button>
+                </div>
+                <div class="col">
+                    <div class="prop-label">Task Type</div>
+                    <div class="prop-value mt-1">To-do</div>
+                </div>
+                <div class="col">
+                    <div class="prop-label">Priority</div>
+                    <div class="prop-value mt-1 d-flex align-items-center gap-2 text-dark">
+                        <span style="width: 10px; height: 10px; background-color: #e5e7eb; border-radius: 50%; display: inline-block;"></span> None
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="prop-label">Queue</div>
+                    <div class="prop-value mt-1 text-secondary d-flex align-items-center gap-1">
+                        None <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="prop-label">Assigned to</div>
+                    <div class="prop-value mt-1">No owner</div>
+                </div>
+            </div>
+
+
+            <div class="ps-4 mb-4">
+                <div class="prop-label mb-2">Task Notes</div>
+                <p class="text-dark mb-0" style="font-size: 0.95rem; line-height: 1.6;">
+                    Call Brian next Tuesday at 4 about our very best cupcake models. Make sure to pull the specs together for the extra tasty variety.
+                </p>
+            </div>
+
+
+            <div class="d-flex justify-content-between align-items-center ps-4 pe-3 mt-4">
+                <a href="#" class="text-decoration-none fw-bold d-flex align-items-center gap-2" style="color: #0f766e; font-size: 0.9rem;">
+                    <i class="bi bi-chat-left-text" style="font-size: 1.1rem;"></i> Add comment
+                </a>
+                <a href="#" class="text-decoration-none fw-bold text-dark d-flex align-items-center gap-1" style="font-size: 0.9rem;">
+                    2 associations <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>

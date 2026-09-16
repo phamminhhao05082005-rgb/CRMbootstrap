@@ -1,0 +1,181 @@
+/* ==========================================================================
+   CRM Components Library - Main Layout & Navigation Styles (testcss.css)
+   ========================================================================== */
+
+:root {
+    --crm-sidebar-width: 260px;
+    --crm-primary: #0d6efd;
+    --crm-primary-light: #e7f1ff;
+    --crm-text-main: #1e293b;
+    --crm-text-muted: #64748b;
+    --crm-border-color: #e2e8f0;
+    --crm-bg-code: #1e1e2e;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #f8fafc;
+    color: var(--crm-text-main);
+    padding: 0 !important;
+    margin: 0 !important;
+    display: block !important; /* Ngăn chặn display: flex từ component CSS làm lệch layout */
+    justify-content: normal !important;
+}
+
+/* SIDEBAR TRÁI */
+.custom-sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding-top: 0;
+    background-color: #ffffff;
+    border-right: 1px solid var(--crm-border-color);
+    box-shadow: 2px 0 12px rgba(0, 0, 0, 0.03);
+    overflow-y: auto;
+}
+
+/* Brand header trên sidebar */
+.brand-header {
+    background: linear-gradient(to bottom, #ffffff, #fbfcfd);
+}
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    box-shadow: 0 4px 10px rgba(13, 110, 253, 0.3);
+}
+
+/* Nav Pills danh sách component */
+.custom-sidebar-nav .nav-link {
+    color: #475569;
+    font-weight: 500;
+    font-size: 0.92rem;
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 4px;
+    border: 1px solid transparent;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.custom-sidebar-nav .nav-link:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    transform: translateX(2px);
+}
+
+.custom-sidebar-nav .nav-link.active {
+    background-color: #eef2ff !important;
+    color: #3b82f6 !important;
+    font-weight: 600;
+    border-color: #c7d2fe;
+    box-shadow: 0 2px 4px rgba(59, 130, 246, 0.08);
+}
+
+.custom-sidebar-nav .nav-link.active i {
+    color: #2563eb !important;
+}
+
+/* VÙNG NỘI DUNG CHÍNH (BÊN PHẢI) */
+.main-content {
+    min-height: 100vh;
+    background-color: #f8fafc;
+}
+
+/* Khối xem trước Component (Preview box) */
+.preview-card {
+    border-radius: 12px;
+    border: 1px solid var(--crm-border-color);
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.preview-container {
+    background-color: #ffffff;
+    min-height: 120px;
+}
+
+/* Khối hiển thị Code (HTML & CSS) */
+.code-card {
+    border-radius: 12px;
+    border: 1px solid #334155;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.code-header {
+    background-color: #181825;
+    border-bottom: 1px solid #2a2b3d;
+}
+
+.code-pre {
+    font-family: 'Fira Code', 'Consolas', 'Menlo', monospace;
+    font-size: 0.85rem;
+    background-color: var(--crm-bg-code);
+    max-height: 350px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    line-height: 1.6;
+}
+
+/* Tùy chỉnh thanh cuộn cho khối code */
+.code-pre::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+.code-pre::-webkit-scrollbar-track {
+    background: #181825;
+}
+.code-pre::-webkit-scrollbar-thumb {
+    background: #45475a;
+    border-radius: 3px;
+}
+.code-pre::-webkit-scrollbar-thumb:hover {
+    background: #585b70;
+}
+
+/* Nút copy code */
+.copy-btn {
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.copy-btn.btn-copied {
+    background-color: #10b981 !important;
+    border-color: #10b981 !important;
+    color: #ffffff !important;
+}
+
+/* Toast thông báo */
+.copy-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #10b981;
+    color: white;
+    font-weight: 500;
+    font-size: 0.9rem;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.copy-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

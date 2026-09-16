@@ -1,0 +1,112 @@
+body {
+    background-color: #f3f4f6;
+    font-family: 'Inter', sans-serif;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.property-card {
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid #d1d5db;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.property-header {
+    cursor: pointer;
+    padding: 16px;
+    border-radius: 12px;
+    transition: background-color 0.2s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.property-header:hover {
+    background-color: #f8fafc;
+}
+
+.property-header[aria-expanded="true"] {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.toggle-icon {
+    font-size: 0.8rem;
+    color: #374151;
+    transition: transform 0.2s ease;
+}
+
+.property-header[aria-expanded="true"] .toggle-icon {
+    transform: rotate(90deg);
+}
+
+.header-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 110px;
+}
+
+.actions-text {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #1f2937;
+}
+
+.btn-settings {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #9ca3af;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    color: #4b5563;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-settings:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+
+.property-body {
+    padding: 0 16px 20px 16px;
+}
+
+
+.prop-group {
+    margin-top: 16px;
+}
+
+.prop-label {
+    font-size: 0.75rem;
+    color: #6b7280;
+    margin-bottom: 4px;
+}
+
+.prop-value {
+    font-size: 0.95rem;
+    color: #374151;
+    word-wrap: break-word;
+}
+
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #3f8854;
+    display: inline-block;
+}
