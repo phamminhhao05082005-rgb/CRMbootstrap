@@ -103,7 +103,38 @@ body {
     min-height: 120px;
 }
 
-/* Khối hiển thị Code (HTML & CSS) */
+/* Khung hiển thị Toast xem trước (định vị tương đối, cho phép Toast đóng/mở tự nhiên) */
+.preview-toast-box {
+    position: relative;
+    min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0b0f19 !important;
+    background-image: radial-gradient(#1e293b 1px, transparent 1px);
+    background-size: 16px 16px;
+    padding: 30px 20px;
+    border-radius: 0 0 12px 12px;
+    overflow: hidden;
+}
+
+.preview-toast-box .toast-container,
+.preview-toast-box .toast-notification {
+    position: relative !important;
+    bottom: auto !important;
+    right: auto !important;
+    top: auto !important;
+    left: auto !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    z-index: 1 !important;
+}
+
+.preview-toast-box .toast {
+    position: relative !important;
+}
+
+/* Khối hiển thị Code (HTML, CSS, JS) */
 .code-card {
     border-radius: 12px;
     border: 1px solid #334155;
@@ -156,7 +187,7 @@ body {
     color: #ffffff !important;
 }
 
-/* Toast thông báo */
+/* Toast thông báo chung khi copy */
 .copy-toast {
     position: fixed;
     bottom: 24px;

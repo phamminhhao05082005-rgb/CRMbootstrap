@@ -1,0 +1,29 @@
+<div class="toast-container position-fixed bottom-0 end-0 p-4">
+    <div id="liveToast" class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true"
+        data-bs-autohide="true" data-bs-delay="5000">
+        <div class="toast-header">
+            <div class="toast-icon-box">
+                <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <strong class="me-auto">Hệ Thống Bảo Mật</strong>
+
+            <span class="time-badge">
+                <i class="fa-regular fa-clock me-1"></i> Vừa xong
+            </span>
+
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+
+        <div class="toast-body">
+            <div class="d-flex align-items-center">
+                <i class="fa-solid fa-circle-check text-success fs-5 me-3"></i>
+                <div>
+                    <span class="text-white fw-semibold d-block">Thành công!</span>
+                    Mọi thay đổi cấu hình hệ thống của bạn đã được lưu lại an toàn.
+                </div>
+            </div>
+        </div>
+
+        <div class="toast-progress" id="toastProgress"></div>
+    </div>
+</div>

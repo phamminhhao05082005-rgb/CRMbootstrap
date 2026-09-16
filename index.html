@@ -14,10 +14,17 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
 
+    <!-- Font Awesome Icons (Dùng cho Toast) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     <!-- CSS từng Component -->
     <link rel="stylesheet" href="accordion1.css">
     <link rel="stylesheet" href="accordion2.css">
     <link rel="stylesheet" href="badge.css">
+    <link rel="stylesheet" href="toasts1.css">
+    <link rel="stylesheet" href="toasts2.css">
+    <link rel="stylesheet" href="toasts3.css">
+    <link rel="stylesheet" href="toasts4.css">
 
     <!-- CSS Gốc (load sau để quản lý layout và ghi đè kiểu body an toàn) -->
     <link rel="stylesheet" href="testcss.css">
@@ -37,7 +44,6 @@
                     </div>
                     <div>
                         <h6 class="mb-0 fw-bold text-dark">CRM Library</h6>
-                       
                     </div>
                 </div>
 
@@ -47,7 +53,7 @@
 
                 <!-- Danh sách tabs chuyển đổi component -->
                 <div class="nav flex-column nav-pills custom-sidebar-nav" id="componentTabs" role="tablist" aria-orientation="vertical">
-                    <!-- Tab Accordion (2 mẫu) -->
+                    <!-- Tab Accordion -->
                     <button class="nav-link active d-flex align-items-center justify-content-between mb-1" 
                             id="tab-accordion-btn" 
                             data-bs-toggle="pill" 
@@ -60,7 +66,6 @@
                             <i class="bi bi-menu-button-wide text-primary"></i>
                             <span>Accordion</span>
                         </span>
-                        
                     </button>
 
                     <!-- Tab Badge -->
@@ -76,7 +81,36 @@
                             <i class="bi bi-tag-fill text-success"></i>
                             <span>Badge</span>
                         </span>
-                        
+                    </button>
+
+                    <!-- Tab Toasts -->
+                    <button class="nav-link d-flex align-items-center justify-content-between mb-1" 
+                            id="tab-toasts-btn" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#tab-toasts" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="tab-toasts" 
+                            aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-bell-fill text-warning"></i>
+                            <span>Toasts</span>
+                        </span>
+                    </button>
+
+                    <!-- Tab Alert -->
+                    <button class="nav-link d-flex align-items-center justify-content-between mb-1" 
+                            id="tab-alert-btn" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#tab-alert" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="tab-alert" 
+                            aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-exclamation-triangle-fill text-danger"></i>
+                            <span>Alert</span>
+                        </span>
                     </button>
                 </div>
             </nav>
@@ -99,7 +133,6 @@
                                 <h1 class="h3 fw-bold mb-1">1. Accordion Components</h1>
                                 <p class="text-muted mb-0 small">Các mẫu Accordion mở rộng / thu gọn (Collapse) trong hệ thống CRM</p>
                             </div>
-                           
                         </div>
 
                         <!-- ---------------------------------------------- -->
@@ -115,16 +148,124 @@
                             <div class="preview-card mb-4 bg-white">
                                 <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
                                     <span class="fw-bold text-dark d-flex align-items-center gap-2">
-                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước (Preview)
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
                                     </span>
                                     <span class="badge bg-light text-secondary border">Interactive</span>
                                 </div>
                                 <div class="p-4 preview-container" style="background-color: #f3f4f6;" id="preview-accordion1">
-                                    <div class="text-center py-4">
-                                        <div class="spinner-border text-primary" role="status">
-                                            <span class="visually-hidden">Loading...</span>
+                                    <div class="task-card">
+                                        <div class="task-header" data-bs-toggle="collapse" data-bs-target="#taskBody" aria-expanded="false" aria-controls="taskBody">
+                                            <div class="d-flex justify-content-between align-items-start w-100">
+                                                <div class="w-100">
+                                                    <div class="d-flex justify-content-between align-items-center mb-2">
+                                                        <div class="d-flex align-items-center gap-2">
+                                                            <i class="bi bi-chevron-right toggle-icon text-dark"></i>
+                                                            <h6 class="mb-0 fw-bold fs-6">Task</h6>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-3">
+                                                            <span class="actions-link text-dark fw-bold align-items-center gap-1" style="font-size: 0.85rem;">
+                                                                Actions <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                                                            </span>
+                                                            <span class="text-secondary d-flex align-items-center gap-1" style="font-size: 0.85rem;">
+                                                                <i class="bi bi-calendar"></i> Overdue: Sep 6, 2026 at 11:15 AM GMT+7
+                                                            </span>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="collapsed-summary d-flex align-items-center gap-2 ps-4">
+                                                        <div class="status-circle"><i class="bi bi-check2"></i></div>
+                                                        <span class="text-dark" style="font-size: 0.95rem;">(Sample task) Follow up with Brian</span>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div class="text-muted small mt-2">Đang tải component...</div>
+
+                                        <div id="taskBody" class="collapse">
+                                            <div class="card-body pt-1 pb-4">
+                                                <div class="d-flex align-items-center gap-2 ps-4 mb-4">
+                                                    <div class="status-circle"><i class="bi bi-check2"></i></div>
+                                                    <div class="input-group task-input-group w-100">
+                                                        <input type="text" class="form-control border-0 shadow-none text-dark" value="(Sample task) Follow up with Brian">
+                                                        <span class="input-group-text"><i class="bi bi-pencil text-secondary"></i></span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row ps-4 mb-4">
+                                                    <div class="col-auto pe-4">
+                                                        <div class="prop-label">Due date</div>
+                                                        <div class="d-flex gap-2">
+                                                            <div class="input-group input-group-sm date-input-group" style="width: 140px;">
+                                                                <span class="input-group-text"><i class="bi bi-calendar"></i></span>
+                                                                <input type="text" class="form-control shadow-none" value="09/06/2026">
+                                                            </div>
+                                                            <div class="input-group input-group-sm date-input-group" style="width: 120px;">
+                                                                <span class="input-group-text"><i class="bi bi-clock"></i></span>
+                                                                <input type="text" class="form-control shadow-none" value="11:15 AM">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <div class="prop-label">Reminder</div>
+                                                        <div class="prop-value d-flex align-items-center gap-1 mt-1 cursor-pointer">
+                                                            No reminder <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2 ps-4 mb-3">
+                                                    <input class="form-check-input mt-0 border-secondary shadow-none" type="checkbox" style="width: 18px; height: 18px; border-radius: 4px;">
+                                                    <span class="text-secondary" style="font-size: 0.95rem;">Set to repeat</span>
+                                                    <i class="bi bi-info-circle text-secondary" style="font-size: 0.9rem;"></i>
+                                                </div>
+
+                                                <hr class="border-secondary opacity-25 mx-4 my-4">
+
+                                                <div class="row ps-4 pe-2 mb-4">
+                                                    <div class="col">
+                                                        <div class="prop-label">Task stage</div>
+                                                        <button class="btn-stage d-flex align-items-center gap-1">
+                                                            Not Started <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                                                        </button>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="prop-label">Task Type</div>
+                                                        <div class="prop-value mt-1">To-do</div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="prop-label">Priority</div>
+                                                        <div class="prop-value mt-1 d-flex align-items-center gap-2 text-dark">
+                                                            <span style="width: 10px; height: 10px; background-color: #e5e7eb; border-radius: 50%; display: inline-block;"></span> None
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="prop-label">Queue</div>
+                                                        <div class="prop-value mt-1 text-secondary d-flex align-items-center gap-1">
+                                                            None <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col">
+                                                        <div class="prop-label">Assigned to</div>
+                                                        <div class="prop-value mt-1">No owner</div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="ps-4 mb-4">
+                                                    <div class="prop-label mb-2">Task Notes</div>
+                                                    <p class="text-dark mb-0" style="font-size: 0.95rem; line-height: 1.6;">
+                                                        Call Brian next Tuesday at 4 about our very best cupcake models. Make sure to pull the specs together for the extra tasty variety.
+                                                    </p>
+                                                </div>
+
+                                                <div class="d-flex justify-content-between align-items-center ps-4 pe-3 mt-4">
+                                                    <a href="#" class="text-decoration-none fw-bold d-flex align-items-center gap-2" style="color: #0f766e; font-size: 0.9rem;">
+                                                        <i class="bi bi-chat-left-text" style="font-size: 1.1rem;"></i> Add comment
+                                                    </a>
+                                                    <a href="#" class="text-decoration-none fw-bold text-dark d-flex align-items-center gap-1" style="font-size: 0.9rem;">
+                                                        2 associations <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -175,16 +316,60 @@
                             <div class="preview-card mb-4 bg-white">
                                 <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
                                     <span class="fw-bold text-dark d-flex align-items-center gap-2">
-                                        <i class="bi bi-eye text-info"></i> Giao diện xem trước (Preview)
+                                        <i class="bi bi-eye text-info"></i> Giao diện xem trước
                                     </span>
                                     <span class="badge bg-light text-secondary border">Interactive</span>
                                 </div>
                                 <div class="p-4 preview-container d-flex justify-content-center" style="background-color: #f3f4f6;" id="preview-accordion2">
-                                    <div class="text-center py-4">
-                                        <div class="spinner-border text-info" role="status">
-                                            <span class="visually-hidden">Loading...</span>
+                                    <div class="property-card">
+                                        <div class="property-header" data-bs-toggle="collapse" data-bs-target="#propertyBody" aria-expanded="false"
+                                            aria-controls="propertyBody">
+                                            <div class="d-flex align-items-center gap-2">
+                                                <i class="bi bi-chevron-right toggle-icon"></i>
+                                                <h2 class="header-title">About this ...</h2>
+                                            </div>
+
+                                            <div class="d-flex align-items-center gap-3">
+                                                <div class="actions-text d-flex align-items-center gap-1">
+                                                    Actions <i class="bi bi-caret-down-fill" style="font-size: 0.6rem;"></i>
+                                                </div>
+
+                                                <button class="btn-settings" onclick="event.stopPropagation();">
+                                                    <i class="bi bi-gear"></i>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="text-muted small mt-2">Đang tải component...</div>
+
+                                        <div id="propertyBody" class="collapse">
+                                            <div class="property-body">
+                                                <div class="prop-group">
+                                                    <div class="prop-label">Deal owner</div>
+                                                    <div class="prop-value">PHẠM MINH HÀO</div>
+                                                </div>
+
+                                                <div class="prop-group">
+                                                    <div class="prop-label">Last Contacted</div>
+                                                    <div class="prop-value">09/09/2026 11:15 AM GMT+7</div>
+                                                </div>
+
+                                                <div class="prop-group">
+                                                    <div class="prop-label">Deal Type</div>
+                                                    <div class="prop-value">New Business</div>
+                                                </div>
+
+                                                <div class="prop-group">
+                                                    <div class="prop-label">Priority</div>
+                                                    <div class="prop-value d-flex align-items-center gap-2">
+                                                        <span class="status-dot"></span> Low
+                                                    </div>
+                                                </div>
+
+                                                <div class="prop-group">
+                                                    <div class="prop-label">Closed Lost Reason</div>
+                                                    <div class="prop-value">--</div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -231,7 +416,6 @@
                                 <h1 class="h3 fw-bold mb-1">2. Badge Component</h1>
                                 <p class="text-muted mb-0 small">Các mẫu nhãn thông báo số lượng (unread count), huy hiệu và nhãn trạng thái CRM</p>
                             </div>
-                            
                         </div>
 
                         <!-- Giao diện xem trước (Preview) -->
@@ -243,11 +427,67 @@
                                 <span class="badge bg-light text-secondary border">Interactive</span>
                             </div>
                             <div class="p-4 preview-container" style="background-color: #f8fafc;" id="preview-badge">
-                                <div class="text-center py-4">
-                                    <div class="spinner-border text-success" role="status">
-                                        <span class="visually-hidden">Loading...</span>
+                                <div class="p-3">
+                                    <div class="mb-4">
+                                        <h6 class="text-secondary fw-semibold small mb-3 text-uppercase">1. Badge trên nút bấm (Button Badges)</h6>
+                                        <div class="d-flex flex-wrap align-items-center gap-2">
+                                            <button type="button" class="btn btn-primary btn-crm-badge position-relative">
+                                                <i class="bi bi-inbox fs-6"></i> Inbox
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger badge-floating-top">
+                                                    99+
+                                                    <span class="visually-hidden">unread messages</span>
+                                                </span>
+                                            </button>
+
+                                            <button type="button" class="btn btn-primary btn-crm-badge">
+                                                <i class="bi bi-bell fs-6"></i> Notifications
+                                                <span class="badge rounded-pill badge-inline-sub bg-danger">4</span>
+                                            </button>
+
+                                            <button type="button" class="btn btn-outline-secondary btn-crm-badge position-relative">
+                                                <i class="bi bi-check2-square fs-6"></i> Tasks
+                                                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-warning text-dark badge-floating-top">
+                                                    12
+                                                </span>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <div class="text-muted small mt-2">Đang tải component...</div>
+
+                                    <div class="mb-4">
+                                        <h6 class="text-secondary fw-semibold small mb-3 text-uppercase">2. Badge trạng thái CRM (Status Badges)</h6>
+                                        <div class="d-flex flex-wrap align-items-center gap-2">
+                                            <span class="badge text-bg-success badge-status-item">
+                                                <i class="bi bi-check-circle-fill"></i> Thành công
+                                            </span>
+                                            <span class="badge text-bg-primary badge-status-item">
+                                                <i class="bi bi-info-circle-fill"></i> Đang xử lý
+                                            </span>
+                                            <span class="badge text-bg-warning text-dark badge-status-item">
+                                                <i class="bi bi-hourglass-split"></i> Chờ duyệt
+                                            </span>
+                                            <span class="badge text-bg-danger badge-status-item">
+                                                <i class="bi bi-exclamation-octagon-fill"></i> Quá hạn
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div>
+                                        <h6 class="text-secondary fw-semibold small mb-3 text-uppercase">3. Badge hình viên thuốc (Rounded Pill)</h6>
+                                        <div class="d-flex flex-wrap align-items-center gap-2">
+                                            <span class="badge rounded-pill text-bg-success badge-status-item">
+                                                <i class="bi bi-check2"></i> Hoàn thành
+                                            </span>
+                                            <span class="badge rounded-pill text-bg-primary badge-status-item">
+                                                <i class="bi bi-person-fill"></i> Khách hàng mới
+                                            </span>
+                                            <span class="badge rounded-pill text-bg-warning text-dark badge-status-item">
+                                                <i class="bi bi-clock-history"></i> Đang chăm sóc
+                                            </span>
+                                            <span class="badge rounded-pill text-bg-secondary badge-status-item">
+                                                <i class="bi bi-archive-fill"></i> Đóng hồ sơ
+                                            </span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -283,6 +523,569 @@
                         </div>
                     </div>
 
+                    <!-- ============================================== -->
+                    <!-- TAB 3: TOASTS COMPONENTS (4 MẪU) -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade" id="tab-toasts" role="tabpanel" aria-labelledby="tab-toasts-btn">
+                        <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+                            <div>
+                                <h1 class="h3 fw-bold mb-1">3. Toasts Components</h1>
+                                <p class="text-muted mb-0 small">Các mẫu thông báo Toast (Notification, Security, Upload, Undo) trong CRM</p>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 3.1 MẪU 1: SECURITY TOAST (HỆ THỐNG BẢO MẬT) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="toast-mau-1" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
+                                <h2 class="h5 fw-bold mb-0">Thông báo hệ thống</h2>
+                            </div>
+
+                            <!-- Preview Mẫu 1 (Chứa trực tiếp mã HTML để JS nhận diện ngay khi DOMContentLoaded) -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <button class="btn btn-sm btn-outline-primary py-1 px-2 rounded-2" onclick="reRunToast(1)">
+                                        <i class="bi bi-play-fill me-1"></i> Kích hoạt Toast
+                                    </button>
+                                </div>
+                                <div class="preview-toast-box" id="preview-toasts1">
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+                                        <div id="liveToast" class="toast custom-toast" role="alert" aria-live="assertive" aria-atomic="true"
+                                            data-bs-autohide="true" data-bs-delay="5000">
+                                            <div class="toast-header">
+                                                <div class="toast-icon-box">
+                                                    <i class="fa-solid fa-shield-halved"></i>
+                                                </div>
+                                                <strong class="me-auto">Hệ Thống Bảo Mật</strong>
+
+                                                <span class="time-badge">
+                                                    <i class="fa-regular fa-clock me-1"></i> Vừa xong
+                                                </span>
+
+                                                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                                            </div>
+
+                                            <div class="toast-body">
+                                                <div class="d-flex align-items-center">
+                                                    <i class="fa-solid fa-circle-check text-success fs-5 me-3"></i>
+                                                    <div>
+                                                        <span class="text-white fw-semibold d-block">Thành công!</span>
+                                                        Mọi thay đổi cấu hình hệ thống của bạn đã được lưu lại an toàn.
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="toast-progress" id="toastProgress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HTML Mẫu 1 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-toasts1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-toasts1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- CSS Mẫu 1 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-css-toasts1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-toasts1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- JS Mẫu 1 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-js-toasts1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-toasts1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-5 border-2 border-secondary-subtle">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 3.2 MẪU 2: NOTIFICATION TOAST (TIN NHẮN) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="toast-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Tin nhắn & Thông báo</h2>
+                            </div>
+
+                            <!-- Preview Mẫu 2 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-info"></i> Giao diện xem trước
+                                    </span>
+                                    <button class="btn btn-sm btn-outline-info py-1 px-2 rounded-2" onclick="reRunToast(2)">
+                                        <i class="bi bi-play-fill me-1"></i> Kích hoạt Toast
+                                    </button>
+                                </div>
+                                <div class="preview-toast-box" id="preview-toasts2">
+                                    <div id="crmToast" class="toast-notification position-fixed bottom-0 end-0 m-4 p-4 rounded-4 shadow-lg text-white"
+                                        style="width: 360px; background-color: #111827; border: 1px solid #1f2937; z-index: 1080;">
+
+                                        <div class="px-3 py-2 rounded-3 mb-3 fw-semibold text-white" style="background-color: #1f2937; font-size: 14px;">
+                                            New notification
+                                        </div>
+
+                                        <div class="d-flex align-items-start gap-3 mb-4">
+                                            <img src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="Bonnie Green"
+                                                class="rounded-circle object-fit-cover" style="width: 48px; height: 48px;">
+                                            <div>
+                                                <div class="fw-bold text-white fs-6">Bonnie Green</div>
+                                                <div class="text-secondary" style="font-size: 14px;">commented on your photo</div>
+                                                <div class="text-primary" style="font-size: 13px;">a few seconds ago</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="d-flex gap-2">
+                                            <button type="button" id="closeToastBtn" class="btn w-50 py-2 fw-medium text-white border-0"
+                                                style="background-color: #1f2937;">Close</button>
+                                            <button type="button" class="btn btn-primary w-50 py-2 fw-medium">Reply</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HTML Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-toasts2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-toasts2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- CSS Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-css-toasts2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-toasts2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- JS Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-js-toasts2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-toasts2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-5 border-2 border-secondary-subtle">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 3.3 MẪU 3: UPLOAD TOAST (TIẾN ĐỘ TẢI TỆP) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="toast-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Tiến độ tải tệp</h2>
+                            </div>
+
+                            <!-- Preview Mẫu 3 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-warning"></i> Giao diện xem trước
+                                    </span>
+                                    <button class="btn btn-sm btn-outline-warning py-1 px-2 rounded-2" onclick="reRunToast(3)">
+                                        <i class="bi bi-play-fill me-1"></i> Kích hoạt Toast
+                                    </button>
+                                </div>
+                                <div class="preview-toast-box" id="preview-toasts3">
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+                                        <div id="uploadToast" class="toast toast-upload shadow-lg" role="alert" aria-live="assertive" aria-atomic="true"
+                                            data-bs-delay="5000">
+                                            <div class="toast-body p-4">
+                                                <div class="upload-icon-box mb-3">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor" stroke-width="2">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M16 12l-4-4m0 0l-4 4m4-4v12" />
+                                                    </svg>
+                                                </div>
+
+                                                <h6 class="fw-bold mb-1 fs-5">Uploading in progress</h6>
+                                                <p class="mb-4" style="color: #9ca3af; font-size: 0.9rem;">
+                                                    Please wait while your file is being uploaded. This may take a moment.
+                                                </p>
+
+                                                <div class="d-flex align-items-center gap-3 mb-4">
+                                                    <div class="upload-progress-track">
+                                                        <div class="upload-progress-bar"></div>
+                                                    </div>
+                                                    <span class="fw-bold fs-6">75%</span>
+                                                </div>
+
+                                                <div class="d-flex gap-2">
+                                                    <button type="button" class="btn btn-upload-cancel flex-grow-1 rounded-3 py-2 fw-medium"
+                                                        data-bs-dismiss="toast">
+                                                        Cancel upload
+                                                    </button>
+                                                    <button type="button" class="btn btn-upload-primary flex-grow-1 rounded-3 py-2 fw-medium">
+                                                        Go to uploads
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HTML Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-toasts3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-toasts3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- CSS Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-css-toasts3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-toasts3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- JS Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-js-toasts3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-toasts3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-5 border-2 border-secondary-subtle">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 3.4 MẪU 4: UNDO ACTION TOAST (HOÀN TÁC) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="toast-mau-4" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 4</span>
+                                <h2 class="h5 fw-bold mb-0">Hoàn tác tác vụ</h2>
+                            </div>
+
+                            <!-- Preview Mẫu 4 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-success"></i> Giao diện xem trước
+                                    </span>
+                                    <button class="btn btn-sm btn-outline-success py-1 px-2 rounded-2" onclick="reRunToast(4)">
+                                        <i class="bi bi-play-fill me-1"></i> Kích hoạt Toast
+                                    </button>
+                                </div>
+                                <div class="preview-toast-box" id="preview-toasts4">
+                                    <div class="toast-container position-fixed bottom-0 end-0 p-4">
+                                        <div id="undoToast" class="toast toast-undo" role="alert" aria-live="assertive" aria-atomic="true"
+                                            data-bs-autohide="false">
+                                            <div class="toast-body d-flex align-items-center justify-content-between p-3">
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24"
+                                                        stroke="currentColor" stroke-width="2" style="color: #10b981;">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                                    </svg>
+                                                    <span style="font-size: 0.95rem;">Action completed.</span>
+                                                </div>
+
+                                                <div class="d-flex align-items-center gap-2">
+                                                    <button type="button" class="btn-undo" id="btnUndoAction">
+                                                        Undo (<span id="undoCountdown">5</span>s)
+                                                    </button>
+
+                                                    <button type="button" class="btn-close btn-close-white ms-2 shadow-none" data-bs-dismiss="toast"
+                                                        aria-label="Close"></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- HTML Mẫu 4 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-toasts4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-toasts4"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- CSS Mẫu 4 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-css-toasts4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-toasts4"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- JS Mẫu 4 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-js-toasts4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-toasts4"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+                    <!-- ============================================== -->
+                    <!-- TAB 4: ALERT COMPONENT (TAB RIÊNG BIỆT) -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade" id="tab-alert" role="tabpanel" aria-labelledby="tab-alert-btn">
+                        <div class="d-flex justify-content-between align-items-center pb-3 mb-4 border-bottom">
+                            <div>
+                                <h1 class="h3 fw-bold mb-1">4. Alert Component</h1>
+                                <p class="text-muted mb-0 small">Các mẫu thông báo Alert (thông tin, thành công, cảnh báo, tính năng mới, bảo trì hệ thống)</p>
+                            </div>
+                        </div>
+
+                        <!-- Giao diện xem trước (Preview) -->
+                        <div class="preview-card mb-4 bg-white">
+                            <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                    <i class="bi bi-eye text-danger"></i> Giao diện xem trước
+                                </span>
+                                <div class="d-flex align-items-center gap-2">
+                                    <button class="btn btn-sm btn-outline-primary py-1 px-2 rounded-2" onclick="resetAlerts()">
+                                        <i class="bi bi-arrow-clockwise me-1"></i> Khôi phục Alert
+                                    </button>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                            </div>
+                            <div class="p-4 preview-container" style="background-color: #f8fafc;" id="preview-alert">
+                                <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                                    <!-- icon chữ i / thông tin -->
+                                    <symbol id="info-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287z" />
+                                    </symbol>
+                                    <!-- icon dấu tick / thành công -->
+                                    <symbol id="check-circle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+                                    </symbol>
+                                    <!-- icon cảnh báo / lỗi -->
+                                    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                    </symbol>
+                                    <!-- icon đóng / dấu X (dùng cho nút tắt alert) -->
+                                    <symbol id="x-lg" viewBox="0 0 16 16">
+                                        <path
+                                            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+                                    </symbol>
+                                    <!-- icon ngôi sao (dùng cho đánh giá / nổi bật) -->
+                                    <symbol id="star-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+                                    </symbol>
+                                    <!-- icon chuông thông báo (notification) -->
+                                    <symbol id="bell-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+                                    </symbol>
+                                    <!-- icon khóa (security / quyền hạn) -->
+                                    <symbol id="lock-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+                                    </symbol>
+                                    <!-- icon bánh răng (cài đặt / hệ thống) -->
+                                    <symbol id="gear-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.988 1.988l.17.31c.45.82-.12 1.848-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.988 1.988l.31-.17a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.988-1.988l-.17-.31a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.988-1.988l-.31.17a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.86z" />
+                                    </symbol>
+                                </svg>
+
+                                <!-- 1. Alert với symbol: info-fill -->
+                                <div class="alert alert-primary alert-dismissible fade show d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+                                        <use xlink:href="#info-fill" />
+                                    </svg>
+                                    <div class="flex-grow-1">
+                                        Thông tin hệ thống mới
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                                <!-- 2. Alert với symbol: check-circle-fill -->
+                                <div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+                                        <use xlink:href="#check-circle-fill" />
+                                    </svg>
+                                    <div class="flex-grow-1">
+                                        Thực hiện thao tác thành công
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                                <!-- 3. Alert với symbol: exclamation-triangle-fill -->
+                                <div class="alert alert-warning alert-dismissible fade show d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+                                        <use xlink:href="#exclamation-triangle-fill" />
+                                    </svg>
+                                    <div class="flex-grow-1">
+                                        Cảnh báo rủi ro hệ thống
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                                <!-- 4. Alert với symbol: star-fill -->
+                                <div class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Star:">
+                                        <use xlink:href="#star-fill" />
+                                    </svg>
+                                    <div class="flex-grow-1">
+                                        Tính năng nổi bật mới
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                                <!-- 5. Alert với symbol: bell-fill -->
+                                <div class="alert alert-secondary alert-dismissible fade show d-flex align-items-center" role="alert">
+                                    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Bell:">
+                                        <use xlink:href="#bell-fill" />
+                                    </svg>
+                                    <div class="flex-grow-1">
+                                        Bạn có thông báo chưa đọc
+                                    </div>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+
+                                <!-- Alert thông báo dài sử dụng symbol cuối cùng: gear-fill (Đã thêm nút đóng) -->
+                                <div class="alert alert-dark alert-dismissible fade show" role="alert">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Gear:">
+                                            <use xlink:href="#gear-fill" />
+                                        </svg>
+                                        <h4 class="alert-heading mb-0">Hệ thống đang bảo trì định kỳ!</h4>
+                                    </div>
+                                    <p>Aww yeah, you successfully read this important alert message. This example text is going to run a bit longer so
+                                        that you can see how spacing within an alert works with this kind of content.</p>
+                                    <hr>
+                                    <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+                                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Khối 1: NỘI DUNG HTML -->
+                        <div class="code-card mb-4">
+                            <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                    <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                </div>
+                                <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-alert', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                </button>
+                            </div>
+                            <div class="p-0">
+                                <pre class="text-light m-0 p-3 code-pre"><code id="code-html-alert"><!-- Đang tải... --></code></pre>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </main>
         </div>
@@ -290,7 +1093,15 @@
 
     <!-- Bootstrap 5 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script giao diện thư viện component -->
     <script src="testjs.js"></script>
+
+    <!-- Import các file JS của từng Toast component (giữ nguyên không sửa file) -->
+    <script src="toasts1.js"></script>
+    <script src="toasts2.js"></script>
+    <script src="toasts3.js"></script>
+    <script src="toasts4.js"></script>
 </body>
 
 </html>

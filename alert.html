@@ -1,0 +1,111 @@
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <!-- icon chữ i / thông tin -->
+    <symbol id="info-fill" viewBox="0 0 16 16">
+        <path
+            d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287z" />
+    </symbol>
+    <!-- icon dấu tick / thành công -->
+    <symbol id="check-circle-fill" viewBox="0 0 16 16">
+        <path
+            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
+    </symbol>
+    <!-- icon cảnh báo / lỗi -->
+    <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
+        <path
+            d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+    </symbol>
+    <!-- icon đóng / dấu X (dùng cho nút tắt alert) -->
+    <symbol id="x-lg" viewBox="0 0 16 16">
+        <path
+            d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+    </symbol>
+    <!-- icon ngôi sao (dùng cho đánh giá / nổi bật) -->
+    <symbol id="star-fill" viewBox="0 0 16 16">
+        <path
+            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
+    </symbol>
+    <!-- icon chuông thông báo (notification) -->
+    <symbol id="bell-fill" viewBox="0 0 16 16">
+        <path
+            d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
+    </symbol>
+    <!-- icon khóa (security / quyền hạn) -->
+    <symbol id="lock-fill" viewBox="0 0 16 16">
+        <path
+            d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
+    </symbol>
+    <!-- icon bánh răng (cài đặt / hệ thống) -->
+    <symbol id="gear-fill" viewBox="0 0 16 16">
+        <path
+            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.988 1.988l.17.31c.45.82-.12 1.848-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.988 1.988l.31-.17a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.988-1.988l-.17-.31a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.988-1.988l-.31.17a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.86z" />
+    </symbol>
+</svg>
+
+<!-- 1. Alert với symbol: info-fill -->
+<div class="alert alert-primary alert-dismissible fade show d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+        <use xlink:href="#info-fill" />
+    </svg>
+    <div class="flex-grow-1">
+        Thông tin hệ thống mới
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- 2. Alert với symbol: check-circle-fill -->
+<div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+        <use xlink:href="#check-circle-fill" />
+    </svg>
+    <div class="flex-grow-1">
+        Thực hiện thao tác thành công
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- 3. Alert với symbol: exclamation-triangle-fill -->
+<div class="alert alert-warning alert-dismissible fade show d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+        <use xlink:href="#exclamation-triangle-fill" />
+    </svg>
+    <div class="flex-grow-1">
+        Cảnh báo rủi ro hệ thống
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- 4. Alert với symbol: star-fill -->
+<div class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Star:">
+        <use xlink:href="#star-fill" />
+    </svg>
+    <div class="flex-grow-1">
+        Tính năng nổi bật mới
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- 5. Alert với symbol: bell-fill -->
+<div class="alert alert-secondary alert-dismissible fade show d-flex align-items-center" role="alert">
+    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Bell:">
+        <use xlink:href="#bell-fill" />
+    </svg>
+    <div class="flex-grow-1">
+        Bạn có thông báo chưa đọc
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+
+<!-- Alert thông báo dài sử dụng symbol cuối cùng: gear-fill -->
+<div class="alert alert-dark alert-dismissible fade show" role="alert">
+    <div class="d-flex align-items-center mb-2">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Gear:">
+            <use xlink:href="#gear-fill" />
+        </svg>
+        <h4 class="alert-heading mb-0">Hệ thống đang bảo trì định kỳ!</h4>
+    </div>
+    <p>Hệ thống đang bảo trì định kỳ.</p>
+    <hr>
+    <p class="mb-0">Vui lòng quay lại sau.</p>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>

@@ -1,0 +1,24 @@
+.toast-undo {
+    background-color: #1f2937;
+    border-left: 4px solid #10b981;
+    border-radius: 0.5rem;
+    color: #f3f4f6;
+    width: 350px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2);
+}
+
+.btn-undo {
+    color: #34d399;
+    font-weight: 600;
+    text-decoration: none;
+    background: rgba(52, 211, 153, 0.1);
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+    transition: 0.2s;
+}
+
+.btn-undo:hover {
+    background: rgba(52, 211, 153, 0.2);
+    color: #10b981;
+}
