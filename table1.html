@@ -179,4 +179,35 @@
             </tbody>
         </table>
     </div>
+
+    <div class="hs-pagination-footer d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div class="hs-pagination-info">
+            Showing <span class="hs-page-start">1</span> to <span class="hs-page-end">10</span> of <span
+                class="hs-page-total">420</span> results
+        </div>
+
+        <div class="dropdown hs-pagination-per-page">
+            <button class="hs-pagination-per-page-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="hs-per-page-text">Per page</span>
+                <span class="hs-per-page-value">10</span>
+                <i class="bi bi-chevron-down hs-chevron-icon"></i>
+            </button>
+            <ul class="dropdown-menu hs-pagination-dropdown-menu">
+                <li><a class="dropdown-item active" href="javascript:void(0)" data-per-page="10">10</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" data-per-page="25">25</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" data-per-page="50">50</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" data-per-page="100">100</a></li>
+            </ul>
+        </div>
+
+        <div class="hs-pagination-nav" role="navigation" aria-label="Table Pagination">
+            <button type="button" class="hs-pagination-btn active" data-page="1">1</button>
+            <button type="button" class="hs-pagination-btn" data-page="2">2</button>
+            <button type="button" class="hs-pagination-btn" data-page="3">3</button>
+            <button type="button" class="hs-pagination-btn" data-page="4">4</button>
+            <span class="hs-pagination-ellipsis">&hellip;</span>
+            <button type="button" class="hs-pagination-btn" data-page="41">41</button>
+            <button type="button" class="hs-pagination-btn" data-page="42">42</button>
+        </div>
+    </div>
 </div>

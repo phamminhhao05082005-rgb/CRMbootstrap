@@ -5210,6 +5210,37 @@ document.addEventListener("DOMContentLoaded", function () {
             </tbody>
         </table>
     </div>
+
+    <!-- Thanh phân trang CRM (HubSpot style dark footer) -->
+    <div class="hs-pagination-footer d-flex justify-content-between align-items-center flex-wrap gap-3">
+        <div class="hs-pagination-info">
+            Showing <span class="hs-page-start">1</span> to <span class="hs-page-end">10</span> of <span class="hs-page-total">420</span> results
+        </div>
+
+        <div class="dropdown hs-pagination-per-page">
+            <button class="hs-pagination-per-page-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="hs-per-page-text">Per page</span>
+                <span class="hs-per-page-value">10</span>
+                <i class="bi bi-chevron-down hs-chevron-icon"></i>
+            </button>
+            <ul class="dropdown-menu hs-pagination-dropdown-menu">
+                <li><a class="dropdown-item active" href="javascript:void(0)" data-per-page="10">10</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" data-per-page="25">25</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" data-per-page="50">50</a></li>
+                <li><a class="dropdown-item" href="javascript:void(0)" data-per-page="100">100</a></li>
+            </ul>
+        </div>
+
+        <div class="hs-pagination-nav" role="navigation" aria-label="Table Pagination">
+            <button type="button" class="hs-pagination-btn active" data-page="1">1</button>
+            <button type="button" class="hs-pagination-btn" data-page="2">2</button>
+            <button type="button" class="hs-pagination-btn" data-page="3">3</button>
+            <button type="button" class="hs-pagination-btn" data-page="4">4</button>
+            <span class="hs-pagination-ellipsis">&hellip;</span>
+            <button type="button" class="hs-pagination-btn" data-page="41">41</button>
+            <button type="button" class="hs-pagination-btn" data-page="42">42</button>
+        </div>
+    </div>
 </div>`,
     'table1.css': `.hs-btn {
     background-color: #fdfdfd;
@@ -5300,7 +5331,8 @@ document.addEventListener("DOMContentLoaded", function () {
 .hs-table-container {
     background-color: #ffffff;
     border: 1px solid #dfe3eb;
-    border-radius: 0 0 8px 8px;
+    border-bottom: none;
+    border-radius: 0;
     overflow-x: auto;
 }
 
@@ -5421,6 +5453,176 @@ document.addEventListener("DOMContentLoaded", function () {
 
 .table-row-selected {
     background-color: #eaf0f6 !important;
+}
+
+/* ==========================================================================
+   TABLE 1 PAGINATION STYLING (Light Theme - Modern CRM Style)
+   ========================================================================== */
+.hs-pagination-footer {
+    background-color: #ffffff;
+    border: 1px solid #dfe3eb;
+    border-top: 1px solid #edf1f7;
+    border-radius: 0 0 8px 8px;
+    padding: 12px 20px;
+    color: #33475b;
+    font-size: 14px;
+    font-family: inherit;
+}
+
+.hs-pagination-info {
+    color: #516f90;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    user-select: none;
+}
+
+.hs-pagination-info .hs-page-start,
+.hs-pagination-info .hs-page-end,
+.hs-pagination-info .hs-page-total {
+    font-weight: 600;
+    color: #33475b;
+}
+
+.hs-pagination-per-page {
+    position: relative;
+}
+
+.hs-pagination-per-page-btn {
+    background-color: #ffffff;
+    border: 1.5px solid #0091ae;
+    color: #33475b;
+    border-radius: 6px;
+    padding: 5px 14px;
+    font-size: 14px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 1px 2px rgba(0, 145, 174, 0.08);
+}
+
+.hs-pagination-per-page-btn::after {
+    display: none !important;
+}
+
+.hs-pagination-per-page-btn:hover,
+.hs-pagination-per-page-btn:focus,
+.hs-pagination-per-page-btn[aria-expanded="true"] {
+    background-color: #f5fbfc;
+    border-color: #007a93;
+    color: #1e293b;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 145, 174, 0.18);
+}
+
+.hs-per-page-text {
+    color: #64748b;
+    font-weight: 400;
+}
+
+.hs-per-page-value {
+    color: #0091ae;
+    font-weight: 600;
+}
+
+.hs-chevron-icon {
+    font-size: 11px;
+    color: #64748b;
+    transition: transform 0.2s ease;
+}
+
+.hs-pagination-per-page-btn[aria-expanded="true"] .hs-chevron-icon {
+    transform: rotate(180deg);
+}
+
+.hs-pagination-dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #cbd6e2;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    min-width: 100px;
+    padding: 6px;
+}
+
+.hs-pagination-dropdown-menu .dropdown-item {
+    color: #33475b;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 5px;
+    transition: all 0.15s ease;
+}
+
+.hs-pagination-dropdown-menu .dropdown-item:hover {
+    background-color: #eaf0f6;
+    color: #0091ae;
+}
+
+.hs-pagination-dropdown-menu .dropdown-item.active,
+.hs-pagination-dropdown-menu .dropdown-item:active {
+    background-color: #0091ae;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+/* Grouped segmented buttons */
+.hs-pagination-nav {
+    display: inline-flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #cbd6e2;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.hs-pagination-btn {
+    background: #ffffff;
+    border: none;
+    border-right: 1px solid #dfe3eb;
+    color: #33475b;
+    font-size: 14px;
+    font-weight: 500;
+    min-width: 38px;
+    height: 36px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.hs-pagination-btn:last-child {
+    border-right: none;
+}
+
+.hs-pagination-btn:hover:not(.active) {
+    background-color: #f5f8fa;
+    color: #0091ae;
+}
+
+.hs-pagination-btn.active {
+    background-color: #eaf0f6;
+    color: #0091ae;
+    font-weight: 600;
+    cursor: default;
+}
+
+.hs-pagination-ellipsis {
+    color: #8898aa;
+    font-size: 14px;
+    height: 36px;
+    min-width: 32px;
+    padding: 0 8px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #dfe3eb;
+    user-select: none;
 }`,
     'table1.js': `document.addEventListener('DOMContentLoaded', function () {
     const tables = document.querySelectorAll('.hs-table');
@@ -5498,6 +5700,114 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+
+    // ==========================================
+    // Table 1 Pagination Interactive Logic
+    // ==========================================
+    function initTable1Pagination() {
+        const paginationFooters = document.querySelectorAll('.hs-pagination-footer');
+        paginationFooters.forEach(footer => {
+            if (footer.dataset.paginationInitialized) return;
+            footer.dataset.paginationInitialized = 'true';
+
+            let currentPage = 1;
+            let perPage = 10;
+            const totalResults = 420;
+
+            const infoStart = footer.querySelector('.hs-page-start');
+            const infoEnd = footer.querySelector('.hs-page-end');
+            const infoTotal = footer.querySelector('.hs-page-total');
+            const perPageValue = footer.querySelector('.hs-per-page-value');
+            const perPageItems = footer.querySelectorAll('.hs-pagination-dropdown-menu .dropdown-item');
+            const navContainer = footer.querySelector('.hs-pagination-nav');
+
+            function updatePaginationInfo() {
+                const totalPages = Math.ceil(totalResults / perPage);
+                if (currentPage > totalPages) currentPage = totalPages;
+                if (currentPage < 1) currentPage = 1;
+
+                const start = totalResults === 0 ? 0 : (currentPage - 1) * perPage + 1;
+                const end = Math.min(currentPage * perPage, totalResults);
+
+                if (infoStart) infoStart.textContent = start;
+                if (infoEnd) infoEnd.textContent = end;
+                if (infoTotal) infoTotal.textContent = totalResults;
+                if (perPageValue) perPageValue.textContent = perPage;
+
+                renderPaginationButtons(totalPages);
+            }
+
+            function renderPaginationButtons(totalPages) {
+                if (!navContainer) return;
+
+                let pages = [];
+                if (totalPages <= 7) {
+                    for (let i = 1; i <= totalPages; i++) pages.push(i);
+                } else {
+                    if (currentPage <= 4) {
+                        pages = [1, 2, 3, 4, '...', totalPages - 1, totalPages];
+                    } else if (currentPage >= totalPages - 3) {
+                        pages = [1, 2, '...', totalPages - 3, totalPages - 2, totalPages - 1, totalPages];
+                    } else {
+                        pages = [1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages];
+                    }
+                }
+
+                navContainer.innerHTML = '';
+                pages.forEach(p => {
+                    if (p === '...') {
+                        const ellipsis = document.createElement('span');
+                        ellipsis.className = 'hs-pagination-ellipsis';
+                        ellipsis.innerHTML = '&hellip;';
+                        navContainer.appendChild(ellipsis);
+                    } else {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.className = `hs-pagination-btn ${p === currentPage ? 'active' : ''}`;
+                        btn.textContent = p;
+                        btn.setAttribute('data-page', p);
+                        btn.addEventListener('click', function (e) {
+                            e.preventDefault();
+                            if (currentPage !== p) {
+                                currentPage = p;
+                                updatePaginationInfo();
+                            }
+                        });
+                        navContainer.appendChild(btn);
+                    }
+                });
+            }
+
+            // Per page dropdown selection
+            perPageItems.forEach(item => {
+                item.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    perPageItems.forEach(el => el.classList.remove('active'));
+                    this.classList.add('active');
+                    perPage = parseInt(this.getAttribute('data-per-page'), 10) || 10;
+                    currentPage = 1;
+                    updatePaginationInfo();
+                });
+            });
+
+            // Bind click to static initial buttons
+            if (navContainer) {
+                const initialBtns = navContainer.querySelectorAll('.hs-pagination-btn');
+                initialBtns.forEach(btn => {
+                    btn.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const p = parseInt(this.getAttribute('data-page'), 10);
+                        if (p && p !== currentPage) {
+                            currentPage = p;
+                            updatePaginationInfo();
+                        }
+                    });
+                });
+            }
+        });
+    }
+
+    initTable1Pagination();
 });`
 };
 
