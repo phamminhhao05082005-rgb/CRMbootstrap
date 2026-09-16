@@ -5763,7 +5763,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     } else {
                         const btn = document.createElement('button');
                         btn.type = 'button';
-                        btn.className = `hs-pagination-btn ${p === currentPage ? 'active' : ''}`;
+                        btn.className = p === currentPage ? 'hs-pagination-btn active' : 'hs-pagination-btn';
                         btn.textContent = p;
                         btn.setAttribute('data-page', p);
                         btn.addEventListener('click', function (e) {
@@ -5817,6 +5817,12 @@ async function loadComponent(htmlPath, cssPath, previewId, codeHtmlId, codeCssId
     let cssContent = '';
     let jsContent = '';
 
+    const getFallback = (p) => {
+        if (!p || typeof FALLBACK_COMPONENTS === 'undefined') return '';
+        const clean = p.replace(/^\.\//, '');
+        return FALLBACK_COMPONENTS[p] || FALLBACK_COMPONENTS[clean] || FALLBACK_COMPONENTS['./' + clean] || '';
+    };
+
     // Tải HTML
     try {
         const htmlRes = await fetch(htmlPath);
@@ -5826,9 +5832,8 @@ async function loadComponent(htmlPath, cssPath, previewId, codeHtmlId, codeCssId
             throw new Error(`HTTP ${htmlRes.status}`);
         }
     } catch (fetchErr) {
-        if (FALLBACK_COMPONENTS[htmlPath]) {
-            htmlContent = FALLBACK_COMPONENTS[htmlPath];
-        } else {
+        htmlContent = getFallback(htmlPath);
+        if (!htmlContent) {
             console.error(`Không thể tải ${htmlPath}:`, fetchErr);
         }
     }
@@ -5855,9 +5860,8 @@ async function loadComponent(htmlPath, cssPath, previewId, codeHtmlId, codeCssId
                 throw new Error(`HTTP ${cssRes.status}`);
             }
         } catch (cssErr) {
-            if (FALLBACK_COMPONENTS[cssPath]) {
-                cssContent = FALLBACK_COMPONENTS[cssPath];
-            } else {
+            cssContent = getFallback(cssPath);
+            if (!cssContent) {
                 console.error(`Không thể tải ${cssPath}:`, cssErr);
             }
         }
@@ -5878,9 +5882,8 @@ async function loadComponent(htmlPath, cssPath, previewId, codeHtmlId, codeCssId
                 throw new Error(`HTTP ${jsRes.status}`);
             }
         } catch (jsErr) {
-            if (FALLBACK_COMPONENTS[jsPath]) {
-                jsContent = FALLBACK_COMPONENTS[jsPath];
-            } else {
+            jsContent = getFallback(jsPath);
+            if (!jsContent) {
                 console.error(`Không thể tải ${jsPath}:`, jsErr);
             }
         }

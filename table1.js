@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     } else {
                         const btn = document.createElement('button');
                         btn.type = 'button';
-                        btn.className = `hs-pagination-btn ${p === currentPage ? 'active' : ''}`;
+                        btn.className = p === currentPage ? 'hs-pagination-btn active' : 'hs-pagination-btn';
                         btn.textContent = p;
                         btn.setAttribute('data-page', p);
                         btn.addEventListener('click', function (e) {
