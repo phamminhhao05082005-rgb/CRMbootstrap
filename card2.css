@@ -1,0 +1,107 @@
+ .crm-kanban-card {
+     background: #ffffff;
+     border: 1px solid #e5e7eb;
+     border-radius: 12px;
+     padding: 16px;
+     width: 320px;
+     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+     transition: all 0.2s ease-in-out;
+     cursor: pointer;
+ }
+
+ .crm-kanban-card:hover {
+     transform: translateY(-2px);
+     box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+     border-color: #d1d5db;
+ }
+
+ .crm-card-title {
+     font-size: 16px;
+     font-weight: 700;
+     color: #0f766e;
+     margin-bottom: 14px;
+     letter-spacing: -0.01em;
+ }
+
+ .crm-card-item {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+     font-size: 14px;
+     color: #4b5563;
+     margin-bottom: 10px;
+     font-weight: 500;
+ }
+
+ .crm-card-item i.icon-main {
+     color: #6b7280;
+     font-size: 16px;
+     width: 18px;
+     display: flex;
+     justify-content: center;
+ }
+
+ .crm-avatar-small {
+     width: 22px;
+     height: 22px;
+     background-color: #f3f4f6;
+     color: #6b7280;
+     border-radius: 50%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     font-size: 12px;
+ }
+
+ .crm-card-footer {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-top: 18px;
+     padding-top: 14px;
+     border-top: 1px solid #f3f4f6;
+ }
+
+ .crm-footer-actions {
+     display: flex;
+     gap: 14px;
+     color: #9ca3af;
+     font-size: 16px;
+ }
+
+ .crm-footer-actions i {
+     transition: color 0.15s ease;
+ }
+
+ .crm-footer-actions i:hover {
+     color: #4b5563;
+ }
+
+ .crm-time-badge {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+     background-color: #f9fafb;
+     padding: 4px 10px;
+     border-radius: 6px;
+     font-size: 12px;
+     color: #4b5563;
+     font-weight: 600;
+     border: 1px solid #e5e7eb;
+     transition: background-color 0.15s ease;
+ }
+
+ .crm-time-badge:hover {
+     background-color: #f3f4f6;
+ }
+
+ .crm-time-badge .separator {
+     width: 1px;
+     height: 14px;
+     background-color: #d1d5db;
+ }
+
+ .crm-time-badge .alert-icon {
+     color: #ef4444;
+     font-size: 14px;
+ }

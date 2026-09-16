@@ -1,0 +1,74 @@
+.btn-trigger {
+    background-color: #10b981;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    transition: all 0.2s;
+}
+
+.btn-trigger:hover {
+    background-color: #059669;
+    color: #fff;
+}
+
+.crm-popover {
+    background-color: #1f2937;
+    border: 1px solid #374151;
+    border-radius: 0.75rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    padding: 1.25rem;
+    min-width: 300px;
+    color: #e5e7eb;
+    margin-top: 0.5rem !important;
+}
+
+.crm-popover-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.crm-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: #9ca3af;
+    margin-bottom: 0.4rem;
+}
+
+.crm-control {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    color: #f3f4f6;
+    border-radius: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.crm-control:focus {
+    background-color: #374151;
+    border-color: #10b981;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
+    color: #fff;
+}
+
+.crm-control::placeholder {
+    color: #9ca3af;
+}
+
+.btn-action-primary {
+    background-color: #10b981;
+    color: #fff;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+}
+
+.btn-action-primary:hover {
+    background-color: #059669;
+    color: #fff;
+}

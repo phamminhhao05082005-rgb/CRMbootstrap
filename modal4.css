@@ -1,0 +1,49 @@
+.crm-btn-toggle {
+    background-color: #1e3a8a;
+    border-color: #3b82f6;
+    color: #93c5fd;
+    font-weight: 500;
+}
+
+.crm-btn-toggle:hover {
+    background-color: #1e40af;
+    color: #fff;
+}
+
+.crm-modal-content {
+    background-color: #1f2937;
+    color: #f3f4f6;
+    border-radius: 0.75rem;
+    border: none;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.crm-modal-text {
+    color: #d1d5db;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+.crm-icon-warning {
+    color: #9ca3af;
+}
+
+.crm-btn-danger {
+    background-color: #dc2626;
+    border: none;
+}
+
+.crm-btn-danger:hover {
+    background-color: #b91c1c;
+}
+
+.crm-btn-cancel {
+    background-color: #374151;
+    border: 1px solid #4b5563;
+    color: #f3f4f6;
+}
+
+.crm-btn-cancel:hover {
+    background-color: #4b5563;
+    color: #fff;
+}

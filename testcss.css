@@ -441,3 +441,259 @@ body {
     overflow-y: auto;
     white-space: pre-wrap;
 }
+
+/* ==========================================================================
+   POPOVER PREVIEWS CUSTOM STYLING & SCOPING
+   ========================================================================== */
+.preview-popover-box {
+    background-color: #f8fafc;
+    border-radius: 0 0 12px 12px;
+    position: relative;
+    overflow: visible !important;
+}
+
+#preview-popovers1 {
+    min-height: 330px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+#preview-popovers2 {
+    min-height: 480px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+#preview-popovers3 {
+    min-height: 460px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+#preview-popovers4 {
+    min-height: 430px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+/* Đảm bảo màu sắc nút Filter Contacts (Mẫu 3) giữ chuẩn xanh dương của popovers3.css khi cùng nạp popovers4.css */
+#preview-popovers3 .btn-trigger {
+    background-color: #3b82f6 !important;
+    color: #fff !important;
+}
+#preview-popovers3 .btn-trigger:hover {
+    background-color: #2563eb !important;
+    color: #fff !important;
+}
+#preview-popovers3 .btn-action-primary {
+    background-color: #3b82f6 !important;
+    color: #fff !important;
+}
+#preview-popovers3 .btn-action-primary:hover {
+    background-color: #2563eb !important;
+    color: #fff !important;
+}
+#preview-popovers3 .crm-control:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Đảm bảo popover card hiển thị không bị che khuất trong preview */
+.preview-card:has(#preview-popovers1),
+.preview-card:has(#preview-popovers2),
+.preview-card:has(#preview-popovers3),
+.preview-card:has(#preview-popovers4),
+.preview-card:has(#preview-dropdown1),
+.preview-card:has(#preview-dropdown2),
+.preview-card:has(#preview-dropdown3) {
+    overflow: visible !important;
+}
+
+/* ==========================================================================
+   DROPDOWN PREVIEWS CUSTOM STYLING & SCOPING
+   ========================================================================== */
+#preview-dropdown1 {
+    background-color: #0f172a;
+    min-height: 440px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+#preview-dropdown2 {
+    background-color: #111827;
+    min-height: 460px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+#preview-dropdown3 {
+    background-color: #f8fafc;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+/* Scoping để cách ly class .crm-dropdown-menu và .crm-dropdown-item giữa Dropdown 1 và Dropdown 2 */
+#preview-dropdown1 .crm-dropdown-menu {
+    background-color: #1f2937 !important;
+    border-color: #374151 !important;
+    min-width: 280px !important;
+}
+
+#preview-dropdown1 .crm-dropdown-item {
+    justify-content: flex-start !important;
+    gap: 0.75rem !important;
+}
+
+#preview-dropdown2 .crm-dropdown-menu {
+    background-color: #2d2d2d !important;
+    border-color: #404040 !important;
+    min-width: 220px !important;
+}
+
+#preview-dropdown2 .crm-dropdown-item {
+    justify-content: space-between !important;
+}
+
+/* ==========================================================================
+   MODAL PREVIEWS CUSTOM STYLING & SCOPING
+   ========================================================================== */
+#preview-modal1,
+#preview-modal2,
+#preview-modal3,
+#preview-modal4 {
+    background-color: #0f172a;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 1.5rem;
+    position: relative;
+    border-radius: 0.75rem;
+}
+
+#preview-modal5 {
+    background-color: #f8fafc;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 1.5rem;
+    position: relative;
+    border-radius: 0.75rem;
+}
+
+/* Bảo vệ tiêu đề modal tối màu không bị ghi đè bởi rule toàn cục .modal-title trong modal5.css */
+.crm-modal-dark .modal-title {
+    color: #f8fafc !important;
+}
+
+/* Đảm bảo dropdown và select trong modal hiển thị đúng */
+.crm-modal-dark select option {
+    background-color: #1e293b;
+    color: #f8fafc;
+}
+
+/* ==========================================================================
+   CARD PREVIEWS CUSTOM STYLING
+   ========================================================================== */
+#preview-card1,
+#preview-card2 {
+    background-color: #f1f5f9;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 1.5rem;
+    position: relative;
+    border-radius: 0.75rem;
+}
+
+#preview-card1 .container-fluid {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+/* ==========================================================================
+   OFFCANVAS PREVIEWS CUSTOM STYLING & PROTECTION
+   ========================================================================== */
+#preview-offcanvas1,
+#preview-offcanvas2 {
+    background-color: #f8fafc;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 3rem 1.5rem;
+    position: relative;
+    border-radius: 0.75rem;
+}
+
+/* Bảo vệ styling cho dark modal input tránh bị .form-control của offcanvas1.css ảnh hưởng */
+.crm-modal-dark .form-control.crm-input-dark {
+    background-color: #334155 !important;
+    border: 1px solid #475569 !important;
+    color: #f8fafc !important;
+}
+
+.crm-modal-dark .form-control.crm-input-dark:focus {
+    background-color: #334155 !important;
+    border-color: #3b82f6 !important;
+    color: #f8fafc !important;
+}
+
+/* ==========================================================================
+   TABLE PREVIEWS CUSTOM STYLING
+   ========================================================================== */
+#preview-table1 {
+    background-color: #f8fafc;
+    min-height: 350px;
+    padding: 1.5rem;
+    position: relative;
+    border-radius: 0.75rem;
+    overflow-x: auto;
+}
+
+#preview-table1 .container-fluid {
+    padding: 0;
+}

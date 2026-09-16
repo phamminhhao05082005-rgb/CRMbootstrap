@@ -1,0 +1,41 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#dealActivityModal">
+    <i class="bi bi-clock-history"></i> Open Deal Activity
+</button>
+
+
+<div class="modal fade" id="dealActivityModal" tabindex="-1" aria-labelledby="dealActivityModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content crm-modal-dark p-2">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="dealActivityModalLabel">Deal Activity Log</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body mt-3">
+                <div class="timeline-item mb-4 pb-2">
+                    <div class="timeline-icon"><i class="bi bi-file-earmark-text"></i></div>
+                    <h6 class="fw-bold mb-1">Contract Sent to Client</h6>
+                    <p class="text-secondary small mb-2">Proposal v2.0 including new pricing models.</p>
+                    <button class="btn timeline-btn py-1 px-3"><i class="bi bi-download me-1"></i> Download PDF</button>
+                </div>
+                <div class="timeline-item mb-4 pb-2">
+                    <div class="timeline-icon"><i class="bi bi-camera-video"></i></div>
+                    <h6 class="fw-bold mb-1">Negotiation Meeting</h6>
+                    <p class="text-secondary small mb-2">Discussed terms with technical team.</p>
+                    <button class="btn timeline-btn py-1 px-3"><i class="bi bi-eye me-1"></i> View Notes</button>
+                </div>
+                <div class="timeline-item mb-2 border-0">
+                    <div class="timeline-icon"><i class="bi bi-flag"></i></div>
+                    <h6 class="fw-bold mb-1">Deal Stage: Qualification</h6>
+                    <p class="text-secondary small mb-2">Lead successfully qualified by marketing.</p>
+                    <button class="btn timeline-btn py-1 px-3"><i class="bi bi-box-arrow-up-right me-1"></i> Open
+                        Details</button>
+                </div>
+            </div>
+            <div class="modal-footer border-0 pt-0 d-block">
+                <button type="button" class="btn crm-btn-primary w-100 py-2">View Full History</button>
+            </div>
+        </div>
+    </div>
+</div>

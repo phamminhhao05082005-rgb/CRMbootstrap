@@ -1,0 +1,145 @@
+<div class="quick-filter-bar">
+
+    <button type="button" class="btn-qf-text" data-filter="Ticket owner">
+        Ticket owner <i class="bi bi-caret-down-fill"></i>
+    </button>
+
+    <button type="button" class="btn-qf-text" data-filter="Create date">
+        Create date <i class="bi bi-caret-down-fill"></i>
+    </button>
+
+    <button type="button" class="btn-qf-text" data-filter="Last activity date">
+        Last activity date <i class="bi bi-caret-down-fill"></i>
+    </button>
+
+    <button type="button" class="btn-qf-text" data-filter="Priority">
+        Priority <i class="bi bi-caret-down-fill"></i>
+    </button>
+
+    <div class="qf-divider"></div>
+
+    <button type="button" class="btn-qf-circle shadow-sm" data-bs-toggle="modal" data-bs-target="#editQuickFiltersModal"
+        title="Edit quick filters">
+        <i class="bi bi-pencil"></i>
+    </button>
+
+</div>
+
+<div class="modal fade" id="editQuickFiltersModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content hubspot-style">
+
+            <div class="modal-header hubspot-style">
+                <h5 class="modal-title">Edit quick filters</h5>
+                <button type="button" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body hubspot-style pb-2">
+                <div class="filter-count-text">Quick filters used: <span id="filterCounter">4</span>/10</div>
+
+                <div id="filterListContainer">
+
+                    <div class="filter-item-row">
+                        <div class="filter-select-wrapper">
+                            <i class="bi bi-person-check prefix-icon"></i>
+                            <select class="form-select">
+                                <option selected>Ticket owner</option>
+                                <option>Deal owner</option>
+                                <option>Create date</option>
+                                <option>Close date</option>
+                                <option>Last activity date</option>
+                                <option>Priority</option>
+                                <option>Ticket status</option>
+                                <option>Source</option>
+                                <option>Associated company</option>
+                                <option>Associated contact</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-trash" title="Delete filter">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </div>
+
+                    <div class="filter-item-row">
+                        <div class="filter-select-wrapper">
+                            <i class="bi bi-calendar3 prefix-icon"></i>
+                            <select class="form-select">
+                                <option>Ticket owner</option>
+                                <option>Deal owner</option>
+                                <option selected>Create date</option>
+                                <option>Close date</option>
+                                <option>Last activity date</option>
+                                <option>Priority</option>
+                                <option>Ticket status</option>
+                                <option>Source</option>
+                                <option>Associated company</option>
+                                <option>Associated contact</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-trash" title="Delete filter">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </div>
+
+                    <div class="filter-item-row">
+                        <div class="filter-select-wrapper">
+                            <i class="bi bi-calendar-check prefix-icon"></i>
+                            <select class="form-select">
+                                <option>Ticket owner</option>
+                                <option>Deal owner</option>
+                                <option>Create date</option>
+                                <option>Close date</option>
+                                <option selected>Last activity date</option>
+                                <option>Priority</option>
+                                <option>Ticket status</option>
+                                <option>Source</option>
+                                <option>Associated company</option>
+                                <option>Associated contact</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-trash" title="Delete filter">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </div>
+
+                    <div class="filter-item-row">
+                        <div class="filter-select-wrapper">
+                            <i class="bi bi-list-task prefix-icon"></i>
+                            <select class="form-select">
+                                <option>Ticket owner</option>
+                                <option>Deal owner</option>
+                                <option>Create date</option>
+                                <option>Close date</option>
+                                <option>Last activity date</option>
+                                <option selected>Priority</option>
+                                <option>Ticket status</option>
+                                <option>Source</option>
+                                <option>Associated company</option>
+                                <option>Associated contact</option>
+                            </select>
+                        </div>
+                        <button type="button" class="btn-trash" title="Delete filter">
+                            <i class="bi bi-trash3"></i>
+                        </button>
+                    </div>
+
+                </div>
+
+                <div class="d-flex gap-2 mt-4">
+                    <button type="button" class="btn-action-pill shadow-none" id="btnAddFilter">
+                        <i class="bi bi-plus-lg"></i> Add quick filter
+                    </button>
+                    <button type="button" class="btn-action-pill shadow-none" id="btnClearFilters">
+                        <i class="bi bi-trash3"></i> Delete all quick filters
+                    </button>
+                </div>
+            </div>
+
+            <div class="modal-footer hubspot-style mt-3">
+                <button type="button" class="btn-hs-primary shadow-none" data-bs-dismiss="modal">Done</button>
+                <button type="button" class="btn-hs-outline shadow-none" data-bs-dismiss="modal">Cancel</button>
+            </div>
+
+        </div>
+    </div>
+</div>

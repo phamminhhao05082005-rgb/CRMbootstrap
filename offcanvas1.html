@@ -1,0 +1,101 @@
+<button class="btn-add-contact" type="button" data-bs-toggle="offcanvas" data-bs-target="#createContactCanvas">
+    Add contacts
+    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
+        stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+    </svg>
+</button>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="createContactCanvas">
+    <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Create Contact</h5>
+        <button type="button" class="btn-close-custom" data-bs-dismiss="offcanvas">✕</button>
+    </div>
+
+    <div class="offcanvas-body">
+        <div class="form-group">
+            <label class="form-label">Email</label>
+            <input type="email" class="form-control" value="test@gmail.com" placeholder="Enter email address">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">First name</label>
+            <input type="text" class="form-control" value="test" placeholder="Enter first name">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Last name</label>
+            <input type="text" class="form-control" placeholder="Enter last name">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Contact owner</label>
+            <div class="custom-select-wrapper">
+                <div class="custom-select-trigger">
+                    <span>Phạm Minh Hào</span>
+                </div>
+                <div class="custom-select-menu">
+                    <div class="custom-select-search-wrap">
+                        <input type="text" class="custom-select-search" placeholder="Search owners...">
+                    </div>
+                    <div class="custom-select-list">
+                        <div class="custom-select-item">Phạm Minh Hào</div>
+                        <div class="custom-select-item">John Doe</div>
+                        <div class="custom-select-item">Jane Smith</div>
+                        <div class="custom-select-item">Unassigned</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Job title</label>
+            <input type="text" class="form-control" placeholder="E.g. Marketing Manager">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Phone number</label>
+            <input type="tel" class="form-control" placeholder="E.g. +1 234 567 8900">
+        </div>
+
+        <div class="form-group">
+            <label class="form-label">Lifecycle stage</label>
+            <div class="custom-select-wrapper">
+                <div class="custom-select-trigger">
+                    <span class="c-badge bg-mql">Marketing Qualified Lead</span>
+                </div>
+                <div class="custom-select-menu">
+                    <div class="custom-select-search-wrap">
+                        <input type="text" class="custom-select-search" placeholder="Search stages...">
+                    </div>
+                    <div class="custom-select-list">
+                        <div class="custom-select-item">
+                            <span class="c-badge bg-subscriber">Subscriber</span>
+                        </div>
+                        <div class="custom-select-item">
+                            <span class="c-badge bg-lead">Lead</span>
+                        </div>
+                        <div class="custom-select-item">
+                            <span class="c-badge bg-mql">Marketing Qualified Lead</span>
+                        </div>
+                        <div class="custom-select-item">
+                            <span class="c-badge bg-sql">Sales Qualified Lead</span>
+                        </div>
+                        <div class="custom-select-item">
+                            <span class="c-badge bg-opportunity">Opportunity</span>
+                        </div>
+                        <div class="custom-select-item">
+                            <span class="c-badge bg-customer">Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="offcanvas-footer">
+        <button class="btn-create">Create</button>
+        <button class="btn-outline">Create and add another</button>
+        <button class="btn-outline" data-bs-dismiss="offcanvas">Cancel</button>
+    </div>
+</div>

@@ -1,0 +1,69 @@
+.crm-detail-card {
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 0.75rem;
+    width: 360px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+}
+
+.crm-detail-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #f1f3f5;
+}
+
+.crm-detail-body {
+    padding: 1.25rem;
+}
+
+.deal-icon-box {
+    width: 36px;
+    height: 36px;
+    background-color: #f1f3f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #495057;
+    font-size: 1.1rem;
+}
+
+.action-btn-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    border: none;
+    padding: 0;
+    color: #495057;
+    font-size: 0.75rem;
+    transition: color 0.2s;
+}
+
+.action-btn-item:hover {
+    color: #0d6efd;
+}
+
+.action-icon-circle {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.35rem;
+    background-color: #fff;
+    font-size: 0.95rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.02);
+    transition: all 0.2s ease;
+}
+
+.action-btn-item:hover .action-icon-circle {
+    border-color: #0d6efd;
+    color: #0d6efd;
+    box-shadow: 0 0.25rem 0.5rem rgba(13, 110, 253, 0.1);
+}

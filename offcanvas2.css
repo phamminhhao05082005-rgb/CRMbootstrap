@@ -1,0 +1,42 @@
+.notification-offcanvas {
+    width: 460px !important;
+}
+
+.nav-tabs-custom .nav-link {
+    border: none;
+    color: #495057;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    background: transparent;
+}
+
+.nav-tabs-custom .nav-link.active {
+    color: #212529;
+    font-weight: 600;
+    background: transparent;
+    border-bottom: 2px solid #212529;
+}
+
+.notification-item {
+    padding: 1rem 1.25rem;
+    border-bottom: 1px solid #dee2e6;
+    transition: background-color 0.15s ease;
+}
+
+.notification-item:hover {
+    background-color: #f8f9fa;
+}
+
+.notification-action-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 0.6rem 1.25rem;
+    font-size: 0.875rem;
+    min-height: 48px;
+}
+
+.bell-badge-wrapper {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}

@@ -1,0 +1,54 @@
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#createCompanyModal">
+    <i class="bi bi-plus-lg"></i> Open Create Company Modal
+</button>
+
+
+<div class="modal fade" id="createCompanyModal" tabindex="-1" aria-labelledby="createCompanyModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content crm-modal-dark p-2">
+            <div class="modal-header border-0 pb-0">
+                <h5 class="modal-title fw-bold" id="createCompanyModalLabel">Create new company</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
+                    aria-label="Close"></button>
+            </div>
+            <div class="modal-body border-bottom border-secondary border-opacity-25 mb-3">
+                <form action="#" method="POST">
+                    @csrf
+                    <div class="mb-3">
+                        <label class="form-label text-light fs-6 fw-semibold mb-1">Company Name</label>
+                        <input type="text" class="form-control crm-input-dark py-2" name="name"
+                            placeholder="Type company name">
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-6">
+                            <label class="form-label text-light fs-6 fw-semibold mb-1">Estimated Value</label>
+                            <input type="text" class="form-control crm-input-dark py-2" name="value"
+                                placeholder="$50,000">
+                        </div>
+                        <div class="col-6">
+                            <label class="form-label text-light fs-6 fw-semibold mb-1">Industry</label>
+                            <select class="form-select crm-input-dark py-2" name="industry">
+                                <option selected>Select industry</option>
+                                <option value="tech">Technology</option>
+                                <option value="finance">Finance</option>
+                                <option value="health">Healthcare</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label text-light fs-6 fw-semibold mb-1">Company Description</label>
+                        <textarea class="form-control crm-input-dark" name="description" rows="4"
+                            placeholder="Write company background here..."></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer border-0 pt-0 justify-content-start">
+                <button type="button" class="btn crm-btn-primary px-4 py-2 me-2">
+                    <i class="bi bi-plus"></i> Add new company
+                </button>
+                <button type="button" class="btn crm-btn-cancel px-4 py-2" data-bs-dismiss="modal">Cancel</button>
+            </div>
+        </div>
+    </div>
+</div>

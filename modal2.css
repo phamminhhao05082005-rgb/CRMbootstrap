@@ -1,0 +1,52 @@
+ .crm-modal-dark {
+     background-color: #1e293b;
+     color: #f8fafc;
+     border: 1px solid #334155;
+     border-radius: 0.75rem;
+ }
+
+ .crm-btn-primary {
+     background-color: #3b82f6;
+     border-color: #3b82f6;
+     border-radius: 0.5rem;
+     font-weight: 500;
+ }
+
+ .crm-btn-primary:hover {
+     background-color: #2563eb;
+ }
+
+ .timeline-item {
+     border-left: 1px solid #475569;
+     margin-left: 1rem;
+     padding-left: 1.5rem;
+     position: relative;
+ }
+
+ .timeline-icon {
+     position: absolute;
+     left: -0.75rem;
+     top: 0;
+     background-color: #334155;
+     border-radius: 50%;
+     width: 1.5rem;
+     height: 1.5rem;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     color: #3b82f6;
+     font-size: 0.75rem;
+ }
+
+ .timeline-btn {
+     background-color: #334155;
+     color: #cbd5e1;
+     border: 1px solid #475569;
+     font-size: 0.85rem;
+     border-radius: 0.5rem;
+ }
+
+ .timeline-btn:hover {
+     background-color: #475569;
+     color: white;
+ }

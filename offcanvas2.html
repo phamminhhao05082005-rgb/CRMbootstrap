@@ -1,0 +1,129 @@
+<div class="container">
+
+    <div class="bell-badge-wrapper" data-bs-toggle="offcanvas" data-bs-target="#notificationOffcanvas"
+        aria-controls="notificationOffcanvas">
+        <i class="bi bi-bell fs-3 text-dark"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+            style="font-size: 0.65rem;">
+            2
+        </span>
+    </div>
+</div>
+
+<div class="offcanvas offcanvas-end notification-offcanvas shadow" tabindex="-1" id="notificationOffcanvas"
+    aria-labelledby="notificationOffcanvasLabel">
+
+    <div class="offcanvas-header border-bottom py-3 px-4">
+        <h5 class="offcanvas-title fw-bold text-dark fs-4" id="notificationOffcanvasLabel">Notifications</h5>
+        <button type="button" class="btn-close shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+
+
+    <div class="offcanvas-body p-0 d-flex flex-column">
+
+        <div class="d-flex justify-content-between align-items-center px-3 border-bottom">
+            <ul class="nav nav-tabs nav-tabs-custom mb-0">
+                <li class="nav-item">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tab-unread">Unread
+                        (2)</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-all">All</button>
+                </li>
+                <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#tab-trash">Trash</button>
+                </li>
+            </ul>
+            <button class="btn btn-link text-dark p-0 fs-5"><i class="bi bi-gear"></i></button>
+        </div>
+
+        <div class="notification-action-bar d-flex justify-content-between align-items-center" id="actionBar">
+
+            <div id="defaultActionContent" class="d-flex align-items-center justify-content-between w-100">
+                <div class="form-check d-flex align-items-center gap-2 mb-0">
+                    <input class="form-check-input notification-checkbox shadow-none mt-0" type="checkbox"
+                        id="selectAllCheckbox" style="width: 1.15em; height: 1.15em; cursor: pointer;">
+                    <label class="form-check-label text-dark user-select-none" for="selectAllCheckbox"
+                        style="cursor: pointer;">
+                        Select all <i class="bi bi-info-circle text-muted" style="font-size: 0.8rem;"></i>
+                    </label>
+                </div>
+                <div class="text-secondary">
+                    Type: <span class="fw-semibold text-dark dropdown-toggle" style="cursor: pointer;">All</span>
+                </div>
+            </div>
+
+            <div id="selectedActionContent" class="d-none align-items-center justify-content-between w-100">
+                <div class="form-check d-flex align-items-center gap-2 mb-0">
+                    <input class="form-check-input notification-checkbox shadow-none mt-0" type="checkbox"
+                        id="selectAllCheckboxActive" style="width: 1.15em; height: 1.15em; cursor: pointer;" checked>
+                    <label class="form-check-label fw-medium text-dark user-select-none" for="selectAllCheckboxActive"
+                        id="selectionCountText" style="cursor: pointer;">
+                        All selected
+                    </label>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <button
+                        class="btn btn-link text-dark text-decoration-none p-0 d-flex align-items-center gap-1 fs-6 fw-normal shadow-none"
+                        style="font-size: 0.875rem !important;">
+                        <i class="bi bi-envelope"></i> Mark as read
+                    </button>
+                    <button
+                        class="btn btn-link text-dark text-decoration-none p-0 d-flex align-items-center gap-1 fs-6 fw-normal shadow-none"
+                        style="font-size: 0.875rem !important;">
+                        <i class="bi bi-trash"></i> Delete
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-content flex-grow-1 overflow-auto">
+            <div class="tab-pane fade show active" id="tab-unread">
+                <div class="notification-item d-flex align-items-start gap-3">
+                    <div class="form-check mt-1 mb-0">
+                        <input class="form-check-input single-item-checkbox shadow-none" type="checkbox" value=""
+                            style="width: 1.15em; height: 1.15em; cursor: pointer;">
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start mb-1">
+                            <h6 class="mb-0 fw-bold text-dark fs-6">Your invitation to test1@gmail.com didn't arrive
+                            </h6>
+                            <span class="text-muted" style="font-size: 0.75rem;">3d</span>
+                        </div>
+                        <p class="text-secondary mb-2" style="font-size: 0.825rem;">We've detected that your teammate
+                            hasn't received their ema...</p>
+                        <a href="#"
+                            class="btn btn-outline-secondary btn-sm rounded-pill px-3 py-1 text-dark text-decoration-none d-inline-flex align-items-center gap-1 fw-medium"
+                            style="font-size: 0.75rem;">
+                            <i class="bi bi-link-45deg"></i> Manage Users
+                        </a>
+                    </div>
+                </div>
+
+                <div class="notification-item d-flex align-items-start gap-3">
+                    <div class="form-check mt-1 mb-0">
+                        <input class="form-check-input single-item-checkbox shadow-none" type="checkbox" value=""
+                            style="width: 1.15em; height: 1.15em; cursor: pointer;">
+                    </div>
+                    <div class="flex-grow-1">
+                        <div class="d-flex justify-content-between align-items-start mb-1">
+                            <h6 class="mb-0 fw-bold text-dark fs-6">New unassigned Live Chat conversation from Mar...
+                            </h6>
+                            <span class="text-muted" style="font-size: 0.75rem;">7d</span>
+                        </div>
+                        <p class="text-secondary mb-0" style="font-size: 0.825rem;">Maria Johnson (Sample Contact)
+                            started this conversation: "A...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-all">
+                <div class="p-4 text-center text-muted fs-6">No other notifications</div>
+            </div>
+
+            <div class="tab-pane fade" id="tab-trash">
+                <div class="p-4 text-center text-muted fs-6">Trash is empty</div>
+            </div>
+        </div>
+    </div>
+</div>

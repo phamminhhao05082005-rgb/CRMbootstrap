@@ -1,0 +1,211 @@
+.quick-filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 0;
+}
+
+.btn-qf-text {
+    font-weight: 600;
+    color: #33475b;
+    border: none;
+    background: transparent;
+    padding: 0.4rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    transition: background-color 0.2s, color 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-qf-text:hover {
+    background-color: #f5f8fa;
+    color: #0091ae;
+}
+
+.btn-qf-text i {
+    font-size: 0.75rem;
+    color: #516f90;
+}
+
+.qf-divider {
+    width: 1px;
+    height: 24px;
+    background-color: #cbd6e2;
+    margin: 0 0.5rem;
+}
+
+.btn-qf-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid #cbd6e2;
+    background: white;
+    color: #33475b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.btn-qf-circle:hover {
+    background-color: #f5f8fa;
+    border-color: #7c98b6;
+}
+
+.modal-content.hubspot-style {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.modal-header.hubspot-style {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.25rem 1.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #212529;
+    font-size: 1.25rem;
+}
+
+.modal-body.hubspot-style {
+    padding: 1.5rem;
+}
+
+.filter-count-text {
+    font-size: 0.875rem;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.filter-item-row {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.filter-select-wrapper {
+    position: relative;
+    flex-grow: 1;
+}
+
+.filter-select-wrapper .prefix-icon {
+    position: absolute;
+    left: 0.875rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #868e96;
+    font-size: 0.9rem;
+    pointer-events: none;
+}
+
+.filter-select-wrapper .form-select {
+    padding-left: 2.25rem;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    color: #495057;
+    font-size: 0.9rem;
+    height: 42px;
+    box-shadow: none;
+    cursor: pointer;
+}
+
+.filter-select-wrapper .form-select:focus {
+    border-color: #0d6efd;
+}
+
+.btn-trash {
+    background: transparent;
+    border: none;
+    color: #6c757d;
+    padding: 0.5rem;
+    border-radius: 6px;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-trash:hover {
+    background-color: #f3f4f6;
+    color: #dc3545;
+}
+
+.btn-action-pill {
+    background: white;
+    border: 1px solid #ced4da;
+    border-radius: 20px;
+    padding: 0.4rem 1rem;
+    font-size: 0.825rem;
+    color: #495057;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.btn-action-pill:hover {
+    background-color: #f8f9fa;
+    color: #212529;
+}
+
+.modal-footer.hubspot-style {
+    border-top: none;
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    justify-content: flex-start;
+    gap: 0.75rem;
+}
+
+.btn-hs-primary {
+    background-color: #224341;
+    color: white;
+    border-radius: 6px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.btn-hs-primary:hover {
+    background-color: #18302f;
+    color: white;
+}
+
+.btn-hs-outline {
+    background-color: white;
+    color: #212529;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-hs-outline:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-qf-text.active {
+    background-color: #eaf0f6;
+    color: #0091ae;
+}
+
+.btn-qf-text.active i {
+    color: #0091ae;
+}
+
+.btn-action-pill:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
+.qf-empty-notice {
+    color: #868e96;
+    font-size: 0.875rem;
+    padding: 0.4rem 0.75rem;
+}

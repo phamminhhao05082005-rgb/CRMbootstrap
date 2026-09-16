@@ -1,0 +1,43 @@
+.crm-modal-dark {
+    background-color: #1e293b;
+    color: #f8fafc;
+    border: 1px solid #334155;
+    border-radius: 0.75rem;
+}
+
+.crm-input-dark {
+    background-color: #334155;
+    border: 1px solid #475569;
+    color: #f8fafc;
+    border-radius: 0.5rem;
+}
+
+.crm-input-dark:focus {
+    background-color: #334155;
+    border-color: #3b82f6;
+    color: #f8fafc;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.crm-btn-primary {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+    border-radius: 0.5rem;
+    font-weight: 500;
+}
+
+.crm-btn-primary:hover {
+    background-color: #2563eb;
+}
+
+.crm-btn-cancel {
+    background-color: #334155;
+    border: 1px solid #475569;
+    color: #cbd5e1;
+    border-radius: 0.5rem;
+}
+
+.crm-btn-cancel:hover {
+    background-color: #475569;
+    color: white;
+}

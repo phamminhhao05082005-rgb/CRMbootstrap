@@ -1,0 +1,182 @@
+<div class="container-fluid px-0">
+    <div class="d-flex justify-content-between align-items-center p-3 hs-toolbar">
+        <div class="d-flex align-items-center gap-3">
+            <div class="position-relative">
+                <i class="bi bi-search hs-search-icon"></i>
+                <input type="text" class="form-control hs-search-input" placeholder="Search ( / )">
+            </div>
+
+            <button class="hs-btn hs-btn-pill" type="button" data-bs-toggle="collapse"
+                data-bs-target="#quickFiltersCollapse" aria-expanded="true" aria-controls="quickFiltersCollapse">
+                <i class="bi bi-filter"></i> Filter
+            </button>
+
+            <div class="dropdown">
+                <button class="hs-btn hs-btn-pill" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-sort-down"></i> Sort by
+                </button>
+                <div class="dropdown-menu dropdown-menu-custom">
+                    <label class="form-label text-muted small fw-semibold mb-2">Sort by</label>
+                    <div class="d-flex gap-2">
+                        <select class="form-select form-select-sm border-secondary-subtle">
+                            <option selected>Lead Status</option>
+                            <option>Create Date</option>
+                            <option>Name</option>
+                        </select>
+                        <div class="btn-group sort-btn-group" role="group">
+                            <button type="button" class="btn btn-light active">Z &rarr; A</button>
+                            <button type="button" class="btn btn-light">A &rarr; Z</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="collapse show" id="quickFiltersCollapse">
+        <div class="d-flex align-items-center gap-3 p-3 hs-quick-filters">
+            <div class="dropdown">
+                <button class="hs-quick-filter-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Contact owner <i class="bi bi-caret-down-fill small"></i>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-small">
+                    <li><a class="dropdown-item dropdown-item-custom" href="#">Me</a></li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="#">Unassigned</a></li>
+                    <li>
+                        <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item dropdown-item-custom" href="#">All owners</a></li>
+                </ul>
+            </div>
+
+            <div class="dropdown">
+                <button class="hs-quick-filter-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Create date <i class="bi bi-caret-down-fill small"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-custom">
+                    <label class="form-label text-muted small fw-semibold mb-2">Date range</label>
+                    <select class="form-select form-select-sm mb-2">
+                        <option>Today</option>
+                        <option>Yesterday</option>
+                        <option>This week</option>
+                        <option>This month</option>
+                        <option>Custom range</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="hs-quick-filter-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Last activity date <i class="bi bi-caret-down-fill small"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-custom">
+                    <label class="form-label text-muted small fw-semibold mb-2">Date range</label>
+                    <select class="form-select form-select-sm mb-2">
+                        <option>Any time</option>
+                        <option>Past 7 days</option>
+                        <option>Past 30 days</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="hs-quick-filter-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Lead status <i class="bi bi-caret-down-fill small"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-custom">
+                    <div class="form-check mb-2">
+                        <input class="form-check-input hs-checkbox" type="checkbox" id="status1">
+                        <label class="form-check-label ms-2 font-inter" style="font-size: 14px;"
+                            for="status1">New</label>
+                    </div>
+                    <div class="form-check mb-2">
+                        <input class="form-check-input hs-checkbox" type="checkbox" id="status2">
+                        <label class="form-check-label ms-2 font-inter" style="font-size: 14px;"
+                            for="status2">Open</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input hs-checkbox" type="checkbox" id="status3">
+                        <label class="form-check-label ms-2 font-inter" style="font-size: 14px;"
+                            for="status3">Connected</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="hs-table-container">
+        <table class="table hs-table align-middle">
+            <thead>
+                <tr>
+                    <th style="width: 40px;"><input class="form-check-input hs-checkbox" type="checkbox"
+                            id="selectAllCheckbox"></th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Contact owner</th>
+                    <th>Primary company</th>
+                    <th>Last Activity Date</th>
+                    <th>Lead Status <i class="bi bi-arrow-down"></i></th>
+                    <th>Create Date</th>
+                    <th style="width: 40px;"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input class="form-check-input hs-checkbox row-checkbox" type="checkbox"></td>
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-chevron-right text-muted small"></i>
+                            <div class="hs-avatar hs-avatar-gray">P</div>
+                            <a href="#" class="hs-link">phamminhhao050...</a>
+                        </div>
+                    </td>
+                    <td><a href="#" class="hs-link">phamminhhao05082005... <i
+                                class="bi bi-box-arrow-up-right small"></i></a></td>
+                    <td class="text-muted">--</td>
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="hs-avatar hs-avatar-gray"><i class="bi bi-person"></i></div>
+                            HÀO PHẠM MINH (2351...
+                        </div>
+                    </td>
+                    <td class="text-muted">--</td>
+                    <td class="text-muted">--</td>
+                    <td>Connected</td>
+                    <td>Sep 12, 2026 10:07 AM GMT+7</td>
+                    <td><button class="btn btn-sm text-muted"><i class="bi bi-grip-vertical"></i></button></td>
+                </tr>
+                <tr>
+                    <td><input class="form-check-input hs-checkbox row-checkbox" type="checkbox"></td>
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <i class="bi bi-chevron-right text-muted small"></i>
+                            <div class="hs-avatar bg-primary text-white"><i class="bi bi-building"></i></div>
+                            <a href="#" class="hs-link">dsad dsad</a>
+                        </div>
+                    </td>
+                    <td><a href="#" class="hs-link">2351010052hao@ou.edu... <i
+                                class="bi bi-box-arrow-up-right small"></i></a></td>
+                    <td class="text-muted">--</td>
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="hs-avatar hs-avatar-gray"><i class="bi bi-person"></i></div>
+                            HÀO PHẠM MINH (2351...
+                        </div>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center gap-2">
+                            <div class="hs-avatar bg-primary text-white"><i class="bi bi-building"></i></div>
+                            <a href="#" class="hs-link">Trường Đại học Mở Th...</a>
+                        </div>
+                    </td>
+                    <td class="text-muted">--</td>
+                    <td class="text-muted">--</td>
+                    <td>Sep 11, 2026 2:12 PM GMT+7</td>
+                    <td><button class="btn btn-sm text-muted"><i class="bi bi-grip-vertical"></i></button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
