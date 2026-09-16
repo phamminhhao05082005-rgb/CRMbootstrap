@@ -1250,48 +1250,48 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Tải 4 Mẫu Toasts
     loadComponent(
-        'toasts1.html',
-        'toasts1.css',
+        './toasts1.html',
+        './toasts1.css',
         'preview-toasts1',
         'code-html-toasts1',
         'code-css-toasts1',
-        'toasts1.js',
+        './toasts1.js',
         'code-js-toasts1'
     );
 
     loadComponent(
-        'toasts2.html',
-        'toasts2.css',
+        './toasts2.html',
+        './toasts2.css',
         'preview-toasts2',
         'code-html-toasts2',
         'code-css-toasts2',
-        'toasts2.js',
+        './toasts2.js',
         'code-js-toasts2'
     );
 
     loadComponent(
-        'toasts3.html',
-        'toasts3.css',
+        './toasts3.html',
+        './toasts3.css',
         'preview-toasts3',
         'code-html-toasts3',
         'code-css-toasts3',
-        'toasts3.js',
+        './toasts3.js',
         'code-js-toasts3'
     );
 
     loadComponent(
-        'toasts4.html',
-        'toasts4.css',
+        './toasts4.html',
+        './toasts4.css',
         'preview-toasts4',
         'code-html-toasts4',
         'code-css-toasts4',
-        'toasts4.js',
+        './toasts4.js',
         'code-js-toasts4'
     );
 
     // Tải Component Alert
     loadComponent(
-        'alert.html',
+        './alert.html',
         null,
         'preview-alert',
         'code-html-alert',
