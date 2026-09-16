@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="toasts2.css">
     <link rel="stylesheet" href="toasts3.css">
     <link rel="stylesheet" href="toasts4.css">
+    <link rel="stylesheet" href="carousel1.css">
+    <link rel="stylesheet" href="carousel2.css">
+    <link rel="stylesheet" href="carousel3.css">
 
     <!-- CSS Gốc (load sau để quản lý layout và ghi đè kiểu body an toàn) -->
     <link rel="stylesheet" href="testcss.css">
@@ -110,6 +113,21 @@
                         <span class="d-flex align-items-center gap-2">
                             <i class="bi bi-exclamation-triangle-fill text-danger"></i>
                             <span>Alert</span>
+                        </span>
+                    </button>
+
+                    <!-- Tab Carousel -->
+                    <button class="nav-link d-flex align-items-center justify-content-between mb-1" 
+                            id="tab-carousel-btn" 
+                            data-bs-toggle="pill" 
+                            data-bs-target="#tab-carousel" 
+                            type="button" 
+                            role="tab" 
+                            aria-controls="tab-carousel" 
+                            aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-images text-info"></i>
+                            <span>Carousel</span>
                         </span>
                     </button>
                 </div>
@@ -1086,6 +1104,428 @@
                         </div>
                     </div>
 
+                    <!-- ============================================== -->
+                    <!-- TAB 5: CAROUSEL COMPONENTS (GỒM 3 MẪU) -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade" id="tab-carousel" role="tabpanel" aria-labelledby="tab-carousel-btn">
+                        
+                        <!-- ------------------------------------------ -->
+                        <!-- MẪU 1: CAROUSEL KÉO THẢ VỚI THANH TIẾN TRÌNH -->
+                        <!-- ------------------------------------------ -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-primary px-2.5 py-1">Mẫu 1</span>
+                                    <h4 class="fw-bold mb-0 text-dark">Carousel Kéo Thả (Draggable Carousel & Progress Bar)</h4>
+                                </div>
+                                <p class="text-muted small mb-0 mt-1">Carousel phong cách Dark UI hiện đại, hỗ trợ kéo thả chuột và đồng bộ thanh tiến trình cuộn mượt mà.</p>
+                            </div>
+                        </div>
+
+                        <!-- Khung Preview Mẫu 1 -->
+                        <div class="card border-0 shadow-sm rounded-3 mb-4 preview-card">
+                            <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-secondary small text-uppercase tracking-wider">
+                                    <i class="bi bi-eye-fill me-1 text-primary"></i> DEMO COMPONENT
+                                </span>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-arrows-expand me-1"></i> Kéo thẻ để cuộn
+                                </span>
+                            </div>
+                            <div class="card-body p-0 preview-carousel-box" id="preview-carousel1">
+                                <div class="dark-section">
+                                    <div class="container-fluid px-4 px-md-5">
+                                        <div class="drag-carousel-wrapper" id="draggableWrapper">
+                                            <div class="drag-carousel-track" id="draggableTrack">
+
+                                                <div class="drag-item">
+                                                    <div class="card-graphic bg-gradient-1">
+                                                        <div class="app-logo">Lovable</div>
+                                                    </div>
+                                                    <div class="card-info">
+                                                        <p>Lovable builds its AI-native coding platform and developer experience on top of Mintlify.</p>
+                                                        <a href="#" class="card-link">Read Lovable's story &rsaquo;</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="drag-item">
+                                                    <div class="card-graphic bg-gradient-2">
+                                                        <div class="app-logo">Kalshi</div>
+                                                    </div>
+                                                    <div class="card-info">
+                                                        <p>Kalshi powers its developer documentation with Mintlify.</p>
+                                                        <a href="#" class="card-link">Read Kalshi's story &rsaquo;</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="drag-item">
+                                                    <div class="card-graphic bg-gradient-3">
+                                                        <div class="app-logo">Decagon</div>
+                                                    </div>
+                                                    <div class="card-info">
+                                                        <p>Decagon ships sleek, AI-native documentation built on Mintlify.</p>
+                                                        <a href="#" class="card-link">Read Decagon's story &rsaquo;</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="drag-item">
+                                                    <div class="card-graphic bg-gradient-4">
+                                                        <div class="app-logo">Replit</div>
+                                                    </div>
+                                                    <div class="card-info">
+                                                        <p>Learn how Replit uses Mintlify to turn documentation into a fast, collaborative experience.
+                                                        </p>
+                                                        <a href="#" class="card-link">Read Replit's story &rsaquo;</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="drag-item">
+                                                    <div class="card-graphic bg-gradient-2">
+                                                        <div class="app-logo">Kalshi 2</div>
+                                                    </div>
+                                                    <div class="card-info">
+                                                        <p>Kalshi powers its developer documentation with Mintlify.</p>
+                                                        <a href="#" class="card-link">Read Kalshi's story &rsaquo;</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="drag-item">
+                                                    <div class="card-graphic bg-gradient-3">
+                                                        <div class="app-logo">Decagon 2</div>
+                                                    </div>
+                                                    <div class="card-info">
+                                                        <p>Decagon ships sleek, AI-native documentation built on Mintlify.</p>
+                                                        <a href="#" class="card-link">Read Decagon's story &rsaquo;</a>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="carousel-progress-container">
+                                            <div class="carousel-progress-bar" id="progressBar"></div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Khối Mã Nguồn Mẫu 1 -->
+                        <div class="row mb-5">
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-carousel1', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-html-carousel1"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-css-carousel1', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-css-carousel1"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-js-carousel1', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy JS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-js-carousel1"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-5 opacity-25">
+
+                        <!-- ------------------------------------------ -->
+                        <!-- MẪU 2: CAROUSEL 3D FOCUS VỚI AUTO-PLAY -->
+                        <!-- ------------------------------------------ -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-danger px-2.5 py-1">Mẫu 2</span>
+                                    <h4 class="fw-bold mb-0 text-dark">Carousel 3D Tiêu Điểm (Focus 3D & Auto-Play)</h4>
+                                </div>
+                                <p class="text-muted small mb-0 mt-1">Hiệu ứng thẻ phóng to ở giữa với chiều sâu 3D, điều khiển Next/Prev, kéo chuột và nút Tạm dừng/Tiếp tục.</p>
+                            </div>
+                        </div>
+
+                        <!-- Khung Preview Mẫu 2 -->
+                        <div class="card border-0 shadow-sm rounded-3 mb-4 preview-card">
+                            <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-secondary small text-uppercase tracking-wider">
+                                    <i class="bi bi-eye-fill me-1 text-danger"></i> DEMO COMPONENT
+                                </span>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-play-circle me-1"></i> Tự động lướt slide
+                                </span>
+                            </div>
+                            <div class="card-body p-0 preview-carousel-box" id="preview-carousel2">
+                                <div class="carousel-section">
+                                    <div class="focus-carousel-container" id="sliderContainer">
+
+                                        <button class="nav-btn nav-prev" id="btnPrev">&lsaquo;</button>
+
+                                        <div class="focus-item">
+                                            <div class="card-img-wrapper">
+                                                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80"
+                                                    alt="Nature Mountains">
+                                            </div>
+                                            <div class="item-content">
+                                                <h3 class="item-title">Data Agent</h3>
+                                                <p class="item-text">Get instant answers to custom questions about your customers.</p>
+                                                <a href="#" class="btn-learn-more">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="focus-item">
+                                            <div class="card-img-wrapper">
+                                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80"
+                                                    alt="Customer Support">
+                                            </div>
+                                            <div class="item-content">
+                                                <h3 class="item-title">Customer Agent</h3>
+                                                <p class="item-text">Resolve 65% of your customer inquiries automatically.</p>
+                                                <a href="#" class="btn-learn-more">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="focus-item">
+                                            <div class="card-img-wrapper">
+                                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+                                                    alt="Prospecting">
+                                            </div>
+                                            <div class="item-content">
+                                                <h3 class="item-title">Prospecting Agent</h3>
+                                                <p class="item-text">Spot buying signals, source contacts, and launch personalized outreach.</p>
+                                                <a href="#" class="btn-learn-more">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <div class="focus-item">
+                                            <div class="card-img-wrapper">
+                                                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=500&q=80"
+                                                    alt="Analytics">
+                                            </div>
+                                            <div class="item-content">
+                                                <h3 class="item-title">Analytics Agent</h3>
+                                                <p class="item-text">Track your performance and optimize workflows in real-time.</p>
+                                                <a href="#" class="btn-learn-more">Learn more</a>
+                                            </div>
+                                        </div>
+
+                                        <button class="nav-btn nav-next" id="btnNext">&rsaquo;</button>
+                                    </div>
+
+                                    <div class="play-pause-wrapper">
+                                        <button class="btn-toggle-play" id="btnPlayPause">||</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Khối Mã Nguồn Mẫu 2 -->
+                        <div class="row mb-5">
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-carousel2', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-html-carousel2"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-css-carousel2', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-css-carousel2"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-js-carousel2', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy JS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-js-carousel2"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <hr class="my-5 opacity-25">
+
+                        <!-- ------------------------------------------ -->
+                        <!-- MẪU 3: LOGO MARQUEE CHẠY VÔ TẬN -->
+                        <!-- ------------------------------------------ -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-success px-2.5 py-1">Mẫu 3</span>
+                                    <h4 class="fw-bold mb-0 text-dark">Dải Logo Đối Tác (Infinite Logo Marquee)</h4>
+                                </div>
+                                <p class="text-muted small mb-0 mt-1">Dải logo thương hiệu đối tác chạy vô tận mượt mà theo thời gian thực với nút Tạm dừng/Tiếp tục chuyển động.</p>
+                            </div>
+                        </div>
+
+                        <!-- Khung Preview Mẫu 3 -->
+                        <div class="card border-0 shadow-sm rounded-3 mb-4 preview-card">
+                            <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-secondary small text-uppercase tracking-wider">
+                                    <i class="bi bi-eye-fill me-1 text-success"></i> DEMO COMPONENT
+                                </span>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-infinity me-1"></i> Chạy liên tục
+                                </span>
+                            </div>
+                            <div class="card-body p-0 preview-carousel-box" id="preview-carousel3">
+                                <div class="container">
+                                    <div class="partners-section">
+
+                                        <div class="partners-text">
+                                            TRUSTED BY 299,000+ <br>
+                                            CUSTOMERS WORLDWIDE
+                                        </div>
+
+                                        <div class="partners-divider"></div>
+
+                                        <div class="marquee-wrapper">
+                                            <div class="marquee-track" id="logoTrack">
+
+                                                <div class="logo-item"><span class="demo-logo-text eventbrite">eventbrite</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text ebay">ebay</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text doordash">DOORDASH</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text reddit">reddit</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text tripadvisor">Tripadvisor</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text">Spotify</span></div>
+
+                                                <div class="logo-item"><span class="demo-logo-text eventbrite">eventbrite</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text ebay">ebay</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text doordash">DOORDASH</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text reddit">reddit</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text tripadvisor">Tripadvisor</span></div>
+                                                <div class="logo-item"><span class="demo-logo-text">Spotify</span></div>
+                                            </div>
+                                        </div>
+
+                                        <button class="control-btn" id="playPauseBtn" aria-label="Pause animation">
+                                            <svg id="icon-pause" viewBox="0 0 24 24">
+                                                <rect x="6" y="4" width="4" height="16"></rect>
+                                                <rect x="14" y="4" width="4" height="16"></rect>
+                                            </svg>
+
+                                            <svg id="icon-play" viewBox="0 0 24 24" style="display: none;">
+                                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                                            </svg>
+                                        </button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Khối Mã Nguồn Mẫu 3 -->
+                        <div class="row mb-4">
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-html-carousel3', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-html-carousel3"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-css-carousel3', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-css-carousel3"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn" onclick="copyCode('code-js-carousel3', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy JS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-js-carousel3"><!-- Đang tải... --></code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </main>
         </div>
@@ -1102,6 +1542,11 @@
     <script src="toasts2.js"></script>
     <script src="toasts3.js"></script>
     <script src="toasts4.js"></script>
+
+    <!-- Import các file JS của từng Carousel component (giữ nguyên không sửa file) -->
+    <script src="carousel1.js"></script>
+    <script src="carousel2.js"></script>
+    <script src="carousel3.js"></script>
 </body>
 
 </html>

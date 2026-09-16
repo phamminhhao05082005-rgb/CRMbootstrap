@@ -1109,7 +1109,816 @@ const FALLBACK_COMPONENTS = {
     <hr>
     <p class="mb-0">Vui lòng quay lại sau.</p>
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>`
+</div>`,
+
+    // Carousel Mẫu 1 (Drag & Scroll)
+    'carousel1.html': `<div class="dark-section">
+    <div class="container-fluid px-4 px-md-5">
+        <div class="drag-carousel-wrapper" id="draggableWrapper">
+            <div class="drag-carousel-track" id="draggableTrack">
+
+                <div class="drag-item">
+                    <div class="card-graphic bg-gradient-1">
+                        <div class="app-logo">Lovable</div>
+                    </div>
+                    <div class="card-info">
+                        <p>Lovable builds its AI-native coding platform and developer experience on top of Mintlify.</p>
+                        <a href="#" class="card-link">Read Lovable's story &rsaquo;</a>
+                    </div>
+                </div>
+
+                <div class="drag-item">
+                    <div class="card-graphic bg-gradient-2">
+                        <div class="app-logo">Kalshi</div>
+                    </div>
+                    <div class="card-info">
+                        <p>Kalshi powers its developer documentation with Mintlify.</p>
+                        <a href="#" class="card-link">Read Kalshi's story &rsaquo;</a>
+                    </div>
+                </div>
+
+                <div class="drag-item">
+                    <div class="card-graphic bg-gradient-3">
+                        <div class="app-logo">Decagon</div>
+                    </div>
+                    <div class="card-info">
+                        <p>Decagon ships sleek, AI-native documentation built on Mintlify.</p>
+                        <a href="#" class="card-link">Read Decagon's story &rsaquo;</a>
+                    </div>
+                </div>
+
+                <div class="drag-item">
+                    <div class="card-graphic bg-gradient-4">
+                        <div class="app-logo">Replit</div>
+                    </div>
+                    <div class="card-info">
+                        <p>Learn how Replit uses Mintlify to turn documentation into a fast, collaborative experience.</p>
+                        <a href="#" class="card-link">Read Replit's story &rsaquo;</a>
+                    </div>
+                </div>
+
+                <div class="drag-item">
+                    <div class="card-graphic bg-gradient-2">
+                        <div class="app-logo">Kalshi 2</div>
+                    </div>
+                    <div class="card-info">
+                        <p>Kalshi powers its developer documentation with Mintlify.</p>
+                        <a href="#" class="card-link">Read Kalshi's story &rsaquo;</a>
+                    </div>
+                </div>
+
+                <div class="drag-item">
+                    <div class="card-graphic bg-gradient-3">
+                        <div class="app-logo">Decagon 2</div>
+                    </div>
+                    <div class="card-info">
+                        <p>Decagon ships sleek, AI-native documentation built on Mintlify.</p>
+                        <a href="#" class="card-link">Read Decagon's story &rsaquo;</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="carousel-progress-container">
+            <div class="carousel-progress-bar" id="progressBar"></div>
+        </div>
+
+    </div>
+</div>`,
+
+    'carousel1.css': `.dark-section {
+    background-color: #0b0f19;
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.drag-carousel-wrapper {
+    overflow: hidden;
+    cursor: grab;
+    position: relative;
+}
+
+.drag-carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+.drag-carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-bottom: 2rem;
+}
+
+.drag-carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.drag-item {
+    flex: 0 0 320px;
+    user-select: none;
+}
+
+.card-graphic {
+    height: 320px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.bg-gradient-1 {
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+}
+
+.bg-gradient-2 {
+    background: linear-gradient(135deg, #114357, #f29492);
+}
+
+.bg-gradient-3 {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.bg-gradient-4 {
+    background: linear-gradient(135deg, #870000, #190a05);
+}
+
+.app-logo {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.card-info {
+    margin-top: 1rem;
+}
+
+.card-info p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.card-link {
+    color: #4ade80;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: #22c55e;
+}
+
+.carousel-progress-container {
+    width: 300px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    margin: 2rem auto 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4ade80;
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.1s ease;
+}`,
+
+    'carousel1.js': `document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('draggableTrack');
+    const progressBar = document.getElementById('progressBar');
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    function updateProgressBar() {
+        const maxScrollLeft = slider.scrollWidth - slider.clientWidth;
+
+        if (maxScrollLeft <= 0) {
+            progressBar.style.width = '100%';
+            return;
+        }
+
+        const scrollPercentage = (slider.scrollLeft / maxScrollLeft) * 100;
+        progressBar.style.width = Math.max(5, scrollPercentage) + '%';
+    }
+
+    setTimeout(updateProgressBar, 100);
+
+    slider.addEventListener('scroll', updateProgressBar);
+    window.addEventListener('resize', updateProgressBar);
+
+    slider.addEventListener('mousedown', (e) => {
+        isDown = true;
+        slider.style.scrollBehavior = 'auto';
+        startX = e.pageX - slider.offsetLeft;
+        scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+        isDown = false;
+    });
+
+    slider.addEventListener('mouseup', () => {
+        isDown = false;
+        slider.style.scrollBehavior = 'smooth';
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+        if (!isDown) return;
+        e.preventDefault();
+        const x = e.pageX - slider.offsetLeft;
+        const walk = (x - startX) * 2;
+        slider.scrollLeft = scrollLeft - walk;
+    });
+});`,
+
+    // Carousel Mẫu 2 (Focus 3D Cards)
+    'carousel2.html': `<div class="carousel-section">
+    <div class="focus-carousel-container" id="sliderContainer">
+
+        <button class="nav-btn nav-prev" id="btnPrev">&lsaquo;</button>
+
+        <div class="focus-item">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=500&q=80"
+                    alt="Nature Mountains">
+            </div>
+            <div class="item-content">
+                <h3 class="item-title">Data Agent</h3>
+                <p class="item-text">Get instant answers to custom questions about your customers.</p>
+                <a href="#" class="btn-learn-more">Learn more</a>
+            </div>
+        </div>
+
+        <div class="focus-item">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=500&q=80"
+                    alt="Customer Support">
+            </div>
+            <div class="item-content">
+                <h3 class="item-title">Customer Agent</h3>
+                <p class="item-text">Resolve 65% of your customer inquiries automatically.</p>
+                <a href="#" class="btn-learn-more">Learn more</a>
+            </div>
+        </div>
+
+        <div class="focus-item">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=500&q=80"
+                    alt="Prospecting">
+            </div>
+            <div class="item-content">
+                <h3 class="item-title">Prospecting Agent</h3>
+                <p class="item-text">Spot buying signals, source contacts, and launch personalized outreach.</p>
+                <a href="#" class="btn-learn-more">Learn more</a>
+            </div>
+        </div>
+
+        <div class="focus-item">
+            <div class="card-img-wrapper">
+                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?auto=format&fit=crop&w=500&q=80"
+                    alt="Analytics">
+            </div>
+            <div class="item-content">
+                <h3 class="item-title">Analytics Agent</h3>
+                <p class="item-text">Track your performance and optimize workflows in real-time.</p>
+                <a href="#" class="btn-learn-more">Learn more</a>
+            </div>
+        </div>
+
+        <button class="nav-btn nav-next" id="btnNext">&rsaquo;</button>
+    </div>
+
+    <div class="play-pause-wrapper">
+        <button class="btn-toggle-play" id="btnPlayPause">||</button>
+    </div>
+</div>`,
+
+    'carousel2.css': `.carousel-section {
+     width: 100%;
+     padding: 3rem 0;
+     overflow: hidden;
+     position: relative;
+ }
+
+ .focus-carousel-container {
+     position: relative;
+     width: 100%;
+     max-width: 1100px;
+     height: 550px;
+     margin: 0 auto;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     touch-action: pan-y;
+     user-select: none;
+     cursor: grab;
+ }
+
+ .focus-carousel-container:active {
+     cursor: grabbing;
+ }
+
+ .focus-item {
+     position: absolute;
+     width: 280px;
+     height: 400px;
+     background-color: #ffffff;
+     border-radius: 12px;
+     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.04);
+     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+         opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+         box-shadow 0.6s ease;
+     display: flex;
+     flex-direction: column;
+     opacity: 0;
+     transform: scale(0.7);
+     z-index: 1;
+     pointer-events: none;
+ }
+
+ .focus-item.active {
+     transform: translateX(0) scale(1);
+     width: 360px;
+     height: 520px;
+     opacity: 1;
+     z-index: 3;
+     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+     pointer-events: auto;
+ }
+
+ .focus-item.prev {
+     transform: translateX(-120%) scale(0.85);
+     opacity: 0.5;
+     z-index: 2;
+     pointer-events: auto;
+ }
+
+ .focus-item.next {
+     transform: translateX(120%) scale(0.85);
+     opacity: 0.5;
+     z-index: 2;
+     pointer-events: auto;
+ }
+
+ .card-img-wrapper {
+     padding: 1rem 1rem 0 1rem;
+     height: 55%;
+     width: 100%;
+ }
+
+ .card-img-wrapper img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 10px;
+     background-color: #f7f3ed;
+ }
+
+ .item-content {
+     padding: 1.5rem 2rem 2rem 2rem;
+     flex-grow: 1;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     text-align: center;
+ }
+
+ .item-title {
+     font-size: 1.15rem;
+     font-weight: 700;
+     color: #222;
+     margin-bottom: 0.5rem;
+ }
+
+ .focus-item.active .item-title {
+     font-size: 1.4rem;
+ }
+
+ .item-text {
+     font-size: 0.85rem;
+     color: #666;
+     line-height: 1.5;
+     margin-bottom: 1rem;
+ }
+
+ .focus-item.active .item-text {
+     font-size: 0.95rem;
+ }
+
+ .btn-learn-more {
+     margin-top: auto;
+     align-self: center;
+     font-size: 0.9rem;
+     font-weight: 600;
+     color: #111;
+     text-decoration: none;
+     border-bottom: 2px solid #e75c3b;
+     padding-bottom: 2px;
+     transition: all 0.2s;
+ }
+
+ .btn-learn-more:hover {
+     color: #e75c3b;
+ }
+
+ .nav-btn {
+     position: absolute;
+     top: 50%;
+     transform: translateY(-50%);
+     width: 45px;
+     height: 45px;
+     border-radius: 50%;
+     background: white;
+     border: none;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+     font-size: 1.2rem;
+     font-weight: bold;
+     color: #333;
+     cursor: pointer;
+     z-index: 10;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: all 0.2s;
+ }
+
+ .nav-btn:hover {
+     background: #f8f9fa;
+     transform: translateY(-50%) scale(1.05);
+ }
+
+ .nav-prev {
+     left: 15px;
+ }
+
+ .nav-next {
+     right: 15px;
+ }
+
+ .play-pause-wrapper {
+     text-align: center;
+     margin-top: 1rem;
+ }
+
+ .btn-toggle-play {
+     width: 35px;
+     height: 35px;
+     border-radius: 50%;
+     border: none;
+     background: white;
+     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+     font-weight: bold;
+     font-size: 0.8rem;
+     color: #333;
+     cursor: pointer;
+ }`,
+
+    'carousel2.js': `document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.focus-item');
+    const btnPrev = document.getElementById('btnPrev');
+    const btnNext = document.getElementById('btnNext');
+    const btnPlayPause = document.getElementById('btnPlayPause');
+    const container = document.getElementById('sliderContainer');
+
+    let currentIndex = 1;
+    const totalItems = items.length;
+
+    let autoPlayTimer;
+    let isAutoPlaying = true;
+
+    function updateSlider() {
+        const activeIndex = currentIndex;
+        const prevIndex = (currentIndex - 1 + totalItems) % totalItems;
+        const nextIndex = (currentIndex + 1) % totalItems;
+
+        items.forEach((item) => {
+            item.className = 'focus-item';
+        });
+
+        items[activeIndex].classList.add('active');
+        items[prevIndex].classList.add('prev');
+        items[nextIndex].classList.add('next');
+    }
+
+    function goNext() {
+        currentIndex = (currentIndex + 1) % totalItems;
+        updateSlider();
+    }
+
+    function goPrev() {
+        currentIndex = (currentIndex - 1 + totalItems) % totalItems;
+        updateSlider();
+    }
+
+    btnNext.addEventListener('click', () => {
+        goNext();
+        resetAutoPlay();
+    });
+
+    btnPrev.addEventListener('click', () => {
+        goPrev();
+        resetAutoPlay();
+    });
+
+    items.forEach(item => {
+        item.addEventListener('click', (e) => {
+            if (item.classList.contains('prev')) {
+                goPrev();
+                resetAutoPlay();
+            } else if (item.classList.contains('next')) {
+                goNext();
+                resetAutoPlay();
+            }
+        });
+    });
+
+    function startAutoPlay() {
+        if (isAutoPlaying) {
+            autoPlayTimer = setInterval(goNext, 3000);
+        }
+    }
+
+    function resetAutoPlay() {
+        clearInterval(autoPlayTimer);
+        startAutoPlay();
+    }
+
+    btnPlayPause.addEventListener('click', () => {
+        isAutoPlaying = !isAutoPlaying;
+        if (isAutoPlaying) {
+            btnPlayPause.innerHTML = '||';
+            startAutoPlay();
+        } else {
+            btnPlayPause.innerHTML = '&#9654;';
+            clearInterval(autoPlayTimer);
+        }
+    });
+
+    let startX = 0;
+    let isDragging = false;
+
+    container.addEventListener('mousedown', (e) => {
+        if (e.target.closest('button')) return;
+        isDragging = true;
+        startX = e.pageX;
+        clearInterval(autoPlayTimer);
+    });
+
+    container.addEventListener('mouseup', (e) => {
+        if (!isDragging) return;
+        let endX = e.pageX;
+        let diff = startX - endX;
+
+        if (diff > 50) goNext();
+        else if (diff < -50) goPrev();
+
+        isDragging = false;
+        startAutoPlay();
+    });
+
+    container.addEventListener('mouseleave', () => {
+        isDragging = false;
+    });
+
+    container.addEventListener('touchstart', (e) => {
+        if (e.target.closest('button')) return;
+        startX = e.touches[0].clientX;
+        clearInterval(autoPlayTimer);
+    });
+
+    container.addEventListener('touchend', (e) => {
+        let endX = e.changedTouches[0].clientX;
+        let diff = startX - endX;
+
+        if (diff > 50) goNext();
+        else if (diff < -50) goPrev();
+
+        startAutoPlay();
+    });
+
+    updateSlider();
+    startAutoPlay();
+});`,
+
+    // Carousel Mẫu 3 (Logo Marquee)
+    'carousel3.html': `<div class="container">
+    <div class="partners-section">
+
+        <div class="partners-text">
+            TRUSTED BY 299,000+ <br>
+            CUSTOMERS WORLDWIDE
+        </div>
+
+        <div class="partners-divider"></div>
+
+        <div class="marquee-wrapper">
+            <div class="marquee-track" id="logoTrack">
+
+                <div class="logo-item"><span class="demo-logo-text eventbrite">eventbrite</span></div>
+                <div class="logo-item"><span class="demo-logo-text ebay">ebay</span></div>
+                <div class="logo-item"><span class="demo-logo-text doordash">DOORDASH</span></div>
+                <div class="logo-item"><span class="demo-logo-text reddit">reddit</span></div>
+                <div class="logo-item"><span class="demo-logo-text tripadvisor">Tripadvisor</span></div>
+                <div class="logo-item"><span class="demo-logo-text">Spotify</span></div>
+
+                <div class="logo-item"><span class="demo-logo-text eventbrite">eventbrite</span></div>
+                <div class="logo-item"><span class="demo-logo-text ebay">ebay</span></div>
+                <div class="logo-item"><span class="demo-logo-text doordash">DOORDASH</span></div>
+                <div class="logo-item"><span class="demo-logo-text reddit">reddit</span></div>
+                <div class="logo-item"><span class="demo-logo-text tripadvisor">Tripadvisor</span></div>
+                <div class="logo-item"><span class="demo-logo-text">Spotify</span></div>
+            </div>
+        </div>
+
+        <button class="control-btn" id="playPauseBtn" aria-label="Pause animation">
+            <svg id="icon-pause" viewBox="0 0 24 24">
+                <rect x="6" y="4" width="4" height="16"></rect>
+                <rect x="14" y="4" width="4" height="16"></rect>
+            </svg>
+
+            <svg id="icon-play" viewBox="0 0 24 24" style="display: none;">
+                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+            </svg>
+        </button>
+
+    </div>
+</div>`,
+
+    'carousel3.css': `.partners-section {
+    background: #ffffff;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    padding: 1.5rem 0;
+    display: flex;
+    align-items: center;
+}
+
+.partners-text {
+    flex: 0 0 auto;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #1a202c;
+    line-height: 1.4;
+    padding-right: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+.partners-divider {
+    width: 1px;
+    height: 45px;
+    background-color: #e2e8f0;
+    margin-right: 1.5rem;
+    flex: 0 0 auto;
+}
+
+.marquee-wrapper {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.marquee-track {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    animation: scrollLogos 25s linear infinite;
+    width: max-content;
+}
+
+.logo-item {
+    flex: 0 0 auto;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-img {
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
+    transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+}
+
+.demo-logo-text {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #a0aec0;
+}
+
+.demo-logo-text.eventbrite {
+    color: #f05537;
+}
+
+.demo-logo-text.ebay {
+    color: #e53238;
+}
+
+.demo-logo-text.doordash {
+    color: #ff3008;
+}
+
+.demo-logo-text.reddit {
+    color: #ff4500;
+}
+
+.demo-logo-text.tripadvisor {
+    color: #000000;
+}
+
+.control-btn {
+    flex: 0 0 auto;
+    background: none;
+    border: none;
+    padding: 0;
+    margin-left: 1.5rem;
+    cursor: pointer;
+    color: #4a5568;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    transition: color 0.2s;
+}
+
+.control-btn:hover {
+    color: #000;
+}
+
+.control-btn svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+@keyframes scrollLogos {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}`,
+
+    'carousel3.js': `document.addEventListener('DOMContentLoaded', () => {
+    const track = document.getElementById('logoTrack');
+    const btn = document.getElementById('playPauseBtn');
+    const iconPause = document.getElementById('icon-pause');
+    const iconPlay = document.getElementById('icon-play');
+
+    let isPlaying = true;
+
+    btn.addEventListener('click', () => {
+        if (isPlaying) {
+            track.style.animationPlayState = 'paused';
+            iconPause.style.display = 'none';
+            iconPlay.style.display = 'block';
+        } else {
+            track.style.animationPlayState = 'running';
+            iconPlay.style.display = 'none';
+            iconPause.style.display = 'block';
+        }
+        isPlaying = !isPlaying;
+    });
+});`
 };
 
 // 5. Hàm tự động tải HTML, CSS và JS vào trang
@@ -1136,9 +1945,9 @@ async function loadComponent(htmlPath, cssPath, previewId, codeHtmlId, codeCssId
 
     const previewEl = document.getElementById(previewId);
     const codeHtmlEl = document.getElementById(codeHtmlId);
-    // Thay thế spinner bằng nội dung component thực tế (không đè lên toasts đã có sẵn DOM)
+    // Thay thế spinner bằng nội dung component thực tế (không đè lên components đã có sẵn DOM tĩnh để bảo vệ event listener)
     if (previewEl && htmlContent) {
-        if (!previewId.startsWith('preview-toasts') || previewEl.querySelector('.spinner-border') || previewEl.children.length === 0) {
+        if (previewEl.querySelector('.spinner-border') || previewEl.children.length === 0) {
             previewEl.innerHTML = htmlContent;
         }
     }
@@ -1296,6 +2105,37 @@ document.addEventListener("DOMContentLoaded", () => {
         'preview-alert',
         'code-html-alert',
         null
+    );
+
+    // Tải 3 Mẫu Carousel
+    loadComponent(
+        'carousel1.html',
+        'carousel1.css',
+        'preview-carousel1',
+        'code-html-carousel1',
+        'code-css-carousel1',
+        'carousel1.js',
+        'code-js-carousel1'
+    );
+
+    loadComponent(
+        'carousel2.html',
+        'carousel2.css',
+        'preview-carousel2',
+        'code-html-carousel2',
+        'code-css-carousel2',
+        'carousel2.js',
+        'code-js-carousel2'
+    );
+
+    loadComponent(
+        'carousel3.html',
+        'carousel3.css',
+        'preview-carousel3',
+        'code-html-carousel3',
+        'code-css-carousel3',
+        'carousel3.js',
+        'code-js-carousel3'
     );
 
     // Kích hoạt đồng bộ Tab

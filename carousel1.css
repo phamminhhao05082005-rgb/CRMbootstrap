@@ -1,0 +1,124 @@
+.dark-section {
+    background-color: #0b0f19;
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.drag-carousel-wrapper {
+    overflow: hidden;
+    cursor: grab;
+    position: relative;
+}
+
+.drag-carousel-wrapper:active {
+    cursor: grabbing;
+}
+
+.drag-carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding-bottom: 2rem;
+}
+
+.drag-carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.drag-item {
+    flex: 0 0 320px;
+    user-select: none;
+}
+
+.card-graphic {
+    height: 320px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+}
+
+.bg-gradient-1 {
+    background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+}
+
+.bg-gradient-2 {
+    background: linear-gradient(135deg, #114357, #f29492);
+}
+
+.bg-gradient-3 {
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+}
+
+.bg-gradient-4 {
+    background: linear-gradient(135deg, #870000, #190a05);
+}
+
+.app-logo {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: #000;
+}
+
+.card-info {
+    margin-top: 1rem;
+}
+
+.card-info p {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+.card-link {
+    color: #4ade80;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.card-link:hover {
+    color: #22c55e;
+}
+
+
+.carousel-progress-container {
+    width: 300px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    border-radius: 4px;
+    margin: 2rem auto 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #4ade80;
+    border-radius: 4px;
+    width: 0%;
+    transition: width 0.1s ease;
+}
