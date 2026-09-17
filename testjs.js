@@ -7235,7 +7235,697 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 }
 
-document.addEventListener('DOMContentLoaded', initList1);`
+document.addEventListener('DOMContentLoaded', initList1);`,
+
+    'collapse1.html': `<div class="chat-widget-container">
+    <div class="chat-window" id="chatWindow">
+
+        <div class="view-container view-list" id="viewList">
+            <div class="chat-header">
+                <div class="header-title">Your Chats</div>
+                <div class="chat-header-actions">
+                    <button class="header-btn" title="New Chat">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </button>
+                    <button class="header-btn expand-btn" title="Expand">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </button>
+                    <button class="header-btn close-btn" title="Close">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="chat-list-body">
+                <div class="chat-list-item" id="openChatBtn">
+                    <div class="chat-bot-avatar">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="#f05537">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                            <circle cx="8.5" cy="10.5" r="1.5" />
+                            <circle cx="15.5" cy="10.5" r="1.5" />
+                            <path d="M12 16c-1.48 0-2.75-.81-3.45-2H8.38c.84 1.83 2.7 3.1 4.75 3.1s3.91-1.27 4.75-3.1h-2.17c-.7 1.19-1.97 2-3.45 2z" />
+                        </svg>
+                    </div>
+                    <div class="chat-list-content">
+                        <div class="chat-list-header">
+                            <h4>Support</h4>
+                            <span>15 sec. ago</span>
+                        </div>
+                        <p class="chat-list-snippet">I'm sorry, that doesn't look like an email address. Can y...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="view-container view-chat" id="viewChat">
+            <div class="chat-header">
+                <div class="chat-header-left">
+                    <button class="back-btn" id="backToListBtn" title="Back to list">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 18l-6-6 6-6" />
+                        </svg>
+                    </button>
+                    <div class="chat-bot-avatar">
+                        <svg viewBox="0 0 24 24" width="20" height="20" fill="#f05537">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                            <circle cx="8.5" cy="10.5" r="1.5" />
+                            <circle cx="15.5" cy="10.5" r="1.5" />
+                            <path d="M12 16c-1.48 0-2.75-.81-3.45-2H8.38c.84 1.83 2.7 3.1 4.75 3.1s3.91-1.27 4.75-3.1h-2.17c-.7 1.19-1.97 2-3.45 2z" />
+                        </svg>
+                        <div class="online-indicator"></div>
+                    </div>
+                    <div class="chat-bot-details">
+                        <h3>Support</h3>
+                        <p>Powered by AI</p>
+                    </div>
+                </div>
+                <div class="chat-header-actions">
+                    <button class="header-btn expand-btn" title="Expand">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7" />
+                        </svg>
+                    </button>
+                    <button class="header-btn close-btn" title="Close">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-body" id="chatBodyScroll">
+                <div class="message-row">
+                    <div class="message-avatar">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="#f05537">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                            <circle cx="8.5" cy="10.5" r="1.5" />
+                            <circle cx="15.5" cy="10.5" r="1.5" />
+                            <path d="M12 16c-1.48 0-2.75-.81-3.45-2H8.38c.84 1.83 2.7 3.1 4.75 3.1s3.91-1.27 4.75-3.1h-2.17c-.7 1.19-1.97 2-3.45 2z" />
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <span class="emoji">👋</span> Want to chat about Support? I'm here to help you find your way.
+                        </div>
+                        <div class="message-bubble">
+                            Ask me or select an option below.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="message-row user-row">
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <span class="emoji">📅</span> Book a demo
+                        </div>
+                        <div class="message-time">09:47 AM</div>
+                    </div>
+                </div>
+
+                <div class="message-row">
+                    <div class="message-avatar">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="#f05537">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                            <circle cx="8.5" cy="10.5" r="1.5" />
+                            <circle cx="15.5" cy="10.5" r="1.5" />
+                            <path d="M12 16c-1.48 0-2.75-.81-3.45-2H8.38c.84 1.83 2.7 3.1 4.75 3.1s3.91-1.27 4.75-3.1h-2.17c-.7 1.19-1.97 2-3.45 2z" />
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        <div class="sender-name">Support</div>
+                        <div class="message-bubble">
+                            Great, can you give us your <strong>email address</strong>?
+                            <br><br>
+                            ℹ️ <em>So we can send you the demo details and all the information you need about Support.</em>
+                        </div>
+                        <div class="message-time">09:47 AM</div>
+                    </div>
+                </div>
+
+                <div class="message-row user-row">
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            hello
+                        </div>
+                        <div class="message-time">09:48 AM</div>
+                    </div>
+                </div>
+
+                <div class="message-row">
+                    <div class="message-avatar">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="#f05537">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z" />
+                            <circle cx="8.5" cy="10.5" r="1.5" />
+                            <circle cx="15.5" cy="10.5" r="1.5" />
+                            <path d="M12 16c-1.48 0-2.75-.81-3.45-2H8.38c.84 1.83 2.7 3.1 4.75 3.1s3.91-1.27 4.75-3.1h-2.17c-.7 1.19-1.97 2-3.45 2z" />
+                        </svg>
+                    </div>
+                    <div class="message-content">
+                        <div class="sender-name">Support</div>
+                        <div class="message-bubble">
+                            I'm sorry, that doesn't look like an email address. Can you try again?
+                        </div>
+                        <div class="message-time">09:48 AM</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="chat-footer">
+                <div class="input-container">
+                    <input type="text" class="chat-input" placeholder="Write a message...">
+                    <div class="input-actions">
+                        <button class="action-btn">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M21.44 11.05l-9.19 9.19a6 6 0 01-8.49-8.49l9.19-9.19a4 4 0 015.66 5.66l-9.2 9.19a2 2 0 01-2.83-2.83l8.49-8.48" />
+                            </svg>
+                        </button>
+                        <button class="action-btn">
+                            <svg viewBox="0 0 24 24">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="footer-note">
+                    AI-generated content may be inaccurate.
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <button class="chat-toggle-btn" id="chatToggleBtn">
+        <svg class="icon-open" viewBox="0 0 24 24">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+        <svg class="icon-close" viewBox="0 0 24 24">
+            <path d="M18 6L6 18M6 6l12 12"></path>
+        </svg>
+    </button>
+</div>`,
+
+    'collapse1.css': `:root {
+     --primary-bg: #222222;
+     --primary-text: #ffffff;
+     --chat-bg: #ffffff;
+     --msg-bot-bg: #f5f5f5;
+     --msg-user-bg: #222222;
+     --msg-text: #1a1a1a;
+     --border-color: #eaeaea;
+ }
+
+ body {
+     font-family: 'Inter', sans-serif;
+     margin: 0;
+     padding: 0;
+     height: 100vh;
+     background-color: #f9f9f9;
+ }
+
+ .chat-widget-container {
+     position: fixed;
+     bottom: 24px;
+     right: 24px;
+     z-index: 9999;
+     display: flex;
+     flex-direction: column;
+     align-items: flex-end;
+ }
+
+ .chat-toggle-btn {
+     width: 60px;
+     height: 60px;
+     border-radius: 50%;
+     background-color: var(--primary-bg);
+     color: var(--primary-text);
+     border: none;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     cursor: pointer;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     transition: transform 0.2s, box-shadow 0.2s;
+     margin-top: 16px;
+ }
+
+ .chat-toggle-btn:hover {
+     transform: scale(1.05);
+     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+ }
+
+ .chat-toggle-btn svg {
+     width: 28px;
+     height: 28px;
+     fill: none;
+     stroke: currentColor;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+ }
+
+ .icon-open {
+     display: block;
+ }
+
+ .icon-close {
+     display: none;
+ }
+
+ .chat-toggle-btn.active .icon-open {
+     display: none;
+ }
+
+ .chat-toggle-btn.active .icon-close {
+     display: block;
+ }
+
+ .chat-window {
+     width: 420px;
+     height: 520px;
+     background-color: var(--chat-bg);
+     border-radius: 12px;
+     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+     display: flex;
+     flex-direction: column;
+     overflow: hidden;
+     opacity: 0;
+     pointer-events: none;
+     transform: translateY(20px) scale(0.95);
+     transform-origin: bottom right;
+     transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+ }
+
+ .chat-window.open {
+     opacity: 1;
+     pointer-events: auto;
+     transform: translateY(0) scale(1);
+ }
+
+ .chat-window.expanded {
+     height: 80vh;
+ }
+
+ .view-container {
+     display: flex;
+     flex-direction: column;
+     height: 100%;
+     width: 100%;
+ }
+
+ .view-list {
+     display: none;
+ }
+
+ .view-chat {
+     display: flex;
+ }
+
+ .show-list .view-list {
+     display: flex;
+ }
+
+ .show-list .view-chat {
+     display: none;
+ }
+
+ .chat-header {
+     background-color: var(--primary-bg);
+     color: var(--primary-text);
+     padding: 16px 20px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     flex-shrink: 0;
+ }
+
+ .chat-header-left {
+     display: flex;
+     align-items: center;
+     gap: 12px;
+ }
+
+ .header-title {
+     font-size: 16px;
+     font-weight: 700;
+ }
+
+ .back-btn {
+     background: none;
+     border: none;
+     color: var(--primary-text);
+     cursor: pointer;
+     padding: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .back-btn svg {
+     width: 20px;
+     height: 20px;
+     fill: none;
+     stroke: currentColor;
+     stroke-width: 2.5;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+ }
+
+ .chat-bot-avatar {
+     width: 32px;
+     height: 32px;
+     border-radius: 50%;
+     background-color: #ffffff;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     position: relative;
+ }
+
+ .chat-bot-avatar img,
+ .chat-bot-avatar svg {
+     width: 20px;
+     height: 20px;
+ }
+
+ .online-indicator {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     width: 10px;
+     height: 10px;
+     background-color: #00d084;
+     border: 2px solid var(--primary-bg);
+     border-radius: 50%;
+ }
+
+ .chat-bot-details {
+     display: flex;
+     flex-direction: column;
+ }
+
+ .chat-bot-details h3 {
+     margin: 0;
+     font-size: 15px;
+     font-weight: 700;
+ }
+
+ .chat-bot-details p {
+     margin: 0;
+     font-size: 11px;
+     color: #d1d1d1;
+     font-weight: 500;
+ }
+
+ .chat-header-actions {
+     display: flex;
+     gap: 16px;
+     align-items: center;
+ }
+
+ .header-btn {
+     background: none;
+     border: none;
+     color: var(--primary-text);
+     cursor: pointer;
+     padding: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .header-btn svg {
+     width: 20px;
+     height: 20px;
+     fill: none;
+     stroke: currentColor;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+ }
+
+ .chat-list-body {
+     flex: 1;
+     background-color: var(--chat-bg);
+     overflow-y: auto;
+ }
+
+ .chat-list-item {
+     padding: 16px 20px;
+     display: flex;
+     gap: 12px;
+     cursor: pointer;
+     border-bottom: 1px solid var(--border-color);
+     transition: background-color 0.2s;
+ }
+
+ .chat-list-item:hover {
+     background-color: #f9f9f9;
+ }
+
+ .chat-list-item .chat-bot-avatar {
+     border: 1px solid #ddd;
+ }
+
+ .chat-list-content {
+     flex: 1;
+     display: flex;
+     flex-direction: column;
+     gap: 4px;
+ }
+
+ .chat-list-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .chat-list-header h4 {
+     margin: 0;
+     font-size: 14px;
+     font-weight: 600;
+     color: var(--msg-text);
+ }
+
+ .chat-list-header span {
+     font-size: 11px;
+     color: #777;
+ }
+
+ .chat-list-snippet {
+     font-size: 13px;
+     color: #555;
+     margin: 0;
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     max-width: 280px;
+ }
+
+ .chat-body {
+     flex: 1;
+     padding: 20px;
+     overflow-y: auto;
+     background-color: var(--chat-bg);
+     display: flex;
+     flex-direction: column;
+     gap: 20px;
+ }
+
+ .chat-body::-webkit-scrollbar {
+     width: 6px;
+ }
+
+ .chat-body::-webkit-scrollbar-thumb {
+     background-color: #ccc;
+     border-radius: 10px;
+ }
+
+ .message-row {
+     display: flex;
+     gap: 12px;
+ }
+
+ .message-row.user-row {
+     flex-direction: row-reverse;
+ }
+
+ .message-avatar {
+     width: 28px;
+     height: 28px;
+     border-radius: 50%;
+     background-color: #fff;
+     border: 1px solid #ddd;
+     flex-shrink: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .message-content {
+     display: flex;
+     flex-direction: column;
+     max-width: 75%;
+ }
+
+ .user-row .message-content {
+     align-items: flex-end;
+ }
+
+ .sender-name {
+     font-size: 12px;
+     font-weight: 600;
+     margin-bottom: 4px;
+     color: var(--msg-text);
+ }
+
+ .message-bubble {
+     background-color: var(--msg-bot-bg);
+     color: var(--msg-text);
+     padding: 12px 16px;
+     border-radius: 0 12px 12px 12px;
+     font-size: 14px;
+     line-height: 1.5;
+     margin-bottom: 8px;
+ }
+
+ .user-row .message-bubble {
+     background-color: var(--msg-user-bg);
+     color: var(--primary-text);
+     border-radius: 12px 0 12px 12px;
+     margin-bottom: 4px;
+ }
+
+ .message-time {
+     font-size: 10px;
+     color: #888;
+ }
+
+ .chat-footer {
+     padding: 12px 20px;
+     background-color: var(--chat-bg);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ .input-container {
+     display: flex;
+     align-items: center;
+     border: 1px solid #ccc;
+     border-radius: 24px;
+     padding: 10px 16px;
+     background-color: var(--chat-bg);
+     width: 100%;
+     box-sizing: border-box;
+ }
+
+ .chat-input {
+     flex: 1;
+     border: none;
+     outline: none;
+     font-size: 14px;
+     padding: 0;
+     font-family: inherit;
+ }
+
+ .input-actions {
+     display: flex;
+     gap: 12px;
+     align-items: center;
+     margin-left: 8px;
+ }
+
+ .action-btn {
+     background: none;
+     border: none;
+     color: #555;
+     cursor: pointer;
+     padding: 0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .action-btn svg {
+     width: 18px;
+     height: 18px;
+     fill: none;
+     stroke: currentColor;
+     stroke-width: 2;
+     stroke-linecap: round;
+     stroke-linejoin: round;
+ }
+
+ .footer-note {
+     font-size: 11px;
+     color: #888;
+     margin-top: 10px;
+     margin-bottom: 4px;
+ }
+
+ .emoji {
+     font-size: 16px;
+     margin-right: 4px;
+ }
+
+ @media (max-width: 480px) {
+     .chat-window {
+         width: calc(100vw - 32px);
+         height: calc(100vh - 100px);
+         bottom: 80px;
+         right: 16px;
+     }
+
+     .chat-widget-container {
+         bottom: 16px;
+         right: 16px;
+     }
+ }`,
+
+    'collapse1.js': `document.addEventListener('DOMContentLoaded', () => {
+    const chatToggleBtn = document.getElementById('chatToggleBtn');
+    const chatWindow = document.getElementById('chatWindow');
+    const closeBtns = document.querySelectorAll('.close-btn');
+    const expandBtns = document.querySelectorAll('.expand-btn');
+    const backToListBtn = document.getElementById('backToListBtn');
+    const openChatBtn = document.getElementById('openChatBtn');
+    const chatBodyScroll = document.getElementById('chatBodyScroll');
+
+    function toggleChat() {
+        chatWindow.classList.toggle('open');
+        chatToggleBtn.classList.toggle('active');
+        if (chatWindow.classList.contains('open')) {
+            chatBodyScroll.scrollTop = chatBodyScroll.scrollHeight;
+        }
+    }
+
+    chatToggleBtn.addEventListener('click', toggleChat);
+
+    closeBtns.forEach(btn => {
+        btn.addEventListener('click', toggleChat);
+    });
+
+    expandBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            chatWindow.classList.toggle('expanded');
+        });
+    });
+
+    backToListBtn.addEventListener('click', () => {
+        chatWindow.classList.add('show-list');
+    });
+
+    openChatBtn.addEventListener('click', () => {
+        chatWindow.classList.remove('show-list');
+        chatBodyScroll.scrollTop = chatBodyScroll.scrollHeight;
+    });
+});`
 };
 
 // 5. Hàm tự động tải HTML, CSS và JS vào trang
@@ -7643,6 +8333,17 @@ document.addEventListener("DOMContentLoaded", () => {
         'code-css-list1',
         'list1.js',
         'code-js-list1'
+    );
+
+    // Tải Component Collapse
+    loadComponent(
+        'collapse1.html',
+        'collapse1.css',
+        'preview-collapse1',
+        'code-html-collapse1',
+        'code-css-collapse1',
+        'collapse1.js',
+        'code-js-collapse1'
     );
 
     // Kích hoạt đồng bộ Tab
