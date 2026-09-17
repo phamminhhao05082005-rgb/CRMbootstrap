@@ -7925,6 +7925,1089 @@ document.addEventListener('DOMContentLoaded', initList1);`,
         chatWindow.classList.remove('show-list');
         chatBodyScroll.scrollTop = chatBodyScroll.scrollHeight;
     });
+});`,
+
+    'accordion3.html': `<div class="card widget-card">
+    <div class="widget-header d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center gap-2 header-trigger" data-bs-toggle="collapse" data-bs-target="#dealsCollapse">
+            <i class="bi bi-chevron-down chevron-icon"></i>
+            <span class="fw-bold text-dark fs-6">Deals (1)</span>
+        </div>
+        <div class="d-flex align-items-center gap-2">
+            <button class="btn btn-link add-btn text-dark fw-bold text-decoration-none px-2 py-1">
+                <i class="bi bi-plus"></i> Add
+            </button>
+            <button class="btn btn-icon border">
+                <i class="bi bi-gear"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="dealsCollapse" class="collapse show">
+        <div class="card-body px-3 pb-3 pt-0">
+            
+            <div class="inner-deal-card p-3 mb-3">
+                <div class="d-flex align-items-center gap-2 mb-2">
+                    <div class="deal-icon-bg d-flex justify-content-center align-items-center">
+                        <i class="bi bi-handshake fs-6"></i>
+                    </div>
+                    <a href="#" class="teal-link fw-bold text-decoration-none fs-6">test6</a>
+                </div>
+                
+                <div class="d-flex flex-column gap-1 property-text">
+                    <div>
+                        <span class="text-secondary">Amount:</span> 
+                        <span class="text-dark">--</span>
+                    </div>
+                    <div>
+                        <span class="text-secondary">Close Date:</span> 
+                        <span class="text-dark">September 30, 2026</span>
+                    </div>
+                    <div class="d-flex align-items-center gap-1 mt-1">
+                        <span class="text-secondary">Deal Stage:</span> 
+                        <div class="dropdown d-inline-block">
+                            <button class="btn dropdown-toggle stage-badge badge-qualified" type="button" data-bs-toggle="dropdown">
+                                Qualified To Buy
+                            </button>
+                            <ul class="dropdown-menu shadow-sm">
+                                <li><a class="dropdown-item" href="#">Appointment Scheduled</a></li>
+                                <li><a class="dropdown-item" href="#">Qualified To Buy</a></li>
+                                <li><a class="dropdown-item" href="#">Presentation Scheduled</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-3">
+                    <a href="#" class="teal-link fw-bold text-decoration-none property-text">Add association label</a>
+                </div>
+            </div>
+
+            <div>
+                <a href="#" class="teal-link fw-bold text-decoration-none fs-6">
+                    View all associated Deals <i class="bi bi-box-arrow-up-right ms-1 small"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+</div>`,
+
+    'accordion3.css': `body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.widget-card {
+    width: 320px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    background-color: #ffffff;
+}
+
+.widget-header {
+    padding: 16px;
+    background-color: transparent;
+}
+
+.header-trigger {
+    cursor: pointer;
+    user-select: none;
+}
+
+.chevron-icon {
+    font-size: 12px;
+    transition: transform 0.2s ease;
+    color: #4b5563;
+}
+
+.header-trigger.collapsed .chevron-icon {
+    transform: rotate(-90deg);
+}
+
+.add-btn {
+    font-size: 14px;
+}
+
+.add-btn:hover {
+    background-color: #f3f4f6;
+    border-radius: 4px;
+}
+
+.btn-icon {
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4b5563;
+    background: white;
+}
+
+.btn-icon:hover {
+    background: #f3f4f6;
+}
+
+.inner-deal-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    background-color: #ffffff;
+}
+
+.deal-icon-bg {
+    width: 28px;
+    height: 28px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    color: #4b5563;
+}
+
+.teal-link {
+    color: #0f5c6e;
+}
+
+.teal-link:hover {
+    color: #0a404d;
+}
+
+.property-text {
+    font-size: 14px;
+}
+
+.stage-badge {
+    padding: 2px 8px;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 6px;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.stage-badge::after {
+    display: none;
+}
+
+.stage-badge::before {
+    content: "\\F229";
+    font-family: bootstrap-icons !important;
+    font-size: 10px;
+    order: 2;
+    margin-left: 2px;
+}
+
+.badge-qualified {
+    background-color: #b44018;
+    color: #ffffff;
+}
+
+.badge-qualified:hover,
+.badge-qualified:focus,
+.badge-qualified:active {
+    background-color: #933312 !important;
+    color: #ffffff !important;
+}
+
+.dropdown-item {
+    font-size: 14px;
+}
+`,
+
+    'accordion3.js': `document.addEventListener('DOMContentLoaded', () => {
+    const collapseTrigger = document.querySelector('.header-trigger');
+    const collapseElement = document.getElementById('dealsCollapse');
+
+    if (!collapseTrigger || !collapseElement) return;
+
+    collapseElement.addEventListener('hide.bs.collapse', () => {
+        collapseTrigger.classList.add('collapsed');
+    });
+
+    collapseElement.addEventListener('show.bs.collapse', () => {
+        collapseTrigger.classList.remove('collapsed');
+    });
+});`,
+
+    'card3.html': `<div class="chat-card p-3">
+    <div class="d-flex gap-3">
+        
+        <div class="avatar-circle flex-shrink-0">UV</div>
+        
+        <div class="chat-content flex-grow-1">
+            
+            <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="sender-name fw-bold">Maria Johnson (Sample Contact)</span>
+                <span class="chat-timestamp">11:56 AM</span>
+                <div class="action-icon d-inline-flex align-items-center" title="Actions">
+                    <i class="bi bi-window"></i>
+                    <i class="bi bi-caret-down-fill" style="font-size: 10px; margin-left: 2px;"></i>
+                </div>
+            </div>
+            
+            <div class="chat-text">
+                <p class="mb-4">Any new chats will appear here. Choose what you'd like to do next:</p>
+                
+                <div class="mb-4">
+                    <div class="fw-bold text-dark mb-1">Send a test chat</div>
+                    <div>
+                        <a href="#" class="chat-link">Continue on this link</a> to interact with the live chat and understand how the conversation appears here.
+                    </div>
+                </div>
+                
+                <div class="mb-2">
+                    <div class="fw-bold text-dark mb-1">Manage your live chat channel</div>
+                    <div>
+                        Get your chat ready by customizing your chat settings and automations. <a href="#" class="chat-link">Edit your chatflow</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>`,
+
+    'card3.css': `body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.chat-card {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    max-width: 550px;
+}
+
+.avatar-circle {
+    width: 36px;
+    height: 36px;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 2px;
+}
+
+.sender-name {
+    color: #33475b;
+    font-size: 15px;
+}
+
+.chat-timestamp {
+    font-size: 13px;
+    color: #8795a1;
+}
+
+.action-icon {
+    color: #8795a1;
+    cursor: pointer;
+    padding: 2px 4px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.action-icon:hover {
+    background-color: #f3f4f6;
+    color: #33475b;
+}
+
+.chat-text {
+    color: #33475b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.chat-link {
+    color: #0f5c6e;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 1px solid #0f5c6e;
+    padding-bottom: 1px;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.chat-link:hover {
+    color: #0a404d;
+    border-color: #0a404d;
+}
+`,
+
+    'collapse2.html': `<div class="associate-records-container py-3" style="max-width: 600px; width: 100%;">
+    
+    <div class="mb-2 d-flex align-items-center gap-1">
+        <label class="fw-bold text-dark fs-6">Associate with records</label>
+        <i class="bi bi-info-circle text-secondary" style="font-size: 14px; cursor: pointer;"></i>
+    </div>
+
+    <div class="position-relative associate-dropdown-container">
+        
+        <button class="btn btn-outline-secondary w-100 text-start d-flex justify-content-between align-items-center dropdown-trigger" type="button">
+            <span class="text-dark">Associated with 0 records</span>
+            <i class="bi bi-caret-down-fill text-secondary small"></i>
+        </button>
+
+        <div class="custom-dropdown-menu shadow-lg collapse" id="associateDropdown">
+            <div class="dropdown-arrow"></div>
+            
+            <div class="d-flex h-100">
+                
+                <div class="sidebar-nav d-flex flex-column">
+                    <div class="nav-item selected-nav-item d-flex justify-content-between align-items-center mb-1">
+                        <span>Selected</span>
+                        <span>0</span>
+                    </div>
+                    <hr class="my-1 mx-2 text-secondary">
+                    
+                    <div class="sidebar-scrollable flex-grow-1">
+                        <div class="nav-item d-flex justify-content-between align-items-center active" data-target="calls">
+                            <span>Calls</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="carts">
+                            <span>Carts</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="companies">
+                            <span>Companies</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="contacts">
+                            <span>Contacts</span>
+                            <span>2</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="contracts">
+                            <span>Contracts</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="deals">
+                            <span>Deals</span>
+                            <span>1</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="feedback">
+                            <span>Feedback</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="invoices">
+                            <span>Invoices</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="leads">
+                            <span>Leads</span>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-area flex-grow-1 p-3">
+                    
+                    <div class="content-panel active-panel" id="panel-calls">
+                        <div class="position-relative mb-4">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Calls">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="empty-state text-center mt-5">
+                            <div class="empty-icon mb-3">
+                                <i class="bi bi-search" style="font-size: 40px; color: #cbd5e1; opacity: 0.5;"></i>
+                                <div class="empty-shadow"></div>
+                            </div>
+                            <p class="text-secondary mb-1">No suggested records to associate.</p>
+                            <p class="text-secondary">Search to find a record.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-panel" id="panel-contacts">
+                        <div class="position-relative mb-3">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Contacts">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="records-list">
+                            <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-person text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold text-dark">Brian Halligan</div>
+                                        <div class="text-secondary small">brian@hubspot.com</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                            <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-person text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold text-dark">Dharmesh Shah</div>
+                                        <div class="text-secondary small">dharmesh@hubspot.com</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-panel" id="panel-deals">
+                        <div class="position-relative mb-3">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Deals">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="records-list">
+                            <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-handshake text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold text-dark">Enterprise Software Deal</div>
+                                        <div class="text-secondary small">$50,000 • Q4 Closing</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-panel" id="panel-generic">
+                        <div class="position-relative mb-4">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input generic-search-input" placeholder="Search">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="empty-state text-center mt-5">
+                            <div class="empty-icon mb-3">
+                                <i class="bi bi-search" style="font-size: 40px; color: #cbd5e1; opacity: 0.5;"></i>
+                                <div class="empty-shadow"></div>
+                            </div>
+                            <p class="text-secondary mb-1">No suggested records to associate.</p>
+                            <p class="text-secondary">Search to find a record.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>`,
+
+    'collapse2.css': `body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.associate-dropdown-container {
+    width: 100%;
+}
+
+.dropdown-trigger {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.dropdown-trigger:hover, .dropdown-trigger:focus, .dropdown-trigger:active {
+    background-color: #f8fafc !important;
+    border-color: #94a3b8 !important;
+    color: #1f2937 !important;
+    box-shadow: none !important;
+}
+
+.custom-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: 500px;
+    height: 350px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    z-index: 1000;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-left: 1px solid #e5e7eb;
+    border-top: 1px solid #e5e7eb;
+    z-index: 1001;
+}
+
+.sidebar-nav {
+    width: 160px;
+    border-right: 1px solid #e5e7eb;
+    padding: 12px 0;
+}
+
+.custom-dropdown-menu .nav-item,
+.sidebar-nav .nav-item {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #4b5563;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.custom-dropdown-menu .nav-item:hover,
+.sidebar-nav .nav-item:hover {
+    background-color: #f3f4f6;
+}
+
+.custom-dropdown-menu .nav-item.active,
+.sidebar-nav .nav-item.active {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #1f2937;
+    border-left: 3px solid #1f2937;
+    padding-left: 13px;
+}
+
+.selected-nav-item {
+    cursor: default;
+}
+.selected-nav-item:hover {
+    background-color: transparent !important;
+}
+
+.sidebar-scrollable {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #9ca3af transparent;
+}
+
+.sidebar-scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-scrollable::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 4px 0;
+}
+
+.sidebar-scrollable::-webkit-scrollbar-thumb {
+    background-color: #9ca3af;
+    border-radius: 10px;
+}
+
+.content-area {
+    background-color: #ffffff;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.search-input {
+    font-size: 14px;
+    border-color: #cbd5e1;
+}
+
+.search-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.empty-state {
+    font-size: 14px;
+}
+
+.empty-shadow {
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    background: radial-gradient(ellipse at center, rgba(203,213,225,0.4) 0%, rgba(255,255,255,0) 70%);
+}
+
+.content-panel {
+    display: none;
+    height: 100%;
+}
+
+.content-panel.active-panel {
+    display: block;
+}
+
+.records-list {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+.record-item {
+    font-size: 14px;
+}
+
+.record-item:hover {
+    background-color: #f8fafc;
+}
+
+.record-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.form-check-input {
+    cursor: pointer;
+}
+`,
+
+    'collapse2.js': `document.addEventListener('DOMContentLoaded', () => {
+    const trigger = document.querySelector('.dropdown-trigger');
+    const dropdown = document.getElementById('associateDropdown');
+    const navItems = document.querySelectorAll('.sidebar-scrollable .nav-item');
+    const panels = document.querySelectorAll('.content-panel');
+    const genericSearchInput = document.querySelector('.generic-search-input');
+
+    if (!trigger || !dropdown) return;
+
+    trigger.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const bsCollapse = new bootstrap.Collapse(dropdown, {
+            toggle: false
+        });
+        
+        if (dropdown.classList.contains('show')) {
+            bsCollapse.hide();
+        } else {
+            bsCollapse.show();
+        }
+    });
+
+    document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && !trigger.contains(e.target) && dropdown.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(dropdown, { toggle: false });
+            bsCollapse.hide();
+        }
+    });
+
+    dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+    });
+
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            
+            navItems.forEach(nav => nav.classList.remove('active'));
+            item.classList.add('active');
+
+            const targetName = item.getAttribute('data-target');
+            const targetPanelId = \`panel-\${targetName}\`;
+            
+            panels.forEach(panel => panel.classList.remove('active-panel'));
+
+            const specificPanel = document.getElementById(targetPanelId);
+            if (specificPanel) {
+                specificPanel.classList.add('active-panel');
+            } else {
+                const genericPanel = document.getElementById('panel-generic');
+                if (genericPanel) {
+                    genericPanel.classList.add('active-panel');
+                }
+                if (genericSearchInput) {
+                    const categoryName = item.querySelector('span:first-child').textContent;
+                    genericSearchInput.placeholder = \`Search \${categoryName.trim()}\`;
+                }
+            }
+        });
+    });
+});`,
+
+    'dropdown4.html': `<div class="dropdown">
+    
+    <button class="btn icon-btn dropdown-toggle-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Các hành động khác">
+        <i class="bi bi-three-dots"></i>
+    </button>
+    
+    <ul class="dropdown-menu custom-dropdown shadow-lg">
+        
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-pencil item-icon"></i> Chỉnh sửa Deal
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-arrow-left-right item-icon"></i> Thay đổi giai đoạn
+            </a>
+        </li>
+        
+        <li><hr class="dropdown-divider"></li>
+        
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-person-add item-icon"></i> Phân công người phụ trách
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                <i class="bi bi-link-45deg item-icon"></i> Liên kết liên hệ / công ty
+            </a>
+        </li>
+
+        <li><hr class="dropdown-divider"></li>
+
+        <li>
+            <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-telephone item-icon"></i> Ghi lại cuộc gọi
+                </div>
+                <i class="bi bi-plus text-primary action-add-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-envelope item-icon"></i> Soạn Email
+                </div>
+                <i class="bi bi-plus text-primary action-add-icon"></i>
+            </a>
+        </li>
+        <li>
+            <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-check2-square item-icon"></i> Tạo công việc (Task)
+                </div>
+                <i class="bi bi-plus text-primary action-add-icon"></i>
+            </a>
+        </li>
+
+        <li><hr class="dropdown-divider"></li>
+
+        <li>
+            <a class="dropdown-item d-flex align-items-center gap-3 text-danger danger-item" href="#">
+                <i class="bi bi-trash item-icon text-danger"></i> Xóa Deal
+            </a>
+        </li>
+    </ul>
+
+</div>`,
+
+    'dropdown4.css': `.icon-btn {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    font-size: 18px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover, .icon-btn:focus {
+    background-color: #f9fafb;
+    color: #111827;
+    border-color: #9ca3af;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dropdown-toggle-btn::after {
+    display: none;
+}
+
+.custom-dropdown {
+    width: 280px;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+    background-color: #ffffff;
+    margin-top: 8px !important;
+}
+
+.custom-dropdown li {
+    margin-bottom: 2px;
+}
+
+.custom-dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+.custom-dropdown .dropdown-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    border-radius: 6px; 
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.custom-dropdown .dropdown-item:hover, .custom-dropdown .dropdown-item:focus {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.custom-dropdown .danger-item:hover, .custom-dropdown .danger-item:focus {
+    background-color: #fef2f2 !important;
+    color: #dc2626 !important;
+}
+
+.custom-dropdown .item-icon {
+    font-size: 16px;
+    color: #6b7280;
+    width: 20px;
+    text-align: center;
+    transition: color 0.15s ease;
+}
+
+.custom-dropdown .dropdown-item:hover .item-icon {
+    color: #374151;
+}
+
+.custom-dropdown .danger-item:hover .item-icon {
+    color: #dc2626 !important;
+}
+
+.custom-dropdown .action-add-icon {
+    font-size: 16px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.2s ease;
+}
+
+.custom-dropdown .dropdown-item:hover .action-add-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.custom-dropdown .dropdown-divider {
+    margin: 6px 4px;
+    border-color: #e5e7eb;
+    border-top-width: 1px;
+}
+`,
+
+    'popover5.html': `<div class="d-flex align-items-center gap-3 p-3 border rounded-3 bg-white shadow-sm" style="max-width: 320px; width: 100%;">
+    <img src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="rounded-circle" width="40" height="40">
+    <div>
+        <span class="fw-medium text-dark profile-trigger" id="profileLabel" role="button" tabindex="0">
+            Mateo Perez
+        </span>
+        <div class="text-secondary small">Engineering Department</div>
+    </div>
+</div>
+
+<div id="popoverTemplate" class="d-none">
+    <div class="profile-card">
+        
+        <div class="profile-cover">
+            <button class="btn btn-link text-white position-absolute top-0 end-0 p-2 text-decoration-none border-0">
+                <i class="bi bi-three-dots"></i>
+            </button>
+        </div>
+        
+        <div class="profile-body px-4 pb-4">
+            <div class="profile-avatar-wrapper">
+                <img src="https://i.pravatar.cc/150?img=11" alt="Mateo Perez" class="profile-avatar bg-white">
+            </div>
+            
+            <h4 class="fw-bold mb-1 text-dark">Mateo Perez</h4>
+            <p class="text-secondary mb-3" style="font-size: 15px;">Tomorrow Tech</p>
+
+            <div class="d-flex gap-2 mb-4">
+                <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
+                    <i class="bi bi-chat-fill mb-1"></i>
+                    <span>Tin nhắn</span>
+                </button>
+                <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
+                    <i class="bi bi-telephone-fill mb-1"></i>
+                    <span>Cuộc gọi thoại</span>
+                </button>
+                <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
+                    <i class="bi bi-camera-video-fill mb-1"></i>
+                    <span>Cuộc gọi video</span>
+                </button>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3 align-items-center border-bottom pb-3">
+                <span class="text-secondary" style="font-size: 14px;">Bí danh</span>
+                <a href="#" class="text-secondary text-decoration-none" style="font-size: 14px;">Đặt biệt danh</a>
+            </div>
+
+            <div class="d-flex flex-column gap-3 mb-4">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-envelope text-secondary fs-6"></i>
+                    <a href="mailto:mateo.perez@tomorrowtech.com" class="text-dark text-decoration-none contact-link">mateo.perez@tomorrowtech.com</a>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-telephone text-secondary fs-6"></i>
+                    <span class="text-dark" style="font-size: 14px;">+1 (555) 123-4567</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-building text-secondary fs-6"></i>
+                    <span class="text-dark" style="font-size: 14px;">Engineering Department</span>
+                </div>
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-geo-alt text-secondary fs-6"></i>
+                    <span class="text-dark" style="font-size: 14px;">San Francisco, CA</span>
+                </div>
+            </div>
+
+            <button class="btn custom-blue-btn w-100 fw-medium py-2">
+                Thêm liên hệ hoặc nhóm
+            </button>
+        </div>
+        
+    </div>
+</div>`,
+
+    'popover5.css': `body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.custom-profile-popover {
+    max-width: 360px;
+    width: 360px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 0;
+    margin: 0;
+    z-index: 1060;
+}
+
+.custom-profile-popover .popover-body {
+    padding: 0;
+}
+
+.profile-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.profile-cover {
+    height: 110px;
+    background: linear-gradient(135deg, #a6c0fe 0%, #3b82f6 100%);
+    position: relative;
+}
+
+.profile-avatar-wrapper {
+    margin-top: -40px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.custom-profile-popover .action-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 8px;
+    font-size: 11px;
+    color: #4b5563;
+    transition: background-color 0.2s, border-color 0.2s;
+    box-shadow: none;
+}
+
+.custom-profile-popover .action-btn:hover {
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+    color: #374151;
+}
+
+.custom-profile-popover .action-btn i {
+    font-size: 18px;
+    color: #374151;
+}
+
+.custom-profile-popover .contact-link {
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.custom-profile-popover .contact-link:hover {
+    color: #2563eb !important;
+}
+
+.custom-blue-btn {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.custom-blue-btn:hover, 
+.custom-blue-btn:active, 
+.custom-blue-btn:focus {
+    background-color: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.profile-trigger {
+    cursor: pointer;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.2s;
+}
+
+.profile-trigger:hover {
+    text-decoration: underline;
+}
+`,
+
+    'popover5.js': `document.addEventListener('DOMContentLoaded', () => {
+    const profileLabel = document.getElementById('profileLabel');
+    const popoverTemplateEl = document.getElementById('popoverTemplate');
+    if (!profileLabel || !popoverTemplateEl) return;
+    
+    const popoverTemplate = popoverTemplateEl.innerHTML;
+    
+    const popover = new bootstrap.Popover(profileLabel, {
+        html: true,
+        content: popoverTemplate,
+        placement: 'right',
+        customClass: 'custom-profile-popover',
+        trigger: 'manual',
+        sanitize: false
+    });
+
+    let hideTimeout;
+
+    const showPopover = () => {
+        clearTimeout(hideTimeout);
+        popover.show();
+        
+        const popoverElement = document.querySelector('.custom-profile-popover');
+        if (popoverElement) {
+            popoverElement.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
+            popoverElement.addEventListener('mouseleave', hidePopover);
+        }
+    };
+
+    const hidePopover = () => {
+        hideTimeout = setTimeout(() => {
+            popover.hide();
+        }, 300);
+    };
+
+    profileLabel.addEventListener('mouseenter', showPopover);
+    profileLabel.addEventListener('mouseleave', hidePopover);
+    profileLabel.addEventListener('focus', showPopover);
+    profileLabel.addEventListener('blur', hidePopover);
 });`
 };
 
@@ -8344,6 +9427,57 @@ document.addEventListener("DOMContentLoaded", () => {
         'code-css-collapse1',
         'collapse1.js',
         'code-js-collapse1'
+    );
+
+    // Tải Mẫu Accordion 3
+    loadComponent(
+        'accordion3.html',
+        'accordion3.css',
+        'preview-accordion3',
+        'code-html-accordion3',
+        'code-css-accordion3',
+        'accordion3.js',
+        'code-js-accordion3'
+    );
+
+    // Tải Mẫu Popovers 5
+    loadComponent(
+        'popover5.html',
+        'popover5.css',
+        'preview-popover5',
+        'code-html-popover5',
+        'code-css-popover5',
+        'popover5.js',
+        'code-js-popover5'
+    );
+
+    // Tải Mẫu Dropdown 4
+    loadComponent(
+        'dropdown4.html',
+        'dropdown4.css',
+        'preview-dropdown4',
+        'code-html-dropdown4',
+        'code-css-dropdown4'
+    );
+
+    // Tải Mẫu Card 3
+    loadComponent(
+        'card3.html',
+        'card3.css',
+        'preview-card3',
+        'code-html-card3',
+        'code-css-card3'
+    );
+
+    // Tải Mẫu Collapse 2
+    loadComponent(
+        'collapse2.html',
+        'collapse2.css',
+        'preview-collapse2',
+        'code-html-collapse2',
+        'code-css-collapse2',
+        'collapse2.js',
+        'code-js-collapse2'
     );
 
     // Kích hoạt đồng bộ Tab

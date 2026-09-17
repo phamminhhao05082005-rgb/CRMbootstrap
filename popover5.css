@@ -1,0 +1,103 @@
+body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.custom-profile-popover {
+    max-width: 360px;
+    width: 360px;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    padding: 0;
+    margin: 0;
+    z-index: 1060;
+}
+
+.custom-profile-popover .popover-body {
+    padding: 0;
+}
+
+.profile-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.profile-cover {
+    height: 110px;
+    background: linear-gradient(135deg, #a6c0fe 0%, #3b82f6 100%);
+    position: relative;
+}
+
+.profile-avatar-wrapper {
+    margin-top: -40px;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 2;
+}
+
+.profile-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    object-fit: cover;
+}
+
+.custom-profile-popover .action-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 8px;
+    font-size: 11px;
+    color: #4b5563;
+    transition: background-color 0.2s, border-color 0.2s;
+    box-shadow: none;
+}
+
+.custom-profile-popover .action-btn:hover {
+    background-color: #e9ecef;
+    border-color: #e9ecef;
+    color: #374151;
+}
+
+.custom-profile-popover .action-btn i {
+    font-size: 18px;
+    color: #374151;
+}
+
+.custom-profile-popover .contact-link {
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.custom-profile-popover .contact-link:hover {
+    color: #2563eb !important;
+}
+
+.custom-blue-btn {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.custom-blue-btn:hover, 
+.custom-blue-btn:active, 
+.custom-blue-btn:focus {
+    background-color: #1d4ed8 !important;
+    border-color: #1d4ed8 !important;
+    color: #ffffff !important;
+}
+
+.profile-trigger {
+    cursor: pointer;
+    text-decoration: underline transparent;
+    transition: text-decoration 0.2s;
+}
+
+.profile-trigger:hover {
+    text-decoration: underline;
+}

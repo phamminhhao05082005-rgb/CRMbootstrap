@@ -1,0 +1,162 @@
+body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.associate-dropdown-container {
+    width: 100%;
+}
+
+.dropdown-trigger {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+    padding: 8px 16px;
+    font-size: 14px;
+}
+
+.dropdown-trigger:hover, .dropdown-trigger:focus, .dropdown-trigger:active {
+    background-color: #f8fafc !important;
+    border-color: #94a3b8 !important;
+    color: #1f2937 !important;
+    box-shadow: none !important;
+}
+
+.custom-dropdown-menu {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 0;
+    width: 500px;
+    height: 350px;
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    z-index: 1000;
+}
+
+.dropdown-arrow {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 16px;
+    height: 16px;
+    background-color: #ffffff;
+    border-left: 1px solid #e5e7eb;
+    border-top: 1px solid #e5e7eb;
+    z-index: 1001;
+}
+
+.sidebar-nav {
+    width: 160px;
+    border-right: 1px solid #e5e7eb;
+    padding: 12px 0;
+}
+
+.custom-dropdown-menu .nav-item,
+.sidebar-nav .nav-item {
+    padding: 8px 16px;
+    font-size: 14px;
+    color: #4b5563;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.2s;
+}
+
+.custom-dropdown-menu .nav-item:hover,
+.sidebar-nav .nav-item:hover {
+    background-color: #f3f4f6;
+}
+
+.custom-dropdown-menu .nav-item.active,
+.sidebar-nav .nav-item.active {
+    background-color: #f3f4f6;
+    font-weight: 600;
+    color: #1f2937;
+    border-left: 3px solid #1f2937;
+    padding-left: 13px;
+}
+
+.selected-nav-item {
+    cursor: default;
+}
+.selected-nav-item:hover {
+    background-color: transparent !important;
+}
+
+.sidebar-scrollable {
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #9ca3af transparent;
+}
+
+.sidebar-scrollable::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar-scrollable::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 4px 0;
+}
+
+.sidebar-scrollable::-webkit-scrollbar-thumb {
+    background-color: #9ca3af;
+    border-radius: 10px;
+}
+
+.content-area {
+    background-color: #ffffff;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.search-input {
+    font-size: 14px;
+    border-color: #cbd5e1;
+}
+
+.search-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.empty-state {
+    font-size: 14px;
+}
+
+.empty-shadow {
+    width: 80px;
+    height: 30px;
+    margin: 0 auto;
+    background: radial-gradient(ellipse at center, rgba(203,213,225,0.4) 0%, rgba(255,255,255,0) 70%);
+}
+
+.content-panel {
+    display: none;
+    height: 100%;
+}
+
+.content-panel.active-panel {
+    display: block;
+}
+
+.records-list {
+    height: calc(100% - 50px);
+    overflow-y: auto;
+}
+
+.record-item {
+    font-size: 14px;
+}
+
+.record-item:hover {
+    background-color: #f8fafc;
+}
+
+.record-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.form-check-input {
+    cursor: pointer;
+}

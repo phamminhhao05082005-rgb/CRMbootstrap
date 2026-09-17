@@ -1,0 +1,94 @@
+.icon-btn {
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    color: #4b5563;
+    font-size: 18px;
+    padding: 6px 14px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.icon-btn:hover, .icon-btn:focus {
+    background-color: #f9fafb;
+    color: #111827;
+    border-color: #9ca3af;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.dropdown-toggle-btn::after {
+    display: none;
+}
+
+.custom-dropdown {
+    width: 280px;
+    padding: 8px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1) !important;
+    background-color: #ffffff;
+    margin-top: 8px !important;
+}
+
+.custom-dropdown li {
+    margin-bottom: 2px;
+}
+
+.custom-dropdown li:last-child {
+    margin-bottom: 0;
+}
+
+.custom-dropdown .dropdown-item {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    border-radius: 6px; 
+    transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.custom-dropdown .dropdown-item:hover, .custom-dropdown .dropdown-item:focus {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.custom-dropdown .danger-item:hover, .custom-dropdown .danger-item:focus {
+    background-color: #fef2f2 !important;
+    color: #dc2626 !important;
+}
+
+.custom-dropdown .item-icon {
+    font-size: 16px;
+    color: #6b7280;
+    width: 20px;
+    text-align: center;
+    transition: color 0.15s ease;
+}
+
+.custom-dropdown .dropdown-item:hover .item-icon {
+    color: #374151;
+}
+
+.custom-dropdown .danger-item:hover .item-icon {
+    color: #dc2626 !important;
+}
+
+.custom-dropdown .action-add-icon {
+    font-size: 16px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.2s ease;
+}
+
+.custom-dropdown .dropdown-item:hover .action-add-icon {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.custom-dropdown .dropdown-divider {
+    margin: 6px 4px;
+    border-color: #e5e7eb;
+    border-top-width: 1px;
+}

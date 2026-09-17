@@ -1,0 +1,157 @@
+<div class="associate-records-container py-3" style="max-width: 600px; width: 100%;">
+    
+    <div class="mb-2 d-flex align-items-center gap-1">
+        <label class="fw-bold text-dark fs-6">Associate with records</label>
+        <i class="bi bi-info-circle text-secondary" style="font-size: 14px; cursor: pointer;"></i>
+    </div>
+
+    <div class="position-relative associate-dropdown-container">
+        
+        <button class="btn btn-outline-secondary w-100 text-start d-flex justify-content-between align-items-center dropdown-trigger" type="button">
+            <span class="text-dark">Associated with 0 records</span>
+            <i class="bi bi-caret-down-fill text-secondary small"></i>
+        </button>
+
+        <div class="custom-dropdown-menu shadow-lg collapse" id="associateDropdown">
+            <div class="dropdown-arrow"></div>
+            
+            <div class="d-flex h-100">
+                
+                <div class="sidebar-nav d-flex flex-column">
+                    <div class="nav-item selected-nav-item d-flex justify-content-between align-items-center mb-1">
+                        <span>Selected</span>
+                        <span>0</span>
+                    </div>
+                    <hr class="my-1 mx-2 text-secondary">
+                    
+                    <div class="sidebar-scrollable flex-grow-1">
+                        <div class="nav-item d-flex justify-content-between align-items-center active" data-target="calls">
+                            <span>Calls</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="carts">
+                            <span>Carts</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="companies">
+                            <span>Companies</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="contacts">
+                            <span>Contacts</span>
+                            <span>2</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="contracts">
+                            <span>Contracts</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="deals">
+                            <span>Deals</span>
+                            <span>1</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="feedback">
+                            <span>Feedback</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="invoices">
+                            <span>Invoices</span>
+                            <span>0</span>
+                        </div>
+                        <div class="nav-item d-flex justify-content-between align-items-center" data-target="leads">
+                            <span>Leads</span>
+                            <span>0</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-area flex-grow-1 p-3">
+                    
+                    <div class="content-panel active-panel" id="panel-calls">
+                        <div class="position-relative mb-4">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Calls">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="empty-state text-center mt-5">
+                            <div class="empty-icon mb-3">
+                                <i class="bi bi-search" style="font-size: 40px; color: #cbd5e1; opacity: 0.5;"></i>
+                                <div class="empty-shadow"></div>
+                            </div>
+                            <p class="text-secondary mb-1">No suggested records to associate.</p>
+                            <p class="text-secondary">Search to find a record.</p>
+                        </div>
+                    </div>
+
+                    <div class="content-panel" id="panel-contacts">
+                        <div class="position-relative mb-3">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Contacts">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="records-list">
+                            <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-person text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold text-dark">Brian Halligan</div>
+                                        <div class="text-secondary small">brian@hubspot.com</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                            <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-person text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold text-dark">Dharmesh Shah</div>
+                                        <div class="text-secondary small">dharmesh@hubspot.com</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-panel" id="panel-deals">
+                        <div class="position-relative mb-3">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Deals">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="records-list">
+                            <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                        <i class="bi bi-handshake text-secondary"></i>
+                                    </div>
+                                    <div>
+                                        <div class="fw-bold text-dark">Enterprise Software Deal</div>
+                                        <div class="text-secondary small">$50,000 • Q4 Closing</div>
+                                    </div>
+                                </div>
+                                <input type="checkbox" class="form-check-input">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-panel" id="panel-generic">
+                        <div class="position-relative mb-4">
+                            <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input generic-search-input" placeholder="Search">
+                            <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                        </div>
+                        <div class="empty-state text-center mt-5">
+                            <div class="empty-icon mb-3">
+                                <i class="bi bi-search" style="font-size: 40px; color: #cbd5e1; opacity: 0.5;"></i>
+                                <div class="empty-shadow"></div>
+                            </div>
+                            <p class="text-secondary mb-1">No suggested records to associate.</p>
+                            <p class="text-secondary">Search to find a record.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

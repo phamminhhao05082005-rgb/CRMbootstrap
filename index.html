@@ -22,6 +22,7 @@
     <!-- CSS từng Component -->
     <link rel="stylesheet" href="accordion1.css">
     <link rel="stylesheet" href="accordion2.css">
+    <link rel="stylesheet" href="accordion3.css">
     <link rel="stylesheet" href="badge.css">
     <link rel="stylesheet" href="toasts1.css">
     <link rel="stylesheet" href="toasts2.css">
@@ -34,9 +35,11 @@
     <link rel="stylesheet" href="popovers2.css">
     <link rel="stylesheet" href="popovers3.css">
     <link rel="stylesheet" href="popovers4.css">
+    <link rel="stylesheet" href="popover5.css">
     <link rel="stylesheet" href="dropdown1.css">
     <link rel="stylesheet" href="dropdown2.css">
     <link rel="stylesheet" href="dropdown3.css">
+    <link rel="stylesheet" href="dropdown4.css">
 
     <link rel="stylesheet" href="modal1.css">
     <link rel="stylesheet" href="modal2.css">
@@ -46,6 +49,7 @@
 
     <link rel="stylesheet" href="card1.css">
     <link rel="stylesheet" href="card2.css">
+    <link rel="stylesheet" href="card3.css">
 
     <link rel="stylesheet" href="offcanvas1.css">
     <link rel="stylesheet" href="offcanvas2.css">
@@ -55,6 +59,7 @@
     <link rel="stylesheet" href="grid1.css">
     <link rel="stylesheet" href="list1.css">
     <link rel="stylesheet" href="collapse1.css">
+    <link rel="stylesheet" href="collapse2.css">
 
     <!-- CSS Gốc (load sau để quản lý layout và ghi đè kiểu body an toàn) -->
     <link rel="stylesheet" href="testcss.css">
@@ -228,7 +233,7 @@
                 <div class="tab-content" id="componentTabsContent">
 
                     <!-- ============================================== -->
-                    <!-- TAB 1: ACCORDION COMPONENTS (GỒM MẪU 1 VÀ MẪU 2) -->
+                    <!-- TAB 1: ACCORDION COMPONENTS (GỒM 3 MẪU) -->
                     <!-- ============================================== -->
                     <div class="tab-pane fade show active" id="tab-accordion" role="tabpanel"
                         aria-labelledby="tab-accordion-btn">
@@ -240,6 +245,11 @@
                                 <h1 class="h3 fw-bold mb-1">1. Accordion Components</h1>
                                 <p class="text-muted mb-0 small">Các mẫu Accordion mở rộng / thu gọn (Collapse) trong hệ
                                     thống CRM</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#acc-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Task Accordion</a>
+                                <a href="#acc-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Deal Accordion</a>
+                                <a href="#acc-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Associated Deals</a>
                             </div>
                         </div>
 
@@ -713,6 +723,219 @@
                                 <div class="p-0">
                                     <pre
                                         class="text-light m-0 p-3 code-pre"><code id="code-css-accordion2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 1.3 MẪU 3: DEALS WIDGET ACCORDION (DANH SÁCH DEAL LIÊN KẾT) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="acc-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Deals Accordion (Danh sách Deals liên kết CRM)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 3 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div
+                                    class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-warning"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">Interactive</span>
+                                </div>
+                                <div class="p-4 preview-container d-flex justify-content-center"
+                                    style="background-color: #f3f4f6;" id="preview-accordion3">
+                                    <div class="card widget-card">
+                                        <div class="widget-header d-flex justify-content-between align-items-center">
+                                            <div class="d-flex align-items-center gap-2 header-trigger" data-bs-toggle="collapse" data-bs-target="#dealsCollapse">
+                                                <i class="bi bi-chevron-down chevron-icon"></i>
+                                                <span class="fw-bold text-dark fs-6">Deals (1)</span>
+                                            </div>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <button class="btn btn-link add-btn text-dark fw-bold text-decoration-none px-2 py-1">
+                                                    <i class="bi bi-plus"></i> Add
+                                                </button>
+                                                <button class="btn btn-icon border">
+                                                    <i class="bi bi-gear"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                        <div id="dealsCollapse" class="collapse show">
+                                            <div class="card-body px-3 pb-3 pt-0">
+                                                <div class="inner-deal-card p-3 mb-3">
+                                                    <div class="d-flex align-items-center gap-2 mb-2">
+                                                        <div class="deal-icon-bg d-flex justify-content-center align-items-center">
+                                                            <i class="bi bi-handshake fs-6"></i>
+                                                        </div>
+                                                        <a href="#" class="teal-link fw-bold text-decoration-none fs-6">test6</a>
+                                                    </div>
+                                                    
+                                                    <div class="d-flex flex-column gap-1 property-text">
+                                                        <div>
+                                                            <span class="text-secondary">Amount:</span> 
+                                                            <span class="text-dark">--</span>
+                                                        </div>
+                                                        <div>
+                                                            <span class="text-secondary">Close Date:</span> 
+                                                            <span class="text-dark">September 30, 2026</span>
+                                                        </div>
+                                                        <div class="d-flex align-items-center gap-1 mt-1">
+                                                            <span class="text-secondary">Deal Stage:</span> 
+                                                            <div class="dropdown d-inline-block">
+                                                                <button class="btn dropdown-toggle stage-badge badge-qualified" type="button" data-bs-toggle="dropdown">
+                                                                    Qualified To Buy
+                                                                </button>
+                                                                <ul class="dropdown-menu shadow-sm">
+                                                                    <li><a class="dropdown-item" href="#">Appointment Scheduled</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Qualified To Buy</a></li>
+                                                                    <li><a class="dropdown-item" href="#">Presentation Scheduled</a></li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="mt-3">
+                                                        <a href="#" class="teal-link fw-bold text-decoration-none property-text">Add association label</a>
+                                                    </div>
+                                                </div>
+
+                                                <div>
+                                                    <a href="#" class="teal-link fw-bold text-decoration-none fs-6">
+                                                        View all associated Deals <i class="bi bi-box-arrow-up-right ms-1 small"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Hướng dẫn Phụ thuộc & Mã nhúng Mẫu 3 -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header d-flex justify-content-between align-items-center">
+                                    <div class="fw-bold d-flex align-items-center gap-2 text-dark">
+                                        <i class="bi bi-box-seam text-warning fs-5"></i>
+                                        <span>Khung mã nguồn tích hợp (Dependencies &amp; Template)</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-dark copy-btn"
+                                        onclick="copyCode('dep-code-accordion3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Dependencies
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File accordion3.css (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File accordion3.js (Bắt buộc xoay icon)</span>
+                                        <span class="dep-badge-pill dep-badge-lib"><i class="bi bi-box"></i> Bootstrap 5.3.2 CSS &amp; Icons</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-accordion3">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS &amp; Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 3. File CSS của Component (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="accordion3.css"&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- 5. File JS quản lý hiệu ứng đóng/mở và xoay icon Chevron (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="accordion3.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Header kích hoạt collapse nằm ở thẻ <code>.header-trigger</code> liên kết với <code>#dealsCollapse</code>. File <code>accordion3.js</code> sẽ lắng nghe sự kiện <code>hide.bs.collapse</code> và <code>show.bs.collapse</code> để xoay icon chevron mượt mà.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_accordion3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-accordion3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-accordion3">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Accordion 3&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="accordion3.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light d-flex justify-content-center"&gt;
+    &lt;!-- Dán nội dung accordion3.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="accordion3.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-accordion3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-accordion3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-accordion3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-accordion3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 3: NỘI DUNG JS Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning-emphasis fw-bold small d-flex align-items-center gap-2" style="color: #facc15 !important;">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-accordion3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-accordion3"><!-- Đang tải... --></code></pre>
                                 </div>
                             </div>
                         </section>
@@ -2605,7 +2828,7 @@
                     </div>
 
                     <!-- ============================================== -->
-                    <!-- TAB 6: POPOVERS COMPONENTS (4 MẪU) -->
+                    <!-- TAB 6: POPOVERS COMPONENTS (5 MẪU) -->
                     <!-- ============================================== -->
                     <div class="tab-pane fade" id="tab-popovers" role="tabpanel" aria-labelledby="tab-popovers-btn">
                         <!-- Tiêu đề Tab Popovers -->
@@ -2614,11 +2837,12 @@
                                 <h1 class="h3 fw-bold mb-1">6. Popovers Components</h1>
                                 <p class="text-muted mb-0 small">Các mẫu Popovers hiển thị thông tin người dùng, công ty đối tác và form tác vụ nổi (Floating Card &amp; Dropdown) trong CRM</p>
                             </div>
-                            <div class="d-flex gap-2">
+                            <div class="d-flex flex-wrap gap-2">
                                 <a href="#pop-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: User Profile</a>
                                 <a href="#pop-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Company Profile</a>
                                 <a href="#pop-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Advanced Filter</a>
                                 <a href="#pop-mau-4" class="btn btn-sm btn-outline-secondary">Mẫu 4: Quick Note</a>
+                                <a href="#pop-mau-5" class="btn btn-sm btn-outline-secondary">Mẫu 5: Profile Card</a>
                             </div>
                         </div>
 
@@ -3371,10 +3595,232 @@
                                 </div>
                             </div>
                         </section>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 6.5 MẪU 5: PROFILE POPOVER CARD (HOVER/FOCUS) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="pop-mau-5" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-white px-2 py-1 rounded-pill" style="background-color: #8b5cf6;">Mẫu 5</span>
+                                <h2 class="h5 fw-bold mb-0">Hồ sơ người dùng CRM mở rộng (Profile Card Popover)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 5 -->
+                            <div class="preview-card mb-4 bg-white" style="overflow: visible;">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-light text-secondary border">
+                                        <i class="bi bi-cursor me-1"></i> Rê chuột hoặc Tab vào tên để hiện Popover
+                                    </span>
+                                </div>
+                                <div class="p-5 preview-container preview-popover-box d-flex justify-content-center align-items-center"
+                                    id="preview-popover5" style="background-color: #f8fafc; min-height: 280px; overflow: visible;">
+                                    <div class="d-flex align-items-center gap-3 p-3 border rounded-3 bg-white shadow-sm" style="max-width: 320px; width: 100%;">
+                                        <img src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="rounded-circle" width="40" height="40">
+                                        <div>
+                                            <span class="fw-medium text-dark profile-trigger" id="profileLabel" role="button" tabindex="0">
+                                                Mateo Perez
+                                            </span>
+                                            <div class="text-secondary small">Engineering Department</div>
+                                        </div>
+                                    </div>
+
+                                    <div id="popoverTemplate" class="d-none">
+                                        <div class="profile-card">
+                                            <div class="profile-cover">
+                                                <button class="btn btn-link text-white position-absolute top-0 end-0 p-2 text-decoration-none border-0">
+                                                    <i class="bi bi-three-dots"></i>
+                                                </button>
+                                            </div>
+                                            
+                                            <div class="profile-body px-4 pb-4">
+                                                <div class="profile-avatar-wrapper">
+                                                    <img src="https://i.pravatar.cc/150?img=11" alt="Mateo Perez" class="profile-avatar bg-white">
+                                                </div>
+                                                
+                                                <h4 class="fw-bold mb-1 text-dark">Mateo Perez</h4>
+                                                <p class="text-secondary mb-3" style="font-size: 15px;">Tomorrow Tech</p>
+
+                                                <div class="d-flex gap-2 mb-4">
+                                                    <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
+                                                        <i class="bi bi-chat-fill mb-1"></i>
+                                                        <span>Tin nhắn</span>
+                                                    </button>
+                                                    <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
+                                                        <i class="bi bi-telephone-fill mb-1"></i>
+                                                        <span>Cuộc gọi thoại</span>
+                                                    </button>
+                                                    <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
+                                                        <i class="bi bi-camera-video-fill mb-1"></i>
+                                                        <span>Cuộc gọi video</span>
+                                                    </button>
+                                                </div>
+
+                                                <div class="d-flex justify-content-between mb-3 align-items-center border-bottom pb-3">
+                                                    <span class="text-secondary" style="font-size: 14px;">Bí danh</span>
+                                                    <a href="#" class="text-secondary text-decoration-none" style="font-size: 14px;">Đặt biệt danh</a>
+                                                </div>
+
+                                                <div class="d-flex flex-column gap-3 mb-4">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <i class="bi bi-envelope text-secondary fs-6"></i>
+                                                        <a href="mailto:mateo.perez@tomorrowtech.com" class="text-dark text-decoration-none contact-link">mateo.perez@tomorrowtech.com</a>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <i class="bi bi-telephone text-secondary fs-6"></i>
+                                                        <span class="text-dark" style="font-size: 14px;">+1 (555) 123-4567</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <i class="bi bi-building text-secondary fs-6"></i>
+                                                        <span class="text-dark" style="font-size: 14px;">Engineering Department</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <i class="bi bi-geo-alt text-secondary fs-6"></i>
+                                                        <span class="text-dark" style="font-size: 14px;">San Francisco, CA</span>
+                                                    </div>
+                                                </div>
+
+                                                <button class="btn custom-blue-btn w-100 fw-medium py-2">
+                                                    Thêm liên hệ hoặc nhóm
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Hướng dẫn Phụ thuộc & Mã nhúng Mẫu 5 -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header d-flex justify-content-between align-items-center">
+                                    <div class="fw-bold d-flex align-items-center gap-2 text-dark">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>Khung mã nguồn tích hợp (Dependencies &amp; Template)</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-dark copy-btn"
+                                        onclick="copyCode('dep-code-popover5', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Dependencies
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File popover5.css (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File popover5.js (Bắt buộc tương tác Popover)</span>
+                                        <span class="dep-badge-pill dep-badge-lib"><i class="bi bi-box"></i> Bootstrap 5.3.2 CSS &amp; JS Bundle</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-popover5">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;!-- 2. Bootstrap 5 CSS &amp; Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 3. File CSS của Component (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="popover5.css"&gt;
+
+&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- 5. File JS khởi tạo và xử lý Hover/Focus Popover (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="popover5.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Popover dùng <code>trigger: 'manual'</code> và template HTML được giữ ẩn trong thẻ <code>#popoverTemplate</code>. File <code>popover5.js</code> quản lý bộ đếm độ trễ (delay) khi di chuột ra ngoài để người dùng có thể lia chuột vào tương tác trực tiếp với thẻ popover mà không bị ẩn đột ngột.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_popover5.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-popover5', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-popover5">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Popover 5&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="popover5.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-5 bg-light d-flex justify-content-center align-items-center" style="min-height: 100vh;"&gt;
+    &lt;!-- Dán nội dung popover5.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="popover5.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML Mẫu 5 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-popover5', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-popover5"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS Mẫu 5 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-popover5', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-popover5"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 3: NỘI DUNG JS Mẫu 5 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning-emphasis fw-bold small d-flex align-items-center gap-2" style="color: #facc15 !important;">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-popover5', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-popover5"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
                     </div>
 
                     <!-- ============================================== -->
-                    <!-- TAB 7: DROPDOWN COMPONENTS (3 MẪU) -->
+                    <!-- TAB 7: DROPDOWN COMPONENTS (4 MẪU) -->
                     <!-- ============================================== -->
                     <div class="tab-pane fade" id="tab-dropdowns" role="tabpanel" aria-labelledby="tab-dropdowns-btn">
                         <!-- Tiêu đề Tab Dropdowns -->
@@ -3383,10 +3829,11 @@
                                 <h1 class="h3 fw-bold mb-1">7. Dropdown Components</h1>
                                 <p class="text-muted mb-0 small">Các mẫu Dropdown điều hướng, menu người dùng tài khoản và bộ lọc danh mục trong CRM</p>
                             </div>
-                            <div class="d-flex gap-2">
+                            <div class="d-flex flex-wrap gap-2">
                                 <a href="#drop-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: User Account</a>
                                 <a href="#drop-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Multi-level Submenu</a>
                                 <a href="#drop-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Quick Filter Search</a>
+                                <a href="#drop-mau-4" class="btn btn-sm btn-outline-secondary">Mẫu 4: Actions Menu</a>
                             </div>
                         </div>
 
@@ -4090,6 +4537,194 @@
                                 </div>
                                 <div class="p-0">
                                     <pre class="text-light m-0 p-3 code-pre"><code id="code-js-dropdown3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 7.4 MẪU 4: CRM ACTION DROPDOWN MENU -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="drop-mau-4" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 4</span>
+                                <h2 class="h5 fw-bold mb-0">Menu thao tác Deal nhanh (CRM Actions Dropdown)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 4 -->
+                            <div class="preview-card mb-4 bg-white" style="overflow: visible;">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                                        <i class="bi bi-hand-index-thumb-fill me-1"></i> Click nút ba chấm để mở menu
+                                    </span>
+                                </div>
+                                <div class="p-4 preview-container preview-popover-box d-flex justify-content-center align-items-start"
+                                    id="preview-dropdown4" style="background-color: #f8fafc; min-height: 480px; padding-top: 35px; overflow: visible;">
+                                    <div class="dropdown">
+                                        <button class="btn icon-btn dropdown-toggle-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false" title="Các hành động khác">
+                                            <i class="bi bi-three-dots"></i>
+                                        </button>
+                                        
+                                        <ul class="dropdown-menu custom-dropdown shadow-lg">
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                                                    <i class="bi bi-pencil item-icon"></i> Chỉnh sửa Deal
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                                                    <i class="bi bi-arrow-left-right item-icon"></i> Thay đổi giai đoạn
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                                                    <i class="bi bi-person-add item-icon"></i> Phân công người phụ trách
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center gap-3" href="#">
+                                                    <i class="bi bi-link-45deg item-icon"></i> Liên kết liên hệ / công ty
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <i class="bi bi-telephone item-icon"></i> Ghi lại cuộc gọi
+                                                    </div>
+                                                    <i class="bi bi-plus text-primary action-add-icon"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <i class="bi bi-envelope item-icon"></i> Soạn Email
+                                                    </div>
+                                                    <i class="bi bi-plus text-primary action-add-icon"></i>
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a class="dropdown-item d-flex justify-content-between align-items-center" href="#">
+                                                    <div class="d-flex align-items-center gap-3">
+                                                        <i class="bi bi-check2-square item-icon"></i> Tạo công việc (Task)
+                                                    </div>
+                                                    <i class="bi bi-plus text-primary action-add-icon"></i>
+                                                </a>
+                                            </li>
+                                            <li><hr class="dropdown-divider"></li>
+                                            <li>
+                                                <a class="dropdown-item d-flex align-items-center gap-3 text-danger danger-item" href="#">
+                                                    <i class="bi bi-trash item-icon text-danger"></i> Xóa Deal
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Hướng dẫn Phụ thuộc & Mã nhúng Mẫu 4 -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header d-flex justify-content-between align-items-center">
+                                    <div class="fw-bold d-flex align-items-center gap-2 text-dark">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>Khung mã nguồn tích hợp (Dependencies &amp; Template)</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-dark copy-btn"
+                                        onclick="copyCode('dep-code-dropdown4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Dependencies
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File dropdown4.css (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-lib"><i class="bi bi-box"></i> Bootstrap 5.3.2 CSS &amp; Icons</span>
+                                        <span class="dep-badge-pill dep-badge-lib"><i class="bi bi-box"></i> Bootstrap 5.3.2 JS Bundle</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-dropdown4">&lt;!-- 1. Bootstrap 5 CSS &amp; Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 2. File CSS của Component (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="dropdown4.css"&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Component này dùng cơ chế Bootstrap Dropdown chuẩn với <code>data-bs-toggle="dropdown"</code>. Các nút tác vụ nhanh như Soạn Email, Ghi cuộc gọi có hiệu ứng hiện icon dấu <code>+</code> khi hover mượt mà.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_dropdown4.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-dropdown4', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-dropdown4">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Dropdown 4&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="dropdown4.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-5 bg-light d-flex justify-content-center"&gt;
+    &lt;!-- Dán nội dung dropdown4.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML Mẫu 4 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-dropdown4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-dropdown4"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS Mẫu 4 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-dropdown4', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-dropdown4"><!-- Đang tải... --></code></pre>
                                 </div>
                             </div>
                         </section>
@@ -4874,18 +5509,19 @@
                     </div>
 
                     <!-- ============================================== -->
-                    <!-- TAB 9: CARD COMPONENTS (GỒM 2 MẪU) -->
+                    <!-- TAB 9: CARD COMPONENTS (GỒM 3 MẪU) -->
                     <!-- ============================================== -->
                     <div class="tab-pane fade" id="tab-cards" role="tabpanel" aria-labelledby="tab-cards-btn">
                         <!-- Tiêu đề Cards & Nút điều hướng nhanh -->
                         <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
                             <div>
                                 <h1 class="h3 fw-bold mb-1">9. Card Components</h1>
-                                <p class="text-muted mb-0 small">Các mẫu Card giao dịch CRM chuyên nghiệp: Thẻ chi tiết Deal và Thẻ bài Kanban Deal</p>
+                                <p class="text-muted mb-0 small">Các mẫu Card giao dịch CRM chuyên nghiệp: Thẻ chi tiết Deal, Thẻ bài Kanban Deal và Thẻ tin nhắn tương tác</p>
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#card-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Deal Detail Card</a>
                                 <a href="#card-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Kanban Deal Card</a>
+                                <a href="#card-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Chat Message Card</a>
                             </div>
                         </div>
 
@@ -5158,6 +5794,162 @@
                                 </div>
                                 <div class="p-0">
                                     <pre class="text-light m-0 p-3 code-pre"><code id="code-css-card2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 9.3 MẪU 3: CHAT MESSAGE CARD (TIN NHẮN TRAO ĐỔI) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="card-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Thẻ tin nhắn hội thoại CRM (Chat Message Card)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 3 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-success-subtle text-success border border-success-subtle">
+                                        Chat Conversation Card
+                                    </span>
+                                </div>
+                                <div class="p-4 preview-container d-flex justify-content-center align-items-center"
+                                    id="preview-card3" style="background-color: #f8fafc;">
+                                    <div class="chat-card p-3">
+                                        <div class="d-flex gap-3">
+                                            <div class="avatar-circle flex-shrink-0">UV</div>
+                                            <div class="chat-content flex-grow-1">
+                                                <div class="d-flex align-items-center gap-2 mb-2">
+                                                    <span class="sender-name fw-bold">Maria Johnson (Sample Contact)</span>
+                                                    <span class="chat-timestamp">11:56 AM</span>
+                                                    <div class="action-icon d-inline-flex align-items-center" title="Actions">
+                                                        <i class="bi bi-window"></i>
+                                                        <i class="bi bi-caret-down-fill" style="font-size: 10px; margin-left: 2px;"></i>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="chat-text">
+                                                    <p class="mb-4">Any new chats will appear here. Choose what you'd like to do next:</p>
+                                                    
+                                                    <div class="mb-4">
+                                                        <div class="fw-bold text-dark mb-1">Send a test chat</div>
+                                                        <div>
+                                                            <a href="#" class="chat-link">Continue on this link</a> to interact with the live chat and understand how the conversation appears here.
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="mb-2">
+                                                        <div class="fw-bold text-dark mb-1">Manage your live chat channel</div>
+                                                        <div>
+                                                            Get your chat ready by customizing your chat settings and automations. <a href="#" class="chat-link">Edit your chatflow</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Hướng dẫn Phụ thuộc & Mã nhúng Mẫu 3 -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header d-flex justify-content-between align-items-center">
+                                    <div class="fw-bold d-flex align-items-center gap-2 text-dark">
+                                        <i class="bi bi-box-seam text-success fs-5"></i>
+                                        <span>Khung mã nguồn tích hợp (Dependencies &amp; Template)</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-dark copy-btn"
+                                        onclick="copyCode('dep-code-card3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Dependencies
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File card3.css (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-lib"><i class="bi bi-box"></i> Bootstrap 5.3.2 CSS &amp; Icons</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-card3">&lt;!-- 1. Bootstrap 5 CSS &amp; Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 2. File CSS của Component (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="card3.css"&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Component này dùng hiển thị lịch sử tin nhắn / Live chat CRM dạng thẻ trực quan. Hỗ trợ hiển thị avatar viết tắt (initials), timestamp, và các action liên kết tùy biến.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_card3.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-card3', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-card3">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Card 3&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="card3.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light d-flex justify-content-center"&gt;
+    &lt;!-- Dán nội dung card3.html vào đây --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-card3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS Mẫu 3 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-card3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-card3"><!-- Đang tải... --></code></pre>
                                 </div>
                             </div>
                         </section>
@@ -6958,7 +7750,7 @@
                     </div>
 
                     <!-- ============================================== -->
-                    <!-- TAB 14: COLLAPSE COMPONENTS (GỒM 1 MẪU) -->
+                    <!-- TAB 14: COLLAPSE COMPONENTS (GỒM 2 MẪU) -->
                     <!-- ============================================== -->
                     <div class="tab-pane fade" id="tab-collapse" role="tabpanel" aria-labelledby="tab-collapse-btn">
                         <!-- Tiêu đề Collapse & Nút điều hướng nhanh -->
@@ -6969,6 +7761,7 @@
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#collapse-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Support Chat Widget</a>
+                                <a href="#collapse-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Associate Records</a>
                             </div>
                         </div>
 
@@ -7258,6 +8051,305 @@
                                 </div>
                             </div>
                         </section>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 14.2 MẪU 2: ASSOCIATE RECORDS COLLAPSE DROPDOWN -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="collapse-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Khung liên kết bản ghi CRM (Associate Records Collapse)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 2 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                                        <i class="bi bi-arrows-collapse me-1"></i> Click nút để mở / đóng bảng liên kết
+                                    </span>
+                                </div>
+                                <div class="p-4 preview-container position-relative d-flex justify-content-center" id="preview-collapse2" style="background-color: #f8fafc; min-height: 480px;">
+                                    <div class="associate-records-container py-3" style="max-width: 600px; width: 100%;">
+                                        <div class="mb-2 d-flex align-items-center gap-1">
+                                            <label class="fw-bold text-dark fs-6">Associate with records</label>
+                                            <i class="bi bi-info-circle text-secondary" style="font-size: 14px; cursor: pointer;"></i>
+                                        </div>
+
+                                        <div class="position-relative associate-dropdown-container">
+                                            <button class="btn btn-outline-secondary w-100 text-start d-flex justify-content-between align-items-center dropdown-trigger" type="button">
+                                                <span class="text-dark">Associated with 0 records</span>
+                                                <i class="bi bi-caret-down-fill text-secondary small"></i>
+                                            </button>
+
+                                            <div class="custom-dropdown-menu shadow-lg collapse" id="associateDropdown">
+                                                <div class="dropdown-arrow"></div>
+                                                
+                                                <div class="d-flex h-100">
+                                                    <div class="sidebar-nav d-flex flex-column">
+                                                        <div class="nav-item selected-nav-item d-flex justify-content-between align-items-center mb-1">
+                                                            <span>Selected</span>
+                                                            <span>0</span>
+                                                        </div>
+                                                        <hr class="my-1 mx-2 text-secondary">
+                                                        
+                                                        <div class="sidebar-scrollable flex-grow-1">
+                                                            <div class="nav-item d-flex justify-content-between align-items-center active" data-target="calls">
+                                                                <span>Calls</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="carts">
+                                                                <span>Carts</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="companies">
+                                                                <span>Companies</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="contacts">
+                                                                <span>Contacts</span>
+                                                                <span>2</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="contracts">
+                                                                <span>Contracts</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="deals">
+                                                                <span>Deals</span>
+                                                                <span>1</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="feedback">
+                                                                <span>Feedback</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="invoices">
+                                                                <span>Invoices</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                            <div class="nav-item d-flex justify-content-between align-items-center" data-target="leads">
+                                                                <span>Leads</span>
+                                                                <span>0</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="content-area flex-grow-1 p-3">
+                                                        <div class="content-panel active-panel" id="panel-calls">
+                                                            <div class="position-relative mb-4">
+                                                                <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Calls">
+                                                                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                                                            </div>
+                                                            <div class="empty-state text-center mt-5">
+                                                                <div class="empty-icon mb-3">
+                                                                    <i class="bi bi-search" style="font-size: 40px; color: #cbd5e1; opacity: 0.5;"></i>
+                                                                    <div class="empty-shadow"></div>
+                                                                </div>
+                                                                <p class="text-secondary mb-1">No suggested records to associate.</p>
+                                                                <p class="text-secondary">Search to find a record.</p>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="content-panel" id="panel-contacts">
+                                                            <div class="position-relative mb-3">
+                                                                <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Contacts">
+                                                                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                                                            </div>
+                                                            <div class="records-list">
+                                                                <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                                                            <i class="bi bi-person text-secondary"></i>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="fw-bold text-dark">Brian Halligan</div>
+                                                                            <div class="text-secondary small">brian@hubspot.com</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                </div>
+                                                                <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                                                            <i class="bi bi-person text-secondary"></i>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="fw-bold text-dark">Dharmesh Shah</div>
+                                                                            <div class="text-secondary small">dharmesh@hubspot.com</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="content-panel" id="panel-deals">
+                                                            <div class="position-relative mb-3">
+                                                                <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input" placeholder="Search Deals">
+                                                                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                                                            </div>
+                                                            <div class="records-list">
+                                                                <div class="record-item d-flex align-items-center justify-content-between p-2 rounded mb-1">
+                                                                    <div class="d-flex align-items-center gap-2">
+                                                                        <div class="record-icon bg-light rounded-circle d-flex justify-content-center align-items-center">
+                                                                            <i class="bi bi-handshake text-secondary"></i>
+                                                                        </div>
+                                                                        <div>
+                                                                            <div class="fw-bold text-dark">Enterprise Software Deal</div>
+                                                                            <div class="text-secondary small">$50,000 • Q4 Closing</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <input type="checkbox" class="form-check-input">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="content-panel" id="panel-generic">
+                                                            <div class="position-relative mb-4">
+                                                                <input type="text" class="form-control rounded-pill pe-5 ps-3 search-input generic-search-input" placeholder="Search">
+                                                                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary"></i>
+                                                            </div>
+                                                            <div class="empty-state text-center mt-5">
+                                                                <div class="empty-icon mb-3">
+                                                                    <i class="bi bi-search" style="font-size: 40px; color: #cbd5e1; opacity: 0.5;"></i>
+                                                                    <div class="empty-shadow"></div>
+                                                                </div>
+                                                                <p class="text-secondary mb-1">No suggested records to associate.</p>
+                                                                <p class="text-secondary">Search to find a record.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Hướng dẫn Phụ thuộc & Mã nhúng Mẫu 2 -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header d-flex justify-content-between align-items-center">
+                                    <div class="fw-bold d-flex align-items-center gap-2 text-dark">
+                                        <i class="bi bi-box-seam text-info fs-5"></i>
+                                        <span>Khung mã nguồn tích hợp (Dependencies &amp; Template)</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-dark copy-btn"
+                                        onclick="copyCode('dep-code-collapse2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Dependencies
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File collapse2.css (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File collapse2.js (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-lib"><i class="bi bi-box"></i> Bootstrap 5.3.2 CSS &amp; JS Bundle</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-collapse2">&lt;!-- 1. Bootstrap 5 CSS &amp; Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 2. File CSS của Component (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="collapse2.css"&gt;
+
+&lt;!-- 3. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+
+&lt;!-- 4. File JS điều khiển chuyển danh mục và collapse dropdown (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="collapse2.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-warning-soft">
+                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Component này dùng Bootstrap Collapse kết hợp danh mục sidebar đa năng. File <code>collapse2.js</code> xử lý tự động đóng khi click ra ngoài và chuyển tab danh mục (Calls, Contacts, Deals...) mượt mà.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_collapse2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-collapse2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-collapse2">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Collapse 2&lt;/title&gt;
+    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="collapse2.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-5 bg-light d-flex justify-content-center"&gt;
+    &lt;!-- Dán nội dung collapse2.html vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="collapse2.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-collapse2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-collapse2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-collapse2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-collapse2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 3: NỘI DUNG JS Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning-emphasis fw-bold small d-flex align-items-center gap-2" style="color: #facc15 !important;">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-collapse2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-collapse2"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
                     </div>
 
                 </div>
@@ -7298,8 +8390,13 @@
     <script src="grid1.js"></script>
     <!-- Import các file JS của từng List component (giữ nguyên không sửa file) -->
     <script src="list1.js"></script>
+    <!-- Import các file JS của từng Accordion component -->
+    <script src="accordion3.js"></script>
+    <!-- Import các file JS của từng Popover component -->
+    <script src="popover5.js"></script>
     <!-- Import các file JS của từng Collapse component (giữ nguyên không sửa file) -->
     <script src="collapse1.js"></script>
+    <script src="collapse2.js"></script>
 </body>
 
 </html>

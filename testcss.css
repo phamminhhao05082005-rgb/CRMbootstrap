@@ -521,9 +521,11 @@ body {
 .preview-card:has(#preview-popovers2),
 .preview-card:has(#preview-popovers3),
 .preview-card:has(#preview-popovers4),
+.preview-card:has(#preview-popover5),
 .preview-card:has(#preview-dropdown1),
 .preview-card:has(#preview-dropdown2),
-.preview-card:has(#preview-dropdown3) {
+.preview-card:has(#preview-dropdown3),
+.preview-card:has(#preview-dropdown4) {
     overflow: visible !important;
 }
 
@@ -562,6 +564,28 @@ body {
     justify-content: center;
     padding-top: 35px;
     padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+#preview-dropdown4 {
+    background-color: #f8fafc;
+    min-height: 480px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    position: relative;
+    overflow: visible;
+}
+
+#preview-popover5 {
+    background-color: #f8fafc;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
     overflow: visible;
 }
