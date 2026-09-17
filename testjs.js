@@ -6836,7 +6836,406 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }, { offset: Number.NEGATIVE_INFINITY }).element;
     }
-});`
+});`,
+
+    'list1.html': `<div class="activity-list-wrapper container py-4" style="max-width: 800px;">
+    
+    
+    <div class="mb-3">
+        <div class="position-relative" style="width: 280px;">
+            <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary search-icon"></i>
+            <input type="text" class="form-control rounded-pill ps-5 global-search" placeholder="Search activities">
+        </div>
+    </div>
+
+    
+    <div class="d-flex align-items-center gap-2 mb-4 flex-wrap">
+        
+        
+        <div class="filter-wrapper d-inline-flex align-items-center" id="timeFilterWrapper">
+            <div class="dropdown">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold filter-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="btnTimeFilter">
+                    <span id="timeFilterLabel">All time</span>
+                    <i class="bi bi-caret-down-fill small ms-1"></i>
+                </button>
+                <div class="dropdown-menu shadow-sm p-0 py-2">
+                    <div class="px-3 pb-2">
+                        <div class="position-relative">
+                            <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary search-icon"></i>
+                            <input type="text" class="form-control rounded-pill ps-5 search-dropdown-input" id="timeSearch" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="dropdown-divider my-1"></div>
+                    <div class="max-h-250 overflow-auto">
+                        <div class="time-item-container"><a class="dropdown-item time-item" href="#" data-value="All time">All time</a></div>
+                        <div class="time-item-container"><a class="dropdown-item time-item" href="#" data-value="Today">Today</a></div>
+                        <div class="time-item-container"><a class="dropdown-item time-item" href="#" data-value="Yesterday">Yesterday</a></div>
+                        <div class="time-item-container"><a class="dropdown-item time-item" href="#" data-value="This week">This week</a></div>
+                        <div class="time-item-container"><a class="dropdown-item time-item" href="#" data-value="Last week">Last week</a></div>
+                        <div class="time-item-container"><a class="dropdown-item time-item" href="#" data-value="Last 7 days">Last 7 days</a></div>
+                        <div class="time-item-container"><a class="dropdown-item time-item d-flex justify-content-between align-items-center text-secondary" href="#" data-value="Custom date range">Custom date range <i class="bi bi-chevron-right"></i></a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-icon-container d-none" id="timeFilterClear">
+                <i class="bi bi-x fs-5"></i>
+            </div>
+        </div>
+
+        
+        <div class="filter-wrapper d-inline-flex align-items-center" id="assignFilterWrapper">
+            <div class="dropdown">
+                <button class="btn btn-link text-decoration-none text-dark fw-bold filter-toggle" type="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" id="btnAssignFilter">
+                    <span id="assignFilterLabel">Activity assigned to</span>
+                    <i class="bi bi-caret-down-fill small ms-1"></i>
+                </button>
+                <div class="dropdown-menu shadow-sm p-0 py-2" style="width: 350px;">
+                    <div class="px-3 pb-2">
+                        <div class="position-relative">
+                            <i class="bi bi-search position-absolute top-50 start-0 translate-middle-y ms-3 text-secondary search-icon"></i>
+                            <input type="text" class="form-control rounded-pill ps-5 search-dropdown-input" id="assignSearch" placeholder="Search">
+                        </div>
+                    </div>
+                    <div class="dropdown-divider my-1"></div>
+                    <div class="max-h-250 overflow-auto">
+                        <label class="dropdown-item assignee-item d-flex align-items-start gap-2">
+                            <input type="checkbox" class="form-check-input custom-checkbox assignee-cb mt-1" value="Me">
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <i class="bi bi-lightning-fill text-secondary"></i> Me
+                                </div>
+                                <div class="assignee-subtitle text-secondary">This value is dynamically applied to the current user</div>
+                            </div>
+                        </label>
+                        <label class="dropdown-item assignee-item d-flex align-items-center gap-2">
+                            <input type="checkbox" class="form-check-input custom-checkbox assignee-cb mt-0" value="All deactivated and removed owners">
+                            <i class="bi bi-lightning-fill text-secondary"></i> All deactivated and removed owners
+                        </label>
+                        <label class="dropdown-item assignee-item d-flex align-items-center gap-2">
+                            <input type="checkbox" class="form-check-input custom-checkbox assignee-cb mt-0" value="testuser Zigman">
+                            testuser Zigman
+                        </label>
+                        <label class="dropdown-item assignee-item d-flex align-items-center gap-2">
+                            <input type="checkbox" class="form-check-input custom-checkbox assignee-cb mt-0" value="HÀO PHẠM MINH">
+                            HÀO PHẠM MINH
+                        </label>
+                        <label class="dropdown-item assignee-item d-flex align-items-center gap-2">
+                            <input type="checkbox" class="form-check-input custom-checkbox assignee-cb mt-0" value="Unassigned">
+                            Unassigned
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="clear-icon-container d-none" id="assignFilterClear">
+                <i class="bi bi-x fs-5"></i>
+            </div>
+        </div>
+
+        
+        <button class="btn btn-link text-dark fw-bold text-decoration-none d-none" id="btnClearAll">Clear all</button>
+
+    </div>
+
+    
+    <h5 class="fw-normal text-secondary mb-3">September 2026</h5>
+
+    
+    <div class="card custom-card mb-3">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="fw-bold text-dark d-flex align-items-center gap-2">
+                    Deal Activity <i class="bi bi-handshake text-dark fs-6"></i>
+                </div>
+                <div class="text-secondary small">
+                    Sep 17, 2026 at 8:13 AM GMT+7
+                </div>
+            </div>
+            <div class="text-dark">
+                <span class="custom-link fw-bold">HÀO PHẠM MINH</span> moved test6 from Appointment Scheduled to Qualified To Buy. 
+                <a href="#" class="custom-link fw-bold text-decoration-none">View details</a>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="card custom-card mb-3">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="fw-bold text-dark d-flex align-items-center gap-2">
+                    Deal Activity <i class="bi bi-handshake text-dark fs-6"></i>
+                </div>
+                <div class="text-secondary small">
+                    Sep 17, 2026 at 8:11 AM GMT+7
+                </div>
+            </div>
+            <div class="text-dark">
+                <span class="custom-link fw-bold">HÀO PHẠM MINH</span> moved test6 to Appointment Scheduled. 
+                <a href="#" class="custom-link fw-bold text-decoration-none">View details</a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div class="card custom-card mb-3">
+        <div class="card-body p-4">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+                <div class="fw-bold text-dark d-flex align-items-center gap-2">
+                    Created <i class="bi bi-handshake text-dark fs-6"></i>
+                </div>
+                <div class="text-secondary small">
+                    Sep 17, 2026 at 8:11 AM GMT+7
+                </div>
+            </div>
+            <div class="text-dark">
+                This deal was created by <span class="custom-link fw-bold">HÀO PHẠM MINH</span>
+            </div>
+        </div>
+    </div>
+
+</div>`,
+
+    'list1.css': `.search-icon {
+    font-size: 14px;
+}
+
+.global-search {
+    font-size: 14px;
+    border-color: #cbd5e1;
+}
+
+.global-search:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.search-dropdown-input {
+    font-size: 14px;
+    border-color: #cbd5e1;
+}
+
+.search-dropdown-input:focus {
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25);
+}
+
+.filter-wrapper {
+    border-radius: 6px;
+    transition: background-color 0.2s;
+}
+
+.filter-wrapper.active-filter-bg {
+    background-color: #e5e7eb;
+}
+
+.filter-toggle {
+    font-size: 15px;
+    padding: 6px 12px;
+    color: #33475b;
+}
+
+.filter-wrapper:not(.active-filter-bg) .filter-toggle:hover {
+    color: #000;
+}
+
+.clear-icon-container {
+    cursor: pointer;
+    padding: 0 8px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #cbd5e1;
+}
+
+.clear-icon-container:hover {
+    color: #1f2937;
+}
+
+.max-h-250 {
+    max-height: 250px;
+}
+
+.activity-list-wrapper .dropdown-item,
+.filter-wrapper .dropdown-item {
+    font-size: 14px;
+    padding: 10px 16px;
+    color: #33475b;
+}
+
+.activity-list-wrapper .dropdown-item:hover,
+.filter-wrapper .dropdown-item:hover {
+    background-color: #f5f8fa;
+    color: #33475b;
+}
+
+.assignee-item {
+    cursor: pointer;
+}
+
+.assignee-item:active {
+    background-color: #e2e8f0;
+}
+
+.assignee-subtitle {
+    font-size: 12px;
+}
+
+.custom-checkbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.custom-card {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.custom-link {
+    color: #0f5c6e;
+}
+
+.custom-link:hover {
+    color: #0a404d;
+}
+
+.max-h-250::-webkit-scrollbar {
+    width: 8px;
+}
+.max-h-250::-webkit-scrollbar-track {
+    background: transparent;
+}
+.max-h-250::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+}`,
+
+    'list1.js': `function initList1() {
+    const timeSearch = document.getElementById('timeSearch');
+    const timeItems = document.querySelectorAll('.time-item-container');
+
+    if (timeSearch) {
+        timeSearch.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            timeItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(term) ? '' : 'none';
+            });
+        });
+    }
+
+    const assignSearch = document.getElementById('assignSearch');
+    const assignItems = document.querySelectorAll('.assignee-item');
+
+    if (assignSearch) {
+        assignSearch.addEventListener('input', (e) => {
+            const term = e.target.value.toLowerCase();
+            assignItems.forEach(item => {
+                const text = item.textContent.toLowerCase();
+                item.style.display = text.includes(term) ? '' : 'none';
+            });
+        });
+    }
+
+    let currentTime = 'All time';
+    let selectedAssigneesCount = 0;
+
+    const timeLinks = document.querySelectorAll('.time-item');
+    timeLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            currentTime = link.dataset.value;
+
+            const dropdownEl = document.getElementById('btnTimeFilter');
+            if (dropdownEl && window.bootstrap) {
+                const dropdownObj = bootstrap.Dropdown.getInstance(dropdownEl);
+                if (dropdownObj) dropdownObj.hide();
+            }
+
+            updateUI();
+        });
+    });
+
+    const assigneeCheckboxes = document.querySelectorAll('.assignee-cb');
+    assigneeCheckboxes.forEach(cb => {
+        cb.addEventListener('change', () => {
+            selectedAssigneesCount = document.querySelectorAll('.assignee-cb:checked').length;
+            updateUI();
+        });
+    });
+
+    const timeWrapper = document.getElementById('timeFilterWrapper');
+    const timeLabel = document.getElementById('timeFilterLabel');
+    const timeClear = document.getElementById('timeFilterClear');
+
+    const assignWrapper = document.getElementById('assignFilterWrapper');
+    const assignLabel = document.getElementById('assignFilterLabel');
+    const assignClear = document.getElementById('assignFilterClear');
+
+    const btnClearAll = document.getElementById('btnClearAll');
+
+    function updateUI() {
+        if (timeLabel && timeWrapper && timeClear) {
+            if (currentTime !== 'All time') {
+                timeLabel.textContent = currentTime;
+                timeWrapper.classList.add('active-filter-bg');
+                timeClear.classList.remove('d-none');
+            } else {
+                timeLabel.textContent = 'All time';
+                timeWrapper.classList.remove('active-filter-bg');
+                timeClear.classList.add('d-none');
+            }
+        }
+
+        if (assignLabel && assignWrapper && assignClear) {
+            if (selectedAssigneesCount > 0) {
+                assignLabel.textContent = \`Activity assigned to (\${selectedAssigneesCount})\`;
+                assignWrapper.classList.add('active-filter-bg');
+                assignClear.classList.remove('d-none');
+            } else {
+                assignLabel.textContent = 'Activity assigned to';
+                assignWrapper.classList.remove('active-filter-bg');
+                assignClear.classList.add('d-none');
+            }
+        }
+
+        if (btnClearAll) {
+            if (currentTime !== 'All time' || selectedAssigneesCount > 0) {
+                btnClearAll.classList.remove('d-none');
+            } else {
+                btnClearAll.classList.add('d-none');
+            }
+        }
+    }
+
+    if (timeClear) {
+        timeClear.addEventListener('click', (e) => {
+            e.stopPropagation();
+            currentTime = 'All time';
+            updateUI();
+        });
+    }
+
+    if (assignClear) {
+        assignClear.addEventListener('click', (e) => {
+            e.stopPropagation();
+            assigneeCheckboxes.forEach(cb => cb.checked = false);
+            selectedAssigneesCount = 0;
+            updateUI();
+        });
+    }
+
+    if (btnClearAll) {
+        btnClearAll.addEventListener('click', () => {
+            currentTime = 'All time';
+            assigneeCheckboxes.forEach(cb => cb.checked = false);
+            selectedAssigneesCount = 0;
+            updateUI();
+        });
+    }
+}
+
+document.addEventListener('DOMContentLoaded', initList1);`
 };
 
 // 5. Hàm tự động tải HTML, CSS và JS vào trang
@@ -7233,6 +7632,17 @@ document.addEventListener("DOMContentLoaded", () => {
         'code-css-grid1',
         'grid1.js',
         'code-js-grid1'
+    );
+
+    // Tải Component List
+    loadComponent(
+        'list1.html',
+        'list1.css',
+        'preview-list1',
+        'code-html-list1',
+        'code-css-list1',
+        'list1.js',
+        'code-js-list1'
     );
 
     // Kích hoạt đồng bộ Tab

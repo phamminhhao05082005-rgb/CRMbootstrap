@@ -211,9 +211,6 @@
     background-color: #eaf0f6 !important;
 }
 
-/* ==========================================================================
-   TABLE 1 PAGINATION STYLING (Light Theme - Modern CRM Style)
-   ========================================================================== */
 .hs-pagination-footer {
     background-color: #ffffff;
     border: 1px solid #dfe3eb;
@@ -323,7 +320,6 @@
     font-weight: 600;
 }
 
-/* Grouped segmented buttons */
 .hs-pagination-nav {
     display: inline-flex;
     align-items: center;
