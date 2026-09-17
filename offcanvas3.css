@@ -1,0 +1,209 @@
+#dealOffcanvas.offcanvas,
+#dealOffcanvas {
+    width: 450px !important;
+    border-left: 1px solid #e5e7eb;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.05);
+    background-color: #f8fafc;
+}
+
+#dealOffcanvas .offcanvas-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#dealOffcanvas .offcanvas-body {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 transparent;
+}
+
+#dealOffcanvas .offcanvas-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#dealOffcanvas .offcanvas-body::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+}
+
+#dealOffcanvas .bg-white {
+    background-color: #ffffff !important;
+}
+
+#dealOffcanvas .view-record-link {
+    color: #0f5c6e;
+    font-size: 14px;
+}
+
+#dealOffcanvas .view-record-link:hover {
+    color: #0a404d;
+}
+
+#dealOffcanvas .actions-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 4px;
+    color: #33475b !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#dealOffcanvas .actions-link:hover {
+    color: #000000 !important;
+}
+
+#dealOffcanvas .dropdown-item {
+    font-size: 14px;
+    padding: 6px 16px;
+    color: #33475b;
+}
+
+#dealOffcanvas .dropdown-item:hover {
+    background-color: #f5f8fa;
+    color: #111827;
+}
+
+#dealOffcanvas .dropdown-divider {
+    margin: 4px 0;
+    border-color: #e5e7eb;
+}
+
+#dealOffcanvas .deal-icon-bg {
+    width: 48px;
+    height: 48px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    color: #4b5563;
+    flex-shrink: 0;
+}
+
+#dealOffcanvas .deal-properties {
+    font-size: 14px;
+    color: #1f2937;
+}
+
+#dealOffcanvas .badge-pink {
+    background-color: #c2297f !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+#dealOffcanvas .action-circle-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 0;
+}
+
+#dealOffcanvas .action-circle-btn .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4b5563;
+    font-size: 18px;
+    transition: all 0.2s;
+    background-color: #ffffff;
+}
+
+#dealOffcanvas .action-circle-btn:hover .circle {
+    background-color: #f8fafc;
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+#dealOffcanvas .action-circle-btn span {
+    font-size: 12px;
+    color: #4b5563;
+}
+
+#dealOffcanvas .custom-accordion {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #ffffff;
+}
+
+#dealOffcanvas .custom-header-container {
+    font-size: 14px;
+    color: #33475b;
+    background-color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+#dealOffcanvas .custom-header-container:hover {
+    background-color: #f9fafb;
+}
+
+#dealOffcanvas .header-title {
+    max-width: none !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+#dealOffcanvas .chevron-icon {
+    display: inline-block;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+#dealOffcanvas .header-title.collapsed .chevron-icon {
+    transform: rotate(-90deg);
+}
+
+#dealOffcanvas .btn-icon {
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #4b5563 !important;
+    background: white !important;
+    border: 1px solid #dee2e6 !important;
+    transition: background-color 0.2s;
+}
+
+#dealOffcanvas .btn-icon:hover {
+    background: #f3f4f6 !important;
+}
+
+#dealOffcanvas .accordion-body {
+    padding: 0 20px 20px 20px;
+    background-color: #ffffff;
+}
+
+#dealOffcanvas .property-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#dealOffcanvas .property-label {
+    font-size: 12px;
+    color: #64748b;
+}
+
+#dealOffcanvas .property-value {
+    font-size: 14px;
+    color: #33475b;
+}
+
+#dealOffcanvas .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}

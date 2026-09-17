@@ -49,8 +49,10 @@
 
     <link rel="stylesheet" href="offcanvas1.css">
     <link rel="stylesheet" href="offcanvas2.css">
+    <link rel="stylesheet" href="offcanvas3.css">
 
     <link rel="stylesheet" href="table1.css">
+    <link rel="stylesheet" href="grid1.css">
 
     <!-- CSS Gốc (load sau để quản lý layout và ghi đè kiểu body an toàn) -->
     <link rel="stylesheet" href="testcss.css">
@@ -184,6 +186,15 @@
                         <span class="d-flex align-items-center gap-2">
                             <i class="bi bi-table" style="color: #6366f1;"></i>
                             <span>Tables</span>
+                        </span>
+                    </button>
+                    <!-- Tab Grid -->
+                    <button class="nav-link d-flex align-items-center justify-content-between mb-1"
+                        id="tab-grid-btn" data-bs-toggle="pill" data-bs-target="#tab-grid" type="button"
+                        role="tab" aria-controls="tab-grid" aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-kanban" style="color: #0284c7;"></i>
+                            <span>Grid</span>
                         </span>
                     </button>
                 </div>
@@ -2597,7 +2608,7 @@
                         <section id="pop-mau-1" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
-                                <h2 class="h5 fw-bold mb-0">User Profile Popover (Thẻ hồ sơ người dùng CRM - Hover)</h2>
+                                <h2 class="h5 fw-bold mb-0">Thẻ hồ sơ người dùng CRM - Hover</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 1 -->
@@ -2772,7 +2783,7 @@
                         <section id="pop-mau-2" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 2</span>
-                                <h2 class="h5 fw-bold mb-0">Company Profile Popover (Thẻ thông tin công ty &amp; Mạng xã hội - Hover)</h2>
+                                <h2 class="h5 fw-bold mb-0">Thẻ thông tin công ty &amp; Mạng xã hội - Hover</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 2 -->
@@ -2982,7 +2993,7 @@
                         <section id="pop-mau-3" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 3</span>
-                                <h2 class="h5 fw-bold mb-0">Advanced Filter Popover (Bộ lọc liên hệ nâng cao - Dropdown Popover)</h2>
+                                <h2 class="h5 fw-bold mb-0">Bộ lọc liên hệ nâng cao - Dropdown Popover</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 3 -->
@@ -3177,7 +3188,7 @@
                         <section id="pop-mau-4" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 4</span>
-                                <h2 class="h5 fw-bold mb-0">Quick Note Activity Popover (Ghi chú nhanh hoạt động Deal/Contact - Dropdown)</h2>
+                                <h2 class="h5 fw-bold mb-0">Ghi chú nhanh hoạt động Deal/Contact - Dropdown</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 4 -->
@@ -3365,7 +3376,7 @@
                         <section id="drop-mau-1" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
-                                <h2 class="h5 fw-bold mb-0">User Account Profile Dropdown (Menu tài khoản người dùng CRM)</h2>
+                                <h2 class="h5 fw-bold mb-0">Menu tài khoản người dùng CRM</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 1 -->
@@ -3597,7 +3608,7 @@
                         <section id="drop-mau-2" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 2</span>
-                                <h2 class="h5 fw-bold mb-0">Multi-level Submenu Dropend (Menu đa cấp mở rộng sang phải)</h2>
+                                <h2 class="h5 fw-bold mb-0">Menu đa cấp mở rộng sang phải</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 2 -->
@@ -3848,7 +3859,7 @@
                         <section id="drop-mau-3" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 3</span>
-                                <h2 class="h5 fw-bold mb-0">Quick Filter Search Dropdown (Menu tìm kiếm &amp; Thêm bộ lọc nhanh)</h2>
+                                <h2 class="h5 fw-bold mb-0">Menu tìm kiếm &amp; Thêm bộ lọc nhanh</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 3 -->
@@ -4089,7 +4100,7 @@
                         <section id="modal-mau-1" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
-                                <h2 class="h5 fw-bold mb-0">Create New Company Modal (Form tạo công ty mới trong CRM)</h2>
+                                <h2 class="h5 fw-bold mb-0">Form tạo công ty mới trong CRM</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 1 -->
@@ -4223,7 +4234,7 @@
                         <section id="modal-mau-2" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
-                                <h2 class="h5 fw-bold mb-0">Deal Activity Log Modal (Nhật ký tiến độ Deal dạng Timeline)</h2>
+                                <h2 class="h5 fw-bold mb-0">Nhật ký tiến độ Deal dạng Timeline</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 2 -->
@@ -4344,7 +4355,7 @@
                         <section id="modal-mau-3" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 3</span>
-                                <h2 class="h5 fw-bold mb-0">Contact Channels Reach Out Modal (Lựa chọn kênh liên lạc khách hàng)</h2>
+                                <h2 class="h5 fw-bold mb-0">Lựa chọn kênh liên lạc khách hàng</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 3 -->
@@ -4478,7 +4489,7 @@
                         <section id="modal-mau-4" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 4</span>
-                                <h2 class="h5 fw-bold mb-0">Delete CRM Record Confirmation Modal (Hộp thoại xác nhận xóa lead CRM)</h2>
+                                <h2 class="h5 fw-bold mb-0">Hộp thoại xác nhận xóa lead CRM</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 4 -->
@@ -4606,7 +4617,7 @@
                         <section id="modal-mau-5" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 5</span>
-                                <h2 class="h5 fw-bold mb-0">HubSpot-Style Edit Quick Filters Modal (Hộp thoại quản lý bộ lọc nhanh)</h2>
+                                <h2 class="h5 fw-bold mb-0">Hộp thoại quản lý bộ lọc nhanh</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 5 -->
@@ -4864,7 +4875,7 @@
                         <section id="card-mau-1" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
-                                <h2 class="h5 fw-bold mb-0">CRM Deal Detail Card (Thẻ chi tiết giao dịch / hợp đồng CRM)</h2>
+                                <h2 class="h5 fw-bold mb-0">Thẻ chi tiết giao dịch / hợp đồng CRM</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 1 -->
@@ -5023,7 +5034,7 @@
                         <section id="card-mau-2" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
-                                <h2 class="h5 fw-bold mb-0">CRM Kanban Deal Card (Thẻ giao dịch bảng Kanban CRM)</h2>
+                                <h2 class="h5 fw-bold mb-0">Thẻ giao dịch bảng Kanban CRM</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 2 -->
@@ -5133,18 +5144,19 @@
                     </div>
 
                     <!-- ============================================== -->
-                    <!-- TAB 10: OFFCANVAS COMPONENTS (GỒM 2 MẪU) -->
+                    <!-- TAB 10: OFFCANVAS COMPONENTS (GỒM 3 MẪU) -->
                     <!-- ============================================== -->
                     <div class="tab-pane fade" id="tab-offcanvas" role="tabpanel" aria-labelledby="tab-offcanvas-btn">
                         <!-- Tiêu đề Offcanvas & Nút điều hướng nhanh -->
                         <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
                             <div>
                                 <h1 class="h3 fw-bold mb-1">10. Offcanvas Components</h1>
-                                <p class="text-muted mb-0 small">Các mẫu Ngăn kéo trượt (Offcanvas Drawer) cho CRM: Form trượt tạo liên hệ khách hàng và Bảng thông báo thông minh</p>
+                                <p class="text-muted mb-0 small">Các mẫu Ngăn kéo trượt (Offcanvas Drawer) cho CRM: Form trượt tạo liên hệ khách hàng, Bảng thông báo thông minh và Chi tiết Deal preview</p>
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#offcanvas-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Create Contact</a>
                                 <a href="#offcanvas-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Notification Drawer</a>
+                                <a href="#offcanvas-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Deal Preview</a>
                             </div>
                         </div>
 
@@ -5154,7 +5166,7 @@
                         <section id="offcanvas-mau-1" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
-                                <h2 class="h5 fw-bold mb-0">Create Contact Offcanvas (Ngăn kéo trượt thêm liên hệ CRM)</h2>
+                                <h2 class="h5 fw-bold mb-0">Ngăn kéo trượt thêm liên hệ CRM</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 1 -->
@@ -5351,7 +5363,7 @@
                         <section id="offcanvas-mau-2" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
-                                <h2 class="h5 fw-bold mb-0">Notification Drawer Offcanvas (Ngăn kéo thông báo & xử lý hàng loạt)</h2>
+                                <h2 class="h5 fw-bold mb-0">Ngăn kéo thông báo & xử lý hàng loạt</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 2 -->
@@ -5569,6 +5581,311 @@
                                 </div>
                             </div>
                         </section>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 10.3 MẪU 3: DEAL PREVIEW OFFCANVAS -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="offcanvas-mau-3" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h5 fw-bold mb-0">Ngăn kéo xem nhanh chi tiết Deal & hoạt động</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 3 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                                        <i class="bi bi-hand-index-thumb-fill me-1"></i> Click nút để mở Drawer
+                                    </span>
+                                </div>
+                                <div class="p-4 preview-container d-flex justify-content-center align-items-center"
+                                    id="preview-offcanvas3">
+                                    <div class="p-4 text-center">
+                                        <button class="btn btn-primary d-inline-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#dealOffcanvas">
+                                            <i class="bi bi-layout-sidebar-reverse"></i> deal1
+                                        </button>
+                                    </div>
+
+                                    <div class="offcanvas offcanvas-end" tabindex="-1" id="dealOffcanvas">
+                                        <div class="offcanvas-header border-bottom">
+                                            <h5 class="offcanvas-title fw-normal">Preview</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                                        </div>
+
+                                        <div class="subheader px-3 py-2 border-bottom d-flex justify-content-between align-items-center">
+                                            <a href="#" class="text-decoration-none fw-bold view-record-link">View record</a>
+                                            <div class="dropdown">
+                                                <button class="btn btn-link text-decoration-none fw-bold actions-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                                                    Actions
+                                                </button>
+                                                <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                                                    <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Customize preview <i class="bi bi-box-arrow-up-right text-secondary small"></i></a></li>
+                                                    <li><a class="dropdown-item" href="#">Unfollow</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item" href="#">View all properties</a></li>
+                                                    <li><a class="dropdown-item" href="#">View property history</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item" href="#">View association history</a></li>
+                                                    <li><a class="dropdown-item" href="#">Review associations</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-stars"></i> Summarize</a></li>
+                                                    <li><hr class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Restore activity <i class="bi bi-box-arrow-up-right text-secondary small"></i></a></li>
+                                                    <li><a class="dropdown-item" href="#">Merge</a></li>
+                                                    <li><a class="dropdown-item" href="#">Clone</a></li>
+                                                    <li><a class="dropdown-item" href="#">Delete</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                        <div class="offcanvas-body p-0">
+                                            <div class="p-4 border-bottom bg-white">
+                                                <div class="d-flex align-items-center gap-3 mb-3">
+                                                    <div class="deal-icon-bg d-flex justify-content-center align-items-center">
+                                                        <i class="bi bi-handshake fs-5"></i>
+                                                    </div>
+                                                    <h3 class="m-0 fw-bold">test</h3>
+                                                </div>
+
+                                                <div class="deal-properties d-flex flex-column gap-2 mb-4">
+                                                    <div><span class="text-secondary">Amount:</span> $10</div>
+                                                    <div><span class="text-secondary">Close Date:</span> <i class="bi bi-calendar3"></i> 09/30/2026</div>
+                                                    <div>
+                                                        <span class="text-secondary">Pipeline:</span> 
+                                                        <span class="badge bg-light text-dark border px-2 py-1 ms-1">Sales Pipeline</span>
+                                                    </div>
+                                                    <div>
+                                                        <span class="text-secondary">Deal Stage:</span> 
+                                                        <span class="badge badge-pink px-2 py-1 ms-1">Presentation Scheduled</span>
+                                                    </div>
+                                                </div>
+
+                                                <div class="d-flex justify-content-between px-2">
+                                                    <button class="action-circle-btn">
+                                                        <div class="circle"><i class="bi bi-pencil-square"></i></div>
+                                                        <span>Note</span>
+                                                    </button>
+                                                    <button class="action-circle-btn">
+                                                        <div class="circle"><i class="bi bi-envelope"></i></div>
+                                                        <span>Email</span>
+                                                    </button>
+                                                    <button class="action-circle-btn">
+                                                        <div class="circle"><i class="bi bi-telephone"></i></div>
+                                                        <span>Call</span>
+                                                    </button>
+                                                    <button class="action-circle-btn">
+                                                        <div class="circle"><i class="bi bi-list-task"></i></div>
+                                                        <span>Task</span>
+                                                    </button>
+                                                    <button class="action-circle-btn">
+                                                        <div class="circle"><i class="bi bi-calendar-event"></i></div>
+                                                        <span>Meeting</span>
+                                                    </button>
+                                                    <button class="action-circle-btn">
+                                                        <div class="circle"><i class="bi bi-three-dots"></i></div>
+                                                        <span>More</span>
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item custom-accordion">
+                                                <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                                                    <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title" data-bs-toggle="collapse" data-bs-target="#aboutThisDeal">
+                                                        <i class="bi bi-chevron-down chevron-icon"></i>
+                                                        <span class="fw-bold">About this deal</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2 pe-3">
+                                                        <div class="dropdown">
+                                                            <button class="btn btn-link text-decoration-none fw-bold actions-link dropdown-toggle p-0" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                                                                Actions
+                                                            </button>
+                                                            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                                                                <li><a class="dropdown-item" href="#">Customize properties</a></li>
+                                                                <li><a class="dropdown-item" href="#">View all properties</a></li>
+                                                                <li><a class="dropdown-item" href="#">View property history</a></li>
+                                                                <li><hr class="dropdown-divider"></li>
+                                                                <li><a class="dropdown-item text-secondary d-flex align-items-center gap-2" href="#"><i class="bi bi-lock"></i> Fill smart properties</a></li>
+                                                            </ul>
+                                                        </div>
+                                                        <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div id="aboutThisDeal" class="collapse show">
+                                                    <div class="accordion-body d-flex flex-column gap-3">
+                                                        <div class="property-group">
+                                                            <div class="property-label">Deal owner</div>
+                                                            <div class="property-value">HÀO PHẠM MINH</div>
+                                                        </div>
+                                                        <div class="property-group">
+                                                            <div class="property-label">Last Contacted</div>
+                                                            <div class="property-value">09/09/2026 11:15 AM GMT+7</div>
+                                                        </div>
+                                                        <div class="property-group">
+                                                            <div class="property-label">Deal Type</div>
+                                                            <div class="property-value">New Business</div>
+                                                        </div>
+                                                        <div class="property-group">
+                                                            <div class="property-label">Priority</div>
+                                                            <div class="property-value d-flex align-items-center gap-2">
+                                                                <span class="status-dot bg-success"></span> Low
+                                                            </div>
+                                                        </div>
+                                                        <div class="property-group">
+                                                            <div class="property-label">Closed Lost Reason</div>
+                                                            <div class="property-value">--</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item custom-accordion">
+                                                <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                                                    <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#recentActivities">
+                                                        <i class="bi bi-chevron-down chevron-icon"></i>
+                                                        <span class="fw-bold">Recent activities</span>
+                                                    </div>
+                                                </div>
+                                                <div id="recentActivities" class="collapse">
+                                                    <div class="accordion-body">
+                                                        <p class="text-secondary small mb-0">No recent activities.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item custom-accordion">
+                                                <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                                                    <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#upcomingActivities">
+                                                        <i class="bi bi-chevron-down chevron-icon"></i>
+                                                        <span class="fw-bold">Upcoming activities</span>
+                                                    </div>
+                                                </div>
+                                                <div id="upcomingActivities" class="collapse">
+                                                    <div class="accordion-body">
+                                                        <p class="text-secondary small mb-0">No upcoming activities.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item custom-accordion">
+                                                <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                                                    <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#contacts">
+                                                        <i class="bi bi-chevron-down chevron-icon"></i>
+                                                        <span class="fw-bold">Contacts (1)</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2 pe-3">
+                                                        <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                                                        <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div id="contacts" class="collapse">
+                                                    <div class="accordion-body">
+                                                        <p class="text-secondary small mb-0">Contact details here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item custom-accordion">
+                                                <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                                                    <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#companies">
+                                                        <i class="bi bi-chevron-down chevron-icon"></i>
+                                                        <span class="fw-bold">Companies (1)</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2 pe-3">
+                                                        <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                                                        <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div id="companies" class="collapse">
+                                                    <div class="accordion-body">
+                                                        <p class="text-secondary small mb-0">Company details here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion-item custom-accordion">
+                                                <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                                                    <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#tickets">
+                                                        <i class="bi bi-chevron-down chevron-icon"></i>
+                                                        <span class="fw-bold">Tickets (1)</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center gap-2 pe-3">
+                                                        <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                                                        <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                                                    </div>
+                                                </div>
+                                                <div id="tickets" class="collapse">
+                                                    <div class="accordion-body">
+                                                        <p class="text-secondary small mb-0">Ticket details here.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hướng dẫn CDN / Phụ thuộc -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-in-down fs-5"></i> THƯ VIỆN CẦN NHÚNG
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('dep-code-offcanvas3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Link
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="dep-code-offcanvas3">&lt;!-- Bootstrap 5 CSS &amp; Bootstrap Icons --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- File CSS Offcanvas 3 --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;offcanvas3.css&quot;&gt;
+
+&lt;!-- Bootstrap 5 JS Bundle &amp; File Script Offcanvas 3 --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;offcanvas3.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Source Code HTML, CSS, JS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-offcanvas3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-offcanvas3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-primary-subtle fw-bold small d-flex align-items-center gap-2" style="color: #60a5fa !important;">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-offcanvas3', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-offcanvas3"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+        
+                        </section>
                     </div>
 
                     <!-- ============================================== -->
@@ -5592,7 +5909,7 @@
                         <section id="table-mau-1" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
-                                <h2 class="h5 fw-bold mb-0">HubSpot-Style CRM Lead Table (Bảng quản lý Lead CRM đa năng)</h2>
+                                <h2 class="h5 fw-bold mb-0">Bảng quản lý Lead CRM</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 1 -->
@@ -5895,6 +6212,465 @@
                         </section>
                     </div>
 
+                    <!-- ============================================== -->
+                    <!-- TAB 12: GRID COMPONENTS (GỒM 1 MẪU) -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade" id="tab-grid" role="tabpanel" aria-labelledby="tab-grid-btn">
+                        <!-- Tiêu đề Grid & Nút điều hướng nhanh -->
+                        <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
+                            <div>
+                                <h1 class="h3 fw-bold mb-1">12. Grid (Kanban Board) Components</h1>
+                                <p class="text-muted mb-0 small">Mẫu Bảng Kanban Grid theo dõi quy trình giao dịch (Deals Pipeline) với tính năng kéo thả (Drag & Drop)</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-2">
+                                <a href="#grid-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Deal Pipeline Kanban</a>
+                            </div>
+                        </div>
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 12.1 MẪU 1: DEAL PIPELINE KANBAN GRID -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="grid-mau-1" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
+                                <h2 class="h5 fw-bold mb-0">Bảng Kanban kéo thả cơ hội bán hàng CRM</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 1 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                                        <i class="bi bi-arrows-move me-1"></i> Hỗ trợ Kéo thả & Cuộn ngang
+                                    </span>
+                                </div>
+                                <div class="p-0 preview-container" id="preview-grid1" style="background-color: #ffffff; min-height: 520px; overflow-x: auto;">
+                                    <div class="board-wrapper d-flex flex-nowrap overflow-x-auto align-items-start gap-3 p-4 flex-grow-1">
+                                        <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+                                            <div class="p-3 d-flex align-items-center gap-2">
+                                                <span class="badge badge-blue rounded-3 px-2 py-1 fs-6">Appointment Scheduled</span>
+                                                <span class="fw-bold text-secondary text-xs">1</span>
+                                            </div>
+                                            <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+                                                <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                                                    <div class="card-body p-3 d-flex flex-column gap-2">
+                                                        <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                                                            test6
+                                                            <button class="btn-icon" title="More options">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="text-secondary text-xs d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/17/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/30/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                                HÀO PHẠM MINH
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                                                            <div class="d-flex gap-1">
+                                                                <button class="btn-icon" title="Edit">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                                </button>
+                                                                <button class="btn-icon" title="List">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                                                </button>
+                                                            </div>
+                                                            <button class="btn-upcoming">— | No upcoming</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+                                            </div>
+                                            <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+                                                <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+                                                <div><strong class="text-dark">$0</strong> (20%) | Weighted amount ⏱</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+                                            <div class="p-3 d-flex align-items-center gap-2">
+                                                <span class="badge badge-orange rounded-3 px-2 py-1 fs-6">Qualified To Buy</span>
+                                                <span class="fw-bold text-secondary text-xs">1</span>
+                                            </div>
+                                            <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+                                                <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                                                    <div class="card-body p-3 d-flex flex-column gap-2">
+                                                        <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                                                            test1
+                                                            <button class="btn-icon" title="More options">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="text-secondary text-xs d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/15/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/30/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                                HÀO PHẠM MINH
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                                                            <div class="d-flex gap-1">
+                                                                <button class="btn-icon" title="Edit">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                                </button>
+                                                                <button class="btn-icon" title="List">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                                                </button>
+                                                            </div>
+                                                            <button class="btn-upcoming">— | No upcoming</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+                                            </div>
+                                            <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+                                                <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+                                                <div><strong class="text-dark">$0</strong> (40%) | Weighted amount ⏱</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+                                            <div class="p-3 d-flex align-items-center gap-2">
+                                                <span class="badge badge-pink rounded-3 px-2 py-1 fs-6">Presentation Scheduled</span>
+                                                <span class="fw-bold text-secondary text-xs">1</span>
+                                            </div>
+                                            <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+                                                <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                                                    <div class="card-body p-3 d-flex flex-column gap-2">
+                                                        <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                                                            test
+                                                            <button class="btn-icon" title="More options">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="text-secondary text-xs d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/07/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/30/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2 text-dark">
+                                                                <strong>$</strong> $10
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                                HÀO PHẠM MINH
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                                                            <div class="d-flex gap-1">
+                                                                <button class="btn-icon" title="Edit">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                                </button>
+                                                                <button class="btn-icon" title="List">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                                                </button>
+                                                            </div>
+                                                            <button class="btn-upcoming btn-upcoming-warn">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                8 days ago | !
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+                                            </div>
+                                            <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+                                                <div><strong class="text-dark">$10</strong> | Total amount ⏱</div>
+                                                <div><strong class="text-dark">$6</strong> (60%) | Weighted amount ⏱</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+                                            <div class="p-3 d-flex align-items-center gap-2">
+                                                <span class="badge badge-purple rounded-3 px-2 py-1 fs-6">Decision Maker Bought-In</span>
+                                                <span class="fw-bold text-secondary text-xs">1</span>
+                                            </div>
+                                            <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+                                                <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                                                    <div class="card-body p-3 d-flex flex-column gap-2">
+                                                        <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                                                            test2
+                                                            <button class="btn-icon" title="More options">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="text-secondary text-xs d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/15/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/30/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                                HÀO PHẠM MINH
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                                                            <div class="d-flex gap-1">
+                                                                <button class="btn-icon" title="Edit">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                                </button>
+                                                                <button class="btn-icon" title="List">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                                                </button>
+                                                            </div>
+                                                            <button class="btn-upcoming">— | No upcoming</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+                                            </div>
+                                            <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+                                                <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+                                                <div><strong class="text-dark">$0</strong> (80%) | Weighted amount ⏱</div>
+                                            </div>
+                                        </div>
+
+                                        <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+                                            <div class="p-3 d-flex align-items-center gap-2">
+                                                <span class="badge badge-yellow rounded-3 px-2 py-1 fs-6">Contract Sent</span>
+                                                <span class="fw-bold text-secondary text-xs">1</span>
+                                            </div>
+                                            <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+                                                <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                                                    <div class="card-body p-3 d-flex flex-column gap-2">
+                                                        <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                                                            test3
+                                                            <button class="btn-icon" title="More options">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="text-secondary text-xs d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/15/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/30/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                                HÀO PHẠM MINH
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                                                            <div class="d-flex gap-1">
+                                                                <button class="btn-icon" title="Edit">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                                </button>
+                                                                <button class="btn-icon" title="List">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                                                </button>
+                                                            </div>
+                                                            <button class="btn-upcoming">— | No upcoming</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+                                            </div>
+                                            <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+                                                <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+                                                <div><strong class="text-dark">$0</strong> (90%) | Weighted amount <svg class="icon-sm ms-1" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+                                            <div class="p-3 d-flex align-items-center gap-2">
+                                                <span class="badge badge-green rounded-3 px-2 py-1 fs-6">Closed Won</span>
+                                                <span class="fw-bold text-secondary text-xs">1</span>
+                                            </div>
+                                            <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+                                                <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                                                    <div class="card-body p-3 d-flex flex-column gap-2">
+                                                        <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                                                            test5
+                                                            <button class="btn-icon" title="More options">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="text-secondary text-xs d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/17/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/17/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                                HÀO PHẠM MINH
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                                                            <div class="d-flex gap-1">
+                                                                <button class="btn-icon" title="Edit">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                                </button>
+                                                                <button class="btn-icon" title="List">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+                                            </div>
+                                            <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+                                                <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+                                                <div>Won (100%) <svg class="icon-sm ms-1" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                                            </div>
+                                        </div>
+
+                                        <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+                                            <div class="p-3 d-flex align-items-center gap-2">
+                                                <span class="badge badge-red rounded-3 px-2 py-1 fs-6">Closed Lost</span>
+                                                <span class="fw-bold text-secondary text-xs">1</span>
+                                            </div>
+                                            <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+                                                <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                                                    <div class="card-body p-3 d-flex flex-column gap-2">
+                                                        <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                                                            test7
+                                                            <button class="btn-icon" title="More options">
+                                                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="text-secondary text-xs d-flex flex-column gap-2">
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/17/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                                09/17/2026
+                                                            </div>
+                                                            <div class="d-flex align-items-center gap-2">
+                                                                <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                                                                HÀO PHẠM MINH
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                                                            <div class="d-flex gap-1">
+                                                                <button class="btn-icon" title="Edit">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                                </button>
+                                                                <button class="btn-icon" title="List">
+                                                                    <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+                                            </div>
+                                            <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+                                                <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+                                                <div>Lost (0%) <svg class="icon-sm ms-1" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hướng dẫn CDN / Phụ thuộc -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-in-down fs-5"></i> THƯ VIỆN CẦN NHÚNG
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('dep-code-grid1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Link
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="dep-code-grid1">&lt;!-- Bootstrap 5 CSS &amp; Bootstrap Icons --&gt;
+&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
+
+&lt;!-- File CSS Grid 1 --&gt;
+&lt;link rel=&quot;stylesheet&quot; href=&quot;grid1.css&quot;&gt;
+
+&lt;!-- Bootstrap 5 JS Bundle &amp; File Script Grid 1 --&gt;
+&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;grid1.js&quot;&gt;&lt;/script&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Source Code HTML, CSS, JS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-grid1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-grid1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-primary-subtle fw-bold small d-flex align-items-center gap-2" style="color: #60a5fa !important;">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-grid1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-grid1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-grid1', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-grid1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+
                 </div>
             </main>
         </div>
@@ -5926,8 +6702,11 @@
     <!-- Import các file JS của từng Offcanvas component (giữ nguyên không sửa file) -->
     <script src="offcanvas1.js"></script>
     <script src="offcanvas2.js"></script>
+    <script src="offcanvas3.js"></script>
     <!-- Import các file JS của từng Table component (giữ nguyên không sửa file) -->
     <script src="table1.js"></script>
+    <!-- Import các file JS của từng Grid component (giữ nguyên không sửa file) -->
+    <script src="grid1.js"></script>
 </body>
 
 </html>

@@ -3765,7 +3765,8 @@ const FALLBACK_COMPONENTS = {
     color: #868e96;
     font-size: 0.875rem;
     padding: 0.4rem 0.75rem;
-}`,
+}
+`,
     'modal5.js': `/**
  * HubSpot CRM - Edit Quick Filters Modal Component
  * Tự động đồng bộ các bộ lọc trong Modal với thanh Quick Filter Bar bên ngoài
@@ -5808,6 +5809,1033 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     initTable1Pagination();
+});`,
+
+    'offcanvas3.html': `<div class="p-4 text-center">
+    <button class="btn btn-primary d-inline-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#dealOffcanvas">
+        <i class="bi bi-layout-sidebar-reverse"></i> deal1
+    </button>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="dealOffcanvas">
+    
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title fw-normal">Preview</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="subheader px-3 py-2 border-bottom d-flex justify-content-between align-items-center">
+        <a href="#" class="text-decoration-none fw-bold view-record-link">View record</a>
+        <div class="dropdown">
+            <button class="btn btn-link text-decoration-none fw-bold actions-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                Actions
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Customize preview <i class="bi bi-box-arrow-up-right text-secondary small"></i></a></li>
+                <li><a class="dropdown-item" href="#">Unfollow</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">View all properties</a></li>
+                <li><a class="dropdown-item" href="#">View property history</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">View association history</a></li>
+                <li><a class="dropdown-item" href="#">Review associations</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-stars"></i> Summarize</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Restore activity <i class="bi bi-box-arrow-up-right text-secondary small"></i></a></li>
+                <li><a class="dropdown-item" href="#">Merge</a></li>
+                <li><a class="dropdown-item" href="#">Clone</a></li>
+                <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="offcanvas-body p-0">
+        <div class="p-4 border-bottom bg-white">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="deal-icon-bg d-flex justify-content-center align-items-center">
+                    <i class="bi bi-handshake fs-5"></i>
+                </div>
+                <h3 class="m-0 fw-bold">test</h3>
+            </div>
+
+            <div class="deal-properties d-flex flex-column gap-2 mb-4">
+                <div><span class="text-secondary">Amount:</span> $10</div>
+                <div><span class="text-secondary">Close Date:</span> <i class="bi bi-calendar3"></i> 09/30/2026</div>
+                <div>
+                    <span class="text-secondary">Pipeline:</span> 
+                    <span class="badge bg-light text-dark border px-2 py-1 ms-1">Sales Pipeline</span>
+                </div>
+                <div>
+                    <span class="text-secondary">Deal Stage:</span> 
+                    <span class="badge badge-pink px-2 py-1 ms-1">Presentation Scheduled</span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between px-2">
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-pencil-square"></i></div>
+                    <span>Note</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-envelope"></i></div>
+                    <span>Email</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-telephone"></i></div>
+                    <span>Call</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-list-task"></i></div>
+                    <span>Task</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-calendar-event"></i></div>
+                    <span>Meeting</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-three-dots"></i></div>
+                    <span>More</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title" data-bs-toggle="collapse" data-bs-target="#aboutThisDeal">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">About this deal</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <div class="dropdown">
+                        <button class="btn btn-link text-decoration-none fw-bold actions-link dropdown-toggle p-0" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                            Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">Customize properties</a></li>
+                            <li><a class="dropdown-item" href="#">View all properties</a></li>
+                            <li><a class="dropdown-item" href="#">View property history</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-secondary d-flex align-items-center gap-2" href="#"><i class="bi bi-lock"></i> Fill smart properties</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="aboutThisDeal" class="collapse show">
+                <div class="accordion-body d-flex flex-column gap-3">
+                    <div class="property-group">
+                        <div class="property-label">Deal owner</div>
+                        <div class="property-value">HÀO PHẠM MINH</div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Last Contacted</div>
+                        <div class="property-value">09/09/2026 11:15 AM GMT+7</div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Deal Type</div>
+                        <div class="property-value">New Business</div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Priority</div>
+                        <div class="property-value d-flex align-items-center gap-2">
+                            <span class="status-dot bg-success"></span> Low
+                        </div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Closed Lost Reason</div>
+                        <div class="property-value">--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#recentActivities">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Recent activities</span>
+                </div>
+            </div>
+            <div id="recentActivities" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">No recent activities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#upcomingActivities">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Upcoming activities</span>
+                </div>
+            </div>
+            <div id="upcomingActivities" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">No upcoming activities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#contacts">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Contacts (1)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="contacts" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">Contact details here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#companies">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Companies (1)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="companies" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">Company details here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#tickets">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Tickets (1)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="tickets" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">Ticket details here.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>`,
+
+    'offcanvas3.css': `/* ==========================================================================
+   Offcanvas 3: Deal Preview Drawer (HubSpot CRM Style)
+   Được đóng gói / scope riêng trong #dealOffcanvas để tránh xung đột CSS
+   ========================================================================== */
+
+#dealOffcanvas.offcanvas,
+#dealOffcanvas {
+    width: 450px !important;
+    border-left: 1px solid #e5e7eb;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.05);
+    background-color: #f8fafc;
+}
+
+#dealOffcanvas .offcanvas-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+#dealOffcanvas .offcanvas-body {
+    scrollbar-width: thin;
+    scrollbar-color: #c1c1c1 transparent;
+}
+
+#dealOffcanvas .offcanvas-body::-webkit-scrollbar {
+    width: 8px;
+}
+
+#dealOffcanvas .offcanvas-body::-webkit-scrollbar-thumb {
+    background-color: #c1c1c1;
+    border-radius: 4px;
+}
+
+#dealOffcanvas .bg-white {
+    background-color: #ffffff !important;
+}
+
+#dealOffcanvas .view-record-link {
+    color: #0f5c6e;
+    font-size: 14px;
+}
+
+#dealOffcanvas .view-record-link:hover {
+    color: #0a404d;
+}
+
+#dealOffcanvas .actions-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 4px;
+    color: #33475b !important;
+    font-size: 14px !important;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+#dealOffcanvas .actions-link:hover {
+    color: #000000 !important;
+}
+
+#dealOffcanvas .dropdown-item {
+    font-size: 14px;
+    padding: 6px 16px;
+    color: #33475b;
+}
+
+#dealOffcanvas .dropdown-item:hover {
+    background-color: #f5f8fa;
+    color: #111827;
+}
+
+#dealOffcanvas .dropdown-divider {
+    margin: 4px 0;
+    border-color: #e5e7eb;
+}
+
+#dealOffcanvas .deal-icon-bg {
+    width: 48px;
+    height: 48px;
+    background-color: #f3f4f6;
+    border-radius: 50%;
+    color: #4b5563;
+    flex-shrink: 0;
+}
+
+#dealOffcanvas .deal-properties {
+    font-size: 14px;
+    color: #1f2937;
+}
+
+#dealOffcanvas .badge-pink {
+    background-color: #c2297f !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+#dealOffcanvas .action-circle-btn {
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    padding: 0;
+}
+
+#dealOffcanvas .action-circle-btn .circle {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #cbd5e1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #4b5563;
+    font-size: 18px;
+    transition: all 0.2s;
+    background-color: #ffffff;
+}
+
+#dealOffcanvas .action-circle-btn:hover .circle {
+    background-color: #f8fafc;
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+#dealOffcanvas .action-circle-btn span {
+    font-size: 12px;
+    color: #4b5563;
+}
+
+#dealOffcanvas .custom-accordion {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #ffffff;
+}
+
+#dealOffcanvas .custom-header-container {
+    font-size: 14px;
+    color: #33475b;
+    background-color: #ffffff;
+    transition: background-color 0.2s;
+}
+
+#dealOffcanvas .custom-header-container:hover {
+    background-color: #f9fafb;
+}
+
+#dealOffcanvas .header-title {
+    max-width: none !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    cursor: pointer;
+    user-select: none;
+}
+
+#dealOffcanvas .chevron-icon {
+    display: inline-block;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+}
+
+#dealOffcanvas .header-title.collapsed .chevron-icon {
+    transform: rotate(-90deg);
+}
+
+#dealOffcanvas .btn-icon {
+    width: 28px !important;
+    height: 28px !important;
+    padding: 0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    color: #4b5563 !important;
+    background: white !important;
+    border: 1px solid #dee2e6 !important;
+    transition: background-color 0.2s;
+}
+
+#dealOffcanvas .btn-icon:hover {
+    background: #f3f4f6 !important;
+}
+
+#dealOffcanvas .accordion-body {
+    padding: 0 20px 20px 20px;
+    background-color: #ffffff;
+}
+
+#dealOffcanvas .property-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+#dealOffcanvas .property-label {
+    font-size: 12px;
+    color: #64748b;
+}
+
+#dealOffcanvas .property-value {
+    font-size: 14px;
+    color: #33475b;
+}
+
+#dealOffcanvas .status-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+}`,
+
+    'offcanvas3.js': `// Script cho Offcanvas 3 (Deal Details Offcanvas)
+// Các tương tác đã được Bootstrap 5 và data-bs-* hỗ trợ sẵn`,
+
+    'grid1.html': `<div class="board-wrapper d-flex flex-nowrap overflow-x-auto align-items-start gap-3 p-4 flex-grow-1">
+    <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+        <div class="p-3 d-flex align-items-center gap-2">
+            <span class="badge badge-blue rounded-3 px-2 py-1 fs-6">Appointment Scheduled</span>
+            <span class="fw-bold text-secondary text-xs">1</span>
+        </div>
+        <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+            <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                <div class="card-body p-3 d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                        test6
+                        <button class="btn-icon" title="More options">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                        </button>
+                    </div>
+                    <div class="text-secondary text-xs d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/17/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/30/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            HÀO PHẠM MINH
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                        <div class="d-flex gap-1">
+                            <button class="btn-icon" title="Edit">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="btn-icon" title="List">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            </button>
+                        </div>
+                        <button class="btn-upcoming">— | No upcoming</button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+        </div>
+        <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+            <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+            <div><strong class="text-dark">$0</strong> (20%) | Weighted amount ⏱</div>
+        </div>
+    </div>
+
+    <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+        <div class="p-3 d-flex align-items-center gap-2">
+            <span class="badge badge-orange rounded-3 px-2 py-1 fs-6">Qualified To Buy</span>
+            <span class="fw-bold text-secondary text-xs">1</span>
+        </div>
+        <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+            <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                <div class="card-body p-3 d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                        test1
+                        <button class="btn-icon" title="More options">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                        </button>
+                    </div>
+                    <div class="text-secondary text-xs d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/15/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/30/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            HÀO PHẠM MINH
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                        <div class="d-flex gap-1">
+                            <button class="btn-icon" title="Edit">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="btn-icon" title="List">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            </button>
+                        </div>
+                        <button class="btn-upcoming">— | No upcoming</button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+        </div>
+        <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+            <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+            <div><strong class="text-dark">$0</strong> (40%) | Weighted amount ⏱</div>
+        </div>
+    </div>
+
+    <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+        <div class="p-3 d-flex align-items-center gap-2">
+            <span class="badge badge-pink rounded-3 px-2 py-1 fs-6">Presentation Scheduled</span>
+            <span class="fw-bold text-secondary text-xs">1</span>
+        </div>
+        <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+            <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                <div class="card-body p-3 d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                        test
+                        <button class="btn-icon" title="More options">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                        </button>
+                    </div>
+                    <div class="text-secondary text-xs d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/07/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/30/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2 text-dark">
+                            <strong>$</strong> $10
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            HÀO PHẠM MINH
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                        <div class="d-flex gap-1">
+                            <button class="btn-icon" title="Edit">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="btn-icon" title="List">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            </button>
+                        </div>
+                        <button class="btn-upcoming btn-upcoming-warn">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            8 days ago | !
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+        </div>
+        <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+            <div><strong class="text-dark">$10</strong> | Total amount ⏱</div>
+            <div><strong class="text-dark">$6</strong> (60%) | Weighted amount ⏱</div>
+        </div>
+    </div>
+
+    <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+        <div class="p-3 d-flex align-items-center gap-2">
+            <span class="badge badge-purple rounded-3 px-2 py-1 fs-6">Decision Maker Bought-In</span>
+            <span class="fw-bold text-secondary text-xs">1</span>
+        </div>
+        <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+            <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                <div class="card-body p-3 d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                        test2
+                        <button class="btn-icon" title="More options">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                        </button>
+                    </div>
+                    <div class="text-secondary text-xs d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/15/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/30/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            HÀO PHẠM MINH
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                        <div class="d-flex gap-1">
+                            <button class="btn-icon" title="Edit">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="btn-icon" title="List">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            </button>
+                        </div>
+                        <button class="btn-upcoming">— | No upcoming</button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+        </div>
+        <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+            <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+            <div><strong class="text-dark">$0</strong> (80%) | Weighted amount ⏱</div>
+        </div>
+    </div>
+
+    <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+        <div class="p-3 d-flex align-items-center gap-2">
+            <span class="badge badge-yellow rounded-3 px-2 py-1 fs-6">Contract Sent</span>
+            <span class="fw-bold text-secondary text-xs">1</span>
+        </div>
+        <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+            <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                <div class="card-body p-3 d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                        test3
+                        <button class="btn-icon" title="More options">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                        </button>
+                    </div>
+                    <div class="text-secondary text-xs d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/15/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/30/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            HÀO PHẠM MINH
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                        <div class="d-flex gap-1">
+                            <button class="btn-icon" title="Edit">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="btn-icon" title="List">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            </button>
+                        </div>
+                        <button class="btn-upcoming">— | No upcoming</button>
+                    </div>
+                </div>
+            </div>
+            <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+        </div>
+        <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+            <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+            <div><strong class="text-dark">$0</strong> (90%) | Weighted amount <svg class="icon-sm ms-1" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+        </div>
+    </div>
+
+    <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+        <div class="p-3 d-flex align-items-center gap-2">
+            <span class="badge badge-green rounded-3 px-2 py-1 fs-6">Closed Won</span>
+            <span class="fw-bold text-secondary text-xs">1</span>
+        </div>
+        <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+            <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                <div class="card-body p-3 d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                        test5
+                        <button class="btn-icon" title="More options">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                        </button>
+                    </div>
+                    <div class="text-secondary text-xs d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/17/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/17/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            HÀO PHẠM MINH
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                        <div class="d-flex gap-1">
+                            <button class="btn-icon" title="Edit">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="btn-icon" title="List">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+        </div>
+        <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+            <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+            <div>Won (100%) <svg class="icon-sm ms-1" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+        </div>
+    </div>
+
+    <div class="kanban-col rounded-3 d-flex flex-column flex-shrink-0 border-0">
+        <div class="p-3 d-flex align-items-center gap-2">
+            <span class="badge badge-red rounded-3 px-2 py-1 fs-6">Closed Lost</span>
+            <span class="fw-bold text-secondary text-xs">1</span>
+        </div>
+        <div class="kanban-col-body px-3 d-flex flex-column gap-2 flex-grow-1">
+            <div class="card drag-card border rounded-3 shadow-sm" draggable="true">
+                <div class="card-body p-3 d-flex flex-column gap-2">
+                    <div class="d-flex justify-content-between align-items-center fw-bold text-dark fs-6">
+                        test7
+                        <button class="btn-icon" title="More options">
+                            <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"></circle><circle cx="12" cy="5" r="1"></circle><circle cx="12" cy="19" r="1"></circle></svg>
+                        </button>
+                    </div>
+                    <div class="text-secondary text-xs d-flex flex-column gap-2">
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/17/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                            09/17/2026
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                            <svg class="icon-sm" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            HÀO PHẠM MINH
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center border-top pt-2 mt-1">
+                        <div class="d-flex gap-1">
+                            <button class="btn-icon" title="Edit">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                            </button>
+                            <button class="btn-icon" title="List">
+                                <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="add-deal-btn rounded-pill w-100 py-1 text-secondary mt-1">+ Deal</button>
+        </div>
+        <div class="p-3 border-top mt-3 text-secondary text-xs d-flex flex-column gap-1">
+            <div><strong class="text-dark">$0</strong> | Total amount ⏱</div>
+            <div>Lost (0%) <svg class="icon-sm ms-1" style="color: #6b7280" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg></div>
+        </div>
+    </div>
+</div>`,
+
+    'grid1.css': `body {
+    background-color: #ffffff;
+}
+
+.board-wrapper {
+    height: 100%;
+    min-height: 480px;
+    padding-bottom: 30px;
+    scrollbar-width: thin;
+    scrollbar-color: #8c8c8c transparent;
+}
+
+.board-wrapper::-webkit-scrollbar {
+    height: 12px;
+}
+
+.board-wrapper::-webkit-scrollbar-track {
+    background: transparent;
+    margin: 0 10px;
+}
+
+.board-wrapper::-webkit-scrollbar-thumb {
+    background-color: #8c8c8c;
+    border-radius: 20px;
+    border: 2px solid #ffffff;
+}
+
+.kanban-col {
+    min-width: 280px;
+    width: 280px;
+    background-color: #f3f4f6;
+}
+
+.badge-blue { background-color: #3b82f6; color: white; }
+.badge-orange { background-color: #c2410c; color: white; }
+.badge-pink { background-color: #d946ef; color: white; }
+.badge-purple { background-color: #8b5cf6; color: white; }
+.badge-yellow { background-color: #fcd34d; color: #1f2937; }
+.badge-green { background-color: #2f784e; color: white; }
+.badge-red { background-color: #a32a2a; color: white; }
+
+.kanban-col-body {
+    min-height: 150px;
+}
+
+.drag-card {
+    cursor: grab;
+    transition: opacity 0.2s;
+}
+
+.drag-card:active {
+    cursor: grabbing;
+}
+
+.drag-card.dragging {
+    background-color: transparent !important;
+    border: 2px dashed #9ca3af !important;
+    box-shadow: none !important;
+}
+
+.drag-card.dragging > * {
+    opacity: 0;
+}
+
+.icon-sm {
+    width: 14px;
+    height: 14px;
+    color: inherit;
+}
+
+.text-xs {
+    font-size: 13px;
+}
+
+.btn-icon {
+    background: transparent;
+    border: none;
+    padding: 4px;
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-icon:hover {
+    background-color: #e5e7eb;
+    color: #374151;
+}
+
+.btn-upcoming {
+    background: transparent;
+    border: 1px solid #fbbf24;
+    color: #4b5563;
+    border-radius: 4px;
+    padding: 2px 8px;
+    font-size: 12px;
+    transition: background-color 0.2s;
+}
+
+.btn-upcoming:hover {
+    background-color: #fef3c7;
+}
+
+.btn-upcoming-warn {
+    border-color: #f59e0b;
+    color: #b45309;
+}
+
+.btn-upcoming-warn:hover {
+    background-color: #fef3c7;
+}
+
+.add-deal-btn {
+    border: 1px dashed #d1d5db;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+}
+
+.add-deal-btn:hover {
+    background: #e5e7eb;
+    border-style: solid;
+}
+
+.kanban-col:hover .add-deal-btn {
+    opacity: 1;
+    visibility: visible;
+}`,
+
+    'grid1.js': `document.addEventListener('DOMContentLoaded', () => {
+    const cards = document.querySelectorAll('.drag-card');
+    const columns = document.querySelectorAll('.kanban-col-body');
+    const boardWrapper = document.querySelector('.board-wrapper');
+
+    let autoScrollId = null;
+    let scrollSpeed = 0;
+
+    function startAutoScroll() {
+        if (scrollSpeed !== 0 && boardWrapper) {
+            boardWrapper.scrollLeft += scrollSpeed;
+            autoScrollId = requestAnimationFrame(startAutoScroll);
+        } else {
+            cancelAnimationFrame(autoScrollId);
+            autoScrollId = null;
+        }
+    }
+
+    function stopAutoScroll() {
+        scrollSpeed = 0;
+        if (autoScrollId) {
+            cancelAnimationFrame(autoScrollId);
+            autoScrollId = null;
+        }
+    }
+
+    if (boardWrapper) {
+        boardWrapper.addEventListener('dragover', (e) => {
+            e.preventDefault(); 
+            
+            const draggingCard = document.querySelector('.dragging');
+            if (!draggingCard) return;
+
+            const threshold = 100;
+            const rect = boardWrapper.getBoundingClientRect();
+            
+            const distToLeft = e.clientX - rect.left;
+            const distToRight = rect.right - e.clientX;
+
+            if (distToLeft < threshold) {
+                scrollSpeed = -15 * (1 - distToLeft / threshold) - 3;
+                if (!autoScrollId) startAutoScroll();
+            } 
+            else if (distToRight < threshold) {
+                scrollSpeed = 15 * (1 - distToRight / threshold) + 3;
+                if (!autoScrollId) startAutoScroll();
+            } 
+            else {
+                stopAutoScroll();
+            }
+        });
+    }
+
+    cards.forEach(card => {
+        card.addEventListener('dragstart', (e) => {
+            if (e.target.tagName.toLowerCase() === 'button' || e.target.closest('button')) {
+                e.preventDefault();
+                return;
+            }
+            setTimeout(() => card.classList.add('dragging'), 0);
+        });
+
+        card.addEventListener('dragend', () => {
+            card.classList.remove('dragging');
+            stopAutoScroll();
+        });
+    });
+
+    columns.forEach(column => {
+        column.addEventListener('dragover', e => {
+            e.preventDefault();
+            const afterElement = getDragAfterElement(column, e.clientY);
+            const draggable = document.querySelector('.dragging');
+            
+            if (draggable) {
+                const addDealBtn = column.querySelector('.add-deal-btn');
+                
+                if (afterElement == null || afterElement === addDealBtn) {
+                    column.insertBefore(draggable, addDealBtn);
+                } else {
+                    column.insertBefore(draggable, afterElement);
+                }
+            }
+        });
+    });
+
+    function getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll('.drag-card:not(.dragging)')];
+
+        return draggableElements.reduce((closest, child) => {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            if (offset < 0 && offset > closest.offset) {
+                return { offset: offset, element: child };
+            } else {
+                return closest;
+            }
+        }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
 });`
 };
 
@@ -6183,6 +7211,28 @@ document.addEventListener("DOMContentLoaded", () => {
         'code-css-table1',
         'table1.js',
         'code-js-table1'
+    );
+
+    // Tải Mẫu Offcanvas 3
+    loadComponent(
+        'offcanvas3.html',
+        'offcanvas3.css',
+        'preview-offcanvas3',
+        'code-html-offcanvas3',
+        'code-css-offcanvas3',
+        'offcanvas3.js',
+        'code-js-offcanvas3'
+    );
+
+    // Tải Component Grid
+    loadComponent(
+        'grid1.html',
+        'grid1.css',
+        'preview-grid1',
+        'code-html-grid1',
+        'code-css-grid1',
+        'grid1.js',
+        'code-js-grid1'
     );
 
     // Kích hoạt đồng bộ Tab

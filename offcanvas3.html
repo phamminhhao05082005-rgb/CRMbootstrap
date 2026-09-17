@@ -1,0 +1,223 @@
+<div class="p-4 text-center">
+    <button class="btn btn-primary d-inline-flex align-items-center gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#dealOffcanvas">
+        <i class="bi bi-layout-sidebar-reverse"></i> deal1
+    </button>
+</div>
+
+<div class="offcanvas offcanvas-end" tabindex="-1" id="dealOffcanvas">
+    
+    <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title fw-normal">Preview</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+
+    <div class="subheader px-3 py-2 border-bottom d-flex justify-content-between align-items-center">
+        <a href="#" class="text-decoration-none fw-bold view-record-link">View record</a>
+        <div class="dropdown">
+            <button class="btn btn-link text-decoration-none fw-bold actions-link dropdown-toggle" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                Actions
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Customize preview <i class="bi bi-box-arrow-up-right text-secondary small"></i></a></li>
+                <li><a class="dropdown-item" href="#">Unfollow</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">View all properties</a></li>
+                <li><a class="dropdown-item" href="#">View property history</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">View association history</a></li>
+                <li><a class="dropdown-item" href="#">Review associations</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-stars"></i> Summarize</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item d-flex justify-content-between align-items-center" href="#">Restore activity <i class="bi bi-box-arrow-up-right text-secondary small"></i></a></li>
+                <li><a class="dropdown-item" href="#">Merge</a></li>
+                <li><a class="dropdown-item" href="#">Clone</a></li>
+                <li><a class="dropdown-item" href="#">Delete</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="offcanvas-body p-0">
+        <div class="p-4 border-bottom bg-white">
+            <div class="d-flex align-items-center gap-3 mb-3">
+                <div class="deal-icon-bg d-flex justify-content-center align-items-center">
+                    <i class="bi bi-handshake fs-5"></i>
+                </div>
+                <h3 class="m-0 fw-bold">test</h3>
+            </div>
+
+            <div class="deal-properties d-flex flex-column gap-2 mb-4">
+                <div><span class="text-secondary">Amount:</span> $10</div>
+                <div><span class="text-secondary">Close Date:</span> <i class="bi bi-calendar3"></i> 09/30/2026</div>
+                <div>
+                    <span class="text-secondary">Pipeline:</span> 
+                    <span class="badge bg-light text-dark border px-2 py-1 ms-1">Sales Pipeline</span>
+                </div>
+                <div>
+                    <span class="text-secondary">Deal Stage:</span> 
+                    <span class="badge badge-pink px-2 py-1 ms-1">Presentation Scheduled</span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-between px-2">
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-pencil-square"></i></div>
+                    <span>Note</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-envelope"></i></div>
+                    <span>Email</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-telephone"></i></div>
+                    <span>Call</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-list-task"></i></div>
+                    <span>Task</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-calendar-event"></i></div>
+                    <span>Meeting</span>
+                </button>
+                <button class="action-circle-btn">
+                    <div class="circle"><i class="bi bi-three-dots"></i></div>
+                    <span>More</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title" data-bs-toggle="collapse" data-bs-target="#aboutThisDeal">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">About this deal</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <div class="dropdown">
+                        <button class="btn btn-link text-decoration-none fw-bold actions-link dropdown-toggle p-0" type="button" data-bs-toggle="dropdown" data-bs-display="static">
+                            Actions
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                            <li><a class="dropdown-item" href="#">Customize properties</a></li>
+                            <li><a class="dropdown-item" href="#">View all properties</a></li>
+                            <li><a class="dropdown-item" href="#">View property history</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item text-secondary d-flex align-items-center gap-2" href="#"><i class="bi bi-lock"></i> Fill smart properties</a></li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="aboutThisDeal" class="collapse show">
+                <div class="accordion-body d-flex flex-column gap-3">
+                    <div class="property-group">
+                        <div class="property-label">Deal owner</div>
+                        <div class="property-value">HÀO PHẠM MINH</div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Last Contacted</div>
+                        <div class="property-value">09/09/2026 11:15 AM GMT+7</div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Deal Type</div>
+                        <div class="property-value">New Business</div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Priority</div>
+                        <div class="property-value d-flex align-items-center gap-2">
+                            <span class="status-dot bg-success"></span> Low
+                        </div>
+                    </div>
+                    <div class="property-group">
+                        <div class="property-label">Closed Lost Reason</div>
+                        <div class="property-value">--</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#recentActivities">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Recent activities</span>
+                </div>
+            </div>
+            <div id="recentActivities" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">No recent activities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#upcomingActivities">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Upcoming activities</span>
+                </div>
+            </div>
+            <div id="upcomingActivities" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">No upcoming activities.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#contacts">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Contacts (1)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="contacts" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">Contact details here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#companies">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Companies (1)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="companies" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">Company details here.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item custom-accordion">
+            <div class="d-flex justify-content-between align-items-stretch custom-header-container">
+                <div class="d-flex align-items-center gap-2 flex-grow-1 px-3 py-3 header-title collapsed" data-bs-toggle="collapse" data-bs-target="#tickets">
+                    <i class="bi bi-chevron-down chevron-icon"></i>
+                    <span class="fw-bold">Tickets (1)</span>
+                </div>
+                <div class="d-flex align-items-center gap-2 pe-3">
+                    <button class="btn btn-sm btn-link text-dark text-decoration-none fw-bold p-0"><i class="bi bi-plus"></i> Add</button>
+                    <button class="btn btn-sm btn-icon border"><i class="bi bi-gear"></i></button>
+                </div>
+            </div>
+            <div id="tickets" class="collapse">
+                <div class="accordion-body">
+                    <p class="text-secondary small mb-0">Ticket details here.</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
