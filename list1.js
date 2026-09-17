@@ -1,7 +1,3 @@
-// ==========================================================================
-// Component List 1: Activity History Timeline List (Search & Filter)
-// ==========================================================================
-
 function initList1() {
     const timeSearch = document.getElementById('timeSearch');
     const timeItems = document.querySelectorAll('.time-item-container');
