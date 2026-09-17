@@ -178,12 +178,39 @@ function reRunAllToasts() {
     [1, 2, 3, 4].forEach(n => reRunToast(n));
 }
 
-// Hàm khôi phục lại các mẫu Alert khi người dùng bấm tắt
+// Quản lý và khôi phục các mẫu Alert theo từng nhóm hoặc toàn bộ
+const alertInitialTemplates = {};
+
+function saveAlertTemplates() {
+    for (let i = 1; i <= 6; i++) {
+        const el = document.getElementById(`preview-alert${i}`);
+        if (el && !alertInitialTemplates[i]) {
+            alertInitialTemplates[i] = el.innerHTML;
+        }
+    }
+}
+
+function resetAlertGroup(num) {
+    saveAlertTemplates();
+    const container = document.getElementById(`preview-alert${num}`);
+    if (container && alertInitialTemplates[num]) {
+        container.innerHTML = alertInitialTemplates[num];
+        if (typeof showToast === 'function') {
+            showToast(`Đã khôi phục lại Alert Mẫu ${num}!`);
+        }
+    }
+}
+
 function resetAlerts() {
-    const container = document.getElementById('preview-alert');
-    if (container && FALLBACK_COMPONENTS['alert.html']) {
-        container.innerHTML = FALLBACK_COMPONENTS['alert.html'];
-        showToast("Đã khôi phục lại danh sách Alert!");
+    saveAlertTemplates();
+    for (let i = 1; i <= 6; i++) {
+        const container = document.getElementById(`preview-alert${i}`);
+        if (container && alertInitialTemplates[i]) {
+            container.innerHTML = alertInitialTemplates[i];
+        }
+    }
+    if (typeof showToast === 'function') {
+        showToast("Đã khôi phục lại tất cả các mẫu Alert!");
     }
 }
 
@@ -1000,115 +1027,403 @@ const FALLBACK_COMPONENTS = {
 
     // Alert Component
     'alert.html': `<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-    <!-- icon chữ i / thông tin -->
+    <!-- 1. icon chữ i / thông tin -->
     <symbol id="info-fill" viewBox="0 0 16 16">
         <path
             d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287z" />
     </symbol>
-    <!-- icon dấu tick / thành công -->
+    <!-- 2. icon dấu tick / thành công -->
     <symbol id="check-circle-fill" viewBox="0 0 16 16">
         <path
             d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z" />
     </symbol>
-    <!-- icon cảnh báo / lỗi -->
+    <!-- 3. icon cảnh báo / lỗi -->
     <symbol id="exclamation-triangle-fill" viewBox="0 0 16 16">
         <path
             d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
     </symbol>
-    <!-- icon đóng / dấu X (dùng cho nút tắt alert) -->
+    <!-- 4. icon đóng / dấu X (dùng cho nút tắt alert) -->
     <symbol id="x-lg" viewBox="0 0 16 16">
         <path
             d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
     </symbol>
-    <!-- icon ngôi sao (dùng cho đánh giá / nổi bật) -->
+    <!-- 5. icon ngôi sao (dùng cho đánh giá / nổi bật) -->
     <symbol id="star-fill" viewBox="0 0 16 16">
         <path
             d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z" />
     </symbol>
-    <!-- icon chuông thông báo (notification) -->
+    <!-- 6. icon chuông thông báo (notification) -->
     <symbol id="bell-fill" viewBox="0 0 16 16">
         <path
             d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zm.995-14.901a1 1 0 1 0-1.99 0A5.002 5.002 0 0 0 3 6c0 1.098-.5 6-2 7h14c-1.5-1-2-5.902-2-7 0-2.42-1.72-4.44-4.005-4.901z" />
     </symbol>
-    <!-- icon khóa (security / quyền hạn) -->
+    <!-- 7. icon khóa (security / quyền hạn) -->
     <symbol id="lock-fill" viewBox="0 0 16 16">
         <path
             d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z" />
     </symbol>
-    <!-- icon bánh răng (cài đặt / hệ thống) -->
+    <!-- 8. icon bánh răng (cài đặt / bảo trì hệ thống) -->
     <symbol id="gear-fill" viewBox="0 0 16 16">
         <path
             d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.988 1.988l.17.31c.45.82-.12 1.848-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.988 1.988l.31-.17a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.988-1.988l-.17-.31a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.988-1.988l-.31.17a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.93 2.93 0 1 1 0-5.86 2.93 2.93 0 0 1 0 5.86z" />
     </symbol>
+    <!-- 9. icon khiên an toàn (shield check) -->
+    <symbol id="shield-fill-check" viewBox="0 0 16 16">
+        <path
+            d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.512 2.453 7 7 0 0 0 1.058.614c.378.162.539.25.824.25s.446-.088.824-.25a7 7 0 0 0 1.058-.614 11.8 11.8 0 0 0 2.512-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m2.146 5.146a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793z" />
+    </symbol>
+    <!-- 10. icon tia sét / mẹo nhanh (lightning charge) -->
+    <symbol id="lightning-charge-fill" viewBox="0 0 16 16">
+        <path
+            d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z" />
+    </symbol>
+    <!-- 11. icon mũi tên hoàn tác (undo / counterclockwise) -->
+    <symbol id="arrow-counterclockwise" viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+            d="M8 3a5 5 0 1 1-4.546 2.914.5.5 0 0 0-.908-.417A6 6 0 1 0 8 2z" />
+        <path
+            d="M8 4.466V.534a.25.25 0 0 0-.41-.192L5.23 2.308a.25.25 0 0 0 0 .384l2.36 1.966A.25.25 0 0 0 8 4.466z" />
+    </symbol>
+    <!-- 12. icon đám mây đồng bộ (cloud check) -->
+    <symbol id="cloud-check-fill" viewBox="0 0 16 16">
+        <path
+            d="M8 2a5.53 5.53 0 0 0-3.594 1.342c-.766.66-1.321 1.52-1.464 2.383C1.266 6.095 0 7.555 0 9.318 0 11.366 1.708 13 3.781 13h8.906C14.502 13 16 11.57 16 9.773c0-1.636-1.242-2.969-2.834-3.194C12.923 3.999 10.69 2 8 2m2.354 4.854-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7 8.793l2.646-2.647a.5.5 0 0 1 .708.708" />
+    </symbol>
+    <!-- 13. icon tin nhắn / chat -->
+    <symbol id="chat-right-text-fill" viewBox="0 0 16 16">
+        <path
+            d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h9.586a1 1 0 0 1 .707.293l2.853 2.853a.5.5 0 0 0 .854-.353zM3.5 3h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1m0 2.5h9a.5.5 0 0 1 0 1h-9a.5.5 0 0 1 0-1m0 2.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1" />
+    </symbol>
+    <!-- 14. icon hộp quà / ưu đãi (gift) -->
+    <symbol id="gift-fill" viewBox="0 0 16 16">
+        <path
+            d="M3 2.5a2.5 2.5 0 0 1 5 0 2.5 2.5 0 0 1 5 0v.006c0 .07 0 .27-.038.494H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h2.038A3 3 0 0 1 3 2.506zm1.068.5H7v-.5a1.5 1.5 0 1 0-3 0c0 .085.002.274.045.43zM9 3h2.932l.023-.07c.043-.156.045-.345.045-.43a1.5 1.5 0 0 0-3 0zm6 4v7.5a1.5 1.5 0 0 1-1.5 1.5H9V7h6zM7 16H2.5A1.5 1.5 0 0 1 1 14.5V7h6z" />
+    </symbol>
 </svg>
+<!-- ================================================================= -->
+<!-- PHẦN 1: MẪU ALERT CƠ BẢN VỚI BIỂU TƯỢNG (STANDARD ICONS)          -->
+<!-- ================================================================= -->
+<div class="mb-4">
+    <h6 class="text-uppercase text-secondary fw-semibold small mb-3">1. Mẫu Alert cơ bản với biểu tượng</h6>
 
-<!-- 1. Alert với symbol: info-fill -->
-<div class="alert alert-primary alert-dismissible fade show d-flex align-items-center" role="alert">
-    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
-        <use xlink:href="#info-fill" />
-    </svg>
-    <div class="flex-grow-1">
-        Thông tin hệ thống mới
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-<!-- 2. Alert với symbol: check-circle-fill -->
-<div class="alert alert-success alert-dismissible fade show d-flex align-items-center" role="alert">
-    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
-        <use xlink:href="#check-circle-fill" />
-    </svg>
-    <div class="flex-grow-1">
-        Thực hiện thao tác thành công
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-<!-- 3. Alert với symbol: exclamation-triangle-fill -->
-<div class="alert alert-warning alert-dismissible fade show d-flex align-items-center" role="alert">
-    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
-        <use xlink:href="#exclamation-triangle-fill" />
-    </svg>
-    <div class="flex-grow-1">
-        Cảnh báo rủi ro hệ thống
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-<!-- 4. Alert với symbol: star-fill -->
-<div class="alert alert-info alert-dismissible fade show d-flex align-items-center" role="alert">
-    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Star:">
-        <use xlink:href="#star-fill" />
-    </svg>
-    <div class="flex-grow-1">
-        Tính năng nổi bật mới
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-<!-- 5. Alert với symbol: bell-fill -->
-<div class="alert alert-secondary alert-dismissible fade show d-flex align-items-center" role="alert">
-    <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Bell:">
-        <use xlink:href="#bell-fill" />
-    </svg>
-    <div class="flex-grow-1">
-        Bạn có thông báo chưa đọc
-    </div>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-
-<!-- Alert thông báo dài sử dụng symbol cuối cùng: gear-fill (Đã thêm nút đóng) -->
-<div class="alert alert-dark alert-dismissible fade show" role="alert">
-    <div class="d-flex align-items-center mb-2">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Gear:">
-            <use xlink:href="#gear-fill" />
+    <!-- 1. Alert với symbol: info-fill -->
+    <div class="alert alert-primary alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:">
+            <use xlink:href="#info-fill" />
         </svg>
-        <h4 class="alert-heading mb-0">Hệ thống đang bảo trì định kỳ!</h4>
+        <div class="flex-grow-1">
+            Thông tin hệ thống mới được cập nhật thành công.
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-    <p>Hệ thống đang bảo trì định kỳ.</p>
-    <hr>
-    <p class="mb-0">Vui lòng quay lại sau.</p>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+    <!-- 2. Alert với symbol: check-circle-fill -->
+    <div class="alert alert-success alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:">
+            <use xlink:href="#check-circle-fill" />
+        </svg>
+        <div class="flex-grow-1">
+            Thực hiện thao tác cập nhật dữ liệu thành công.
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- 3. Alert với symbol: exclamation-triangle-fill -->
+    <div class="alert alert-warning alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:">
+            <use xlink:href="#exclamation-triangle-fill" />
+        </svg>
+        <div class="flex-grow-1">
+            Cảnh báo rủi ro: Kết nối API thanh toán đang chậm hơn bình thường.
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- 4. Alert với symbol: lock-fill (Danger / Security) -->
+    <div class="alert alert-danger alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:">
+            <use xlink:href="#lock-fill" />
+        </svg>
+        <div class="flex-grow-1">
+            Bạn không có quyền chỉnh sửa hợp đồng đã được phê duyệt này.
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- 5. Alert với symbol: star-fill -->
+    <div class="alert alert-info alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Star:">
+            <use xlink:href="#star-fill" />
+        </svg>
+        <div class="flex-grow-1">
+            Tính năng nổi bật mới: Tự động phân loại khách hàng bằng AI.
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- 6. Alert với symbol: bell-fill -->
+    <div class="alert alert-secondary alert-dismissible fade show d-flex align-items-center shadow-sm rounded-3" role="alert">
+        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Bell:">
+            <use xlink:href="#bell-fill" />
+        </svg>
+        <div class="flex-grow-1">
+            Bạn có 4 thông báo công việc mới cần xử lý trong ngày.
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<!-- PHẦN 2: ALERT VIỀN TRÁI NỔI BẬT & BO GÓC (BORDER-ACCENT CALLOUT)  -->
+<!-- ================================================================= -->
+<div class="mb-4">
+    <h6 class="text-uppercase text-secondary fw-semibold small mb-3">2. Alert viền bên nổi bật &amp; Bo góc hiện đại (Callout)</h6>
+
+    <!-- 7. Callout Thành công viền xanh -->
+    <div class="alert alert-success border-0 border-start border-4 border-success shadow-sm rounded-3 alert-dismissible fade show d-flex align-items-center" role="alert">
+        <div class="p-2 rounded-circle bg-success bg-opacity-10 text-success d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 38px; height: 38px;">
+            <svg class="bi" width="20" height="20" role="img" aria-label="Success:">
+                <use xlink:href="#check-circle-fill" />
+            </svg>
+        </div>
+        <div class="flex-grow-1">
+            <strong class="d-block mb-1 text-success-emphasis">Đồng bộ hoàn tất!</strong>
+            <span class="text-secondary small">Hệ thống đã đồng bộ hóa thành công 128 liên hệ khách hàng vào CRM.</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- 8. Callout Nguy hiểm viền đỏ -->
+    <div class="alert alert-danger border-0 border-start border-4 border-danger shadow-sm rounded-3 alert-dismissible fade show d-flex align-items-center" role="alert">
+        <div class="p-2 rounded-circle bg-danger bg-opacity-10 text-danger d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 38px; height: 38px;">
+            <svg class="bi" width="20" height="20" role="img" aria-label="Danger:">
+                <use xlink:href="#exclamation-triangle-fill" />
+            </svg>
+        </div>
+        <div class="flex-grow-1">
+            <strong class="d-block mb-1 text-danger-emphasis">Phiên làm việc đã hết hạn!</strong>
+            <span class="text-secondary small">Vui lòng đăng nhập lại để đảm bảo dữ liệu CRM không bị gián đoạn.</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+
+    <!-- 9. Callout Mẹo nhanh viền vàng (Pro Tip) -->
+    <div class="alert alert-warning border-0 border-start border-4 border-warning shadow-sm rounded-3 alert-dismissible fade show d-flex align-items-center" role="alert">
+        <div class="p-2 rounded-circle bg-warning bg-opacity-10 text-warning d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 38px; height: 38px;">
+            <svg class="bi" width="20" height="20" role="img" aria-label="Tip:">
+                <use xlink:href="#lightning-charge-fill" />
+            </svg>
+        </div>
+        <div class="flex-grow-1">
+            <strong class="d-block mb-1 text-warning-emphasis">Mẹo thao tác nhanh:</strong>
+            <span class="text-secondary small">Bấm tổ hợp phím <kbd class="bg-dark text-white px-1.5 py-0.5 rounded">Ctrl</kbd> + <kbd class="bg-dark text-white px-1.5 py-0.5 rounded">K</kbd> để tìm kiếm nhanh thông tin khách hàng.</span>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<!-- PHẦN 3: ALERT DẠNG VIÊN THUỐC NHỎ GỌN (COMPACT ROUNDED-PILL)      -->
+<!-- ================================================================= -->
+<div class="mb-4">
+    <h6 class="text-uppercase text-secondary fw-semibold small mb-3">3. Alert nhỏ gọn dạng viên thuốc (Rounded Pill)</h6>
+    <div class="d-flex flex-wrap align-items-center gap-2">
+
+        <!-- 10. Pill Success -->
+        <div class="alert alert-success alert-dismissible fade show rounded-pill shadow-sm py-2 px-3 d-inline-flex align-items-center mb-2" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="18" height="18" role="img" aria-label="Success:">
+                <use xlink:href="#check-circle-fill" />
+            </svg>
+            <span class="small fw-medium me-4">Lưu thay đổi thành công</span>
+            <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- 11. Pill Info -->
+        <div class="alert alert-info alert-dismissible fade show rounded-pill shadow-sm py-2 px-3 d-inline-flex align-items-center mb-2" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="18" height="18" role="img" aria-label="Info:">
+                <use xlink:href="#star-fill" />
+            </svg>
+            <span class="small fw-medium me-4">3 liên hệ mới hôm nay</span>
+            <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- 12. Pill Warning Gift -->
+        <div class="alert alert-warning alert-dismissible fade show rounded-pill shadow-sm py-2 px-3 d-inline-flex align-items-center mb-2" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="18" height="18" role="img" aria-label="Gift:">
+                <use xlink:href="#gift-fill" />
+            </svg>
+            <span class="small fw-medium me-4">Ưu đãi Pro còn 5 ngày</span>
+            <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+
+        <!-- 13. Pill Danger Security -->
+        <div class="alert alert-danger alert-dismissible fade show rounded-pill shadow-sm py-2 px-3 d-inline-flex align-items-center mb-2" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="18" height="18" role="img" aria-label="Lock:">
+                <use xlink:href="#lock-fill" />
+            </svg>
+            <span class="small fw-medium me-4">Đã bật bảo mật 2 lớp</span>
+            <button type="button" class="btn-close p-2" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<!-- PHẦN 4: ALERT TƯƠNG TÁC CÓ NÚT HÀNH ĐỘNG (ACTION & UNDO ALERTS)   -->
+<!-- ================================================================= -->
+<div class="mb-4">
+    <h6 class="text-uppercase text-secondary fw-semibold small mb-3">4. Alert có nút bấm hành động (Action &amp; Undo)</h6>
+
+    <!-- 14. Alert Hoàn tác (Undo) -->
+    <div class="alert alert-secondary border-0 shadow-sm rounded-3 alert-dismissible fade show d-flex flex-wrap align-items-center justify-content-between p-3 mb-3" role="alert">
+        <div class="d-flex align-items-center me-3 mb-2 mb-md-0">
+            <div class="p-2 rounded-circle bg-dark bg-opacity-10 text-dark d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 36px; height: 36px;">
+                <svg class="bi" width="18" height="18" role="img" aria-label="Undo:">
+                    <use xlink:href="#arrow-counterclockwise" />
+                </svg>
+            </div>
+            <div>
+                <span class="fw-medium text-dark">Đã chuyển hợp đồng <strong>#HD-8842</strong> vào thùng rác.</span>
+            </div>
+        </div>
+        <div class="d-flex align-items-center gap-2 ms-auto">
+            <button type="button" class="btn btn-sm btn-dark rounded-pill px-3 py-1 shadow-sm" onclick="if(typeof showToast==='function') showToast('Đã hoàn tác hợp đồng #HD-8842!')">
+                Hoàn tác
+            </button>
+            <button type="button" class="btn-close position-static p-2" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+
+    <!-- 15. Alert Kêu gọi hành động (Call To Action) -->
+    <div class="alert alert-primary border-0 shadow-sm rounded-3 alert-dismissible fade show p-3" role="alert">
+        <div class="d-flex align-items-start">
+            <div class="p-2 rounded-circle bg-primary bg-opacity-10 text-primary d-flex align-items-center justify-content-center me-3 flex-shrink-0" style="width: 40px; height: 40px;">
+                <svg class="bi" width="22" height="22" role="img" aria-label="Security:">
+                    <use xlink:href="#shield-fill-check" />
+                </svg>
+            </div>
+            <div class="flex-grow-1 pe-3">
+                <h6 class="alert-heading fw-bold mb-1">Nâng cấp bảo mật tài khoản CRM</h6>
+                <p class="mb-3 small text-secondary">Doanh nghiệp của bạn chưa kích hoạt xác thực 2 bước (2FA). Kích hoạt ngay để ngăn chặn các truy cập trái phép.</p>
+                <div class="d-flex flex-wrap gap-2">
+                    <button type="button" class="btn btn-sm btn-primary rounded-2 px-3 py-1.5 shadow-sm">
+                        Kích hoạt 2FA ngay
+                    </button>
+                    <button type="button" class="btn btn-sm btn-outline-primary rounded-2 px-3 py-1.5" data-bs-dismiss="alert">
+                        Nhắc tôi sau
+                    </button>
+                </div>
+            </div>
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<!-- PHẦN 5: ALERT NHỎ GỌN NỔI GÓC MÀN HÌNH (FLOATING CORNER ALERTS)   -->
+<!-- ================================================================= -->
+<div class="mb-4">
+    <div class="d-flex align-items-center justify-content-between mb-2">
+        <h6 class="text-uppercase text-secondary fw-semibold small mb-0">5. Alert nhỏ gọn ở góc màn hình (Floating Corner / Toast-like)</h6>
+        <span class="badge bg-primary-subtle text-primary border border-primary-subtle rounded-pill small">Góc màn hình</span>
+    </div>
+    <p class="text-muted small mb-3">Có thể hiển thị dạng thẻ nổi trong trang hoặc gắn cố định ở góc với lớp tiện ích Bootstrap <code>position-fixed bottom-0 end-0 m-3 z-3</code>.</p>
+
+    <div class="row g-3">
+        <!-- 16. Floating Card: Đám mây tự động lưu (Góc dưới) -->
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="alert alert-light border shadow-sm rounded-4 alert-dismissible fade show p-3 h-100 mb-0" role="alert">
+                <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 bg-success bg-opacity-10 text-success rounded-circle p-2 d-flex align-items-center justify-content-center me-3" style="width: 42px; height: 42px;">
+                        <svg class="bi" width="22" height="22" role="img" aria-label="Cloud:">
+                            <use xlink:href="#cloud-check-fill" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow-1 pe-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                            <span class="fw-bold text-dark small">Tự động lưu đám mây</span>
+                            <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill" style="font-size: 10px;">Đã lưu</span>
+                        </div>
+                        <p class="mb-0 text-secondary" style="font-size: 12px;">Mọi thay đổi trên biểu mẫu CRM đã được lưu an toàn 3 giây trước.</p>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 17. Floating Card: Tin nhắn khách hàng mới (Góc dưới / phải) -->
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="alert alert-primary border-0 shadow-sm rounded-4 alert-dismissible fade show p-3 h-100 mb-0" role="alert">
+                <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 bg-white text-primary rounded-circle p-2 d-flex align-items-center justify-content-center me-3 shadow-sm" style="width: 42px; height: 42px;">
+                        <svg class="bi" width="20" height="20" role="img" aria-label="Message:">
+                            <use xlink:href="#chat-right-text-fill" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow-1 pe-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                            <span class="fw-bold small text-primary-emphasis">Khách hàng mới</span>
+                            <small class="text-primary-emphasis opacity-75" style="font-size: 11px;">Vừa xong</small>
+                        </div>
+                        <p class="mb-2 small text-primary-emphasis" style="font-size: 12px;">Nguyễn An gửi yêu cầu tư vấn gói CRM Doanh nghiệp.</p>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-sm btn-light text-primary fw-semibold py-0 px-2 rounded-pill shadow-xs" style="font-size: 11px;">Xem chi tiết</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary py-0 px-2 rounded-pill" style="font-size: 11px;" data-bs-dismiss="alert">Bỏ qua</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 18. Floating Card: Dark UI Xác thực bảo mật -->
+        <div class="col-12 col-md-6 col-xl-4">
+            <div class="alert alert-dark border-0 shadow-sm rounded-4 alert-dismissible fade show p-3 h-100 mb-0 text-light" style="background: linear-gradient(135deg, #1e293b, #0f172a);" role="alert">
+                <div class="d-flex align-items-start">
+                    <div class="flex-shrink-0 bg-warning bg-opacity-25 text-warning rounded-circle p-2 d-flex align-items-center justify-content-center me-3" style="width: 42px; height: 42px;">
+                        <svg class="bi" width="20" height="20" role="img" aria-label="Security:">
+                            <use xlink:href="#shield-fill-check" />
+                        </svg>
+                    </div>
+                    <div class="flex-grow-1 pe-2">
+                        <div class="d-flex align-items-center justify-content-between mb-1">
+                            <span class="fw-bold text-white small">Phiên truy cập an toàn</span>
+                            <span class="badge bg-warning text-dark rounded-pill" style="font-size: 10px;">SSL 256</span>
+                        </div>
+                        <p class="mb-0 text-light opacity-75" style="font-size: 12px;">Đã mã hóa đầu cuối dữ liệu CRM từ thiết bị của bạn.</p>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ================================================================= -->
+<!-- PHẦN 6: ALERT THÔNG BÁO DÀI CÓ TIÊU ĐỀ & NỘI DUNG (DETAILED)      -->
+<!-- ================================================================= -->
+<div class="mb-2">
+    <h6 class="text-uppercase text-secondary fw-semibold small mb-3">6. Alert thông báo dài có tiêu đề &amp; nội dung chi tiết</h6>
+
+    <!-- 19. Alert thông báo dài sử dụng symbol: gear-fill -->
+    <div class="alert alert-dark alert-dismissible fade show rounded-3 shadow-sm p-4" role="alert">
+        <div class="d-flex align-items-center mb-2">
+            <div class="p-2 rounded-circle bg-light bg-opacity-10 text-light d-flex align-items-center justify-content-center me-2" style="width: 36px; height: 36px;">
+                <svg class="bi" width="20" height="20" role="img" aria-label="Gear:">
+                    <use xlink:href="#gear-fill" />
+                </svg>
+            </div>
+            <h5 class="alert-heading fw-bold mb-0 text-white">Hệ thống đang bảo trì định kỳ!</h5>
+        </div>
+        <p class="text-light opacity-75 mb-2">
+            Hệ thống CRM đang tiến hành nâng cấp hạ tầng cơ sở dữ liệu định kỳ nhằm tối ưu tốc độ xử lý báo cáo và tăng cường bảo mật cho toàn bộ người dùng.
+        </p>
+        <hr class="border-secondary opacity-25 my-3">
+        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2">
+            <p class="mb-0 small text-light opacity-75">Thời gian dự kiến hoàn tất: <strong>04:30 AM ngày mai</strong>. Vui lòng quay lại sau thời gian này.</p>
+            <span class="badge bg-warning text-dark px-2.5 py-1 rounded-pill small">Hạ tầng v3.2</span>
+        </div>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
 </div>`,
 
     // Carousel Mẫu 1 (Drag & Scroll)
@@ -9191,14 +9506,8 @@ document.addEventListener("DOMContentLoaded", () => {
         'code-js-toasts4'
     );
 
-    // Tải Component Alert
-    loadComponent(
-        './alert.html',
-        null,
-        'preview-alert',
-        'code-html-alert',
-        null
-    );
+    // Khởi tạo và lưu trạng thái gốc cho 6 mẫu Alert
+    saveAlertTemplates();
 
     // Tải 3 Mẫu Carousel
     loadComponent(
