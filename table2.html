@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reports Table</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="table2.css">
+</head>
+<body>
+
+<div class="container-fluid py-4 px-4">
+    
+    <div class="d-flex align-items-center justify-content-between mb-3">
+        <div class="d-flex align-items-center gap-4">
+            <h4 class="fw-bold text-dark mb-0">All reports</h4>
+            <div class="dropdown">
+                <span class="text-secondary" style="font-size: 14px;">Sort By: </span>
+                <button class="btn btn-link text-dark text-decoration-none p-0 dropdown-toggle-custom" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Last modified date <i class="bi bi-chevron-down ms-1" style="font-size: 12px;"></i>
+                </button>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Name</a></li>
+                    <li><a class="dropdown-item" href="#">Created date</a></li>
+                    <li><a class="dropdown-item" href="#">Last modified date</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="d-flex gap-2">
+            <div class="position-relative">
+                <input type="text" class="form-control form-control-sm rounded-pill pe-5 ps-3" placeholder="Search reports..." style="width: 250px;">
+                <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-secondary" style="font-size: 12px;"></i>
+            </div>
+            <button class="btn btn-primary btn-sm rounded-3 px-3 fw-medium">Create report</button>
+        </div>
+    </div>
+
+    <div class="table-container bg-white rounded-3 border">
+        <div class="table-responsive custom-scrollbar">
+            <table class="table custom-table mb-0">
+                <thead>
+                    <tr>
+                        <th scope="col" class="text-center sticky-col left-0" style="width: 50px;"></th>
+                        <th scope="col" class="sticky-col left-50" style="width: 300px;">Name</th>
+                        <th scope="col">Module</th>
+                        <th scope="col">Status</th>
+                        <th scope="col">Visibility</th>
+                        <th scope="col" class="text-end">Total Records</th>
+                        <th scope="col">Created by</th>
+                        <th scope="col">Created date</th>
+                        <th scope="col">Last Modified by</th>
+                        <th scope="col">Last Modified date</th>
+                        <th scope="col" class="text-center sticky-col right-0" style="width: 50px;"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center sticky-col left-0 bg-white">
+                            <i class="bi bi-star star-btn"></i>
+                        </td>
+                        <td class="sticky-col left-50 bg-white">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="report-name text-truncate" style="max-width: 200px;" title="Ecommerce Marketing Journey Report">Ecommerce Marketing Journey Report</span>
+                                <span class="badge curated-badge">Curated</span>
+                            </div>
+                        </td>
+                        <td>Marketing</td>
+                        <td><span class="status-dot active"></span> Active</td>
+                        <td><span class="badge visibility-badge shared"><i class="bi bi-people"></i> Shared</span></td>
+                        <td class="text-end fw-medium text-dark">1,204</td>
+                        <td>System</td>
+                        <td>14 Aug, 2024</td>
+                        <td>--</td>
+                        <td>14 Aug, 2024</td>
+                        <td class="text-center sticky-col right-0 bg-white">
+                            <i class="bi bi-three-dots-vertical action-dots"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center sticky-col left-0 bg-white">
+                            <i class="bi bi-star star-btn"></i>
+                        </td>
+                        <td class="sticky-col left-50 bg-white">
+                            <div class="d-flex align-items-start flex-column gap-1">
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="report-name text-truncate" style="max-width: 200px;" title="Sales Essentials Dashboard">Sales Essentials Dashboard</span>
+                                    <span class="badge curated-badge">Curated</span>
+                                </div>
+                                <span class="report-subtitle text-truncate" style="max-width: 250px;" title="Report on deals, contacts, and sales activities">Report on deals, contacts, and sales activities</span>
+                            </div>
+                        </td>
+                        <td>Sales</td>
+                        <td><span class="status-dot active"></span> Active</td>
+                        <td><span class="badge visibility-badge public"><i class="bi bi-globe"></i> Public</span></td>
+                        <td class="text-end fw-medium text-dark">8,432</td>
+                        <td>System</td>
+                        <td>02 Apr, 2024</td>
+                        <td>--</td>
+                        <td>03 Apr, 2024</td>
+                        <td class="text-center sticky-col right-0 bg-white">
+                            <i class="bi bi-three-dots-vertical action-dots"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center sticky-col left-0 bg-white">
+                            <i class="bi bi-star star-btn"></i>
+                        </td>
+                        <td class="sticky-col left-50 bg-white">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="report-name">Product Dashboard</span>
+                                <span class="badge curated-badge">Curated</span>
+                            </div>
+                        </td>
+                        <td>Products</td>
+                        <td><span class="status-dot inactive"></span> Inactive</td>
+                        <td><span class="badge visibility-badge private"><i class="bi bi-lock"></i> Private</span></td>
+                        <td class="text-end fw-medium text-dark">450</td>
+                        <td>System</td>
+                        <td>01 Dec, 2021</td>
+                        <td>--</td>
+                        <td>16 Feb, 2022</td>
+                        <td class="text-center sticky-col right-0 bg-white">
+                            <i class="bi bi-three-dots-vertical action-dots"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center sticky-col left-0 bg-white">
+                            <i class="bi bi-star star-btn"></i>
+                        </td>
+                        <td class="sticky-col left-50 bg-white">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="report-name">Team activity report</span>
+                                <span class="badge curated-badge">Curated</span>
+                            </div>
+                        </td>
+                        <td>Analytics</td>
+                        <td><span class="status-dot active"></span> Active</td>
+                        <td><span class="badge visibility-badge shared"><i class="bi bi-people"></i> Shared</span></td>
+                        <td class="text-end fw-medium text-dark">2,100</td>
+                        <td>System</td>
+                        <td>27 Jul, 2020</td>
+                        <td>CRM Team</td>
+                        <td>24 Apr, 2021</td>
+                        <td class="text-center sticky-col right-0 bg-white">
+                            <i class="bi bi-three-dots-vertical action-dots"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center sticky-col left-0 bg-white">
+                            <i class="bi bi-star star-btn"></i>
+                        </td>
+                        <td class="sticky-col left-50 bg-white">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="report-name">Sales Trends</span>
+                                <span class="badge curated-badge">Curated</span>
+                            </div>
+                        </td>
+                        <td>Sales</td>
+                        <td><span class="status-dot scheduled"></span> Scheduled</td>
+                        <td><span class="badge visibility-badge shared"><i class="bi bi-people"></i> Shared</span></td>
+                        <td class="text-end fw-medium text-dark">5,600</td>
+                        <td>System</td>
+                        <td>27 Jul, 2020</td>
+                        <td>CRM Team</td>
+                        <td>24 Apr, 2021</td>
+                        <td class="text-center sticky-col right-0 bg-white">
+                            <i class="bi bi-three-dots-vertical action-dots"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center sticky-col left-0 bg-white">
+                            <i class="bi bi-star star-btn"></i>
+                        </td>
+                        <td class="sticky-col left-50 bg-white">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="report-name">Sales Forecast</span>
+                                <span class="badge curated-badge">Curated</span>
+                            </div>
+                        </td>
+                        <td>Sales</td>
+                        <td><span class="status-dot active"></span> Active</td>
+                        <td><span class="badge visibility-badge private"><i class="bi bi-lock"></i> Private</span></td>
+                        <td class="text-end fw-medium text-dark">3,200</td>
+                        <td>System</td>
+                        <td>27 Jul, 2020</td>
+                        <td>CRM Team</td>
+                        <td>24 Apr, 2021</td>
+                        <td class="text-center sticky-col right-0 bg-white">
+                            <i class="bi bi-three-dots-vertical action-dots"></i>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center sticky-col left-0 bg-white">
+                            <i class="bi bi-star star-btn"></i>
+                        </td>
+                        <td class="sticky-col left-50 bg-white">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="report-name">Sales Dashboard</span>
+                                <span class="badge curated-badge">Curated</span>
+                            </div>
+                        </td>
+                        <td>Sales</td>
+                        <td><span class="status-dot active"></span> Active</td>
+                        <td><span class="badge visibility-badge public"><i class="bi bi-globe"></i> Public</span></td>
+                        <td class="text-end fw-medium text-dark">9,800</td>
+                        <td>System</td>
+                        <td>31 Jul, 2020</td>
+                        <td>CRM Team</td>
+                        <td>24 Apr, 2021</td>
+                        <td class="text-center sticky-col right-0 bg-white">
+                            <i class="bi bi-three-dots-vertical action-dots"></i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center py-3">
+        <div class="dropdown">
+            <button class="btn btn-link text-secondary text-decoration-none p-0 dropdown-toggle-custom" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 14px;">
+                Showing <span class="fw-bold text-dark">10</span> / page <i class="bi bi-chevron-down ms-1" style="font-size: 12px;"></i>
+            </button>
+            <ul class="dropdown-menu shadow-sm min-w-auto">
+                <li><a class="dropdown-item" href="#">10</a></li>
+                <li><a class="dropdown-item" href="#">20</a></li>
+                <li><a class="dropdown-item" href="#">50</a></li>
+            </ul>
+        </div>
+
+        <nav aria-label="Table pagination">
+            <ul class="pagination custom-pagination mb-0">
+                <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-chevron-left"></i></a>
+                </li>
+                <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><span class="page-link border-0 text-muted bg-transparent">...</span></li>
+                <li class="page-item"><a class="page-link" href="#">10</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="table2.js"></script>
+</body>
+</html>

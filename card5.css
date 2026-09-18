@@ -1,0 +1,100 @@
+body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.custom-deal-card {
+    background-color: #fce8ec;
+    border: 1px solid #f8d7dd;
+    border-radius: 8px;
+    width: 320px;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+}
+
+.deal-title {
+    color: #9e2a2b;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.btn-expand {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    width: 24px;
+    height: 24px;
+    color: #64748b;
+    transition: all 0.2s;
+}
+
+.btn-expand:hover {
+    background-color: #f8fafc;
+    color: #33475b;
+}
+
+.btn-expand i {
+    font-size: 12px;
+}
+
+.deal-amount {
+    color: #1e293b;
+    font-size: 15px;
+}
+
+.dot-separator {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+.deal-date {
+    color: #33475b;
+    font-size: 14px;
+}
+
+.company-link {
+    color: #4b527e;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.company-link:hover {
+    color: #373c60;
+    text-decoration: underline !important;
+}
+
+.custom-badge {
+    background-color: #e2e8f0;
+    color: #475569;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.deal-notes {
+    color: #64748b;
+    font-size: 14px;
+}
+
+.deal-notes i {
+    font-size: 15px;
+}
+
+.action-icons i {
+    color: #64748b;
+    font-size: 15px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.action-icons i:hover {
+    color: #1e293b;
+}
+
+.action-icons .alert-icon {
+    color: #dc2626;
+}
+
+.action-icons .alert-icon:hover {
+    color: #b91c1c;
+}

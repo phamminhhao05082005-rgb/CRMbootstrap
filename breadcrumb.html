@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM Status Breadcrumbs</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="breadcrumb.css">
+</head>
+<body>
+
+<div class="container py-5">
+    
+    <div class="mb-5">
+        <h6 class="text-secondary mb-3">Mẫu 1: Original CRM Status (Chevron)</h6>
+        <div class="text-secondary mb-2" style="font-size: 14px;">Status</div>
+        <div class="ch-wrapper">
+            <div class="ch-step">
+                <span>New</span>
+            </div>
+            <div class="ch-step">
+                <span>Contacted</span>
+            </div>
+            <div class="ch-step dropdown">
+                <span class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                    Interested <i class="bi bi-chevron-down"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action 1</a></li>
+                    <li><a class="dropdown-item" href="#">Action 2</a></li>
+                </ul>
+            </div>
+            <div class="ch-step dropdown">
+                <span class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                    Qualified <i class="bi bi-chevron-down"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action 1</a></li>
+                    <li><a class="dropdown-item" href="#">Action 2</a></li>
+                </ul>
+            </div>
+            <div class="ch-step inactive dropdown">
+                <span class="dropdown-toggle-custom" data-bs-toggle="dropdown" aria-expanded="false">
+                    Won / Churned <i class="bi bi-chevron-down"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Mark as Won</a></li>
+                    <li><a class="dropdown-item" href="#">Mark as Churned</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5 border-light">
+
+    <div class="mb-5">
+        <h6 class="text-secondary mb-3">Mẫu 2: Modern Connected Pills</h6>
+        <div class="text-secondary mb-2" style="font-size: 14px;">Status</div>
+        <div class="pill-wrapper">
+            <div class="pill-step completed">
+                <i class="bi bi-check-circle-fill me-1"></i> New
+            </div>
+            <div class="pill-step completed">
+                <i class="bi bi-check-circle-fill me-1"></i> Contacted
+            </div>
+            <div class="pill-step completed dropdown">
+                <span data-bs-toggle="dropdown" aria-expanded="false" class="cursor-pointer">
+                    <i class="bi bi-check-circle-fill me-1"></i> Interested <i class="bi bi-chevron-down ms-1"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+            <div class="pill-step active dropdown">
+                <span data-bs-toggle="dropdown" aria-expanded="false" class="cursor-pointer">
+                    <i class="bi bi-record-circle me-1"></i> Qualified <i class="bi bi-chevron-down ms-1"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+            <div class="pill-step inactive dropdown">
+                <span data-bs-toggle="dropdown" aria-expanded="false" class="cursor-pointer">
+                    Won / Churned <i class="bi bi-chevron-down ms-1"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5 border-light">
+
+    <div class="mb-5">
+        <h6 class="text-secondary mb-3">Mẫu 3: Minimalist Underline Tabs</h6>
+        <div class="text-secondary mb-2" style="font-size: 14px;">Status</div>
+        <div class="line-wrapper">
+            <div class="line-step completed">
+                New
+            </div>
+            <div class="line-step completed">
+                Contacted
+            </div>
+            <div class="line-step completed dropdown">
+                <span data-bs-toggle="dropdown" aria-expanded="false" class="cursor-pointer">
+                    Interested <i class="bi bi-chevron-down"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+            <div class="line-step active dropdown">
+                <span data-bs-toggle="dropdown" aria-expanded="false" class="cursor-pointer">
+                    Qualified <i class="bi bi-chevron-down"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+            <div class="line-step inactive dropdown">
+                <span data-bs-toggle="dropdown" aria-expanded="false" class="cursor-pointer">
+                    Won / Churned <i class="bi bi-chevron-down"></i>
+                </span>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-5 border-light">
+
+    <div class="mb-5">
+        <h6 class="text-secondary mb-3">Mẫu 4: Classic Circle Tracker</h6>
+        <div class="text-secondary mb-4" style="font-size: 14px;">Status</div>
+        <div class="circle-wrapper">
+            <div class="circle-step completed">
+                <div class="circle-icon"><i class="bi bi-check"></i></div>
+                <div class="circle-label">New</div>
+            </div>
+            <div class="circle-step completed">
+                <div class="circle-icon"><i class="bi bi-check"></i></div>
+                <div class="circle-label">Contacted</div>
+            </div>
+            <div class="circle-step completed dropdown">
+                <div class="circle-icon cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-check"></i></div>
+                <div class="circle-label cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">Interested <i class="bi bi-chevron-down"></i></div>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+            <div class="circle-step active dropdown">
+                <div class="circle-icon cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">4</div>
+                <div class="circle-label cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">Qualified <i class="bi bi-chevron-down"></i></div>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+            <div class="circle-step inactive dropdown">
+                <div class="circle-icon cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">5</div>
+                <div class="circle-label cursor-pointer" data-bs-toggle="dropdown" aria-expanded="false">Won / Churned <i class="bi bi-chevron-down"></i></div>
+                <ul class="dropdown-menu shadow-sm">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

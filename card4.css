@@ -1,0 +1,131 @@
+body {
+    background-color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.score-card {
+    background-color: #fcfcfd;
+    border-radius: 8px;
+    border: 1px solid #eef0f6;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    max-width: 900px;
+}
+
+.label-text {
+    font-size: 13px;
+    color: #475569;
+}
+
+.info-icon {
+    font-size: 12px;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.info-icon:hover {
+    color: #1e293b !important;
+}
+
+.score-value {
+    font-size: 24px;
+    line-height: 1;
+}
+
+.star-icon {
+    font-size: 16px;
+}
+
+.empty-star {
+    color: #cbd5e1;
+}
+
+.custom-divider {
+    border-color: #e2e8f0;
+    opacity: 1;
+}
+
+.custom-border {
+    border-color: #e2e8f0 !important;
+}
+
+.mini-chart-wrapper {
+    width: 140px;
+    position: relative;
+    padding-left: 24px;
+}
+
+.chart-y-labels {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    bottom: 20px;
+    font-size: 11px;
+}
+
+.chart-area {
+    height: 100px;
+    border-left: 1px solid #cbd5e1;
+    border-bottom: 1px solid #cbd5e1;
+    position: relative;
+}
+
+.chart-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #94a3b8;
+}
+
+.chart-x-labels {
+    font-size: 11px;
+    margin-left: 2px;
+}
+
+.content-text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #475569;
+}
+
+.action-btn {
+    background-color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #33475b;
+    font-size: 13px;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.action-btn:hover {
+    background-color: #f8fafc;
+    border-color: #94a3b8;
+    color: #1e293b;
+}
+
+.action-btn i {
+    color: #64748b;
+}
+
+.feedback-section {
+    font-size: 13px;
+}
+
+.feedback-icon {
+    color: #cbd5e1;
+    cursor: pointer;
+    font-size: 15px;
+    transition: color 0.2s, transform 0.1s;
+}
+
+.feedback-icon:hover {
+    color: #94a3b8;
+    transform: scale(1.1);
+}
+
+.feedback-icon.active {
+    color: #3b82f6;
+}

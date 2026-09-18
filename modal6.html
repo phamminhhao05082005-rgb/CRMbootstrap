@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Task Modal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="modal6.css">
+</head>
+
+<body>
+
+    <div class="container py-5 d-flex justify-content-center">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal">
+            Mở Add Task Modal
+        </button>
+    </div>
+
+    <div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered custom-modal-dialog">
+            <div class="modal-content custom-modal-content">
+
+                <div class="modal-header border-bottom px-4 py-3">
+                    <h5 class="modal-title fw-bold text-dark" id="addTaskModalLabel">Add task</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+
+                <div class="modal-body p-0">
+                    <div class="row g-0 h-100">
+
+                        <div class="col-lg-8 p-4">
+
+                            <div class="form-check mb-4 d-flex align-items-center gap-2">
+                                <input class="form-check-input custom-checkbox m-0" type="checkbox" id="markCompleted">
+                                <label class="form-check-label text-dark mt-1" for="markCompleted">
+                                    Mark as completed
+                                </label>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label form-field-label">Title <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control custom-input input-focus-blue" placeholder="Enter title of task" autofocus>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label form-field-label">Description</label>
+                                <textarea class="form-control custom-input resize-y" rows="5" placeholder="Start typing the details about the task..."></textarea>
+                            </div>
+
+                            <div class="row mb-4 gx-3">
+                                <div class="col-md-4">
+                                    <label class="form-label form-field-label">Task type</label>
+                                    <div class="position-relative">
+                                        <select class="form-select custom-select-appearance text-muted">
+                                            <option selected>Select a type</option>
+                                            <option value="1">To-do</option>
+                                            <option value="2">Call</option>
+                                            <option value="3">Email</option>
+                                        </select>
+                                        <i class="bi bi-caret-down-fill select-caret text-secondary"></i>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <label class="form-label form-field-label">Due date <span class="text-danger">*</span></label>
+                                    <div class="row gx-2">
+                                        <div class="col-7 position-relative">
+                                            <input type="date" id="dueDate" class="form-control custom-input text-dark bg-white" value="2026-09-18">
+                                            <i class="bi bi-calendar position-absolute top-50 end-0 translate-middle-y me-3 text-secondary pointer-none" style="font-size: 14px;"></i>
+                                        </div>
+
+                                        <div class="col-5 position-relative">
+                                            <input type="time" id="dueTime" class="form-control custom-input text-dark bg-white" value="05:49">
+                                            <i class="bi bi-clock position-absolute top-50 end-0 translate-middle-y me-3 text-secondary pointer-none" style="font-size: 14px;"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="form-label form-field-label">Outcome</label>
+                                <div class="position-relative">
+                                    <select class="form-select custom-select-appearance text-muted">
+                                        <option selected>Select an outcome</option>
+                                        <option value="1">Connected</option>
+                                        <option value="2">Left voicemail</option>
+                                    </select>
+                                    <i class="bi bi-caret-down-fill select-caret text-secondary"></i>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4 p-4 border-start bg-white custom-right-panel">
+
+                            <div class="mb-4">
+                                <label class="form-label form-field-label">Owner</label>
+                                <div class="custom-select-box d-flex justify-content-between align-items-center">
+                                    <span class="text-dark">HÀO PHẠM MINH</span>
+                                    <div class="d-flex align-items-center gap-2">
+                                        <i class="bi bi-x text-secondary action-clear" id="clearOwner" title="Clear"></i>
+                                        <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label form-field-label d-flex align-items-center gap-1">
+                                    Related to (1) <i class="bi bi-info-circle text-secondary" style="font-size: 12px; cursor: pointer;"></i>
+                                </label>
+                                <div class="position-relative mb-2">
+                                    <select class="form-select custom-select-appearance text-muted">
+                                        <option selected>Click to select records</option>
+                                    </select>
+                                    <i class="bi bi-caret-down-fill select-caret text-secondary"></i>
+                                </div>
+
+                                <div class="record-chip d-inline-flex align-items-center gap-2" id="recordChip">
+                                    <img src="https://i.pravatar.cc/150?img=44" alt="Jane" class="rounded-circle" width="18" height="18">
+                                    <span>Jane Sampleton (sample)</span>
+                                    <i class="bi bi-x text-secondary ms-1 chip-close" id="removeChip"></i>
+                                </div>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label form-field-label">Collaborators (0)</label>
+                                <div class="position-relative">
+                                    <select class="form-select custom-select-appearance text-muted">
+                                        <option selected></option>
+                                    </select>
+                                    <i class="bi bi-caret-down-fill select-caret text-secondary"></i>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="modal-footer border-top px-4 py-3 bg-white">
+                    <button type="button" class="btn btn-cancel px-3" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-save px-4">Save</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="modal6.js"></script>
+</body>
+
+</html>
