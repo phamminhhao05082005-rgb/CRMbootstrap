@@ -1139,99 +1139,78 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-accordion4">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;AI Summary Card&lt;/title&gt;
-&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;card4.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;container py-5&quot;&gt;
-    
-    &lt;div class=&quot;summary-card&quot;&gt;
-       
-        &lt;div class=&quot;d-flex justify-content-between align-items-center mb-4&quot;&gt;
-            &lt;div class=&quot;d-flex align-items-center gap-2 text-dark-blue fw-bold fs-6&quot;&gt;
-                &lt;i class=&quot;bi bi-stars text-primary fs-5&quot;&gt;&lt;/i&gt; Summary
-            &lt;/div&gt;
-            &lt;div class=&quot;d-flex align-items-center gap-2 text-secondary&quot; style=&quot;font-size: 13px;&quot;&gt;
-                &lt;span&gt;Was this helpful?&lt;/span&gt;
-                &lt;a href=&quot;#&quot; class=&quot;feedback-link&quot;&gt;Yes&lt;/a&gt;
-                &lt;span class=&quot;text-muted&quot; style=&quot;font-size: 10px;&quot;&gt;•&lt;/span&gt;
-                &lt;a href=&quot;#&quot; class=&quot;feedback-link&quot;&gt;No&lt;/a&gt;
-                &lt;button class=&quot;btn btn-link text-secondary p-0 ms-2 collapse-trigger&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#summaryContent&quot;&gt;
-                    &lt;i class=&quot;bi bi-chevron-up&quot;&gt;&lt;/i&gt;
-                &lt;/button&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;div class=&quot;collapse show&quot; id=&quot;summaryContent&quot;&gt;
-            &lt;div class=&quot;d-flex flex-column gap-4&quot;&gt;
-                
-                &lt;div class=&quot;d-flex gap-3&quot;&gt;
-                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
-                        &lt;i class=&quot;bi bi-person&quot;&gt;&lt;/i&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;content-text pt-1&quot;&gt;
-                        Laura Norda (sample) is CFO at &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Acme Inc (sample)&lt;/a&gt;. This organization belongs to the apparel &amp; accessories industry and is based in Toronto, Canada.
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;d-flex gap-3&quot;&gt;
-                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
-                        &lt;i class=&quot;bi bi-envelope&quot;&gt;&lt;/i&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;content-text&quot;&gt;
-                        &lt;div class=&quot;mb-1&quot;&gt;
-                            &lt;span class=&quot;fw-medium text-dark-blue&quot;&gt;Overview of recent email between &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Laura Norda (sample)&lt;/a&gt; and HÀO PHẠM MINH&lt;/span&gt;
-                            &lt;span class=&quot;text-muted ms-2&quot; style=&quot;font-size: 13px;&quot;&gt;13 days ago&lt;/span&gt;
-                        &lt;/div&gt;
-                        &lt;p class=&quot;mb-2&quot;&gt;Laura Norda initiated a request for an additional user license for a new sales rep to be onboarded by the end of the month.&lt;/p&gt;
-                        &lt;div class=&quot;d-flex gap-2&quot;&gt;
-                            &lt;div class=&quot;badge-positive d-flex align-items-center gap-1&quot;&gt;
-                                &lt;i class=&quot;bi bi-info-circle&quot; style=&quot;font-size: 11px;&quot;&gt;&lt;/i&gt; Positive
-                            &lt;/div&gt;
-                            &lt;button class=&quot;btn btn-sm btn-save-note d-flex align-items-center gap-1&quot;&gt;
-                                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt; Save as note
-                            &lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;d-flex gap-3&quot;&gt;
-                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
-                        &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;content-text pt-1&quot;&gt;
-                        &lt;div class=&quot;fw-medium text-dark-blue mb-1&quot;&gt;Snapshot of recent notes&lt;/div&gt;
-                        &lt;p class=&quot;mb-0&quot;&gt;Laura is considering purchasing an additional license and plans to make a decision by the end of the month.&lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;d-flex gap-3&quot;&gt;
-                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
-                        &lt;i class=&quot;bi bi-currency-dollar&quot;&gt;&lt;/i&gt;
-                    &lt;/div&gt;
-                    &lt;div class=&quot;content-text pt-1&quot;&gt;
-                        There is &lt;a href=&quot;#&quot; class=&quot;custom-link fw-medium&quot;&gt;1 won deal&lt;/a&gt; worth &lt;span class=&quot;fw-medium text-dark-blue&quot;&gt;$4,000&lt;/span&gt; for this contact. There is &lt;a href=&quot;#&quot; class=&quot;custom-link fw-medium&quot;&gt;1 open deal&lt;/a&gt; worth &lt;span class=&quot;fw-medium text-dark-blue&quot;&gt;$100&lt;/span&gt;.
-                    &lt;/div&gt;
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;card4.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-accordion4">&lt;div class=&quot;summary-card&quot;&gt;
+       
+        &lt;div class=&quot;d-flex justify-content-between align-items-center mb-4&quot;&gt;
+            &lt;div class=&quot;d-flex align-items-center gap-2 text-dark-blue fw-bold fs-6&quot;&gt;
+                &lt;i class=&quot;bi bi-stars text-primary fs-5&quot;&gt;&lt;/i&gt; Summary
+            &lt;/div&gt;
+            &lt;div class=&quot;d-flex align-items-center gap-2 text-secondary&quot; style=&quot;font-size: 13px;&quot;&gt;
+                &lt;span&gt;Was this helpful?&lt;/span&gt;
+                &lt;a href=&quot;#&quot; class=&quot;feedback-link&quot;&gt;Yes&lt;/a&gt;
+                &lt;span class=&quot;text-muted&quot; style=&quot;font-size: 10px;&quot;&gt;•&lt;/span&gt;
+                &lt;a href=&quot;#&quot; class=&quot;feedback-link&quot;&gt;No&lt;/a&gt;
+                &lt;button class=&quot;btn btn-link text-secondary p-0 ms-2 collapse-trigger&quot; type=&quot;button&quot; data-bs-toggle=&quot;collapse&quot; data-bs-target=&quot;#summaryContent&quot;&gt;
+                    &lt;i class=&quot;bi bi-chevron-up&quot;&gt;&lt;/i&gt;
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;collapse show&quot; id=&quot;summaryContent&quot;&gt;
+            &lt;div class=&quot;d-flex flex-column gap-4&quot;&gt;
+                
+                &lt;div class=&quot;d-flex gap-3&quot;&gt;
+                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
+                        &lt;i class=&quot;bi bi-person&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-text pt-1&quot;&gt;
+                        Laura Norda (sample) is CFO at &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Acme Inc (sample)&lt;/a&gt;. This organization belongs to the apparel &amp; accessories industry and is based in Toronto, Canada.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;d-flex gap-3&quot;&gt;
+                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
+                        &lt;i class=&quot;bi bi-envelope&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-text&quot;&gt;
+                        &lt;div class=&quot;mb-1&quot;&gt;
+                            &lt;span class=&quot;fw-medium text-dark-blue&quot;&gt;Overview of recent email between &lt;a href=&quot;#&quot; class=&quot;custom-link&quot;&gt;Laura Norda (sample)&lt;/a&gt; and HÀO PHẠM MINH&lt;/span&gt;
+                            &lt;span class=&quot;text-muted ms-2&quot; style=&quot;font-size: 13px;&quot;&gt;13 days ago&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;p class=&quot;mb-2&quot;&gt;Laura Norda initiated a request for an additional user license for a new sales rep to be onboarded by the end of the month.&lt;/p&gt;
+                        &lt;div class=&quot;d-flex gap-2&quot;&gt;
+                            &lt;div class=&quot;badge-positive d-flex align-items-center gap-1&quot;&gt;
+                                &lt;i class=&quot;bi bi-info-circle&quot; style=&quot;font-size: 11px;&quot;&gt;&lt;/i&gt; Positive
+                            &lt;/div&gt;
+                            &lt;button class=&quot;btn btn-sm btn-save-note d-flex align-items-center gap-1&quot;&gt;
+                                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt; Save as note
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;d-flex gap-3&quot;&gt;
+                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
+                        &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-text pt-1&quot;&gt;
+                        &lt;div class=&quot;fw-medium text-dark-blue mb-1&quot;&gt;Snapshot of recent notes&lt;/div&gt;
+                        &lt;p class=&quot;mb-0&quot;&gt;Laura is considering purchasing an additional license and plans to make a decision by the end of the month.&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;d-flex gap-3&quot;&gt;
+                    &lt;div class=&quot;icon-box flex-shrink-0&quot;&gt;
+                        &lt;i class=&quot;bi bi-currency-dollar&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;content-text pt-1&quot;&gt;
+                        There is &lt;a href=&quot;#&quot; class=&quot;custom-link fw-medium&quot;&gt;1 won deal&lt;/a&gt; worth &lt;span class=&quot;fw-medium text-dark-blue&quot;&gt;$4,000&lt;/span&gt; for this contact. There is &lt;a href=&quot;#&quot; class=&quot;custom-link fw-medium&quot;&gt;1 open deal&lt;/a&gt; worth &lt;span class=&quot;fw-medium text-dark-blue&quot;&gt;$100&lt;/span&gt;.
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -6831,27 +6810,13 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-modal6">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-
-&lt;head&gt;
-    &lt;meta charset=&quot;UTF-8&quot;&gt;
-    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-    &lt;title&gt;Add Task Modal&lt;/title&gt;
-    &lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-    &lt;link rel=&quot;stylesheet&quot; href=&quot;modal6.css&quot;&gt;
-&lt;/head&gt;
-
-&lt;body&gt;
-
-    &lt;div class=&quot;container py-5 d-flex justify-content-center&quot;&gt;
-        &lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#addTaskModal&quot;&gt;
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-modal6">&lt;!-- Nút mở Modal --&gt;
+&lt;button type=&quot;button&quot; class=&quot;btn btn-primary&quot; data-bs-toggle=&quot;modal&quot; data-bs-target=&quot;#addTaskModal&quot;&gt;
             Mở Add Task Modal
-        &lt;/button&gt;
-    &lt;/div&gt;
-
-    &lt;div class=&quot;modal fade&quot; id=&quot;addTaskModal&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;addTaskModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
+        &lt;/button&gt;
+
+&lt;!-- Modal --&gt;
+&lt;div class=&quot;modal fade&quot; id=&quot;addTaskModal&quot; tabindex=&quot;-1&quot; aria-labelledby=&quot;addTaskModalLabel&quot; aria-hidden=&quot;true&quot;&gt;
         &lt;div class=&quot;modal-dialog modal-xl modal-dialog-centered custom-modal-dialog&quot;&gt;
             &lt;div class=&quot;modal-content custom-modal-content&quot;&gt;
 
@@ -6978,13 +6943,7 @@
 
             &lt;/div&gt;
         &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-    &lt;script src=&quot;modal6.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-
-&lt;/html&gt;</code></pre>
+    &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -7824,111 +7783,90 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card4">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;Score &amp; Insights Card&lt;/title&gt;
-&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;card4.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;container py-5&quot;&gt;
-    
-    &lt;div class=&quot;score-card p-4&quot;&gt;
-        
-        &lt;div class=&quot;d-flex align-items-center gap-3 mb-1&quot;&gt;
-            &lt;span class=&quot;text-secondary label-text&quot;&gt;Score&lt;/span&gt;
-            &lt;span class=&quot;text-secondary small&quot;&gt;•&lt;/span&gt;
-            &lt;span class=&quot;text-secondary label-text d-flex align-items-center gap-1&quot;&gt;
-                Customer fit &lt;i class=&quot;bi bi-info-circle info-icon&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/i&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-        
-        &lt;div class=&quot;d-flex align-items-center gap-4 mb-3&quot;&gt;
-            &lt;div class=&quot;score-value fw-bold text-dark&quot;&gt;0&lt;/div&gt;
-            &lt;div class=&quot;d-flex gap-1&quot;&gt;
-                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-
-        &lt;hr class=&quot;custom-divider mb-4&quot;&gt;
-
-        &lt;div class=&quot;row g-0&quot;&gt;
-            
-            &lt;div class=&quot;col-md-7 pe-4&quot;&gt;
-                &lt;div class=&quot;d-flex gap-4&quot;&gt;
-                    
-                    &lt;div class=&quot;mini-chart-wrapper flex-shrink-0&quot;&gt;
-                        &lt;div class=&quot;chart-y-labels d-flex flex-column justify-content-between text-secondary&quot;&gt;
-                            &lt;span&gt;100&lt;/span&gt;
-                            &lt;span&gt;0&lt;/span&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;chart-area&quot;&gt;
-                            &lt;div class=&quot;chart-line&quot;&gt;&lt;/div&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&quot;chart-x-labels d-flex justify-content-between text-secondary mt-1&quot;&gt;
-                            &lt;span&gt;Last week&lt;/span&gt;
-                            &lt;span&gt;Today&lt;/span&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div&gt;
-                        &lt;h6 class=&quot;fw-bold text-dark mb-3&quot;&gt;Key factors behind this score&lt;/h6&gt;
-                        &lt;p class=&quot;text-secondary mb-0 content-text&quot;&gt;
-                            We don&#039;t have sufficient activity or information for this contact. Once more information is available, a score will be automatically calculated.
-                        &lt;/p&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&quot;col-md-5 ps-4 border-start custom-border&quot;&gt;
-                
-                &lt;h6 class=&quot;fw-bold text-dark mb-3 d-flex align-items-center gap-2&quot;&gt;
-                    &lt;i class=&quot;bi bi-stars text-primary fs-5&quot;&gt;&lt;/i&gt; Freddy AI insights
-                &lt;/h6&gt;
-                
-                &lt;p class=&quot;text-dark mb-3 content-text&quot;&gt;
-                    Laura Norda (sample) is an untouched contact.&lt;br&gt;
-                    Start engaging with them now.
-                &lt;/p&gt;
-                
-                &lt;div class=&quot;d-flex flex-wrap gap-2 mb-4&quot;&gt;
-                    &lt;button class=&quot;btn action-btn d-flex align-items-center gap-2&quot;&gt;
-                        &lt;i class=&quot;bi bi-bullseye&quot;&gt;&lt;/i&gt; Add to sales sequence
-                    &lt;/button&gt;
-                    &lt;button class=&quot;btn action-btn d-flex align-items-center gap-2&quot;&gt;
-                        &lt;i class=&quot;bi bi-envelope&quot;&gt;&lt;/i&gt; Send email
-                    &lt;/button&gt;
-                    &lt;button class=&quot;btn action-btn&quot;&gt;
-                        Make call
-                    &lt;/button&gt;
-                &lt;/div&gt;
-
-                &lt;div class=&quot;feedback-section text-secondary d-flex align-items-center gap-2&quot;&gt;
-                    Freddy got this right? 
-                    &lt;i class=&quot;bi bi-hand-thumbs-up-fill feedback-icon ms-1&quot;&gt;&lt;/i&gt; 
-                    &lt;i class=&quot;bi bi-hand-thumbs-down-fill feedback-icon&quot;&gt;&lt;/i&gt;
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-        &lt;/div&gt;
-        
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;card4.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card4">&lt;div class=&quot;score-card p-4&quot;&gt;
+        
+        &lt;div class=&quot;d-flex align-items-center gap-3 mb-1&quot;&gt;
+            &lt;span class=&quot;text-secondary label-text&quot;&gt;Score&lt;/span&gt;
+            &lt;span class=&quot;text-secondary small&quot;&gt;•&lt;/span&gt;
+            &lt;span class=&quot;text-secondary label-text d-flex align-items-center gap-1&quot;&gt;
+                Customer fit &lt;i class=&quot;bi bi-info-circle info-icon&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;&lt;/i&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;d-flex align-items-center gap-4 mb-3&quot;&gt;
+            &lt;div class=&quot;score-value fw-bold text-dark&quot;&gt;0&lt;/div&gt;
+            &lt;div class=&quot;d-flex gap-1&quot;&gt;
+                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-star-fill star-icon empty-star&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;hr class=&quot;custom-divider mb-4&quot;&gt;
+
+        &lt;div class=&quot;row g-0&quot;&gt;
+            
+            &lt;div class=&quot;col-md-7 pe-4&quot;&gt;
+                &lt;div class=&quot;d-flex gap-4&quot;&gt;
+                    
+                    &lt;div class=&quot;mini-chart-wrapper flex-shrink-0&quot;&gt;
+                        &lt;div class=&quot;chart-y-labels d-flex flex-column justify-content-between text-secondary&quot;&gt;
+                            &lt;span&gt;100&lt;/span&gt;
+                            &lt;span&gt;0&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;chart-area&quot;&gt;
+                            &lt;div class=&quot;chart-line&quot;&gt;&lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;chart-x-labels d-flex justify-content-between text-secondary mt-1&quot;&gt;
+                            &lt;span&gt;Last week&lt;/span&gt;
+                            &lt;span&gt;Today&lt;/span&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div&gt;
+                        &lt;h6 class=&quot;fw-bold text-dark mb-3&quot;&gt;Key factors behind this score&lt;/h6&gt;
+                        &lt;p class=&quot;text-secondary mb-0 content-text&quot;&gt;
+                            We don&#039;t have sufficient activity or information for this contact. Once more information is available, a score will be automatically calculated.
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;col-md-5 ps-4 border-start custom-border&quot;&gt;
+                
+                &lt;h6 class=&quot;fw-bold text-dark mb-3 d-flex align-items-center gap-2&quot;&gt;
+                    &lt;i class=&quot;bi bi-stars text-primary fs-5&quot;&gt;&lt;/i&gt; Freddy AI insights
+                &lt;/h6&gt;
+                
+                &lt;p class=&quot;text-dark mb-3 content-text&quot;&gt;
+                    Laura Norda (sample) is an untouched contact.&lt;br&gt;
+                    Start engaging with them now.
+                &lt;/p&gt;
+                
+                &lt;div class=&quot;d-flex flex-wrap gap-2 mb-4&quot;&gt;
+                    &lt;button class=&quot;btn action-btn d-flex align-items-center gap-2&quot;&gt;
+                        &lt;i class=&quot;bi bi-bullseye&quot;&gt;&lt;/i&gt; Add to sales sequence
+                    &lt;/button&gt;
+                    &lt;button class=&quot;btn action-btn d-flex align-items-center gap-2&quot;&gt;
+                        &lt;i class=&quot;bi bi-envelope&quot;&gt;&lt;/i&gt; Send email
+                    &lt;/button&gt;
+                    &lt;button class=&quot;btn action-btn&quot;&gt;
+                        Make call
+                    &lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;feedback-section text-secondary d-flex align-items-center gap-2&quot;&gt;
+                    Freddy got this right? 
+                    &lt;i class=&quot;bi bi-hand-thumbs-up-fill feedback-icon ms-1&quot;&gt;&lt;/i&gt; 
+                    &lt;i class=&quot;bi bi-hand-thumbs-down-fill feedback-icon&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        &lt;/div&gt;
+        
+    &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -8197,60 +8135,40 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card5">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;Deal Card&lt;/title&gt;
-&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;card5.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;container py-5 d-flex justify-content-center&quot;&gt;
-    
-    &lt;div class=&quot;custom-deal-card p-3&quot;&gt;
-        &lt;div class=&quot;d-flex justify-content-between align-items-start mb-2&quot;&gt;
-            &lt;h6 class=&quot;deal-title m-0&quot;&gt;Widgetz.io (sample)&lt;/h6&gt;
-            &lt;button class=&quot;btn btn-expand p-0 d-flex align-items-center justify-content-center&quot;&gt;
-                &lt;i class=&quot;bi bi-arrows-angle-expand&quot;&gt;&lt;/i&gt;
-            &lt;/button&gt;
-        &lt;/div&gt;
-        
-        &lt;div class=&quot;d-flex align-items-center gap-2 mb-2&quot;&gt;
-            &lt;span class=&quot;deal-amount fw-bold&quot;&gt;$5,600&lt;/span&gt;
-            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
-            &lt;span class=&quot;deal-date&quot;&gt;Closes in Nov&lt;/span&gt;
-        &lt;/div&gt;
-        
-        &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
-            &lt;a href=&quot;#&quot; class=&quot;company-link text-decoration-none&quot;&gt;Widgetz.io (sample)&lt;/a&gt;
-            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
-            &lt;span class=&quot;badge custom-badge&quot;&gt;CRM - Gold pl...&lt;/span&gt;
-        &lt;/div&gt;
-        
-        &lt;div class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
-            &lt;div class=&quot;deal-notes d-flex align-items-center gap-1&quot;&gt;
-                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt; 1 note
-            &lt;/div&gt;
-            &lt;div class=&quot;action-icons d-flex align-items-center gap-2&quot;&gt;
-                &lt;i class=&quot;bi bi-envelope&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-telephone&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-chat-left-text&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-exclamation-circle alert-icon&quot;&gt;&lt;/i&gt;
-                &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card5">&lt;div class=&quot;custom-deal-card p-3&quot;&gt;
+        &lt;div class=&quot;d-flex justify-content-between align-items-start mb-2&quot;&gt;
+            &lt;h6 class=&quot;deal-title m-0&quot;&gt;Widgetz.io (sample)&lt;/h6&gt;
+            &lt;button class=&quot;btn btn-expand p-0 d-flex align-items-center justify-content-center&quot;&gt;
+                &lt;i class=&quot;bi bi-arrows-angle-expand&quot;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;d-flex align-items-center gap-2 mb-2&quot;&gt;
+            &lt;span class=&quot;deal-amount fw-bold&quot;&gt;$5,600&lt;/span&gt;
+            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+            &lt;span class=&quot;deal-date&quot;&gt;Closes in Nov&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
+            &lt;a href=&quot;#&quot; class=&quot;company-link text-decoration-none&quot;&gt;Widgetz.io (sample)&lt;/a&gt;
+            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+            &lt;span class=&quot;badge custom-badge&quot;&gt;CRM - Gold pl...&lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;div class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
+            &lt;div class=&quot;deal-notes d-flex align-items-center gap-1&quot;&gt;
+                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt; 1 note
+            &lt;/div&gt;
+            &lt;div class=&quot;action-icons d-flex align-items-center gap-2&quot;&gt;
+                &lt;i class=&quot;bi bi-envelope&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-telephone&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-chat-left-text&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-exclamation-circle alert-icon&quot;&gt;&lt;/i&gt;
+                &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -8404,7 +8322,55 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                     <span class="text-dark">Closes in 3 days</span>
                 </div>
             </div>
-        </div>
+        </div>
+
+        <div class="d-flex align-items-start gap-3 mb-4">
+            <div class="act-icon icon-purple flex-shrink-0">
+                <i class="bi bi-calendar3"></i>
+            </div>
+            <div class="d-flex flex-column justify-content-center h-100 mt-1">
+                <div class="text-muted-custom mb-1">No upcoming meetings with Laura.</div>
+                <div>
+                    <a href="#" class="act-link d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-plus-circle"></i> Add meeting
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-start gap-3 mb-4">
+            <div class="act-icon icon-orange flex-shrink-0">
+                <i class="bi bi-envelope"></i>
+            </div>
+            <div class="d-flex justify-content-between align-items-center w-100 mt-1">
+                <div class="d-flex flex-column">
+                    <div class="text-muted-custom">Laura Norda (sample) sent an email</div>
+                    <div class="text-dark fw-medium mt-1 mb-1">Add-on license for CRM Gold <i class="bi bi-chevron-right" style="font-size: 10px;"></i></div>
+                    <div class="text-muted-custom" style="font-size: 13px;">13 days ago</div>
+                </div>
+                <div>
+                    <button class="btn btn-reply d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-reply"></i> Reply
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-start gap-3">
+            <div class="act-icon icon-cyan flex-shrink-0">
+                <i class="bi bi-bullseye"></i>
+            </div>
+            <div class="d-flex flex-column justify-content-center h-100 mt-1">
+                <div class="text-muted-custom mb-1">Laura is not part of any sales sequence.</div>
+                <div>
+                    <a href="#" class="act-link d-inline-flex align-items-center gap-1">
+                        <i class="bi bi-plus-circle"></i> Add to a sequence
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
                                 </div>
                             </div>
 
@@ -8444,21 +8410,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card6">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;Activity Card&lt;/title&gt;
-&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;card6.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;container py-5 d-flex justify-content-center&quot;&gt;
-    
-    &lt;div class=&quot;activity-card w-100&quot; style=&quot;max-width: 800px;&quot;&gt;
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-card6">&lt;div class=&quot;activity-card w-100&quot; style=&quot;max-width: 800px;&quot;&gt;
         
         &lt;div class=&quot;d-flex align-items-start gap-3 mb-4&quot;&gt;
             &lt;div class=&quot;act-icon icon-green flex-shrink-0&quot;&gt;
@@ -8521,14 +8473,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
             &lt;/div&gt;
         &lt;/div&gt;
 
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+    &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -9384,6 +9329,8 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                         <!-- ---------------------------------------------- -->
                         <!-- 10.4 MẪU 4: ADD DEAL OFFCANVAS -->
                         <!-- ---------------------------------------------- -->
+                        <!-- 10.4 MẪU 4: ADD DEAL OFFCANVAS -->
+                        <!-- ---------------------------------------------- -->
                         <section id="offcanvas-mau-4" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 4</span>
@@ -9437,7 +9384,76 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                     <i class="bi bi-x text-secondary ms-1 chip-close" id="removeContactChip"></i>
                 </div>
             </div>
-        </div>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label form-field-label">Related account</label>
+            <div class="custom-select-box d-flex justify-content-between align-items-center">
+                <span class="text-dark" id="accountText">Acme Inc (sample)</span>
+                <div class="d-flex align-items-center gap-2">
+                    <i class="bi bi-x text-secondary action-clear" id="clearAccount"></i>
+                    <i class="bi bi-caret-down-fill text-secondary" style="font-size: 10px;"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label form-field-label">Deal type</label>
+            <div class="position-relative">
+                <select class="form-select custom-select-appearance text-muted">
+                    <option selected>Click to select</option>
+                </select>
+                <i class="bi bi-caret-down-fill select-caret text-secondary"></i>
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label form-field-label">Deal name <span class="text-danger">*</span></label>
+            <input type="text" class="form-control custom-input input-focus-blue" value="Acme Inc (sample) Deal">
+        </div>
+
+        <div class="row gx-3 mb-4">
+            <div class="col-4">
+                <label class="form-label form-field-label">Currency</label>
+                <div class="position-relative">
+                    <select class="form-select custom-select-appearance bg-light text-muted" disabled>
+                        <option selected>USD</option>
+                    </select>
+                    <i class="bi bi-caret-down-fill select-caret text-secondary"></i>
+                </div>
+            </div>
+            <div class="col-8">
+                <label class="form-label form-field-label">Deal value <span class="text-danger">*</span></label>
+                <input type="text" class="form-control custom-input input-focus-blue" value="0">
+            </div>
+        </div>
+
+        <div class="mb-4">
+            <button class="btn w-100 add-products-btn d-flex align-items-center gap-2">
+                <i class="bi bi-box-seam"></i> Add products
+            </button>
+        </div>
+
+        <div class="mb-4">
+            <label class="form-label form-field-label">Deal stage</label>
+            <div class="position-relative">
+                <select class="form-select custom-select-appearance text-muted">
+                    <option selected>Click to select</option>
+                </select>
+                <i class="bi bi-caret-down-fill select-caret text-secondary"></i>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="offcanvas-footer border-top px-4 py-3 bg-white d-flex justify-content-end align-items-center">
+        <div class="d-flex gap-2">
+            <button class="btn btn-cancel px-4" data-bs-dismiss="offcanvas">Cancel</button>
+            <button class="btn btn-save px-4">Save</button>
+        </div>
+    </div>
+
+</div>
                                 </div>
                             </div>
 
@@ -9480,24 +9496,12 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-offcanvas4">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;Add Deal Offcanvas&lt;/title&gt;
-&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;offcanvas4.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;container py-5 d-flex justify-content-center&quot;&gt;
-    &lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#addDealOffcanvas&quot;&gt;
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-offcanvas4">&lt;!-- Nút mở Offcanvas --&gt;
+&lt;button class=&quot;btn btn-primary&quot; type=&quot;button&quot; data-bs-toggle=&quot;offcanvas&quot; data-bs-target=&quot;#addDealOffcanvas&quot;&gt;
         Mở Add Deal Offcanvas
-    &lt;/button&gt;
-&lt;/div&gt;
-
+    &lt;/button&gt;
+
+&lt;!-- Offcanvas Drawer --&gt;
 &lt;div class=&quot;offcanvas offcanvas-end custom-offcanvas&quot; tabindex=&quot;-1&quot; id=&quot;addDealOffcanvas&quot;&gt;
     
     &lt;div class=&quot;offcanvas-header border-bottom px-4 py-3 bg-white&quot;&gt;
@@ -9596,12 +9600,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
         &lt;/div&gt;
     &lt;/div&gt;
 
-&lt;/div&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;offcanvas4.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -10473,19 +10472,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-table2">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;Reports Table&lt;/title&gt;
-&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;table2.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;container-fluid py-4 px-4&quot;&gt;
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-table2">&lt;div class=&quot;container-fluid py-4 px-4&quot;&gt;
     
     &lt;div class=&quot;d-flex align-items-center justify-content-between mb-3&quot;&gt;
         &lt;div class=&quot;d-flex align-items-center gap-4&quot;&gt;
@@ -10721,12 +10708,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
         &lt;/nav&gt;
     &lt;/div&gt;
 
-&lt;/div&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-&lt;script src=&quot;table2.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+&lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
@@ -12599,182 +12581,161 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                 </button>
                             </div>
                             <div class="p-0">
-                                <pre class="text-light m-0 p-3 code-pre"><code id="code-html-breadcrumb">&lt;!DOCTYPE html&gt;
-&lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;UTF-8&quot;&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
-&lt;title&gt;CRM Status Breadcrumbs&lt;/title&gt;
-&lt;link href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css&quot; rel=&quot;stylesheet&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;breadcrumb.css&quot;&gt;
-&lt;/head&gt;
-&lt;body&gt;
-
-&lt;div class=&quot;container py-5&quot;&gt;
-    
-    &lt;div class=&quot;mb-5&quot;&gt;
-        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 1: Original CRM Status (Chevron)&lt;/h6&gt;
-        &lt;div class=&quot;text-secondary mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
-        &lt;div class=&quot;ch-wrapper&quot;&gt;
-            &lt;div class=&quot;ch-step&quot;&gt;
-                &lt;span&gt;New&lt;/span&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;ch-step&quot;&gt;
-                &lt;span&gt;Contacted&lt;/span&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;ch-step dropdown&quot;&gt;
-                &lt;span class=&quot;dropdown-toggle-custom&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
-                    Interested &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;ch-step dropdown&quot;&gt;
-                &lt;span class=&quot;dropdown-toggle-custom&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
-                    Qualified &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;ch-step inactive dropdown&quot;&gt;
-                &lt;span class=&quot;dropdown-toggle-custom&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
-                    Won / Churned &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Mark as Won&lt;/a&gt;&lt;/li&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Mark as Churned&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;hr class=&quot;my-5 border-light&quot;&gt;
-
-    &lt;div class=&quot;mb-5&quot;&gt;
-        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 2: Modern Connected Pills&lt;/h6&gt;
-        &lt;div class=&quot;text-secondary mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
-        &lt;div class=&quot;pill-wrapper&quot;&gt;
-            &lt;div class=&quot;pill-step completed&quot;&gt;
-                &lt;i class=&quot;bi bi-check-circle-fill me-1&quot;&gt;&lt;/i&gt; New
-            &lt;/div&gt;
-            &lt;div class=&quot;pill-step completed&quot;&gt;
-                &lt;i class=&quot;bi bi-check-circle-fill me-1&quot;&gt;&lt;/i&gt; Contacted
-            &lt;/div&gt;
-            &lt;div class=&quot;pill-step completed dropdown&quot;&gt;
-                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
-                    &lt;i class=&quot;bi bi-check-circle-fill me-1&quot;&gt;&lt;/i&gt; Interested &lt;i class=&quot;bi bi-chevron-down ms-1&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pill-step active dropdown&quot;&gt;
-                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
-                    &lt;i class=&quot;bi bi-record-circle me-1&quot;&gt;&lt;/i&gt; Qualified &lt;i class=&quot;bi bi-chevron-down ms-1&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;pill-step inactive dropdown&quot;&gt;
-                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
-                    Won / Churned &lt;i class=&quot;bi bi-chevron-down ms-1&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;hr class=&quot;my-5 border-light&quot;&gt;
-
-    &lt;div class=&quot;mb-5&quot;&gt;
-        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 3: Minimalist Underline Tabs&lt;/h6&gt;
-        &lt;div class=&quot;text-secondary mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
-        &lt;div class=&quot;line-wrapper&quot;&gt;
-            &lt;div class=&quot;line-step completed&quot;&gt;
-                New
-            &lt;/div&gt;
-            &lt;div class=&quot;line-step completed&quot;&gt;
-                Contacted
-            &lt;/div&gt;
-            &lt;div class=&quot;line-step completed dropdown&quot;&gt;
-                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
-                    Interested &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;line-step active dropdown&quot;&gt;
-                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
-                    Qualified &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;line-step inactive dropdown&quot;&gt;
-                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
-                    Won / Churned &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
-                &lt;/span&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-    &lt;hr class=&quot;my-5 border-light&quot;&gt;
-
-    &lt;div class=&quot;mb-5&quot;&gt;
-        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 4: Classic Circle Tracker&lt;/h6&gt;
-        &lt;div class=&quot;text-secondary mb-4&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
-        &lt;div class=&quot;circle-wrapper&quot;&gt;
-            &lt;div class=&quot;circle-step completed&quot;&gt;
-                &lt;div class=&quot;circle-icon&quot;&gt;&lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-                &lt;div class=&quot;circle-label&quot;&gt;New&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;circle-step completed&quot;&gt;
-                &lt;div class=&quot;circle-icon&quot;&gt;&lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-                &lt;div class=&quot;circle-label&quot;&gt;Contacted&lt;/div&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;circle-step completed dropdown&quot;&gt;
-                &lt;div class=&quot;circle-icon cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-                &lt;div class=&quot;circle-label cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Interested &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;circle-step active dropdown&quot;&gt;
-                &lt;div class=&quot;circle-icon cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;4&lt;/div&gt;
-                &lt;div class=&quot;circle-label cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Qualified &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-            &lt;div class=&quot;circle-step inactive dropdown&quot;&gt;
-                &lt;div class=&quot;circle-icon cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;5&lt;/div&gt;
-                &lt;div class=&quot;circle-label cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Won / Churned &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
-                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
-                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-
-&lt;/div&gt;
-
-&lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
-
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+                                <pre class="text-light m-0 p-3 code-pre"><code id="code-html-breadcrumb">&lt;div class=&quot;mb-5&quot;&gt;
+        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 1: Original CRM Status (Chevron)&lt;/h6&gt;
+        &lt;div class=&quot;text-secondary mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
+        &lt;div class=&quot;ch-wrapper&quot;&gt;
+            &lt;div class=&quot;ch-step&quot;&gt;
+                &lt;span&gt;New&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ch-step&quot;&gt;
+                &lt;span&gt;Contacted&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ch-step dropdown&quot;&gt;
+                &lt;span class=&quot;dropdown-toggle-custom&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                    Interested &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ch-step dropdown&quot;&gt;
+                &lt;span class=&quot;dropdown-toggle-custom&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                    Qualified &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action 2&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;ch-step inactive dropdown&quot;&gt;
+                &lt;span class=&quot;dropdown-toggle-custom&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;
+                    Won / Churned &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Mark as Won&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Mark as Churned&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr class=&quot;my-5 border-light&quot;&gt;
+
+    &lt;div class=&quot;mb-5&quot;&gt;
+        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 2: Modern Connected Pills&lt;/h6&gt;
+        &lt;div class=&quot;text-secondary mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
+        &lt;div class=&quot;pill-wrapper&quot;&gt;
+            &lt;div class=&quot;pill-step completed&quot;&gt;
+                &lt;i class=&quot;bi bi-check-circle-fill me-1&quot;&gt;&lt;/i&gt; New
+            &lt;/div&gt;
+            &lt;div class=&quot;pill-step completed&quot;&gt;
+                &lt;i class=&quot;bi bi-check-circle-fill me-1&quot;&gt;&lt;/i&gt; Contacted
+            &lt;/div&gt;
+            &lt;div class=&quot;pill-step completed dropdown&quot;&gt;
+                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
+                    &lt;i class=&quot;bi bi-check-circle-fill me-1&quot;&gt;&lt;/i&gt; Interested &lt;i class=&quot;bi bi-chevron-down ms-1&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pill-step active dropdown&quot;&gt;
+                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
+                    &lt;i class=&quot;bi bi-record-circle me-1&quot;&gt;&lt;/i&gt; Qualified &lt;i class=&quot;bi bi-chevron-down ms-1&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;pill-step inactive dropdown&quot;&gt;
+                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
+                    Won / Churned &lt;i class=&quot;bi bi-chevron-down ms-1&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr class=&quot;my-5 border-light&quot;&gt;
+
+    &lt;div class=&quot;mb-5&quot;&gt;
+        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 3: Minimalist Underline Tabs&lt;/h6&gt;
+        &lt;div class=&quot;text-secondary mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
+        &lt;div class=&quot;line-wrapper&quot;&gt;
+            &lt;div class=&quot;line-step completed&quot;&gt;
+                New
+            &lt;/div&gt;
+            &lt;div class=&quot;line-step completed&quot;&gt;
+                Contacted
+            &lt;/div&gt;
+            &lt;div class=&quot;line-step completed dropdown&quot;&gt;
+                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
+                    Interested &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;line-step active dropdown&quot;&gt;
+                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
+                    Qualified &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;line-step inactive dropdown&quot;&gt;
+                &lt;span data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; class=&quot;cursor-pointer&quot;&gt;
+                    Won / Churned &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;
+                &lt;/span&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;hr class=&quot;my-5 border-light&quot;&gt;
+
+    &lt;div class=&quot;mb-5&quot;&gt;
+        &lt;h6 class=&quot;text-secondary mb-3&quot;&gt;Mẫu 4: Classic Circle Tracker&lt;/h6&gt;
+        &lt;div class=&quot;text-secondary mb-4&quot; style=&quot;font-size: 14px;&quot;&gt;Status&lt;/div&gt;
+        &lt;div class=&quot;circle-wrapper&quot;&gt;
+            &lt;div class=&quot;circle-step completed&quot;&gt;
+                &lt;div class=&quot;circle-icon&quot;&gt;&lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;div class=&quot;circle-label&quot;&gt;New&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;circle-step completed&quot;&gt;
+                &lt;div class=&quot;circle-icon&quot;&gt;&lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;div class=&quot;circle-label&quot;&gt;Contacted&lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;circle-step completed dropdown&quot;&gt;
+                &lt;div class=&quot;circle-icon cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;i class=&quot;bi bi-check&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;div class=&quot;circle-label cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Interested &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;circle-step active dropdown&quot;&gt;
+                &lt;div class=&quot;circle-icon cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;4&lt;/div&gt;
+                &lt;div class=&quot;circle-label cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Qualified &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+            &lt;div class=&quot;circle-step inactive dropdown&quot;&gt;
+                &lt;div class=&quot;circle-icon cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;5&lt;/div&gt;
+                &lt;div class=&quot;circle-label cursor-pointer&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;Won / Churned &lt;i class=&quot;bi bi-chevron-down&quot;&gt;&lt;/i&gt;&lt;/div&gt;
+                &lt;ul class=&quot;dropdown-menu shadow-sm&quot;&gt;
+                    &lt;li&gt;&lt;a class=&quot;dropdown-item&quot; href=&quot;#&quot;&gt;Action&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
                             </div>
                         </div>
 
@@ -13057,18 +13018,42 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
 
     <!-- Script giao diện thư viện component -->
     <script src="testjs.js"></script>
-    <!-- Tự động nạp dữ liệu xem trước & code cho các component mới (Accordion 4, Breadcrumb, Card 4, Card 5, Modal 6) -->
+    <!-- Tự động nạp dữ liệu xem trước & code cho các component mới -->
     <script>
         document.addEventListener("DOMContentLoaded", () => {
+            // Hàm làm sạch HTML nếu nạp động qua fetch
+            function cleanHtml(raw) {
+                if (!raw) return '';
+                let content = raw;
+                const bStart = content.indexOf('<body>');
+                const bEnd = content.indexOf('</body>');
+                if (bStart !== -1 && bEnd !== -1) {
+                    content = content.slice(bStart + 6, bEnd);
+                }
+                content = content.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi, '').trim();
+                return content;
+            }
+
+            // Ghi đè phương thức loadComponent cho các mẫu mới để hiển thị HTML sạch (chỉ component, không head/body)
             if (typeof loadComponent === 'function') {
-                loadComponent('accordion4.html', 'accordion4.css', 'preview-accordion4', 'code-html-accordion4', 'code-css-accordion4', 'accordion4.js', 'code-js-accordion4');
-                loadComponent('breadcrumb.html', 'breadcrumb.css', 'preview-breadcrumb', 'code-html-breadcrumb', 'code-css-breadcrumb');
-                loadComponent('card4.html', 'card4.css', 'preview-card4', 'code-html-card4', 'code-css-card4', 'card4.js', 'code-js-card4');
-                loadComponent('card5.html', 'card5.css', 'preview-card5', 'code-html-card5', 'code-css-card5');
-                loadComponent('card6.html', 'card6.css', 'preview-card6', 'code-html-card6', 'code-css-card6');
-                loadComponent('modal6.html', 'modal6.css', 'preview-modal6', 'code-html-modal6', 'code-css-modal6', 'modal6.js', 'code-js-modal6');
-                loadComponent('offcanvas4.html', 'offcanvas4.css', 'preview-offcanvas4', 'code-html-offcanvas4', 'code-css-offcanvas4', 'offcanvas4.js', 'code-js-offcanvas4');
-                loadComponent('table2.html', 'table2.css', 'preview-table2', 'code-html-table2', 'code-css-table2', 'table2.js', 'code-js-table2');
+                const originalLoad = loadComponent;
+                const cleanComponents = [
+                    'accordion4.html', 'breadcrumb.html', 'card4.html',
+                    'card5.html', 'card6.html', 'modal6.html',
+                    'offcanvas4.html', 'table2.html'
+                ];
+                cleanComponents.forEach(file => {
+                    const codeHtmlId = 'code-html-' + file.replace('.html', '');
+                    const el = document.getElementById(codeHtmlId);
+                    if (el) {
+                        const observer = new MutationObserver(() => {
+                            if (el.textContent.includes('<!DOCTYPE') || el.textContent.includes('<head>')) {
+                                el.textContent = cleanHtml(el.textContent);
+                            }
+                        });
+                        observer.observe(el, { childList: true, characterData: true, subtree: true });
+                    }
+                });
             }
         });
     </script>
