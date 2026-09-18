@@ -1,66 +1,65 @@
-<button
-    class="btn btn-white bg-white rounded-circle border d-flex align-items-center justify-content-center p-0 shadow-sm"
-    type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
-    style="width: 32px; height: 32px;" title="Add a quick filter">
-    <i class="bi bi-plus text-secondary fs-5"></i>
-</button>
+<div class="dropdown crm-quick-filter-dropdown">
+    <button
+        class="btn btn-white bg-white rounded-circle border d-flex align-items-center justify-content-center p-0 shadow-sm crm-quick-filter-btn"
+        type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+        title="Add a quick filter">
+        <i class="bi bi-plus-lg text-secondary fs-6"></i>
+    </button>
 
-<div class="dropdown-menu custom-dropdown-menu p-3 mt-2 border-0">
+    <div class="dropdown-menu crm-quick-filter-menu p-3 mt-2 border-0">
+        <h6 class="dropdown-header px-0 text-dark fw-bold fs-6 mb-2">Add a quick filter</h6>
 
-    <h6 class="dropdown-header px-0 text-dark fw-bold fs-6 mb-2">Add a quick filter</h6>
+        <div class="crm-quick-filter-search-wrapper mb-3">
+            <i class="bi bi-search crm-quick-filter-search-icon"></i>
+            <input type="text" class="form-control rounded-pill crm-quick-filter-search-input shadow-none"
+                id="dropdownQuickSearch" placeholder="Search" autocomplete="off">
+        </div>
 
-    <div class="dropdown-search-wrapper mb-3">
-        <i class="bi bi-search"></i>
-        <input type="text" class="form-control rounded-pill dropdown-search-input shadow-none" id="dropdownQuickSearch"
-            placeholder="Search">
+        <div class="crm-quick-filter-category">Deal activity</div>
+
+        <ul class="list-unstyled mb-0 crm-quick-filter-list" id="dropdownActionList">
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">Abc</span>
+                    <span class="text-truncate">Campaign of last booking in meetings tool</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">Abc</span>
+                    <span class="text-truncate">Closed lost reason</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">Abc</span>
+                    <span class="text-truncate">Closed won reason</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon"><i class="bi bi-calendar3"></i></span>
+                    <span class="text-truncate">Date of last meeting booked in meetings tool</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon"><i class="bi bi-check2-square"></i></span>
+                    <span class="text-truncate">Deal stage</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">fx</span>
+                    <span class="text-truncate">Has Last Conversation Follow Ups</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">fx</span>
+                    <span class="text-truncate">Has Last Meeting Follow Ups</span>
+                </a>
+            </li>
+        </ul>
     </div>
-
-    <div class="dropdown-category-title">Deal activity</div>
-
-    <ul class="list-unstyled mb-0 custom-dropdown-list" id="dropdownActionList">
-        <li>
-            <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                <span class="item-icon-box text-muted">Abc</span>
-                <span>Campaign of last booking in meetings tool</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                <span class="item-icon-box text-muted">Abc</span>
-                <span>Closed lost reason</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                <span class="item-icon-box text-muted">Abc</span>
-                <span>Closed won reason</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                <span class="item-icon-box text-muted"><i class="bi bi-calendar3"></i></span>
-                <span>Date of last meeting booked in meetings tool</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                <span class="item-icon-box text-muted"><i class="bi bi-check2-square"></i></span>
-                <span>Deal stage</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                <span class="item-icon-box text-muted">fx</span>
-                <span>Has Last Conversation Follow Ups</span>
-            </a>
-        </li>
-        <li>
-            <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                <span class="item-icon-box text-muted">fx</span>
-                <span>Has Last Meeting Follow Ups</span>
-            </a>
-        </li>
-
-    </ul>
-
 </div>

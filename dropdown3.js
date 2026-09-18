@@ -1,16 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     const searchInput = document.getElementById('dropdownQuickSearch');
-    const listItems = document.querySelectorAll('#dropdownActionList li');
+    const listContainer = document.getElementById('dropdownActionList');
 
-    if (searchInput && listItems.length > 0) {
-        searchInput.addEventListener('keyup', function () {
+    if (searchInput && listContainer) {
+        const listItems = listContainer.querySelectorAll('li');
 
-            let filter = searchInput.value.toLowerCase();
+        searchInput.addEventListener('input', function () {
+            const filter = searchInput.value.toLowerCase().trim();
 
             listItems.forEach(function (item) {
-
-                let textValue = item.textContent || item.innerText;
-
+                const textValue = item.textContent || item.innerText;
                 if (textValue.toLowerCase().indexOf(filter) > -1) {
                     item.style.display = "";
                 } else {

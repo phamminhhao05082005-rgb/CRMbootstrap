@@ -5970,6 +5970,8 @@
                         <!-- ---------------------------------------------- -->
                         <!-- 7.3 MẪU 3: QUICK FILTER SEARCH DROPDOWN -->
                         <!-- ---------------------------------------------- -->
+                        <!-- 7.3 MẪU 3: QUICK FILTER SEARCH DROPDOWN -->
+                        <!-- ---------------------------------------------- -->
                         <section id="drop-mau-3" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 3</span>
@@ -5977,7 +5979,7 @@
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 3 -->
-                            <div class="preview-card mb-4 bg-white">
+                            <div class="preview-card mb-4 bg-white" style="overflow: visible;">
                                 <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
                                     <span class="fw-bold text-dark d-flex align-items-center gap-2">
                                         <i class="bi bi-eye text-success"></i> Giao diện xem trước
@@ -5986,163 +5988,105 @@
                                         <i class="bi bi-hand-index-thumb-fill me-1"></i> Click dấu "+" để mở &amp; gõ tìm kiếm
                                     </span>
                                 </div>
-                                <div class="p-4 preview-container preview-popover-box d-flex justify-content-center align-items-start"
-                                    id="preview-dropdown3">
-                                    <div class="dropdown">
-                                        <button
-                                            class="btn btn-white bg-white rounded-circle border d-flex align-items-center justify-content-center p-0 shadow-sm"
-                                            type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
-                                            style="width: 32px; height: 32px;" title="Add a quick filter">
-                                            <i class="bi bi-plus text-secondary fs-5"></i>
-                                        </button>
+                                <div class="p-5 preview-container d-flex justify-content-center align-items-start"
+                                    id="preview-dropdown3" style="background-color: #f8fafc; min-height: 460px; overflow: visible;">
+                                    <div class="dropdown crm-quick-filter-dropdown">
+    <button
+        class="btn btn-white bg-white rounded-circle border d-flex align-items-center justify-content-center p-0 shadow-sm crm-quick-filter-btn"
+        type="button" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside"
+        title="Add a quick filter">
+        <i class="bi bi-plus-lg text-secondary fs-6"></i>
+    </button>
 
-                                        <div class="dropdown-menu custom-dropdown-menu p-3 mt-2 border-0">
-                                            <h6 class="dropdown-header px-0 text-dark fw-bold fs-6 mb-2">Add a quick filter</h6>
+    <div class="dropdown-menu crm-quick-filter-menu p-3 mt-2 border-0">
+        <h6 class="dropdown-header px-0 text-dark fw-bold fs-6 mb-2">Add a quick filter</h6>
 
-                                            <div class="dropdown-search-wrapper mb-3">
-                                                <i class="bi bi-search"></i>
-                                                <input type="text" class="form-control rounded-pill dropdown-search-input shadow-none" id="dropdownQuickSearch"
-                                                    placeholder="Search">
-                                            </div>
+        <div class="crm-quick-filter-search-wrapper mb-3">
+            <i class="bi bi-search crm-quick-filter-search-icon"></i>
+            <input type="text" class="form-control rounded-pill crm-quick-filter-search-input shadow-none"
+                id="dropdownQuickSearch" placeholder="Search" autocomplete="off">
+        </div>
 
-                                            <div class="dropdown-category-title">Deal activity</div>
+        <div class="crm-quick-filter-category">Deal activity</div>
 
-                                            <ul class="list-unstyled mb-0 custom-dropdown-list" id="dropdownActionList">
-                                                <li>
-                                                    <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                                                        <span class="item-icon-box text-muted">Abc</span>
-                                                        <span>Campaign of last booking in meetings tool</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                                                        <span class="item-icon-box text-muted">Abc</span>
-                                                        <span>Closed lost reason</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                                                        <span class="item-icon-box text-muted">Abc</span>
-                                                        <span>Closed won reason</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                                                        <span class="item-icon-box text-muted"><i class="bi bi-calendar3"></i></span>
-                                                        <span>Date of last meeting booked in meetings tool</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                                                        <span class="item-icon-box text-muted"><i class="bi bi-check2-square"></i></span>
-                                                        <span>Deal stage</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                                                        <span class="item-icon-box text-muted">fx</span>
-                                                        <span>Has Last Conversation Follow Ups</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="#" class="text-decoration-none d-flex align-items-center gap-2 rounded custom-dropdown-item">
-                                                        <span class="item-icon-box text-muted">fx</span>
-                                                        <span>Has Last Meeting Follow Ups</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+        <ul class="list-unstyled mb-0 crm-quick-filter-list" id="dropdownActionList">
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">Abc</span>
+                    <span class="text-truncate">Campaign of last booking in meetings tool</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">Abc</span>
+                    <span class="text-truncate">Closed lost reason</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">Abc</span>
+                    <span class="text-truncate">Closed won reason</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon"><i class="bi bi-calendar3"></i></span>
+                    <span class="text-truncate">Date of last meeting booked in meetings tool</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon"><i class="bi bi-check2-square"></i></span>
+                    <span class="text-truncate">Deal stage</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">fx</span>
+                    <span class="text-truncate">Has Last Conversation Follow Ups</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="crm-quick-filter-item">
+                    <span class="crm-quick-filter-icon">fx</span>
+                    <span class="text-truncate">Has Last Meeting Follow Ups</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
                                 </div>
                             </div>
 
-                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
-                            <div class="dependency-card mb-4">
-                                <div class="dependency-header">
-                                    <div class="dependency-title">
-                                        <i class="bi bi-box-seam text-primary fs-5"></i>
-                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG</span>
+                            <!-- Thư viện cần nhúng -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-white-50 fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-in-down fs-5"></i> THƯ VIỆN CẦN NHÚNG
                                     </div>
-                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
                                         onclick="copyCode('dep-code-dropdown3', this)">
-                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                        <i class="bi bi-clipboard me-1"></i> Copy Link
                                     </button>
                                 </div>
-                                <div class="dependency-body">
-                                    <div class="dep-badges-wrap">
-                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
-                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
-                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
-                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File dropdown3.css (Bắt buộc)</span>
-                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File dropdown3.js (Bắt buộc)</span>
-                                    </div>
-
-                                    <div class="dep-code-box">
-                                        <pre><code id="dep-code-dropdown3">&lt;!-- 1. Google Font Inter &amp; Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
-&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="dep-code-dropdown3">&lt;!-- Bootstrap 5 CSS &amp; Bootstrap Icons --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
 
-&lt;!-- 2. Bootstrap 5 CSS (Phiên bản 5.3.2) (Đặt trong &lt;head&gt;) --&gt;
-&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
-
-&lt;!-- 3. File CSS Dropdown 3 (Đặt trong &lt;head&gt;) --&gt;
+&lt;!-- File CSS Dropdown 3 --&gt;
 &lt;link rel="stylesheet" href="dropdown3.css"&gt;
 
-&lt;!-- 4. Bootstrap 5 JS Bundle &amp; dropdown3.js (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;!-- Bootstrap 5 JS Bundle &amp; File Script Dropdown 3 --&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
 &lt;script src="dropdown3.js"&gt;&lt;/script&gt;</code></pre>
-                                    </div>
-
-                                    <div class="dep-note-box alert-info-soft">
-                                        <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
-                                        <div>
-                                            <strong>Lưu ý quan trọng cho Dev:</strong> Nút mở dropdown sử dụng <code>data-bs-auto-close="outside"</code> để khi người dùng click vào ô tìm kiếm <code>#dropdownQuickSearch</code> bên trong menu thì popup không bị đóng. File <code>dropdown3.js</code> tự động gắn sự kiện <code>keyup</code> để lọc danh sách kết quả ngay lập tức khi người dùng nhập từ khóa.
-                                        </div>
-                                    </div>
-
-                                    <details class="dep-template-details mt-2">
-                                        <summary class="d-flex align-items-center gap-1">
-                                            <i class="bi bi-file-earmark-code text-secondary"></i>
-                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
-                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
-                                        </summary>
-                                        <div class="dep-template-box mt-2">
-                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
-                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_dropdown3.html</span>
-                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-dropdown3', this)">
-                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
-                                                </button>
-                                            </div>
-                                            <pre><code id="template-dropdown3">&lt;!DOCTYPE html&gt;
-&lt;html lang="vi"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-    &lt;title&gt;Test Dropdown 3&lt;/title&gt;
-    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
-    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
-    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
-    &lt;link rel="stylesheet" href="dropdown3.css"&gt;
-&lt;/head&gt;
-&lt;body class="d-flex align-items-start justify-content-center min-vh-100 p-5 bg-light"&gt;
-    &lt;!-- Dán nội dung dropdown3.html vào đây --&gt;
-
-    &lt;!-- Bootstrap 5 JS Bundle &amp; dropdown3.js --&gt;
-    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
-    &lt;script src="dropdown3.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                                        </div>
-                                    </details>
                                 </div>
                             </div>
 
                             <!-- Khối 1: NỘI DUNG HTML Mẫu 3 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
-                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
                                         <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
                                     </div>
                                     <button class="btn btn-sm btn-outline-light copy-btn"
@@ -6151,14 +6095,79 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-dropdown3"><!-- Đang tải... --></code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-dropdown3">&lt;div class=&quot;dropdown crm-quick-filter-dropdown&quot;&gt;
+    &lt;button
+        class=&quot;btn btn-white bg-white rounded-circle border d-flex align-items-center justify-content-center p-0 shadow-sm crm-quick-filter-btn&quot;
+        type=&quot;button&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot; data-bs-auto-close=&quot;outside&quot;
+        title=&quot;Add a quick filter&quot;&gt;
+        &lt;i class=&quot;bi bi-plus-lg text-secondary fs-6&quot;&gt;&lt;/i&gt;
+    &lt;/button&gt;
+
+    &lt;div class=&quot;dropdown-menu crm-quick-filter-menu p-3 mt-2 border-0&quot;&gt;
+        &lt;h6 class=&quot;dropdown-header px-0 text-dark fw-bold fs-6 mb-2&quot;&gt;Add a quick filter&lt;/h6&gt;
+
+        &lt;div class=&quot;crm-quick-filter-search-wrapper mb-3&quot;&gt;
+            &lt;i class=&quot;bi bi-search crm-quick-filter-search-icon&quot;&gt;&lt;/i&gt;
+            &lt;input type=&quot;text&quot; class=&quot;form-control rounded-pill crm-quick-filter-search-input shadow-none&quot;
+                id=&quot;dropdownQuickSearch&quot; placeholder=&quot;Search&quot; autocomplete=&quot;off&quot;&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;crm-quick-filter-category&quot;&gt;Deal activity&lt;/div&gt;
+
+        &lt;ul class=&quot;list-unstyled mb-0 crm-quick-filter-list&quot; id=&quot;dropdownActionList&quot;&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;crm-quick-filter-item&quot;&gt;
+                    &lt;span class=&quot;crm-quick-filter-icon&quot;&gt;Abc&lt;/span&gt;
+                    &lt;span class=&quot;text-truncate&quot;&gt;Campaign of last booking in meetings tool&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;crm-quick-filter-item&quot;&gt;
+                    &lt;span class=&quot;crm-quick-filter-icon&quot;&gt;Abc&lt;/span&gt;
+                    &lt;span class=&quot;text-truncate&quot;&gt;Closed lost reason&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;crm-quick-filter-item&quot;&gt;
+                    &lt;span class=&quot;crm-quick-filter-icon&quot;&gt;Abc&lt;/span&gt;
+                    &lt;span class=&quot;text-truncate&quot;&gt;Closed won reason&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;crm-quick-filter-item&quot;&gt;
+                    &lt;span class=&quot;crm-quick-filter-icon&quot;&gt;&lt;i class=&quot;bi bi-calendar3&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-truncate&quot;&gt;Date of last meeting booked in meetings tool&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;crm-quick-filter-item&quot;&gt;
+                    &lt;span class=&quot;crm-quick-filter-icon&quot;&gt;&lt;i class=&quot;bi bi-check2-square&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;span class=&quot;text-truncate&quot;&gt;Deal stage&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;crm-quick-filter-item&quot;&gt;
+                    &lt;span class=&quot;crm-quick-filter-icon&quot;&gt;fx&lt;/span&gt;
+                    &lt;span class=&quot;text-truncate&quot;&gt;Has Last Conversation Follow Ups&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;crm-quick-filter-item&quot;&gt;
+                    &lt;span class=&quot;crm-quick-filter-icon&quot;&gt;fx&lt;/span&gt;
+                    &lt;span class=&quot;text-truncate&quot;&gt;Has Last Meeting Follow Ups&lt;/span&gt;
+                &lt;/a&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
                             <!-- Khối 2: NỘI DUNG CSS Mẫu 3 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
-                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                    <div class="text-primary-subtle fw-bold small d-flex align-items-center gap-2"
+                                        style="color: #60a5fa !important;">
                                         <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
                                     </div>
                                     <button class="btn btn-sm btn-outline-light copy-btn"
@@ -6167,7 +6176,186 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-dropdown3"><!-- Đang tải... --></code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-dropdown3">/* ==========================================================================
+   DROPDOWN 3: Quick Filter Search Dropdown (CRM Style)
+   ========================================================================== */
+
+.crm-quick-filter-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.crm-quick-filter-btn {
+    width: 36px;
+    height: 36px;
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 50% !important;
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.crm-quick-filter-btn:hover,
+.crm-quick-filter-btn:focus,
+.crm-quick-filter-btn[aria-expanded=&quot;true&quot;] {
+    background-color: #f8fafc !important;
+    border-color: #cbd5e1 !important;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.08) !important;
+    transform: scale(1.04);
+}
+
+.crm-quick-filter-btn i {
+    transition: transform 0.2s ease;
+}
+
+.crm-quick-filter-btn[aria-expanded=&quot;true&quot;] i {
+    transform: rotate(45deg);
+}
+
+/* Dropdown Menu Container */
+.crm-quick-filter-menu.dropdown-menu {
+    width: 380px !important;
+    max-width: 92vw;
+    height: auto !important;
+    min-height: auto !important;
+    background-color: #ffffff !important;
+    border: 1px solid #e2e8f0 !important;
+    border-radius: 14px !important;
+    box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.04) !important;
+    padding: 16px !important;
+    z-index: 1050;
+    margin-top: 8px !important;
+}
+
+.crm-quick-filter-menu .dropdown-header {
+    color: #0f172a !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.01em;
+}
+
+/* Search Wrapper &amp; Input */
+.crm-quick-filter-search-wrapper {
+    position: relative;
+}
+
+.crm-quick-filter-search-icon {
+    position: absolute;
+    left: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #94a3b8;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 3;
+}
+
+.crm-quick-filter-search-input.form-control {
+    padding: 9px 14px 9px 40px !important;
+    border-radius: 9999px !important;
+    border: 1px solid #e2e8f0 !important;
+    background-color: #f8fafc !important;
+    font-size: 13.5px !important;
+    color: #1e293b !important;
+    line-height: 1.5 !important;
+    transition: all 0.2s ease !important;
+    box-shadow: none !important;
+}
+
+.crm-quick-filter-search-input.form-control::placeholder {
+    color: #94a3b8 !important;
+    font-size: 13.5px;
+}
+
+.crm-quick-filter-search-input.form-control:focus {
+    background-color: #ffffff !important;
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15) !important;
+    outline: none !important;
+}
+
+/* Category Header */
+.crm-quick-filter-category {
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #64748b;
+    margin-bottom: 8px;
+    padding: 0 6px;
+}
+
+/* Scrollable List */
+.crm-quick-filter-list {
+    max-height: 250px;
+    overflow-y: auto !important;
+    overflow-x: hidden;
+    padding-right: 2px;
+}
+
+.crm-quick-filter-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.crm-quick-filter-list::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.crm-quick-filter-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+.crm-quick-filter-list::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* List Item Link */
+.crm-quick-filter-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 7px 8px;
+    border-radius: 8px;
+    text-decoration: none !important;
+    color: #334155 !important;
+    font-size: 13.5px;
+    font-weight: 500;
+    transition: background-color 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    cursor: pointer;
+}
+
+.crm-quick-filter-item:hover {
+    background-color: #f1f5f9 !important;
+    color: #0f172a !important;
+    transform: translateX(2px);
+}
+
+.crm-quick-filter-icon {
+    width: 26px;
+    height: 26px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    color: #64748b;
+    font-size: 11.5px;
+    font-weight: 600;
+    font-style: italic;
+    flex-shrink: 0;
+    transition: all 0.15s ease;
+}
+
+.crm-quick-filter-item:hover .crm-quick-filter-icon {
+    background-color: #e2e8f0;
+    border-color: #cbd5e1;
+    color: #0f172a;
+}</code></pre>
                                 </div>
                             </div>
 
@@ -6183,10 +6371,31 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-dropdown3"><!-- Đang tải... --></code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-dropdown3">document.addEventListener(&quot;DOMContentLoaded&quot;, function () {
+    const searchInput = document.getElementById(&#039;dropdownQuickSearch&#039;);
+    const listContainer = document.getElementById(&#039;dropdownActionList&#039;);
+
+    if (searchInput &amp;&amp; listContainer) {
+        const listItems = listContainer.querySelectorAll(&#039;li&#039;);
+
+        searchInput.addEventListener(&#039;input&#039;, function () {
+            const filter = searchInput.value.toLowerCase().trim();
+
+            listItems.forEach(function (item) {
+                const textValue = item.textContent || item.innerText;
+                if (textValue.toLowerCase().indexOf(filter) &gt; -1) {
+                    item.style.display = &quot;&quot;;
+                } else {
+                    item.style.display = &quot;none&quot;;
+                }
+            });
+        });
+    }
+});</code></pre>
                                 </div>
                             </div>
                         </section>
+
 
                         <!-- ---------------------------------------------- -->
                         <!-- 7.4 MẪU 4: CRM ACTION DROPDOWN MENU -->
