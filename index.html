@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="carousel1.css">
     <link rel="stylesheet" href="carousel2.css">
     <link rel="stylesheet" href="carousel3.css">
+    <link rel="stylesheet" href="carousel4.css">
     <link rel="stylesheet" href="popovers1.css">
     <link rel="stylesheet" href="popovers2.css">
     <link rel="stylesheet" href="popovers3.css">
@@ -67,6 +68,7 @@
     <link rel="stylesheet" href="table2.css">
     <link rel="stylesheet" href="grid1.css">
     <link rel="stylesheet" href="list1.css">
+    <link rel="stylesheet" href="list2.css">
     <link rel="stylesheet" href="collapse1.css">
     <link rel="stylesheet" href="collapse2.css">
 
@@ -3885,6 +3887,385 @@
                             </div>
                         </div>
 
+                    
+                        <hr class="my-5 opacity-25">
+
+                        <!-- ------------------------------------------ -->
+                        <!-- MẪU 4: ACTION CAROUSEL (CÁC BƯỚC THIẾT LẬP CRM) -->
+                        <!-- ------------------------------------------ -->
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <div class="d-flex align-items-center gap-2">
+                                    <span class="badge bg-primary px-2.5 py-1">Mẫu 4</span>
+                                    <h4 class="fw-bold mb-0 text-dark">Action Carousel (Thiết lập quy trình CRM)</h4>
+                                </div>
+                                <p class="text-muted small mb-0 mt-1">Thanh trượt hành động từng bước thiết lập CRM với thẻ tương tác, icon màu sắc và nút điều hướng mượt mà.</p>
+                            </div>
+                        </div>
+
+                        <!-- Khung Preview Mẫu 4 -->
+                        <div class="card border-0 shadow-sm rounded-3 mb-4 preview-card">
+                            <div class="card-header bg-white py-3 border-bottom d-flex justify-content-between align-items-center">
+                                <span class="fw-semibold text-secondary small text-uppercase tracking-wider">
+                                    <i class="bi bi-eye-fill me-1 text-primary"></i> DEMO COMPONENT
+                                </span>
+                                <span class="badge bg-light text-dark border">
+                                    <i class="bi bi-arrow-left-right me-1"></i> Cuộn ngang tương tác
+                                </span>
+                            </div>
+                            <div class="card-body p-4 preview-carousel-box d-flex justify-content-center align-items-center" id="preview-carousel4" style="background-color: #f8fafc; overflow: hidden;">
+                                <div class="carousel-wrapper">
+        <button class="nav-btn nav-btn-prev" id="btnPrev" onclick="document.getElementById('carouselTrack')?.scrollBy({ left: -266, behavior: 'smooth' })">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+        
+        <div class="carousel-track" id="carouselTrack">
+            <div class="action-card">
+                <div class="card-icon-box bg-yellow text-yellow">
+                    <i class="bi bi-person-down"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Import contacts</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-blue text-blue">
+                    <i class="bi bi-globe"></i>
+                </div>
+                <div class="card-text-box d-flex justify-content-between">
+                    <span>Bring in website leads</span>
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 13px;"></i>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-purple text-purple">
+                    <i class="bi bi-person-plus"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Invite your team</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-orange text-orange">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Route leads to your team</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-cyan text-cyan">
+                    <i class="bi bi-bullseye"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Create sales sequence</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-gray text-gray">
+                    <i class="bi bi-gear"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Configure pipelines</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="nav-btn nav-btn-next" id="btnNext" onclick="document.getElementById('carouselTrack')?.scrollBy({ left: 266, behavior: 'smooth' })">
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+                            </div>
+                        </div>
+
+                        <!-- Thư viện cần nhúng -->
+                        <div class="code-card mb-4">
+                            <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                <div class="text-white-50 fw-bold small d-flex align-items-center gap-2">
+                                    <i class="bi bi-box-arrow-in-down fs-5"></i> THƯ VIỆN CẦN NHÚNG
+                                </div>
+                                <button class="btn btn-sm btn-outline-light copy-btn"
+                                    onclick="copyCode('dep-code-carousel4', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Link
+                                </button>
+                            </div>
+                            <div class="p-0">
+                                <pre class="text-light m-0 p-3 code-pre"><code id="dep-code-carousel4">&lt;!-- Bootstrap 5 CSS &amp; Bootstrap Icons --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- File CSS Carousel 4 --&gt;
+&lt;link rel="stylesheet" href="carousel4.css"&gt;
+
+&lt;!-- Bootstrap 5 JS Bundle &amp; File Script Carousel 4 --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="carousel4.js"&gt;&lt;/script&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <!-- 3 Cột: HTML, CSS, JS -->
+                        <div class="row">
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn"
+                                            onclick="copyCode('code-html-carousel4', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-html-carousel4">&lt;div class=&quot;carousel-wrapper&quot;&gt;
+        &lt;button class=&quot;nav-btn nav-btn-prev&quot; id=&quot;btnPrev&quot;&gt;
+            &lt;i class=&quot;bi bi-arrow-left&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+        
+        &lt;div class=&quot;carousel-track&quot; id=&quot;carouselTrack&quot;&gt;
+            &lt;div class=&quot;action-card&quot;&gt;
+                &lt;div class=&quot;card-icon-box bg-yellow text-yellow&quot;&gt;
+                    &lt;i class=&quot;bi bi-person-down&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-text-box&quot;&gt;
+                    &lt;span&gt;Import contacts&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;action-card&quot;&gt;
+                &lt;div class=&quot;card-icon-box bg-blue text-blue&quot;&gt;
+                    &lt;i class=&quot;bi bi-globe&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-text-box d-flex justify-content-between&quot;&gt;
+                    &lt;span&gt;Bring in website leads&lt;/span&gt;
+                    &lt;i class=&quot;bi bi-check-circle-fill text-success&quot; style=&quot;font-size: 13px;&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;action-card&quot;&gt;
+                &lt;div class=&quot;card-icon-box bg-purple text-purple&quot;&gt;
+                    &lt;i class=&quot;bi bi-person-plus&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-text-box&quot;&gt;
+                    &lt;span&gt;Invite your team&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;action-card&quot;&gt;
+                &lt;div class=&quot;card-icon-box bg-orange text-orange&quot;&gt;
+                    &lt;i class=&quot;bi bi-diagram-3&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-text-box&quot;&gt;
+                    &lt;span&gt;Route leads to your team&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;action-card&quot;&gt;
+                &lt;div class=&quot;card-icon-box bg-cyan text-cyan&quot;&gt;
+                    &lt;i class=&quot;bi bi-bullseye&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-text-box&quot;&gt;
+                    &lt;span&gt;Create sales sequence&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;action-card&quot;&gt;
+                &lt;div class=&quot;card-icon-box bg-gray text-gray&quot;&gt;
+                    &lt;i class=&quot;bi bi-gear&quot;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;card-text-box&quot;&gt;
+                    &lt;span&gt;Configure pipelines&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;button class=&quot;nav-btn nav-btn-next&quot; id=&quot;btnNext&quot;&gt;
+            &lt;i class=&quot;bi bi-arrow-right&quot;&gt;&lt;/i&gt;
+        &lt;/button&gt;
+    &lt;/div&gt;</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-primary-subtle fw-bold small d-flex align-items-center gap-2"
+                                            style="color: #60a5fa !important;">
+                                            <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn"
+                                            onclick="copyCode('code-css-carousel4', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-css-carousel4">body {
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.carousel-wrapper {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-track {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 10px 4px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+    display: none;
+}
+
+.action-card {
+    display: flex;
+    flex-shrink: 0;
+    width: 250px;
+    height: 54px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.action-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    border-color: #cbd5e1;
+}
+
+.card-icon-box {
+    width: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    border-radius: 5px 0 0 5px;
+}
+
+.card-text-box {
+    flex-grow: 1;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: #33475b;
+}
+
+.bg-yellow { background-color: #fef3c7; }
+.text-yellow { color: #b45309; }
+
+.bg-blue { background-color: #eff6ff; }
+.text-blue { color: #2563eb; }
+
+.bg-purple { background-color: #f3e8ff; }
+.text-purple { color: #7e22ce; }
+
+.bg-orange { background-color: #ffedd5; }
+.text-orange { color: #c2410c; }
+
+.bg-cyan { background-color: #e0f2fe; }
+.text-cyan { color: #0284c7; }
+
+.bg-gray { background-color: #f1f5f9; }
+.text-gray { color: #475569; }
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 52px;
+    height: 38px;
+    border-radius: 20px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    color: #33475b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.nav-btn:disabled {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-btn i {
+    font-size: 18px;
+}
+
+.nav-btn-prev {
+    left: -20px;
+}
+
+.nav-btn-next {
+    right: -20px;
+}</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mb-3">
+                                <div class="code-card h-100">
+                                    <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                        <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                            <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                        </div>
+                                        <button class="btn btn-sm btn-outline-light copy-btn"
+                                            onclick="copyCode('code-js-carousel4', this)">
+                                            <i class="bi bi-clipboard me-1"></i> Copy JS
+                                        </button>
+                                    </div>
+                                    <div class="p-0">
+                                        <pre class="text-light m-0 p-3 code-pre"><code id="code-js-carousel4">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const track = document.getElementById(&#039;carouselTrack&#039;);
+    const btnPrev = document.getElementById(&#039;btnPrev&#039;);
+    const btnNext = document.getElementById(&#039;btnNext&#039;);
+
+    const updateButtons = () =&gt; {
+        btnPrev.disabled = track.scrollLeft &lt;= 0;
+        btnNext.disabled = track.scrollLeft &gt;= (track.scrollWidth - track.clientWidth - 1);
+    };
+
+    btnPrev.addEventListener(&#039;click&#039;, () =&gt; {
+        track.scrollBy({ left: -266, behavior: &#039;smooth&#039; });
+    });
+
+    btnNext.addEventListener(&#039;click&#039;, () =&gt; {
+        track.scrollBy({ left: 266, behavior: &#039;smooth&#039; });
+    });
+
+    track.addEventListener(&#039;scroll&#039;, updateButtons);
+    window.addEventListener(&#039;resize&#039;, updateButtons);
+    
+    updateButtons();
+});</code></pre>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- ============================================== -->
@@ -3902,7 +4283,7 @@
                                 <a href="#pop-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Company Profile</a>
                                 <a href="#pop-mau-3" class="btn btn-sm btn-outline-secondary">Mẫu 3: Advanced Filter</a>
                                 <a href="#pop-mau-4" class="btn btn-sm btn-outline-secondary">Mẫu 4: Quick Note</a>
-                                <a href="#pop-mau-5" class="btn btn-sm btn-outline-secondary">Mẫu 5: Profile Card</a>
+                                <a href="#pop-mau-5" class="btn btn-sm btn-outline-secondary">Mẫu 5: Contact Popover</a>
                             </div>
                         </div>
 
@@ -4659,17 +5040,19 @@
                         <!-- ---------------------------------------------- -->
                         <!-- 6.5 MẪU 5: PROFILE POPOVER CARD (HOVER/FOCUS) -->
                         <!-- ---------------------------------------------- -->
+                        <!-- 6.5 MẪU 5: CONTACT POPOVER -->
+                        <!-- ---------------------------------------------- -->
                         <section id="pop-mau-5" class="mb-5 pt-2">
                             <div class="d-flex align-items-center gap-2 mb-3">
                                 <span class="badge text-white px-2 py-1 rounded-pill" style="background-color: #8b5cf6;">Mẫu 5</span>
-                                <h2 class="h5 fw-bold mb-0">Hồ sơ người dùng CRM mở rộng (Profile Card Popover)</h2>
+                                <h2 class="h5 fw-bold mb-0">Contact Popover (Thẻ thông tin liên hệ CRM nổi bật)</h2>
                             </div>
 
                             <!-- Giao diện xem trước Mẫu 5 -->
                             <div class="preview-card mb-4 bg-white" style="overflow: visible;">
                                 <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
                                     <span class="fw-bold text-dark d-flex align-items-center gap-2">
-                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                        <i class="bi bi-eye" style="color: #8b5cf6;"></i> Giao diện xem trước
                                     </span>
                                     <span class="badge bg-light text-secondary border">
                                         <i class="bi bi-cursor me-1"></i> Rê chuột hoặc Tab vào tên để hiện Popover
@@ -4677,162 +5060,107 @@
                                 </div>
                                 <div class="p-5 preview-container preview-popover-box d-flex justify-content-center align-items-center"
                                     id="preview-popover5" style="background-color: #f8fafc; min-height: 280px; overflow: visible;">
-                                    <div class="d-flex align-items-center gap-3 p-3 border rounded-3 bg-white shadow-sm" style="max-width: 320px; width: 100%;">
-                                        <img src="https://i.pravatar.cc/150?img=11" alt="Avatar" class="rounded-circle" width="40" height="40">
-                                        <div>
-                                            <span class="fw-medium text-dark profile-trigger" id="profileLabel" role="button" tabindex="0">
-                                                Mateo Perez
-                                            </span>
-                                            <div class="text-secondary small">Engineering Department</div>
-                                        </div>
-                                    </div>
+                                    <div class="d-flex align-items-center gap-3 p-3 border rounded-3 bg-white shadow-sm w-50">
+        <img src="https://i.pravatar.cc/150?img=5" alt="Avatar" class="rounded-circle" width="40" height="40">
+        <div class="d-flex flex-column">
+            <span class="fw-medium contact-trigger" id="contactPopoverTrigger" role="button" tabindex="0">
+                Jane Sampleton (sample) &lt;janesampleton...
+            </span>
+            <span class="text-muted" style="font-size: 13px;">16 days ago</span>
+        </div>
+    </div>
 
-                                    <div id="popoverTemplate" class="d-none">
-                                        <div class="profile-card">
-                                            <div class="profile-cover">
-                                                <button class="btn btn-link text-white position-absolute top-0 end-0 p-2 text-decoration-none border-0">
-                                                    <i class="bi bi-three-dots"></i>
-                                                </button>
-                                            </div>
-                                            
-                                            <div class="profile-body px-4 pb-4">
-                                                <div class="profile-avatar-wrapper">
-                                                    <img src="https://i.pravatar.cc/150?img=11" alt="Mateo Perez" class="profile-avatar bg-white">
-                                                </div>
-                                                
-                                                <h4 class="fw-bold mb-1 text-dark">Mateo Perez</h4>
-                                                <p class="text-secondary mb-3" style="font-size: 15px;">Tomorrow Tech</p>
-
-                                                <div class="d-flex gap-2 mb-4">
-                                                    <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
-                                                        <i class="bi bi-chat-fill mb-1"></i>
-                                                        <span>Tin nhắn</span>
-                                                    </button>
-                                                    <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
-                                                        <i class="bi bi-telephone-fill mb-1"></i>
-                                                        <span>Cuộc gọi thoại</span>
-                                                    </button>
-                                                    <button class="btn action-btn flex-fill d-flex flex-column align-items-center justify-content-center py-2">
-                                                        <i class="bi bi-camera-video-fill mb-1"></i>
-                                                        <span>Cuộc gọi video</span>
-                                                    </button>
-                                                </div>
-
-                                                <div class="d-flex justify-content-between mb-3 align-items-center border-bottom pb-3">
-                                                    <span class="text-secondary" style="font-size: 14px;">Bí danh</span>
-                                                    <a href="#" class="text-secondary text-decoration-none" style="font-size: 14px;">Đặt biệt danh</a>
-                                                </div>
-
-                                                <div class="d-flex flex-column gap-3 mb-4">
-                                                    <div class="d-flex align-items-center gap-3">
-                                                        <i class="bi bi-envelope text-secondary fs-6"></i>
-                                                        <a href="mailto:mateo.perez@tomorrowtech.com" class="text-dark text-decoration-none contact-link">mateo.perez@tomorrowtech.com</a>
-                                                    </div>
-                                                    <div class="d-flex align-items-center gap-3">
-                                                        <i class="bi bi-telephone text-secondary fs-6"></i>
-                                                        <span class="text-dark" style="font-size: 14px;">+1 (555) 123-4567</span>
-                                                    </div>
-                                                    <div class="d-flex align-items-center gap-3">
-                                                        <i class="bi bi-building text-secondary fs-6"></i>
-                                                        <span class="text-dark" style="font-size: 14px;">Engineering Department</span>
-                                                    </div>
-                                                    <div class="d-flex align-items-center gap-3">
-                                                        <i class="bi bi-geo-alt text-secondary fs-6"></i>
-                                                        <span class="text-dark" style="font-size: 14px;">San Francisco, CA</span>
-                                                    </div>
-                                                </div>
-
-                                                <button class="btn custom-blue-btn w-100 fw-medium py-2">
-                                                    Thêm liên hệ hoặc nhóm
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </div>
+        <div id="contactPopoverTemplate" class="d-none">
+        <div class="custom-contact-popover">
+            <div class="popover-body-content p-4 pb-3">
+                
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <div class="d-flex align-items-center gap-2 mb-1">
+                            <h6 class="mb-0 contact-name-title fw-medium">Jane Sampleton (sample)</h6>
+                            <div class="social-icons d-flex align-items-center gap-1">
+                                <i class="bi bi-facebook social-blue"></i>
+                                <span class="x-icon-wrapper"><i class="bi bi-twitter-x"></i></span>
+                                <i class="bi bi-linkedin social-blue"></i>
+                            </div>
+                        </div>
+                        <div class="text-secondary" style="font-size: 14px;">
+                            CEO , <a href="#" class="contact-link">Widgetz.io (sam...</a>
+                        </div>
+                    </div>
+                    <div class="btn-group action-btn-group">
+                        <button class="btn btn-sm"><i class="bi bi-pencil"></i></button>
+                        <button class="btn btn-sm"><i class="bi bi-telephone"></i></button>
+                        <button class="btn btn-sm"><i class="bi bi-envelope"></i></button>
+                    </div>
+                </div>
+
+                <hr class="custom-hr">
+
+                <div class="text-dark mb-4" style="font-size: 14px;">
+                    Contact since Jun 11 2026 with <a href="#" class="contact-link fw-medium">one deal</a> in stage <span class="badge stage-badge">New</span>
+                </div>
+
+                <div class="mb-4">
+                    <div class="text-dark mb-3" style="font-size: 14px;">Contact score has not changed in the last 7 days.</div>
+                    <div class="d-flex align-items-start gap-3">
+                        <div class="score-box">43</div>
+                        <div>
+                            <div class="fw-medium text-dark mb-1" style="font-size: 15px;">Key factors behind this score</div>
+                            <div class="text-secondary d-flex align-items-start gap-1" style="font-size: 13px;">
+                                <i class="bi bi-arrow-down text-danger mt-1" style="font-size: 11px;"></i> Very little is known about this contact to give them a score
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-secondary" style="font-size: 14px;">
+                    Were these insights helpful?
+                    <a href="#" class="feedback-btn ms-2"><i class="bi bi-hand-thumbs-up"></i> Yes</a>
+                    <span class="mx-1" style="color: #cbd5e1;">•</span>
+                    <a href="#" class="feedback-btn"><i class="bi bi-hand-thumbs-down"></i> No</a>
+                </div>
+            </div>
+
+            <div class="popover-footer">
+                <a href="#" class="text-decoration-none d-flex align-items-center gap-2">
+                    <i class="bi bi-gear"></i> Customize contact scoring
+                </a>
+            </div>
+        </div>
+    </div>
                                 </div>
                             </div>
 
-                            <!-- Khối Hướng dẫn Phụ thuộc & Mã nhúng Mẫu 5 -->
-                            <div class="dependency-card mb-4">
-                                <div class="dependency-header d-flex justify-content-between align-items-center">
-                                    <div class="fw-bold d-flex align-items-center gap-2 text-dark">
-                                        <i class="bi bi-box-seam text-primary fs-5"></i>
-                                        <span>Khung mã nguồn tích hợp (Dependencies &amp; Template)</span>
+                            <!-- Thư viện cần nhúng -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-white-50 fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-in-down fs-5"></i> THƯ VIỆN CẦN NHÚNG
                                     </div>
-                                    <button class="btn btn-sm btn-outline-dark copy-btn"
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
                                         onclick="copyCode('dep-code-popover5', this)">
-                                        <i class="bi bi-clipboard me-1"></i> Copy Dependencies
+                                        <i class="bi bi-clipboard me-1"></i> Copy Link
                                     </button>
                                 </div>
-                                <div class="dependency-body">
-                                    <div class="dep-badges-wrap">
-                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File popover5.css (Bắt buộc)</span>
-                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File popover5.js (Bắt buộc tương tác Popover)</span>
-                                        <span class="dep-badge-pill dep-badge-lib"><i class="bi bi-box"></i> Bootstrap 5.3.2 CSS &amp; JS Bundle</span>
-                                    </div>
-
-                                    <div class="dep-code-box">
-                                        <pre><code id="dep-code-popover5">&lt;!-- 1. Google Font Inter (Đặt trong &lt;head&gt;) --&gt;
-&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
-
-&lt;!-- 2. Bootstrap 5 CSS &amp; Icons (Đặt trong &lt;head&gt;) --&gt;
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="dep-code-popover5">&lt;!-- Bootstrap 5 CSS &amp; Bootstrap Icons --&gt;
 &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
 &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
 
-&lt;!-- 3. File CSS của Component (Đặt trong &lt;head&gt;) --&gt;
+&lt;!-- File CSS Popover 5 --&gt;
 &lt;link rel="stylesheet" href="popover5.css"&gt;
 
-&lt;!-- 4. Bootstrap 5 JavaScript Bundle (Chứa cả Popper) (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;!-- Bootstrap 5 JS Bundle &amp; File Script Popover 5 --&gt;
 &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
-
-&lt;!-- 5. File JS khởi tạo và xử lý Hover/Focus Popover (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
 &lt;script src="popover5.js"&gt;&lt;/script&gt;</code></pre>
-                                    </div>
-
-                                    <div class="dep-note-box alert-warning-soft">
-                                        <i class="bi bi-exclamation-triangle-fill flex-shrink-0 mt-0.5 fs-6 text-warning"></i>
-                                        <div>
-                                            <strong>Lưu ý quan trọng cho Dev:</strong> Popover dùng <code>trigger: 'manual'</code> và template HTML được giữ ẩn trong thẻ <code>#popoverTemplate</code>. File <code>popover5.js</code> quản lý bộ đếm độ trễ (delay) khi di chuột ra ngoài để người dùng có thể lia chuột vào tương tác trực tiếp với thẻ popover mà không bị ẩn đột ngột.
-                                        </div>
-                                    </div>
-
-                                    <details class="dep-template-details mt-2">
-                                        <summary class="d-flex align-items-center gap-1">
-                                            <i class="bi bi-file-earmark-code text-secondary"></i>
-                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
-                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
-                                        </summary>
-                                        <div class="dep-template-box mt-2">
-                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
-                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_popover5.html</span>
-                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-popover5', this)">
-                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
-                                                </button>
-                                            </div>
-                                            <pre><code id="template-popover5">&lt;!DOCTYPE html&gt;
-&lt;html lang="vi"&gt;
-&lt;head&gt;
-    &lt;meta charset="UTF-8"&gt;
-    &lt;title&gt;Test Popover 5&lt;/title&gt;
-    &lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"&gt;
-    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
-    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
-    &lt;link rel="stylesheet" href="popover5.css"&gt;
-&lt;/head&gt;
-&lt;body class="p-5 bg-light d-flex justify-content-center align-items-center" style="min-height: 100vh;"&gt;
-    &lt;!-- Dán nội dung popover5.html vào đây --&gt;
-    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
-    &lt;script src="popover5.js"&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;</code></pre>
-                                        </div>
-                                    </details>
                                 </div>
                             </div>
 
-                            <!-- Khối 1: NỘI DUNG HTML Mẫu 5 -->
+                            <!-- Source Code HTML, CSS, JS -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
-                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
                                         <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
                                     </div>
                                     <button class="btn btn-sm btn-outline-light copy-btn"
@@ -4841,14 +5169,82 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-popover5"><!-- Đang tải... --></code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-popover5">&lt;div class=&quot;d-flex align-items-center gap-3 p-3 border rounded-3 bg-white shadow-sm w-50&quot;&gt;
+        &lt;img src=&quot;https://i.pravatar.cc/150?img=5&quot; alt=&quot;Avatar&quot; class=&quot;rounded-circle&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;
+        &lt;div class=&quot;d-flex flex-column&quot;&gt;
+            &lt;span class=&quot;fw-medium contact-trigger&quot; id=&quot;contactPopoverTrigger&quot; role=&quot;button&quot; tabindex=&quot;0&quot;&gt;
+                Jane Sampleton (sample) &amp;lt;janesampleton...
+            &lt;/span&gt;
+            &lt;span class=&quot;text-muted&quot; style=&quot;font-size: 13px;&quot;&gt;16 days ago&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div id=&quot;contactPopoverTemplate&quot; class=&quot;d-none&quot;&gt;
+        &lt;div class=&quot;custom-contact-popover&quot;&gt;
+            &lt;div class=&quot;popover-body-content p-4 pb-3&quot;&gt;
+                
+                &lt;div class=&quot;d-flex justify-content-between align-items-start mb-3&quot;&gt;
+                    &lt;div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-1&quot;&gt;
+                            &lt;h6 class=&quot;mb-0 contact-name-title fw-medium&quot;&gt;Jane Sampleton (sample)&lt;/h6&gt;
+                            &lt;div class=&quot;social-icons d-flex align-items-center gap-1&quot;&gt;
+                                &lt;i class=&quot;bi bi-facebook social-blue&quot;&gt;&lt;/i&gt;
+                                &lt;span class=&quot;x-icon-wrapper&quot;&gt;&lt;i class=&quot;bi bi-twitter-x&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                                &lt;i class=&quot;bi bi-linkedin social-blue&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 14px;&quot;&gt;
+                            CEO , &lt;a href=&quot;#&quot; class=&quot;contact-link&quot;&gt;Widgetz.io (sam...&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;btn-group action-btn-group&quot;&gt;
+                        &lt;button class=&quot;btn btn-sm&quot;&gt;&lt;i class=&quot;bi bi-pencil&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;button class=&quot;btn btn-sm&quot;&gt;&lt;i class=&quot;bi bi-telephone&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                        &lt;button class=&quot;btn btn-sm&quot;&gt;&lt;i class=&quot;bi bi-envelope&quot;&gt;&lt;/i&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;hr class=&quot;custom-hr&quot;&gt;
+
+                &lt;div class=&quot;text-dark mb-4&quot; style=&quot;font-size: 14px;&quot;&gt;
+                    Contact since Jun 11 2026 with &lt;a href=&quot;#&quot; class=&quot;contact-link fw-medium&quot;&gt;one deal&lt;/a&gt; in stage &lt;span class=&quot;badge stage-badge&quot;&gt;New&lt;/span&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;mb-4&quot;&gt;
+                    &lt;div class=&quot;text-dark mb-3&quot; style=&quot;font-size: 14px;&quot;&gt;Contact score has not changed in the last 7 days.&lt;/div&gt;
+                    &lt;div class=&quot;d-flex align-items-start gap-3&quot;&gt;
+                        &lt;div class=&quot;score-box&quot;&gt;43&lt;/div&gt;
+                        &lt;div&gt;
+                            &lt;div class=&quot;fw-medium text-dark mb-1&quot; style=&quot;font-size: 15px;&quot;&gt;Key factors behind this score&lt;/div&gt;
+                            &lt;div class=&quot;text-secondary d-flex align-items-start gap-1&quot; style=&quot;font-size: 13px;&quot;&gt;
+                                &lt;i class=&quot;bi bi-arrow-down text-danger mt-1&quot; style=&quot;font-size: 11px;&quot;&gt;&lt;/i&gt; Very little is known about this contact to give them a score
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 14px;&quot;&gt;
+                    Were these insights helpful?
+                    &lt;a href=&quot;#&quot; class=&quot;feedback-btn ms-2&quot;&gt;&lt;i class=&quot;bi bi-hand-thumbs-up&quot;&gt;&lt;/i&gt; Yes&lt;/a&gt;
+                    &lt;span class=&quot;mx-1&quot; style=&quot;color: #cbd5e1;&quot;&gt;•&lt;/span&gt;
+                    &lt;a href=&quot;#&quot; class=&quot;feedback-btn&quot;&gt;&lt;i class=&quot;bi bi-hand-thumbs-down&quot;&gt;&lt;/i&gt; No&lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;popover-footer&quot;&gt;
+                &lt;a href=&quot;#&quot; class=&quot;text-decoration-none d-flex align-items-center gap-2&quot;&gt;
+                    &lt;i class=&quot;bi bi-gear&quot;&gt;&lt;/i&gt; Customize contact scoring
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
                                 </div>
                             </div>
 
-                            <!-- Khối 2: NỘI DUNG CSS Mẫu 5 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
-                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                    <div class="text-primary-subtle fw-bold small d-flex align-items-center gap-2"
+                                        style="color: #60a5fa !important;">
                                         <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
                                     </div>
                                     <button class="btn btn-sm btn-outline-light copy-btn"
@@ -4857,15 +5253,169 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-popover5"><!-- Đang tải... --></code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-popover5">body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+}
+
+.contact-trigger {
+    color: #3b5bdb;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14.5px;
+}
+
+.contact-trigger:hover {
+    text-decoration: underline;
+}
+
+.custom-popover-container {
+    max-width: 480px;
+    width: 480px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.custom-popover-container .popover-body {
+    padding: 0;
+}
+
+.custom-contact-popover {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-name-title {
+    color: #2563eb;
+    font-size: 17px;
+}
+
+.social-icons i {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.social-blue {
+    color: #4267B2;
+}
+
+.x-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: #f1f5f9;
+    border-radius: 50%;
+    color: #475569;
+    font-size: 9px;
+    cursor: pointer;
+}
+
+.action-btn-group {
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+}
+
+.action-btn-group .btn {
+    border-right: 1px solid #cbd5e1;
+    padding: 5px 12px;
+    color: #475569;
+    background-color: #ffffff;
+    border-radius: 0;
+}
+
+.action-btn-group .btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+.action-btn-group .btn:last-child {
+    border-right: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.action-btn-group .btn:hover {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.contact-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+.custom-hr {
+    border-color: #e2e8f0;
+    margin: 16px 0;
+    opacity: 1;
+}
+
+.stage-badge {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.score-box {
+    background-color: #fbf5ff;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.feedback-btn {
+    color: #2563eb;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.feedback-btn:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
+}
+
+.popover-footer {
+    background-color: #fbf5ff;
+    padding: 14px 24px;
+    border-top: 1px solid #f3e8ff;
+}
+
+.popover-footer a {
+    color: #4b527e;
+    font-size: 14.5px;
+    transition: color 0.2s;
+}
+
+.popover-footer a:hover {
+    color: #373c60;
+    text-decoration: underline;
+}</code></pre>
                                 </div>
                             </div>
 
-                            <!-- Khối 3: NỘI DUNG JS Mẫu 5 -->
                             <div class="code-card mb-4">
                                 <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
-                                    <div class="text-warning-emphasis fw-bold small d-flex align-items-center gap-2" style="color: #facc15 !important;">
-                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JAVASCRIPT
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
                                     </div>
                                     <button class="btn btn-sm btn-outline-light copy-btn"
                                         onclick="copyCode('code-js-popover5', this)">
@@ -4873,10 +5423,47 @@
                                     </button>
                                 </div>
                                 <div class="p-0">
-                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-popover5"><!-- Đang tải... --></code></pre>
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-popover5">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const trigger = document.getElementById(&#039;contactPopoverTrigger&#039;);
+    const template = document.getElementById(&#039;contactPopoverTemplate&#039;).innerHTML;
+    
+    const popover = new bootstrap.Popover(trigger, {
+        html: true,
+        content: template,
+        placement: &#039;bottom&#039;,
+        customClass: &#039;custom-popover-container&#039;,
+        trigger: &#039;manual&#039;,
+        sanitize: false
+    });
+
+    let hideTimeout;
+
+    const showPopover = () =&gt; {
+        clearTimeout(hideTimeout);
+        popover.show();
+        
+        const popoverElement = document.querySelector(&#039;.custom-popover-container&#039;);
+        if (popoverElement) {
+            popoverElement.addEventListener(&#039;mouseenter&#039;, () =&gt; clearTimeout(hideTimeout));
+            popoverElement.addEventListener(&#039;mouseleave&#039;, hidePopover);
+        }
+    };
+
+    const hidePopover = () =&gt; {
+        hideTimeout = setTimeout(() =&gt; {
+            popover.hide();
+        }, 300);
+    };
+
+    trigger.addEventListener(&#039;mouseenter&#039;, showPopover);
+    trigger.addEventListener(&#039;mouseleave&#039;, hidePopover);
+    trigger.addEventListener(&#039;focus&#039;, showPopover);
+    trigger.addEventListener(&#039;blur&#039;, hidePopover);
+});</code></pre>
                                 </div>
                             </div>
                         </section>
+
                     </div>
 
                     <!-- ============================================== -->
@@ -11783,6 +12370,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#list-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Activity Timeline List</a>
+                                <a href="#list-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Email List View</a>
                             </div>
                         </div>
 
@@ -12032,6 +12620,641 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                 </div>
                                 <div class="p-0">
                                     <pre class="text-light m-0 p-3 code-pre"><code id="code-js-list1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+                    
+                        <!-- ---------------------------------------------- -->
+                        <!-- 13.2 MẪU 2: EMAIL LIST VIEW -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="list-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Email List View (Danh sách Email / Hộp thư CRM)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 2 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-primary"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-primary-subtle text-primary border border-primary-subtle">
+                                        <i class="bi bi-check2-square me-1"></i> Tương tác Chọn tất cả &amp; Chọn từng mục
+                                    </span>
+                                </div>
+                                <div class="p-3 preview-container" id="preview-list2" style="background-color: #f8fafc; min-height: 480px;">
+                                    <div class="inbox-container bg-white border rounded">
+        
+        <div class="inbox-header d-flex align-items-center p-3 border-bottom">
+            <input class="form-check-input custom-checkbox select-all-cb me-3" type="checkbox" id="selectAll" title="Select all">
+            <button class="btn btn-outline-custom btn-sm fw-medium">Refresh</button>
+        </div>
+
+        <div class="inbox-list" id="inboxList">
+            
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Jane" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Jane Sampleton (sample) &lt;janesampleton...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 16 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">(Sample) Re: Final discussion about the deal (2)</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hello Jane, That's good to know. Would the Hilton hotel work for you? Looking forw
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=11" alt="Spector" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Spector Calista (sample) &lt;spectorcalista...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 17 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">Want to see how CRM Gold can help you meet y... (5)</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hi Spector, Here is the contract with the details. Regards, Hao
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Jane" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Jane Sampleton (sample) &lt;janesampleton...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 19 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">(Sample) Welcome!</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hello Jane, We're thrilled to have you on board and we look forward to delivering an
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Jay" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Jay Patel (sample) &lt;jaypatelsample@gm...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 22 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">Want to see how CRM Gold can help you meet y...</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hello Jay, Thanks for your interest in the CRM Gold plan. Let me know if you would l
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="inbox-footer p-3 border-top text-muted" style="font-size: 14px;">
+            Showing 1 - 4 of 4
+        </div>
+        
+    </div>
+                                </div>
+                            </div>
+
+                            <!-- Thư viện cần nhúng -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-white-50 fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-in-down fs-5"></i> THƯ VIỆN CẦN NHÚNG
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('dep-code-list2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Link
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="dep-code-list2">&lt;!-- Bootstrap 5 CSS &amp; Bootstrap Icons --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- File CSS List 2 --&gt;
+&lt;link rel="stylesheet" href="list2.css"&gt;
+
+&lt;!-- Bootstrap 5 JS Bundle &amp; File Script List 2 --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="list2.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Source Code HTML, CSS, JS -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-info fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-list2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-list2">&lt;div class=&quot;inbox-container bg-white border rounded&quot;&gt;
+        
+        &lt;div class=&quot;inbox-header d-flex align-items-center p-3 border-bottom&quot;&gt;
+            &lt;input class=&quot;form-check-input custom-checkbox select-all-cb me-3&quot; type=&quot;checkbox&quot; id=&quot;selectAll&quot; title=&quot;Select all&quot;&gt;
+            &lt;button class=&quot;btn btn-outline-custom btn-sm fw-medium&quot;&gt;Refresh&lt;/button&gt;
+        &lt;/div&gt;
+
+        &lt;div class=&quot;inbox-list&quot; id=&quot;inboxList&quot;&gt;
+            
+            &lt;div class=&quot;list-item d-flex align-items-start p-3&quot;&gt;
+                &lt;input class=&quot;form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0&quot; type=&quot;checkbox&quot;&gt;
+                &lt;img src=&quot;https://i.pravatar.cc/150?img=5&quot; alt=&quot;Jane&quot; class=&quot;rounded-circle me-3 mt-1 flex-shrink-0&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;
+                
+                &lt;div class=&quot;d-flex flex-grow-1 w-100 min-w-0&quot;&gt;
+                    &lt;div class=&quot;sender-info flex-shrink-0 pe-3&quot; style=&quot;width: 320px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;sender-name text-truncate d-block&quot;&gt;Jane Sampleton (sample) &amp;lt;janesampleton...&lt;/a&gt;
+                        &lt;div class=&quot;d-flex align-items-center text-muted mt-1 time-text&quot;&gt;
+                            &lt;i class=&quot;bi bi-arrow-90deg-up me-1 custom-reply-icon&quot;&gt;&lt;/i&gt; 16 days ago
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;message-preview flex-grow-1 min-w-0 pe-3&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center mb-1&quot;&gt;
+                            &lt;span class=&quot;message-subject text-truncate text-dark me-2&quot;&gt;(Sample) Re: Final discussion about the deal (2)&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge&quot;&gt;Opened&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge ms-1&quot;&gt;Clicked&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;message-snippet text-truncate text-secondary&quot;&gt;
+                            Hello Jane, That&#039;s good to know. Would the Hilton hotel work for you? Looking forw
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;item-actions flex-shrink-0 ms-auto pt-1 dropdown&quot;&gt;
+                        &lt;i class=&quot;bi bi-three-dots-vertical action-dots&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;/i&gt;
+                        &lt;ul class=&quot;dropdown-menu custom-action-menu shadow-sm&quot;&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-envelope-plus&quot;&gt;&lt;/i&gt; Mark as unread&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-link-45deg&quot;&gt;&lt;/i&gt; Link to deal&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-reply&quot;&gt;&lt;/i&gt; Reply&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-forward&quot;&gt;&lt;/i&gt; Forward&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2 text-danger&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-trash&quot;&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;list-item d-flex align-items-start p-3&quot;&gt;
+                &lt;input class=&quot;form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0&quot; type=&quot;checkbox&quot;&gt;
+                &lt;img src=&quot;https://i.pravatar.cc/150?img=11&quot; alt=&quot;Spector&quot; class=&quot;rounded-circle me-3 mt-1 flex-shrink-0&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;
+                
+                &lt;div class=&quot;d-flex flex-grow-1 w-100 min-w-0&quot;&gt;
+                    &lt;div class=&quot;sender-info flex-shrink-0 pe-3&quot; style=&quot;width: 320px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;sender-name text-truncate d-block&quot;&gt;Spector Calista (sample) &amp;lt;spectorcalista...&lt;/a&gt;
+                        &lt;div class=&quot;d-flex align-items-center text-muted mt-1 time-text&quot;&gt;
+                            &lt;i class=&quot;bi bi-arrow-90deg-up me-1 custom-reply-icon&quot;&gt;&lt;/i&gt; 17 days ago
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;message-preview flex-grow-1 min-w-0 pe-3&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center mb-1&quot;&gt;
+                            &lt;span class=&quot;message-subject text-truncate text-dark me-2&quot;&gt;Want to see how CRM Gold can help you meet y... (5)&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge&quot;&gt;Opened&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge ms-1&quot;&gt;Clicked&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;message-snippet text-truncate text-secondary&quot;&gt;
+                            Hi Spector, Here is the contract with the details. Regards, Hao
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;item-actions flex-shrink-0 ms-auto pt-1 dropdown&quot;&gt;
+                        &lt;i class=&quot;bi bi-three-dots-vertical action-dots&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;/i&gt;
+                        &lt;ul class=&quot;dropdown-menu custom-action-menu shadow-sm&quot;&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-envelope-plus&quot;&gt;&lt;/i&gt; Mark as unread&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-link-45deg&quot;&gt;&lt;/i&gt; Link to deal&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-reply&quot;&gt;&lt;/i&gt; Reply&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-forward&quot;&gt;&lt;/i&gt; Forward&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2 text-danger&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-trash&quot;&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;list-item d-flex align-items-start p-3&quot;&gt;
+                &lt;input class=&quot;form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0&quot; type=&quot;checkbox&quot;&gt;
+                &lt;img src=&quot;https://i.pravatar.cc/150?img=5&quot; alt=&quot;Jane&quot; class=&quot;rounded-circle me-3 mt-1 flex-shrink-0&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;
+                
+                &lt;div class=&quot;d-flex flex-grow-1 w-100 min-w-0&quot;&gt;
+                    &lt;div class=&quot;sender-info flex-shrink-0 pe-3&quot; style=&quot;width: 320px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;sender-name text-truncate d-block&quot;&gt;Jane Sampleton (sample) &amp;lt;janesampleton...&lt;/a&gt;
+                        &lt;div class=&quot;d-flex align-items-center text-muted mt-1 time-text&quot;&gt;
+                            &lt;i class=&quot;bi bi-arrow-90deg-up me-1 custom-reply-icon&quot;&gt;&lt;/i&gt; 19 days ago
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;message-preview flex-grow-1 min-w-0 pe-3&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center mb-1&quot;&gt;
+                            &lt;span class=&quot;message-subject text-truncate text-dark me-2&quot;&gt;(Sample) Welcome!&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge&quot;&gt;Opened&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge ms-1&quot;&gt;Clicked&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;message-snippet text-truncate text-secondary&quot;&gt;
+                            Hello Jane, We&#039;re thrilled to have you on board and we look forward to delivering an
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;item-actions flex-shrink-0 ms-auto pt-1 dropdown&quot;&gt;
+                        &lt;i class=&quot;bi bi-three-dots-vertical action-dots&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;/i&gt;
+                        &lt;ul class=&quot;dropdown-menu custom-action-menu shadow-sm&quot;&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-envelope-plus&quot;&gt;&lt;/i&gt; Mark as unread&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-link-45deg&quot;&gt;&lt;/i&gt; Link to deal&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-reply&quot;&gt;&lt;/i&gt; Reply&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-forward&quot;&gt;&lt;/i&gt; Forward&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2 text-danger&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-trash&quot;&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;list-item d-flex align-items-start p-3&quot;&gt;
+                &lt;input class=&quot;form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0&quot; type=&quot;checkbox&quot;&gt;
+                &lt;img src=&quot;https://i.pravatar.cc/150?img=12&quot; alt=&quot;Jay&quot; class=&quot;rounded-circle me-3 mt-1 flex-shrink-0&quot; width=&quot;40&quot; height=&quot;40&quot;&gt;
+                
+                &lt;div class=&quot;d-flex flex-grow-1 w-100 min-w-0&quot;&gt;
+                    &lt;div class=&quot;sender-info flex-shrink-0 pe-3&quot; style=&quot;width: 320px;&quot;&gt;
+                        &lt;a href=&quot;#&quot; class=&quot;sender-name text-truncate d-block&quot;&gt;Jay Patel (sample) &amp;lt;jaypatelsample@gm...&lt;/a&gt;
+                        &lt;div class=&quot;d-flex align-items-center text-muted mt-1 time-text&quot;&gt;
+                            &lt;i class=&quot;bi bi-arrow-90deg-up me-1 custom-reply-icon&quot;&gt;&lt;/i&gt; 22 days ago
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;message-preview flex-grow-1 min-w-0 pe-3&quot;&gt;
+                        &lt;div class=&quot;d-flex align-items-center mb-1&quot;&gt;
+                            &lt;span class=&quot;message-subject text-truncate text-dark me-2&quot;&gt;Want to see how CRM Gold can help you meet y...&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge&quot;&gt;Opened&lt;/span&gt;
+                            &lt;span class=&quot;badge status-badge ms-1&quot;&gt;Clicked&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;message-snippet text-truncate text-secondary&quot;&gt;
+                            Hello Jay, Thanks for your interest in the CRM Gold plan. Let me know if you would l
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    
+                    &lt;div class=&quot;item-actions flex-shrink-0 ms-auto pt-1 dropdown&quot;&gt;
+                        &lt;i class=&quot;bi bi-three-dots-vertical action-dots&quot; data-bs-toggle=&quot;dropdown&quot; aria-expanded=&quot;false&quot;&gt;&lt;/i&gt;
+                        &lt;ul class=&quot;dropdown-menu custom-action-menu shadow-sm&quot;&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-envelope-plus&quot;&gt;&lt;/i&gt; Mark as unread&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-link-45deg&quot;&gt;&lt;/i&gt; Link to deal&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-reply&quot;&gt;&lt;/i&gt; Reply&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-forward&quot;&gt;&lt;/i&gt; Forward&lt;/a&gt;&lt;/li&gt;
+                            &lt;li&gt;&lt;a class=&quot;dropdown-item d-flex align-items-center gap-2 text-danger&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-trash&quot;&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+
+        &lt;div class=&quot;inbox-footer p-3 border-top text-muted&quot; style=&quot;font-size: 14px;&quot;&gt;
+            Showing 1 - 4 of 4
+        &lt;/div&gt;
+        
+    &lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-primary-subtle fw-bold small d-flex align-items-center gap-2"
+                                        style="color: #60a5fa !important;">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-list2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-list2">body {
+    background-color: #f8f9fa;
+    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+}
+
+.inbox-container {
+    border-color: #e5e7eb !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+}
+
+.inbox-header {
+    background-color: #ffffff;
+    border-bottom-color: #e5e7eb !important;
+}
+
+.custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: none !important;
+    transition: all 0.2s;
+}
+
+.custom-checkbox:checked {
+    background-color: #3b82f6;
+    border-color: #3b82f6;
+}
+
+.select-all-cb:checked {
+    box-shadow: 0 0 0 4px #dbeafe !important;
+    border-color: #2563eb;
+    background-color: #2563eb;
+}
+
+.btn-outline-custom {
+    color: #33475b;
+    border: 1px solid #cbd5e1;
+    background-color: #ffffff;
+    font-size: 13px;
+    padding: 6px 16px;
+    border-radius: 4px;
+}
+
+.btn-outline-custom:hover {
+    background-color: #f8fafc;
+    color: #1e293b;
+    border-color: #94a3b8;
+}
+
+.list-item {
+    border-bottom: 1px solid #f1f5f9;
+    transition: background-color 0.15s ease;
+}
+
+.list-item:nth-child(odd) {
+    background-color: #f8fafc;
+}
+
+.list-item:nth-child(even) {
+    background-color: #ffffff;
+}
+
+.list-item:hover {
+    background-color: #f1f5f9;
+}
+
+.list-item.selected-row {
+    background-color: #eff6ff !important;
+}
+
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.sender-name {
+    color: #2563eb;
+    font-size: 14.5px;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.sender-name:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+.time-text {
+    font-size: 13px;
+}
+
+.custom-reply-icon {
+    font-size: 11px;
+    transform: rotate(90deg) scaleX(-1);
+    display: inline-block;
+    color: #94a3b8;
+}
+
+.message-subject {
+    font-size: 14.5px;
+}
+
+.message-snippet {
+    font-size: 14.5px;
+}
+
+.status-badge {
+    background-color: #e2e8f0;
+    color: #33475b;
+    font-weight: 500;
+    font-size: 11px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 1px solid #cbd5e1;
+}
+
+.action-dots {
+    color: #64748b;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.action-dots:hover, .action-dots.show {
+    background-color: #e2e8f0;
+    color: #0f172a;
+}
+
+.custom-action-menu {
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 8px 0;
+    min-width: 180px;
+    margin-top: 4px !important;
+}
+
+.custom-action-menu .dropdown-item {
+    font-size: 14px;
+    color: #374151;
+    padding: 8px 16px;
+    transition: background-color 0.15s;
+}
+
+.custom-action-menu .dropdown-item i {
+    font-size: 16px;
+    color: #6b7280;
+    width: 20px;
+    text-align: center;
+}
+
+.custom-action-menu .dropdown-item.text-danger i {
+    color: #dc2626;
+}
+
+.custom-action-menu .dropdown-item:hover {
+    background-color: #f3f4f6;
+    color: #111827;
+}
+
+.custom-action-menu .dropdown-item:hover i:not(.text-danger i) {
+    color: #374151;
+}
+
+.inbox-footer {
+    background-color: #ffffff;
+    border-top-color: #e5e7eb !important;
+}
+
+.min-w-0 {
+    min-width: 0;
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-list2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-list2">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const selectAllCb = document.getElementById(&#039;selectAll&#039;);
+    const itemCbs = document.querySelectorAll(&#039;.item-cb&#039;);
+
+    const updateRowStyle = (checkbox) =&gt; {
+        const row = checkbox.closest(&#039;.list-item&#039;);
+        if (checkbox.checked) {
+            row.classList.add(&#039;selected-row&#039;);
+        } else {
+            row.classList.remove(&#039;selected-row&#039;);
+        }
+    };
+
+    if (selectAllCb) {
+        selectAllCb.addEventListener(&#039;change&#039;, function() {
+            const isChecked = this.checked;
+            
+            itemCbs.forEach(cb =&gt; {
+                cb.checked = isChecked;
+                updateRowStyle(cb);
+            });
+        });
+    }
+
+    itemCbs.forEach(cb =&gt; {
+        cb.addEventListener(&#039;change&#039;, () =&gt; {
+            updateRowStyle(cb);
+            
+            const total = itemCbs.length;
+            const checkedCount = document.querySelectorAll(&#039;.item-cb:checked&#039;).length;
+            
+            if (selectAllCb) {
+                if (checkedCount === total &amp;&amp; total &gt; 0) {
+                    selectAllCb.checked = true;
+                    selectAllCb.indeterminate = false;
+                } 
+                else if (checkedCount === 0) {
+                    selectAllCb.checked = false;
+                    selectAllCb.indeterminate = false;
+                } 
+                else {
+                    selectAllCb.checked = false;
+                    selectAllCb.indeterminate = true;
+                }
+            }
+        });
+    });
+});</code></pre>
                                 </div>
                             </div>
                         </section>
@@ -13363,7 +14586,8 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                 const cleanComponents = [
                     'accordion4.html', 'breadcrumb.html', 'card4.html',
                     'card5.html', 'card6.html', 'modal6.html',
-                    'offcanvas4.html', 'table2.html'
+                    'offcanvas4.html', 'table2.html',
+                    'carousel4.html', 'list2.html', 'popover5.html'
                 ];
                 cleanComponents.forEach(file => {
                     const codeHtmlId = 'code-html-' + file.replace('.html', '');
@@ -13391,6 +14615,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
     <script src="carousel1.js"></script>
     <script src="carousel2.js"></script>
     <script src="carousel3.js"></script>
+    <script src="carousel4.js"></script>
 
     <!-- Import các file JS của từng Dropdown component (giữ nguyên không sửa file) -->
     <script src="dropdown1.js"></script>
@@ -13411,6 +14636,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
     <script src="grid1.js"></script>
     <!-- Import các file JS của từng List component (giữ nguyên không sửa file) -->
     <script src="list1.js"></script>
+    <script src="list2.js"></script>
     <!-- Import các file JS của từng Accordion component -->
     <script src="accordion3.js"></script>
     <script src="accordion4.js"></script>

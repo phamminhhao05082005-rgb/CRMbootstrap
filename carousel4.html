@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Action Carousel</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="carousel5.css">
+</head>
+<body>
+
+<div class="container py-5">
+    
+    <div class="carousel-wrapper">
+        <button class="nav-btn nav-btn-prev" id="btnPrev">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+        
+        <div class="carousel-track" id="carouselTrack">
+            <div class="action-card">
+                <div class="card-icon-box bg-yellow text-yellow">
+                    <i class="bi bi-person-down"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Import contacts</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-blue text-blue">
+                    <i class="bi bi-globe"></i>
+                </div>
+                <div class="card-text-box d-flex justify-content-between">
+                    <span>Bring in website leads</span>
+                    <i class="bi bi-check-circle-fill text-success" style="font-size: 13px;"></i>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-purple text-purple">
+                    <i class="bi bi-person-plus"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Invite your team</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-orange text-orange">
+                    <i class="bi bi-diagram-3"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Route leads to your team</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-cyan text-cyan">
+                    <i class="bi bi-bullseye"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Create sales sequence</span>
+                </div>
+            </div>
+
+            <div class="action-card">
+                <div class="card-icon-box bg-gray text-gray">
+                    <i class="bi bi-gear"></i>
+                </div>
+                <div class="card-text-box">
+                    <span>Configure pipelines</span>
+                </div>
+            </div>
+        </div>
+
+        <button class="nav-btn nav-btn-next" id="btnNext">
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="carousel5.js"></script>
+</body>
+</html>

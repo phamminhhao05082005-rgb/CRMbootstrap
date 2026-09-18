@@ -1,15 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const profileLabel = document.getElementById('profileLabel');
-    const popoverTemplateEl = document.getElementById('popoverTemplate');
-    if (!profileLabel || !popoverTemplateEl) return;
+    const trigger = document.getElementById('contactPopoverTrigger');
+    const template = document.getElementById('contactPopoverTemplate').innerHTML;
     
-    const popoverTemplate = popoverTemplateEl.innerHTML;
-    
-    const popover = new bootstrap.Popover(profileLabel, {
+    const popover = new bootstrap.Popover(trigger, {
         html: true,
-        content: popoverTemplate,
-        placement: 'right',
-        customClass: 'custom-profile-popover',
+        content: template,
+        placement: 'bottom',
+        customClass: 'custom-popover-container',
         trigger: 'manual',
         sanitize: false
     });
@@ -20,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
         clearTimeout(hideTimeout);
         popover.show();
         
-        const popoverElement = document.querySelector('.custom-profile-popover');
+        const popoverElement = document.querySelector('.custom-popover-container');
         if (popoverElement) {
             popoverElement.addEventListener('mouseenter', () => clearTimeout(hideTimeout));
             popoverElement.addEventListener('mouseleave', hidePopover);
@@ -33,8 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 300);
     };
 
-    profileLabel.addEventListener('mouseenter', showPopover);
-    profileLabel.addEventListener('mouseleave', hidePopover);
-    profileLabel.addEventListener('focus', showPopover);
-    profileLabel.addEventListener('blur', hidePopover);
+    trigger.addEventListener('mouseenter', showPopover);
+    trigger.addEventListener('mouseleave', hidePopover);
+    trigger.addEventListener('focus', showPopover);
+    trigger.addEventListener('blur', hidePopover);
 });

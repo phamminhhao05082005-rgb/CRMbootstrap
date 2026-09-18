@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Email List View</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="list2.css">
+</head>
+<body>
+
+<div class="container py-5">
+    
+    <div class="inbox-container bg-white border rounded">
+        
+        <div class="inbox-header d-flex align-items-center p-3 border-bottom">
+            <input class="form-check-input custom-checkbox select-all-cb me-3" type="checkbox" id="selectAll" title="Select all">
+            <button class="btn btn-outline-custom btn-sm fw-medium">Refresh</button>
+        </div>
+
+        <div class="inbox-list" id="inboxList">
+            
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Jane" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Jane Sampleton (sample) &lt;janesampleton...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 16 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">(Sample) Re: Final discussion about the deal (2)</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hello Jane, That's good to know. Would the Hilton hotel work for you? Looking forw
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=11" alt="Spector" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Spector Calista (sample) &lt;spectorcalista...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 17 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">Want to see how CRM Gold can help you meet y... (5)</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hi Spector, Here is the contract with the details. Regards, Hao
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=5" alt="Jane" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Jane Sampleton (sample) &lt;janesampleton...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 19 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">(Sample) Welcome!</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hello Jane, We're thrilled to have you on board and we look forward to delivering an
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="list-item d-flex align-items-start p-3">
+                <input class="form-check-input custom-checkbox item-cb me-3 mt-2 flex-shrink-0" type="checkbox">
+                <img src="https://i.pravatar.cc/150?img=12" alt="Jay" class="rounded-circle me-3 mt-1 flex-shrink-0" width="40" height="40">
+                
+                <div class="d-flex flex-grow-1 w-100 min-w-0">
+                    <div class="sender-info flex-shrink-0 pe-3" style="width: 320px;">
+                        <a href="#" class="sender-name text-truncate d-block">Jay Patel (sample) &lt;jaypatelsample@gm...</a>
+                        <div class="d-flex align-items-center text-muted mt-1 time-text">
+                            <i class="bi bi-arrow-90deg-up me-1 custom-reply-icon"></i> 22 days ago
+                        </div>
+                    </div>
+                    
+                    <div class="message-preview flex-grow-1 min-w-0 pe-3">
+                        <div class="d-flex align-items-center mb-1">
+                            <span class="message-subject text-truncate text-dark me-2">Want to see how CRM Gold can help you meet y...</span>
+                            <span class="badge status-badge">Opened</span>
+                            <span class="badge status-badge ms-1">Clicked</span>
+                        </div>
+                        <div class="message-snippet text-truncate text-secondary">
+                            Hello Jay, Thanks for your interest in the CRM Gold plan. Let me know if you would l
+                        </div>
+                    </div>
+                    
+                    <div class="item-actions flex-shrink-0 ms-auto pt-1 dropdown">
+                        <i class="bi bi-three-dots-vertical action-dots" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                        <ul class="dropdown-menu custom-action-menu shadow-sm">
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-envelope-plus"></i> Mark as unread</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-link-45deg"></i> Link to deal</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-reply"></i> Reply</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2" href="#"><i class="bi bi-forward"></i> Forward</a></li>
+                            <li><a class="dropdown-item d-flex align-items-center gap-2 text-danger" href="#"><i class="bi bi-trash"></i> Delete</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="inbox-footer p-3 border-top text-muted" style="font-size: 14px;">
+            Showing 1 - 4 of 4
+        </div>
+        
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="list2.js"></script>
+</body>
+</html>

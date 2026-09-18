@@ -1,103 +1,156 @@
 body {
     background-color: #f3f4f6;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
 }
 
-.custom-profile-popover {
-    max-width: 360px;
-    width: 360px;
+.contact-trigger {
+    color: #3b5bdb;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 14.5px;
+}
+
+.contact-trigger:hover {
+    text-decoration: underline;
+}
+
+.custom-popover-container {
+    max-width: 480px;
+    width: 480px;
     border: none;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
     padding: 0;
     margin: 0;
-    z-index: 1060;
-}
-
-.custom-profile-popover .popover-body {
-    padding: 0;
-}
-
-.profile-card {
-    background: #fff;
-    border-radius: 12px;
     overflow: hidden;
 }
 
-.profile-cover {
-    height: 110px;
-    background: linear-gradient(135deg, #a6c0fe 0%, #3b82f6 100%);
-    position: relative;
+.custom-popover-container .popover-body {
+    padding: 0;
 }
 
-.profile-avatar-wrapper {
-    margin-top: -40px;
-    margin-bottom: 8px;
-    position: relative;
-    z-index: 2;
+.custom-contact-popover {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
 }
 
-.profile-avatar {
-    width: 80px;
-    height: 80px;
+.contact-name-title {
+    color: #2563eb;
+    font-size: 17px;
+}
+
+.social-icons i {
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.social-blue {
+    color: #4267B2;
+}
+
+.x-icon-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+    background-color: #f1f5f9;
     border-radius: 50%;
-    border: 3px solid #fff;
-    object-fit: cover;
+    color: #475569;
+    font-size: 9px;
+    cursor: pointer;
 }
 
-.custom-profile-popover .action-btn {
-    background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
-    border-radius: 8px;
-    font-size: 11px;
-    color: #4b5563;
-    transition: background-color 0.2s, border-color 0.2s;
-    box-shadow: none;
+.action-btn-group {
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
 }
 
-.custom-profile-popover .action-btn:hover {
-    background-color: #e9ecef;
-    border-color: #e9ecef;
-    color: #374151;
+.action-btn-group .btn {
+    border-right: 1px solid #cbd5e1;
+    padding: 5px 12px;
+    color: #475569;
+    background-color: #ffffff;
+    border-radius: 0;
 }
 
-.custom-profile-popover .action-btn i {
-    font-size: 18px;
-    color: #374151;
+.action-btn-group .btn:first-child {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
 }
 
-.custom-profile-popover .contact-link {
-    font-size: 14px;
+.action-btn-group .btn:last-child {
+    border-right: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.action-btn-group .btn:hover {
+    background-color: #f8fafc;
+    color: #0f172a;
+}
+
+.contact-link {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    text-decoration: underline;
+    color: #1d4ed8;
+}
+
+.custom-hr {
+    border-color: #e2e8f0;
+    margin: 16px 0;
+    opacity: 1;
+}
+
+.stage-badge {
+    background-color: #f1f5f9;
+    color: #1e293b;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.score-box {
+    background-color: #fbf5ff;
+    color: #1e293b;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.feedback-btn {
+    color: #2563eb;
+    text-decoration: none;
     transition: color 0.2s;
 }
 
-.custom-profile-popover .contact-link:hover {
-    color: #2563eb !important;
+.feedback-btn:hover {
+    color: #1d4ed8;
+    text-decoration: underline;
 }
 
-.custom-blue-btn {
-    background-color: #2563eb;
-    border-color: #2563eb;
-    color: #ffffff;
-    border-radius: 8px;
-    font-size: 14px;
-    transition: background-color 0.2s;
+.popover-footer {
+    background-color: #fbf5ff;
+    padding: 14px 24px;
+    border-top: 1px solid #f3e8ff;
 }
 
-.custom-blue-btn:hover, 
-.custom-blue-btn:active, 
-.custom-blue-btn:focus {
-    background-color: #1d4ed8 !important;
-    border-color: #1d4ed8 !important;
-    color: #ffffff !important;
+.popover-footer a {
+    color: #4b527e;
+    font-size: 14.5px;
+    transition: color 0.2s;
 }
 
-.profile-trigger {
-    cursor: pointer;
-    text-decoration: underline transparent;
-    transition: text-decoration 0.2s;
-}
-
-.profile-trigger:hover {
+.popover-footer a:hover {
+    color: #373c60;
     text-decoration: underline;
 }
