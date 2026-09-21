@@ -1,0 +1,10 @@
+.crm-spinner-pulse {
+    width: 36px; height: 36px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    animation: crm-pulse-anim 1.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes crm-pulse-anim {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0; }
+}

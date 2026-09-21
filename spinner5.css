@@ -1,0 +1,7 @@
+.crm-spinner-dashed {
+    width: 36px; height: 36px;
+    border: 3px dashed #6366f1;
+    border-radius: 50%;
+    animation: crm-spin-dashed 1.5s linear infinite;
+}
+@keyframes crm-spin-dashed { to { transform: rotate(360deg); } }

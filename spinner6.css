@@ -1,0 +1,13 @@
+.crm-spinner-bars { display: flex; gap: 4px; align-items: center; height: 36px; }
+.crm-spinner-bars div {
+    width: 4px; height: 100%;
+    background-color: #10b981;
+    animation: crm-scale-bars 1s infinite ease-in-out;
+}
+.crm-spinner-bars div:nth-child(2) { animation-delay: -0.9s; }
+.crm-spinner-bars div:nth-child(3) { animation-delay: -0.8s; }
+.crm-spinner-bars div:nth-child(4) { animation-delay: -0.7s; }
+@keyframes crm-scale-bars {
+    0%, 40%, 100% { transform: scaleY(0.4); }
+    20% { transform: scaleY(1); }
+}

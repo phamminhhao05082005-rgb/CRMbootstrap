@@ -28,6 +28,22 @@
     <link rel="stylesheet" href="breadcrumb.css">
     <link rel="stylesheet" href="topbar.css">
     <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="spinner1.css">
+    <link rel="stylesheet" href="spinner2.css">
+    <link rel="stylesheet" href="spinner3.css">
+    <link rel="stylesheet" href="spinner4.css">
+    <link rel="stylesheet" href="spinner5.css">
+    <link rel="stylesheet" href="spinner6.css">
+    <link rel="stylesheet" href="spinner7.css">
+    <link rel="stylesheet" href="spinner8.css">
+    <link rel="stylesheet" href="progress1.css">
+    <link rel="stylesheet" href="progress2.css">
+    <link rel="stylesheet" href="progress3.css">
+    <link rel="stylesheet" href="progress4.css">
+    <link rel="stylesheet" href="progress5.css">
+    <link rel="stylesheet" href="progress6.css">
+    <link rel="stylesheet" href="progress7.css">
+    <link rel="stylesheet" href="progress8.css">
     <link rel="stylesheet" href="toasts1.css">
     <link rel="stylesheet" href="toasts2.css">
     <link rel="stylesheet" href="toasts3.css">
@@ -274,6 +290,24 @@
                         <span class="d-flex align-items-center gap-2">
                             <i class="bi bi-layout-sidebar" style="color: #8b5cf6;"></i>
                             <span>Sidebar</span>
+                        </span>
+                    </button>
+                    <!-- Tab Spinners -->
+                    <button class="nav-link d-flex align-items-center justify-content-between mb-1"
+                        id="tab-spinners-btn" data-bs-toggle="pill" data-bs-target="#tab-spinners" type="button"
+                        role="tab" aria-controls="tab-spinners" aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-arrow-repeat" style="color: #0ea5e9;"></i>
+                            <span>Spinners</span>
+                        </span>
+                    </button>
+                    <!-- Tab Progress -->
+                    <button class="nav-link d-flex align-items-center justify-content-between mb-1"
+                        id="tab-progress-btn" data-bs-toggle="pill" data-bs-target="#tab-progress" type="button"
+                        role="tab" aria-controls="tab-progress" aria-selected="false">
+                        <span class="d-flex align-items-center gap-2">
+                            <i class="bi bi-bar-chart-steps" style="color: #10b981;"></i>
+                            <span>Progress</span>
                         </span>
                     </button>
                 </div>
@@ -17335,6 +17369,1661 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                             </div>
                         </section>
                     </div>
+
+
+                    <!-- ============================================== -->
+                    <!-- TAB 18: SPINNERS COMPONENTS (GỒM 8 MẪU) -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade" id="tab-spinners" role="tabpanel" aria-labelledby="tab-spinners-btn">
+                        <!-- Tiêu đề Spinners & Nút điều hướng nhanh -->
+                        <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
+                            <div>
+                                <h1 class="h3 fw-bold mb-1">18. Spinners Components</h1>
+                                <p class="text-muted mb-0 small">8 mẫu hiệu ứng tải trang (Loading Spinners) thuần CSS siêu nhẹ, hiện đại cho hệ thống CRM và Web Application</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-1.5">
+                                <a href="#spin-mau-1" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 1: Ring</a>
+                                <a href="#spin-mau-2" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 2: Pulse</a>
+                                <a href="#spin-mau-3" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 3: Dots</a>
+                                <a href="#spin-mau-4" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 4: Dual</a>
+                                <a href="#spin-mau-5" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 5: Dashed</a>
+                                <a href="#spin-mau-6" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 6: Bars</a>
+                                <a href="#spin-mau-7" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 7: Double Bounce</a>
+                                <a href="#spin-mau-8" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 8: Morphing</a>
+                            </div>
+                        </div>
+
+                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                        <div class="dependency-card mb-5">
+                            <div class="dependency-header">
+                                <div class="dependency-title">
+                                    <i class="bi bi-box-seam text-primary fs-5"></i>
+                                    <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG (DÙNG CHUNG CHO SPINNERS)</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    onclick="copyCode('dep-code-spinners', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                </button>
+                            </div>
+                            <div class="dependency-body">
+                                <div class="dep-badges-wrap">
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File CSS của Mẫu Spinner đã chọn</span>
+                                    <span class="dep-badge-pill dep-badge-none"><i class="bi bi-x-circle"></i> 100% Thuần CSS Keyframe (Không cần Javascript)</span>
+                                </div>
+
+                                <div class="dep-code-box">
+                                    <pre><code id="dep-code-spinners">&lt;!-- Nhúng file CSS tương ứng với mẫu Spinner bạn chọn vào thẻ &lt;head&gt; --&gt;
+&lt;link rel="stylesheet" href="spinner1.css"&gt; &lt;!-- Thay thế bằng spinner2.css, spinner3.css... tuỳ nhu cầu --&gt;</code></pre>
+                                </div>
+
+                                <div class="dep-note-box alert-info-soft">
+                                    <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
+                                    <div>
+                                        <strong>Lưu ý cho Dev:</strong> Toàn bộ 8 mẫu Spinner đều hoạt động <strong>thuần CSS Animation</strong>, dung lượng siêu nhẹ, không cần JavaScript. Bạn có thể copy trực tiếp HTML ở cột trái và CSS ở cột phải của từng mẫu để sử dụng ngay.
+                                    </div>
+                                </div>
+
+                                <details class="dep-template-details mt-2">
+                                    <summary class="d-flex align-items-center gap-1">
+                                        <i class="bi bi-file-earmark-code text-secondary"></i>
+                                        <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                        <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                    </summary>
+                                    <div class="dep-template-box mt-2">
+                                        <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                            <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_spinner.html</span>
+                                            <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-spinner', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy Template
+                                            </button>
+                                        </div>
+                                        <pre><code id="template-spinner">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Spinner Component&lt;/title&gt;
+    &lt;link rel="stylesheet" href="spinner1.css"&gt;
+&lt;/head&gt;
+&lt;body style="display: flex; align-items: center; justify-content: center; height: 100vh; background: #f8fafc;"&gt;
+    &lt;!-- Dán mẫu Spinner HTML bạn chọn vào đây --&gt;
+    &lt;div class="crm-spinner-ring"&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.1 MẪU 1: SINGLE RING SPINNER (VÒNG XOAY ĐƠN) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-1" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
+                                <h2 class="h6 fw-bold mb-0">Single Ring Spinner (Vòng xoay đơn)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Ring</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner1">
+                                            <div class="crm-spinner-ring"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner1', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner1">&lt;div class=&quot;crm-spinner-ring&quot;&gt;&lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner1', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner1">.crm-spinner-ring {
+    width: 36px; height: 36px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #2563eb;
+    border-radius: 50%;
+    animation: crm-spin-ring 0.8s linear infinite;
+}
+@keyframes crm-spin-ring { to { transform: rotate(360deg); } }</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.2 MẪU 2: PULSING CIRCLE SPINNER (VÒNG TRÒN ĐẬP NẢY) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-2" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h6 fw-bold mb-0">Pulsing Circle Spinner (Vòng tròn đập nảy)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Pulse</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner2">
+                                            <div class="crm-spinner-pulse"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner2', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner2">&lt;div class=&quot;crm-spinner-pulse&quot;&gt;&lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner2', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner2">.crm-spinner-pulse {
+    width: 36px; height: 36px;
+    background-color: #3b82f6;
+    border-radius: 50%;
+    animation: crm-pulse-anim 1.2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+@keyframes crm-pulse-anim {
+    0% { transform: scale(0.5); opacity: 1; }
+    100% { transform: scale(1.2); opacity: 0; }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.3 MẪU 3: BOUNCING DOTS SPINNER (3 CHẤM NHẢY NHỊP NHÀNG) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-3" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-secondary px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h6 fw-bold mb-0">Bouncing Dots Spinner (3 chấm nhảy nhịp nhàng)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Dots</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner3">
+                                            <div class="crm-spinner-dots">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner3', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner3">&lt;div class=&quot;crm-spinner-dots&quot;&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner3', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner3">.crm-spinner-dots { display: flex; gap: 6px; align-items: center; height: 36px; }
+.crm-spinner-dots div {
+    width: 10px; height: 10px;
+    background-color: #64748b;
+    border-radius: 50%;
+    animation: crm-bounce-dots 0.5s alternate infinite;
+}
+.crm-spinner-dots div:nth-child(2) { animation-delay: 0.15s; background-color: #475569; }
+.crm-spinner-dots div:nth-child(3) { animation-delay: 0.3s; background-color: #1e293b; }
+@keyframes crm-bounce-dots { to { transform: translateY(-8px); } }</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.4 MẪU 4: DUAL RING SPINNER (VÒNG TRÒN VIỀN KÉP ĐỐI XỨNG) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-4" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 4</span>
+                                <h2 class="h6 fw-bold mb-0">Dual Ring Spinner (Vòng tròn viền kép đối xứng)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Dual Ring</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner4">
+                                            <div class="crm-spinner-dual"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner4', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner4">&lt;div class=&quot;crm-spinner-dual&quot;&gt;&lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner4', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner4">.crm-spinner-dual {
+    width: 36px; height: 36px;
+    border: 3px solid #e2e8f0;
+    border-top-color: #0f5c6e;
+    border-bottom-color: #0f5c6e;
+    border-radius: 50%;
+    animation: crm-spin-dual 1s linear infinite;
+}
+@keyframes crm-spin-dual { to { transform: rotate(360deg); } }</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.5 MẪU 5: DASHED RING SPINNER (VÒNG TRÒN VIỀN NÉT ĐỨT) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-5" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-indigo text-white px-2 py-1 rounded-pill" style="background-color: #6366f1;">Mẫu 5</span>
+                                <h2 class="h6 fw-bold mb-0">Dashed Ring Spinner (Vòng tròn viền nét đứt)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Dashed</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner5">
+                                            <div class="crm-spinner-dashed"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner5', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner5">&lt;div class=&quot;crm-spinner-dashed&quot;&gt;&lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner5', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner5">.crm-spinner-dashed {
+    width: 36px; height: 36px;
+    border: 3px dashed #6366f1;
+    border-radius: 50%;
+    animation: crm-spin-dashed 1.5s linear infinite;
+}
+@keyframes crm-spin-dashed { to { transform: rotate(360deg); } }</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.6 MẪU 6: SOUND WAVE BARS SPINNER (4 CỘT SÓNG NHẢY) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-6" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 6</span>
+                                <h2 class="h6 fw-bold mb-0">Sound Wave Bars Spinner (4 cột sóng nhảy)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Wave Bars</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner6">
+                                            <div class="crm-spinner-bars">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner6', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner6">&lt;div class=&quot;crm-spinner-bars&quot;&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+        &lt;div&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner6', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner6">.crm-spinner-bars { display: flex; gap: 4px; align-items: center; height: 36px; }
+.crm-spinner-bars div {
+    width: 4px; height: 100%;
+    background-color: #10b981;
+    animation: crm-scale-bars 1s infinite ease-in-out;
+}
+.crm-spinner-bars div:nth-child(2) { animation-delay: -0.9s; }
+.crm-spinner-bars div:nth-child(3) { animation-delay: -0.8s; }
+.crm-spinner-bars div:nth-child(4) { animation-delay: -0.7s; }
+@keyframes crm-scale-bars {
+    0%, 40%, 100% { transform: scaleY(0.4); }
+    20% { transform: scaleY(1); }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.7 MẪU 7: DOUBLE BOUNCE SPINNER (2 VÒNG TRÒN ĐẬP LỒNG NHAU) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-7" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 7</span>
+                                <h2 class="h6 fw-bold mb-0">Double Bounce Spinner (2 vòng tròn đập lồng nhau)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Double Bounce</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner7">
+                                            <div class="crm-spinner-double-bounce">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner7', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner7">&lt;div class=&quot;crm-spinner-double-bounce&quot;&gt;
+        &lt;div class=&quot;bounce1&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;bounce2&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner7', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner7">.crm-spinner-double-bounce { width: 36px; height: 36px; position: relative; }
+.crm-spinner-double-bounce div {
+    width: 100%; height: 100%;
+    border-radius: 50%; background-color: #f59e0b;
+    opacity: 0.6; position: absolute; top: 0; left: 0;
+    animation: crm-bounce-out 2s infinite ease-in-out;
+}
+.crm-spinner-double-bounce .bounce2 { animation-delay: -1s; }
+@keyframes crm-bounce-out {
+    0%, 100% { transform: scale(0); }
+    50% { transform: scale(1); }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 18.8 MẪU 8: MORPHING SHAPE SPINNER (HÌNH KHỐI VUÔNG TRÒN BIẾN ẢO) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="spin-mau-8" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-purple text-white px-2 py-1 rounded-pill" style="background-color: #8b5cf6;">Mẫu 8</span>
+                                <h2 class="h6 fw-bold mb-0">Morphing Shape Spinner (Hình khối vuông tròn biến ảo)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Spinner, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <span class="badge bg-light text-secondary border" style="font-size: 11px;">CSS Morphing</span>
+                                        </div>
+                                        <div class="p-4 d-flex align-items-center justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-spinner8">
+                                            <div class="crm-spinner-morph"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML VÀ CSS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-spinner8', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-spinner8">&lt;div class=&quot;crm-spinner-morph&quot;&gt;&lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-spinner8', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 125px; overflow-y: auto;"><code id="code-css-spinner8">.crm-spinner-morph {
+    width: 30px; height: 30px;
+    background-color: #8b5cf6;
+    animation: crm-morph-anim 2s infinite ease-in-out;
+}
+@keyframes crm-morph-anim {
+    0% { border-radius: 0%; transform: rotate(0deg); }
+    25% { border-radius: 50%; transform: rotate(90deg); }
+    50% { border-radius: 50%; transform: rotate(180deg); }
+    75% { border-radius: 0%; transform: rotate(270deg); }
+    100% { border-radius: 0%; transform: rotate(360deg); }
+}</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+
+                    <!-- ============================================== -->
+                    <!-- TAB 19: PROGRESS COMPONENTS (GỒM 8 MẪU) -->
+                    <!-- ============================================== -->
+                    <div class="tab-pane fade" id="tab-progress" role="tabpanel" aria-labelledby="tab-progress-btn">
+                        <!-- Tiêu đề Progress & Nút điều hướng nhanh -->
+                        <div class="d-flex flex-wrap justify-content-between align-items-center pb-3 mb-4 border-bottom gap-2">
+                            <div>
+                                <h1 class="h3 fw-bold mb-1">19. Progress Components</h1>
+                                <p class="text-muted mb-0 small">8 mẫu thanh tiến trình (Progress Bars) hiện đại cho CRM: thanh phần trăm, cảnh báo dung lượng, vạch phân đoạn, hình tròn và mốc mục tiêu</p>
+                            </div>
+                            <div class="d-flex flex-wrap gap-1.5">
+                                <a href="#prog-mau-1" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 1: Standard</a>
+                                <a href="#prog-mau-2" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 2: Storage</a>
+                                <a href="#prog-mau-3" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 3: Slim</a>
+                                <a href="#prog-mau-4" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 4: Segmented</a>
+                                <a href="#prog-mau-5" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 5: Striped</a>
+                                <a href="#prog-mau-6" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 6: Circular</a>
+                                <a href="#prog-mau-7" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 7: Milestone</a>
+                                <a href="#prog-mau-8" class="btn btn-sm btn-outline-secondary py-1 px-2.5" style="font-size: 12px;">Mẫu 8: Thick Inside</a>
+                            </div>
+                        </div>
+
+                        <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng -->
+                        <div class="dependency-card mb-5">
+                            <div class="dependency-header">
+                                <div class="dependency-title">
+                                    <i class="bi bi-box-seam text-primary fs-5"></i>
+                                    <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG (DÙNG CHUNG CHO PROGRESS)</span>
+                                </div>
+                                <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                    onclick="copyCode('dep-code-progress', this)">
+                                    <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                </button>
+                            </div>
+                            <div class="dependency-body">
+                                <div class="dep-badges-wrap">
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File CSS của Mẫu Progress tương ứng</span>
+                                    <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File JS (với các mẫu có animation đếm số)</span>
+                                </div>
+
+                                <div class="dep-code-box">
+                                    <pre><code id="dep-code-progress">&lt;!-- 1. Bootstrap 5 CSS (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+
+&lt;!-- 2. File CSS của mẫu Progress bạn chọn (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="progress1.css"&gt; &lt;!-- Hoặc progress2.css, progress3.css... --&gt;
+
+&lt;!-- 3. File JS điều khiển animation thanh tiến trình (Đặt trước &lt;/body&gt;) --&gt;
+&lt;script src="progress1.js"&gt;&lt;/script&gt;</code></pre>
+                                </div>
+
+                                <div class="dep-note-box alert-info-soft">
+                                    <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
+                                    <div>
+                                        <strong>Lưu ý cho Dev:</strong> Các mẫu Progress được thiết kế gọn gàng, tự động chạy animation mượt mà khi nạp dữ liệu. Bạn có thể bấm nút <strong>Chạy lại</strong> ở từng khung xem trước để kiểm tra lại hiệu ứng hoạt họa bất cứ lúc nào.
+                                    </div>
+                                </div>
+
+                                <details class="dep-template-details mt-2">
+                                    <summary class="d-flex align-items-center gap-1">
+                                        <i class="bi bi-file-earmark-code text-secondary"></i>
+                                        <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                        <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                    </summary>
+                                    <div class="dep-template-box mt-2">
+                                        <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                            <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_progress.html</span>
+                                            <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-progress', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy Template
+                                            </button>
+                                        </div>
+                                        <pre><code id="template-progress">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Test Progress Component&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="progress1.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán mẫu HTML Progress bạn chọn vào đây --&gt;
+    &lt;script src="progress1.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.1 MẪU 1: STANDARD ANIMATED PROGRESS BAR (THANH TIẾN TRÌNH KÈM % TRỰC TIẾP) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-1" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 1</span>
+                                <h2 class="h6 fw-bold mb-0">Standard Animated Progress Bar (Thanh tiến trình kèm % trực tiếp)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Primary Bar</span>
+                                                
+                                            <button class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 11px;" onclick="reRunProgress(1)">
+                                                <i class="bi bi-arrow-clockwise me-1"></i> Chạy lại
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress1">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-dark fw-medium" style="font-size: 14px;">Importing contacts...</span>
+        <span class="text-secondary" style="font-size: 13px;" id="progressText1">0%</span>
+    </div>
+    <div class="crm-progress-track">
+        <div class="crm-progress-fill bg-primary" id="progressBar1" data-target="75"></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress1', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress1">&lt;div class=&quot;d-flex justify-content-between align-items-center mb-2&quot;&gt;
+        &lt;span class=&quot;text-dark fw-medium&quot; style=&quot;font-size: 14px;&quot;&gt;Importing contacts...&lt;/span&gt;
+        &lt;span class=&quot;text-secondary&quot; style=&quot;font-size: 13px;&quot; id=&quot;progressText1&quot;&gt;0%&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;crm-progress-track&quot;&gt;
+        &lt;div class=&quot;crm-progress-fill bg-primary&quot; id=&quot;progressBar1&quot; data-target=&quot;75&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress1', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress1">.crm-progress-track { width: 100%; height: 8px; background-color: #f1f5f9; border-radius: 10px; overflow: hidden; }
+.crm-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.bg-primary { background-color: #2563eb !important; }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Khối JS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-js"></i> JS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-js-progress1', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy JS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-js-progress1">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const p1 = document.getElementById(&#039;progressBar1&#039;);
+    const t1 = document.getElementById(&#039;progressText1&#039;);
+    if (p1 &amp;&amp; t1) {
+        const target = parseInt(p1.getAttribute(&#039;data-target&#039;));
+        setTimeout(() =&gt; { p1.style.width = target + &#039;%&#039;; }, 100);
+        let count = 0;
+        const interval = setInterval(() =&gt; {
+            if (count &gt;= target) clearInterval(interval);
+            else t1.textContent = (++count) + &#039;%&#039;;
+        }, 1500 / target);
+    }
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.2 MẪU 2: STORAGE USAGE WARNING BAR (CẢNH BÁO DUNG LƯỢNG / LƯU TRỮ) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-2" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-warning text-dark px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h6 fw-bold mb-0">Storage Usage Warning Bar (Cảnh báo dung lượng / lưu trữ)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Warning Bar</span>
+                                                
+                                            <button class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 11px;" onclick="reRunProgress(2)">
+                                                <i class="bi bi-arrow-clockwise me-1"></i> Chạy lại
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress2">
+                                            <div class="d-flex justify-content-between align-items-center mb-2">
+        <span class="text-dark fw-medium" style="font-size: 14px;">Storage usage</span>
+        <span class="text-secondary" style="font-size: 13px;">45 GB / 50 GB</span>
+    </div>
+    <div class="crm-progress-track">
+        <div class="crm-progress-fill bg-warning" id="progressBar2" data-target="90"></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress2', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress2">&lt;div class=&quot;d-flex justify-content-between align-items-center mb-2&quot;&gt;
+        &lt;span class=&quot;text-dark fw-medium&quot; style=&quot;font-size: 14px;&quot;&gt;Storage usage&lt;/span&gt;
+        &lt;span class=&quot;text-secondary&quot; style=&quot;font-size: 13px;&quot;&gt;45 GB / 50 GB&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;crm-progress-track&quot;&gt;
+        &lt;div class=&quot;crm-progress-fill bg-warning&quot; id=&quot;progressBar2&quot; data-target=&quot;90&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress2', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress2">.crm-progress-track { width: 100%; height: 8px; background-color: #f1f5f9; border-radius: 10px; overflow: hidden; }
+.crm-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 1.5s ease-out; }
+.bg-warning { background-color: #f59e0b !important; }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Khối JS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-js"></i> JS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-js-progress2', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy JS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-js-progress2">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const p2 = document.getElementById(&#039;progressBar2&#039;);
+    if (p2) {
+        setTimeout(() =&gt; { p2.style.width = p2.getAttribute(&#039;data-target&#039;) + &#039;%&#039;; }, 100);
+    }
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.3 MẪU 3: SLIM TOP PAGE LOADER (THANH TẢI TRANG SIÊU MẢNH 4PX) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-3" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-info text-white px-2 py-1 rounded-pill">Mẫu 3</span>
+                                <h2 class="h6 fw-bold mb-0">Slim Top Page Loader (Thanh tải trang siêu mảnh 4px)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Slim Loader</span>
+                                                
+                                            <button class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 11px;" onclick="reRunProgress(3)">
+                                                <i class="bi bi-arrow-clockwise me-1"></i> Chạy lại
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress3">
+                                            <span class="text-dark fw-medium d-block mb-2" style="font-size: 14px;">Top page loader</span>
+    <div class="crm-progress-track slim">
+        <div class="crm-progress-fill bg-info" id="progressBar3" data-target="100"></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress3', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress3">&lt;span class=&quot;text-dark fw-medium d-block mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Top page loader&lt;/span&gt;
+    &lt;div class=&quot;crm-progress-track slim&quot;&gt;
+        &lt;div class=&quot;crm-progress-fill bg-info&quot; id=&quot;progressBar3&quot; data-target=&quot;100&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress3', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress3">.crm-progress-track.slim { width: 100%; height: 4px; background-color: #f1f5f9; border-radius: 10px; overflow: hidden; }
+.crm-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 2s cubic-bezier(0.4, 0, 0.2, 1); }
+.bg-info { background-color: #0ea5e9 !important; }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Khối JS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-js"></i> JS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-js-progress3', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy JS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-js-progress3">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const p3 = document.getElementById(&#039;progressBar3&#039;);
+    if (p3) {
+        setTimeout(() =&gt; { p3.style.width = p3.getAttribute(&#039;data-target&#039;) + &#039;%&#039;; }, 100);
+    }
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.4 MẪU 4: SEGMENTED PIPELINE STAGES (TIẾN TRÌNH PHÂN KHÚC CHIA VẠCH) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-4" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 4</span>
+                                <h2 class="h6 fw-bold mb-0">Segmented Pipeline Stages (Tiến trình phân khúc chia vạch)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Segmented</span>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress4">
+                                            <span class="text-dark fw-medium d-block mb-3" style="font-size: 14px;">Pipeline stages</span>
+    <div class="crm-progress-segmented">
+        <div class="segment active"></div>
+        <div class="segment active"></div>
+        <div class="segment active"></div>
+        <div class="segment"></div>
+        <div class="segment"></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress4', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress4">&lt;span class=&quot;text-dark fw-medium d-block mb-3&quot; style=&quot;font-size: 14px;&quot;&gt;Pipeline stages&lt;/span&gt;
+    &lt;div class=&quot;crm-progress-segmented&quot;&gt;
+        &lt;div class=&quot;segment active&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;segment active&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;segment active&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;segment&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;segment&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress4', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress4">.crm-progress-segmented { display: flex; gap: 4px; width: 100%; height: 8px; }
+.crm-progress-segmented .segment {
+    flex: 1; background-color: #f1f5f9; border-radius: 4px; transition: background-color 0.3s;
+}
+.crm-progress-segmented .segment.active { background-color: #10b981; }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.5 MẪU 5: STRIPED ANIMATED SYNC BAR (TIẾN TRÌNH SỌC CHÉO ĐỒNG BỘ) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-5" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-indigo text-white px-2 py-1 rounded-pill" style="background-color: #6366f1;">Mẫu 5</span>
+                                <h2 class="h6 fw-bold mb-0">Striped Animated Sync Bar (Tiến trình sọc chéo đồng bộ)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Striped Motion</span>
+                                                
+                                            <button class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 11px;" onclick="reRunProgress(5)">
+                                                <i class="bi bi-arrow-clockwise me-1"></i> Chạy lại
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress5">
+                                            <span class="text-dark fw-medium d-block mb-2" style="font-size: 14px;">Processing sync...</span>
+    <div class="crm-progress-track">
+        <div class="crm-progress-fill bg-indigo progress-striped" id="progressBar5" data-target="85"></div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress5', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress5">&lt;span class=&quot;text-dark fw-medium d-block mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Processing sync...&lt;/span&gt;
+    &lt;div class=&quot;crm-progress-track&quot;&gt;
+        &lt;div class=&quot;crm-progress-fill bg-indigo progress-striped&quot; id=&quot;progressBar5&quot; data-target=&quot;85&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress5', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress5">.crm-progress-track { width: 100%; height: 8px; background-color: #f1f5f9; border-radius: 10px; overflow: hidden; }
+.crm-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 1.5s ease-in-out; }
+.bg-indigo { background-color: #6366f1 !important; }
+.progress-striped {
+    background-image: linear-gradient(45deg, rgba(255,255,255,0.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.15) 50%, rgba(255,255,255,0.15) 75%, transparent 75%, transparent);
+    background-size: 1rem 1rem;
+    animation: crm-stripes-anim 1s linear infinite;
+}
+@keyframes crm-stripes-anim { from { background-position: 1rem 0; } to { background-position: 0 0; } }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Khối JS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-js"></i> JS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-js-progress5', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy JS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-js-progress5">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const p5 = document.getElementById(&#039;progressBar5&#039;);
+    if (p5) setTimeout(() =&gt; { p5.style.width = p5.getAttribute(&#039;data-target&#039;) + &#039;%&#039;; }, 100);
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.6 MẪU 6: CIRCULAR PROGRESS RING (TIẾN TRÌNH HÌNH TRÒN CONIC GRADIENT) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-6" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-primary px-2 py-1 rounded-pill">Mẫu 6</span>
+                                <h2 class="h6 fw-bold mb-0">Circular Progress Ring (Tiến trình hình tròn Conic Gradient)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Circular Ring</span>
+                                                
+                                            <button class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 11px;" onclick="reRunProgress(6)">
+                                                <i class="bi bi-arrow-clockwise me-1"></i> Chạy lại
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress6">
+                                            <div class="crm-circular-progress" id="progressBar6" style="--p: 0%;">
+        <span class="circular-value">0%</span>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress6', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress6">&lt;div class=&quot;crm-circular-progress&quot; id=&quot;progressBar6&quot; style=&quot;--p: 0%;&quot;&gt;
+        &lt;span class=&quot;circular-value&quot;&gt;0%&lt;/span&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress6', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress6">.crm-circular-progress {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: conic-gradient(#3b82f6 var(--p), #f1f5f9 0);
+    display: flex; align-items: center; justify-content: center;
+    transition: --p 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+.crm-circular-progress::before {
+    content: &quot;&quot;; width: 48px; height: 48px;
+    background: #ffffff; border-radius: 50%; position: absolute;
+}
+.circular-value { position: relative; font-size: 13px; font-weight: 600; color: #1e293b; z-index: 1; }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Khối JS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-js"></i> JS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-js-progress6', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy JS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-js-progress6">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const bar = document.getElementById(&#039;progressBar6&#039;);
+    if (bar) {
+        const target = 82; // Set target value here
+        let count = 0;
+        const textSpan = bar.querySelector(&#039;.circular-value&#039;);
+        setTimeout(() =&gt; {
+            const interval = setInterval(() =&gt; {
+                if (count &gt;= target) clearInterval(interval);
+                else {
+                    count++;
+                    bar.style.setProperty(&#039;--p&#039;, count + &#039;%&#039;);
+                    textSpan.textContent = count + &#039;%&#039;;
+                }
+            }, 1500 / target);
+        }, 100);
+    }
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.7 MẪU 7: MILESTONE GOAL TRACKER (THEO DÕI MỤC TIÊU KÈM MỐC TARGET) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-7" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 7</span>
+                                <h2 class="h6 fw-bold mb-0">Milestone Goal Tracker (Theo dõi mục tiêu kèm mốc Target)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Milestone</span>
+                                                
+                                            <button class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 11px;" onclick="reRunProgress(7)">
+                                                <i class="bi bi-arrow-clockwise me-1"></i> Chạy lại
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress7">
+                                            <span class="text-dark fw-medium d-block mb-2" style="font-size: 14px;">Monthly Goal Tracker</span>
+    <div class="crm-progress-track milestone-track position-relative">
+        <div class="crm-progress-fill bg-success" id="progressBar7" data-target="65"></div>
+        <div class="milestone-marker" style="left: 80%;">
+            <div class="marker-line"></div>
+            <span class="marker-text">Target</span>
+        </div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress7', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress7">&lt;span class=&quot;text-dark fw-medium d-block mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;Monthly Goal Tracker&lt;/span&gt;
+    &lt;div class=&quot;crm-progress-track milestone-track position-relative&quot;&gt;
+        &lt;div class=&quot;crm-progress-fill bg-success&quot; id=&quot;progressBar7&quot; data-target=&quot;65&quot;&gt;&lt;/div&gt;
+        &lt;div class=&quot;milestone-marker&quot; style=&quot;left: 80%;&quot;&gt;
+            &lt;div class=&quot;marker-line&quot;&gt;&lt;/div&gt;
+            &lt;span class=&quot;marker-text&quot;&gt;Target&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress7', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress7">.crm-progress-track { width: 100%; height: 8px; background-color: #f1f5f9; border-radius: 10px; position: relative; }
+.crm-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 1.5s ease-out; }
+.bg-success { background-color: #10b981 !important; }
+.milestone-track { overflow: visible; }
+.milestone-marker { position: absolute; top: -4px; bottom: -4px; width: 2px; display: flex; flex-direction: column; align-items: center; }
+.marker-line { width: 2px; height: 16px; background-color: #94a3b8; border-radius: 2px; }
+.marker-text { position: absolute; top: 20px; font-size: 11px; font-weight: 500; color: #64748b; }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Khối JS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-js"></i> JS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-js-progress7', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy JS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-js-progress7">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const p7 = document.getElementById(&#039;progressBar7&#039;);
+    if (p7) setTimeout(() =&gt; { p7.style.width = p7.getAttribute(&#039;data-target&#039;) + &#039;%&#039;; }, 100);
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <hr class="my-4 border-secondary-subtle opacity-50">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 19.8 MẪU 8: THICK BAR WITH INSIDE LABEL (THANH TIẾN TRÌNH CHỨA % BÊN TRONG) -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="prog-mau-8" class="mb-4 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-2.5">
+                                <span class="badge text-bg-secondary px-2 py-1 rounded-pill">Mẫu 8</span>
+                                <h2 class="h6 fw-bold mb-0">Thick Bar with Inside Label (Thanh tiến trình chứa % bên trong)</h2>
+                            </div>
+
+                            <!-- Bố cục 2 cột: Trái hiển thị Progress, Phải hiển thị Code HTML & CSS -->
+                            <div class="row g-3 align-items-stretch">
+                                <!-- CỘT TRÁI: GIAO DIỆN XEM TRƯỚC -->
+                                <div class="col-lg-4 col-md-5 d-flex">
+                                    <div class="preview-card w-100 bg-white d-flex flex-column shadow-sm">
+                                        <div class="card-header bg-white py-2 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                            <span class="fw-bold text-dark d-flex align-items-center gap-2 small">
+                                                <i class="bi bi-eye text-primary"></i> Xem trước
+                                            </span>
+                                            <div class="d-flex align-items-center gap-2">
+                                                <span class="badge bg-light text-secondary border" style="font-size: 11px;">Thick Bar</span>
+                                                
+                                            <button class="btn btn-sm btn-outline-secondary py-0 px-2" style="font-size: 11px;" onclick="reRunProgress(8)">
+                                                <i class="bi bi-arrow-clockwise me-1"></i> Chạy lại
+                                            </button>
+                                            </div>
+                                        </div>
+                                        <div class="p-4 d-flex flex-column justify-content-center flex-grow-1" style="min-height: 160px; background-color: #f8fafc;" id="preview-progress8">
+                                            <span class="text-dark fw-medium d-block mb-2" style="font-size: 14px;">File Upload</span>
+    <div class="crm-progress-track thick-track">
+        <div class="crm-progress-fill bg-primary d-flex align-items-center justify-content-end px-2 text-white fw-bold"
+            style="font-size: 11px;" id="progressBar8" data-target="55">
+            <span class="inner-text">0%</span>
+        </div>
+    </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- CỘT PHẢI: NỘI DUNG CODE HTML, CSS, JS -->
+                                <div class="col-lg-8 col-md-7 d-flex flex-column gap-2">
+                                    <!-- Khối HTML -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-warning fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-html"></i> HTML
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-html-progress8', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre"><code id="code-html-progress8">&lt;span class=&quot;text-dark fw-medium d-block mb-2&quot; style=&quot;font-size: 14px;&quot;&gt;File Upload&lt;/span&gt;
+    &lt;div class=&quot;crm-progress-track thick-track&quot;&gt;
+        &lt;div class=&quot;crm-progress-fill bg-primary d-flex align-items-center justify-content-end px-2 text-white fw-bold&quot;
+            style=&quot;font-size: 11px;&quot; id=&quot;progressBar8&quot; data-target=&quot;55&quot;&gt;
+            &lt;span class=&quot;inner-text&quot;&gt;0%&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;</code></pre>
+                                        </div>
+                                    </div>
+
+                                    <!-- Khối CSS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-info fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-css"></i> CSS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-css-progress8', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-css-progress8">.crm-progress-track.thick-track { width: 100%; height: 18px; background-color: #f1f5f9; border-radius: 10px; overflow: hidden; }
+.crm-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1); }
+.bg-primary { background-color: #2563eb !important; }
+.inner-text { opacity: 0; transition: opacity 0.3s; }
+.inner-text.show { opacity: 1; }</code></pre>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Khối JS -->
+                                    <div class="code-card">
+                                        <div class="code-header py-1.5 px-3 d-flex justify-content-between align-items-center">
+                                            <div class="text-success fw-bold small d-flex align-items-center gap-1.5" style="font-size: 12px;">
+                                                <i class="bi bi-filetype-js"></i> JS
+                                            </div>
+                                            <button class="btn btn-sm btn-outline-light copy-btn py-0 px-2" style="font-size: 11px;"
+                                                onclick="copyCode('code-js-progress8', this)">
+                                                <i class="bi bi-clipboard me-1"></i> Copy JS
+                                            </button>
+                                        </div>
+                                        <div class="p-0">
+                                            <pre class="text-light m-0 p-2.5 code-pre" style="max-height: 120px; overflow-y: auto;"><code id="code-js-progress8">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const p8 = document.getElementById(&#039;progressBar8&#039;);
+    if (p8) {
+        const target = parseInt(p8.getAttribute(&#039;data-target&#039;));
+        const textSpan = p8.querySelector(&#039;.inner-text&#039;);
+        
+        setTimeout(() =&gt; { p8.style.width = target + &#039;%&#039;; }, 100);
+        
+        let count = 0;
+        const interval = setInterval(() =&gt; {
+            if (count &gt;= target) {
+                clearInterval(interval);
+                textSpan.classList.add(&#039;show&#039;);
+            } else {
+                textSpan.textContent = (++count) + &#039;%&#039;;
+            }
+        }, 1500 / target);
+    }
+});</code></pre>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                    </div>
+
+
                 </div>
             </main>
         </div>
@@ -17431,6 +19120,131 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
     <!-- Import các file JS của từng Collapse component (giữ nguyên không sửa file) -->
     <script src="collapse1.js"></script>
     <script src="collapse2.js"></script>
+
+    <!-- Scripts Progress Components -->
+    <script src="progress1.js"></script>
+    <script src="progress2.js"></script>
+    <script src="progress3.js"></script>
+    <script src="progress5.js"></script>
+    <script src="progress6.js"></script>
+    <script src="progress7.js"></script>
+    <script src="progress8.js"></script>
+    <script>
+        function reRunProgress(id) {
+            if (id === 1) {
+                const p = document.getElementById('progressBar1');
+                const t = document.getElementById('progressText1');
+                if (p && t) {
+                    p.style.transition = 'none';
+                    p.style.width = '0%';
+                    t.textContent = '0%';
+                    setTimeout(() => {
+                        p.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                        const target = parseInt(p.getAttribute('data-target')) || 75;
+                        p.style.width = target + '%';
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            if (count >= target) clearInterval(interval);
+                            else t.textContent = (++count) + '%';
+                        }, 1500 / target);
+                    }, 50);
+                }
+            } else if (id === 2) {
+                const p = document.getElementById('progressBar2');
+                if (p) {
+                    p.style.transition = 'none';
+                    p.style.width = '0%';
+                    setTimeout(() => {
+                        p.style.transition = 'width 1.5s ease-out';
+                        p.style.width = (p.getAttribute('data-target') || '90') + '%';
+                    }, 50);
+                }
+            } else if (id === 3) {
+                const p = document.getElementById('progressBar3');
+                if (p) {
+                    p.style.transition = 'none';
+                    p.style.width = '0%';
+                    setTimeout(() => {
+                        p.style.transition = 'width 2s cubic-bezier(0.4, 0, 0.2, 1)';
+                        p.style.width = (p.getAttribute('data-target') || '100') + '%';
+                    }, 50);
+                }
+            } else if (id === 5) {
+                const p = document.getElementById('progressBar5');
+                if (p) {
+                    p.style.transition = 'none';
+                    p.style.width = '0%';
+                    setTimeout(() => {
+                        p.style.transition = 'width 1.5s ease-in-out';
+                        p.style.width = (p.getAttribute('data-target') || '85') + '%';
+                    }, 50);
+                }
+            } else if (id === 6) {
+                const bar = document.getElementById('progressBar6');
+                if (bar) {
+                    const textSpan = bar.querySelector('.circular-value');
+                    bar.style.setProperty('--p', '0%');
+                    if (textSpan) textSpan.textContent = '0%';
+                    const target = 82;
+                    let count = 0;
+                    setTimeout(() => {
+                        const interval = setInterval(() => {
+                            if (count >= target) clearInterval(interval);
+                            else {
+                                count++;
+                                bar.style.setProperty('--p', count + '%');
+                                if (textSpan) textSpan.textContent = count + '%';
+                            }
+                        }, 1500 / target);
+                    }, 50);
+                }
+            } else if (id === 7) {
+                const p = document.getElementById('progressBar7');
+                if (p) {
+                    p.style.transition = 'none';
+                    p.style.width = '0%';
+                    setTimeout(() => {
+                        p.style.transition = 'width 1.5s ease-out';
+                        p.style.width = (p.getAttribute('data-target') || '65') + '%';
+                    }, 50);
+                }
+            } else if (id === 8) {
+                const p = document.getElementById('progressBar8');
+                if (p) {
+                    const textSpan = p.querySelector('.inner-text');
+                    p.style.transition = 'none';
+                    p.style.width = '0%';
+                    if (textSpan) {
+                        textSpan.classList.remove('show');
+                        textSpan.textContent = '0%';
+                    }
+                    const target = parseInt(p.getAttribute('data-target')) || 55;
+                    setTimeout(() => {
+                        p.style.transition = 'width 1.5s cubic-bezier(0.4, 0, 0.2, 1)';
+                        p.style.width = target + '%';
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            if (count >= target) {
+                                clearInterval(interval);
+                                if (textSpan) textSpan.classList.add('show');
+                            } else {
+                                if (textSpan) textSpan.textContent = (++count) + '%';
+                            }
+                        }, 1500 / target);
+                    }, 50);
+                }
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.getElementById('tab-progress-btn');
+            if (btn) {
+                btn.addEventListener('shown.bs.tab', () => {
+                    [1, 2, 3, 5, 6, 7, 8].forEach(id => reRunProgress(id));
+                });
+            }
+        });
+    </script>
 </body>
 
 </html>

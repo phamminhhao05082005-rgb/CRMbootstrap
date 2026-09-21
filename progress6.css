@@ -1,0 +1,12 @@
+.crm-circular-progress {
+    width: 60px; height: 60px; border-radius: 50%;
+    background: conic-gradient(#3b82f6 var(--p), #f1f5f9 0);
+    display: flex; align-items: center; justify-content: center;
+    transition: --p 1.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+}
+.crm-circular-progress::before {
+    content: ""; width: 48px; height: 48px;
+    background: #ffffff; border-radius: 50%; position: absolute;
+}
+.circular-value { position: relative; font-size: 13px; font-weight: 600; color: #1e293b; z-index: 1; }

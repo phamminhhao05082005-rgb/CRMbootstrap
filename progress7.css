@@ -1,0 +1,7 @@
+.crm-progress-track { width: 100%; height: 8px; background-color: #f1f5f9; border-radius: 10px; position: relative; }
+.crm-progress-fill { height: 100%; width: 0%; border-radius: 10px; transition: width 1.5s ease-out; }
+.bg-success { background-color: #10b981 !important; }
+.milestone-track { overflow: visible; }
+.milestone-marker { position: absolute; top: -4px; bottom: -4px; width: 2px; display: flex; flex-direction: column; align-items: center; }
+.marker-line { width: 2px; height: 16px; background-color: #94a3b8; border-radius: 2px; }
+.marker-text { position: absolute; top: 20px; font-size: 11px; font-weight: 500; color: #64748b; }

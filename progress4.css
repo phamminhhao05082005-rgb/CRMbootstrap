@@ -1,0 +1,5 @@
+.crm-progress-segmented { display: flex; gap: 4px; width: 100%; height: 8px; }
+.crm-progress-segmented .segment {
+    flex: 1; background-color: #f1f5f9; border-radius: 4px; transition: background-color 0.3s;
+}
+.crm-progress-segmented .segment.active { background-color: #10b981; }

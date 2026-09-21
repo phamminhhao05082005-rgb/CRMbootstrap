@@ -1,0 +1,10 @@
+.crm-spinner-dots { display: flex; gap: 6px; align-items: center; height: 36px; }
+.crm-spinner-dots div {
+    width: 10px; height: 10px;
+    background-color: #64748b;
+    border-radius: 50%;
+    animation: crm-bounce-dots 0.5s alternate infinite;
+}
+.crm-spinner-dots div:nth-child(2) { animation-delay: 0.15s; background-color: #475569; }
+.crm-spinner-dots div:nth-child(3) { animation-delay: 0.3s; background-color: #1e293b; }
+@keyframes crm-bounce-dots { to { transform: translateY(-8px); } }
