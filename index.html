@@ -70,6 +70,7 @@
     <link rel="stylesheet" href="table1.css">
     <link rel="stylesheet" href="table2.css">
     <link rel="stylesheet" href="grid1.css">
+    <link rel="stylesheet" href="grid2.css">
     <link rel="stylesheet" href="list1.css">
     <link rel="stylesheet" href="list2.css">
     <link rel="stylesheet" href="collapse1.css">
@@ -77,6 +78,16 @@
 
     <!-- CSS Gốc (load sau để quản lý layout và ghi đè kiểu body an toàn) -->
     <link rel="stylesheet" href="testcss.css">
+    <style>
+        body {
+            height: auto !important;
+            overflow-y: auto !important;
+        }
+        #preview-grid2 .kanban-board-container {
+            height: 520px !important;
+            max-height: 520px !important;
+        }
+    </style>
 </head>
 
 <body>
@@ -12725,6 +12736,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                             </div>
                             <div class="d-flex flex-wrap gap-2">
                                 <a href="#grid-mau-1" class="btn btn-sm btn-outline-secondary">Mẫu 1: Deal Pipeline Kanban</a>
+                                <a href="#grid-mau-2" class="btn btn-sm btn-outline-secondary">Mẫu 2: Kanban Board</a>
                             </div>
                         </div>
 
@@ -13167,6 +13179,1007 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                 </div>
                                 <div class="p-0">
                                     <pre class="text-light m-0 p-3 code-pre"><code id="code-js-grid1"><!-- Đang tải... --></code></pre>
+                                </div>
+                            </div>
+                        </section>
+                    
+
+                        <hr class="my-5 border-2 border-secondary-subtle">
+
+                        <!-- ---------------------------------------------- -->
+                        <!-- 12.2 MẪU 2: KANBAN BOARD ĐA GIAI ĐOẠN          -->
+                        <!-- ---------------------------------------------- -->
+                        <section id="grid-mau-2" class="mb-5 pt-2">
+                            <div class="d-flex align-items-center gap-2 mb-3">
+                                <span class="badge text-bg-success px-2 py-1 rounded-pill">Mẫu 2</span>
+                                <h2 class="h5 fw-bold mb-0">Bảng Kanban Board đa giai đoạn (CRM Deals Pipeline)</h2>
+                            </div>
+
+                            <!-- Giao diện xem trước Mẫu 2 -->
+                            <div class="preview-card mb-4 bg-white">
+                                <div class="card-header bg-white py-3 px-3 d-flex align-items-center justify-content-between border-bottom">
+                                    <span class="fw-bold text-dark d-flex align-items-center gap-2">
+                                        <i class="bi bi-eye text-success"></i> Giao diện xem trước
+                                    </span>
+                                    <span class="badge bg-success-subtle text-success border border-success-subtle">
+                                        <i class="bi bi-arrows-move me-1"></i> Hỗ trợ Kéo thả &amp; Cuộn ngang
+                                    </span>
+                                </div>
+                                <div class="p-0 preview-container" id="preview-grid2" style="background-color: #f3f4f6; min-height: 520px; max-height: 580px; overflow-x: auto; overflow-y: hidden;">
+                                    <div class="container-fluid py-4">
+    <div class="kanban-board-container custom-scrollbar-x" id="kanbanContainer">
+        <div class="kanban-board">
+
+            <div class="kanban-col">
+                <div class="kanban-header">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="stage-pill-container d-inline-flex align-items-center">
+                            <span class="stage-pill-title">New</span>
+                            <span class="badge stage-pill-badge rounded-pill stage-count">1</span>
+                        </div>
+                        <i class="bi bi-plus text-secondary fs-5 cursor-pointer"></i>
+                    </div>
+                    <div class="text-secondary" style="font-size: 12px;">
+                        Weighted value <span class="text-dark fw-medium">$5.6K <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                    </div>
+                </div>
+                <div class="kanban-body custom-scrollbar-y dropzone" data-stage="new">
+                    
+                    <div class="deal-card card-danger" draggable="true" data-id="deal-1">
+                        <div class="deal-title text-danger fw-medium mb-2">Widgetz.io (sample)</div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="deal-amount fw-bold text-dark">$5,600</span>
+                            <span class="dot-separator">•</span>
+                            <span class="deal-date">Closes in Nov</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <a href="#" class="company-link text-decoration-none text-primary" draggable="false">Widgetz.io (sample)</a>
+                            <span class="dot-separator">•</span>
+                            <span class="badge custom-badge">CRM - Gold pl...</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="deal-notes text-secondary">
+                                <i class="bi bi-file-earmark-text"></i> 1 note
+                            </div>
+                            <div class="action-icons d-flex align-items-center gap-2">
+                                <i class="bi bi-exclamation-circle text-danger"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="kanban-col">
+                <div class="kanban-header">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="stage-pill-container d-inline-flex align-items-center">
+                            <span class="stage-pill-title">Qualification</span>
+                            <span class="badge stage-pill-badge rounded-pill stage-count">1</span>
+                        </div>
+                        <i class="bi bi-plus text-secondary fs-5 cursor-pointer"></i>
+                    </div>
+                    <div class="text-secondary" style="font-size: 12px;">
+                        Weighted value <span class="text-dark fw-medium">$1.26K <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                    </div>
+                </div>
+                <div class="kanban-body custom-scrollbar-y dropzone" data-stage="qualification">
+                    
+                    <div class="deal-card" draggable="true" data-id="deal-2">
+                        <div class="deal-title text-primary fw-medium mb-2">Acme Inc (sample)</div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="deal-amount fw-bold text-dark">$100</span>
+                            <span class="dot-separator">•</span>
+                            <span class="deal-date">Closes today</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <a href="#" class="company-link text-decoration-none text-primary" draggable="false">Acme Inc (sample)</a>
+                            <span class="dot-separator">•</span>
+                            <span class="badge custom-badge">No products</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="deal-notes text-secondary">
+                                <i class="bi bi-file-earmark-text"></i> 1 note
+                            </div>
+                            <div class="action-icons d-flex align-items-center gap-2">
+                                <i class="bi bi-exclamation-triangle text-warning"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="kanban-col">
+                <div class="kanban-header">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="stage-pill-container d-inline-flex align-items-center">
+                            <span class="stage-pill-title">Discovery</span>
+                            <span class="badge stage-pill-badge rounded-pill stage-count">1</span>
+                        </div>
+                        <i class="bi bi-plus text-secondary fs-5 cursor-pointer"></i>
+                    </div>
+                    <div class="text-secondary" style="font-size: 12px;">
+                        Weighted value <span class="text-dark fw-medium">$1.4K <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                    </div>
+                </div>
+                <div class="kanban-body custom-scrollbar-y dropzone" data-stage="discovery">
+                    
+                    <div class="deal-card" draggable="true" data-id="deal-3">
+                        <div class="deal-title text-primary fw-medium mb-2">Pivotal Tech (sample)</div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="deal-amount fw-bold text-dark">$3,500</span>
+                            <span class="dot-separator">•</span>
+                            <span class="deal-date">Closes in Oct</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <a href="#" class="company-link text-decoration-none text-primary" draggable="false">Pivotal Tech (sample)</a>
+                            <span class="dot-separator">•</span>
+                            <span class="badge custom-badge">Annual m...</span>
+                            <span class="badge custom-badge">+1</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="deal-notes text-secondary">
+                                <i class="bi bi-file-earmark-plus"></i> Add note
+                            </div>
+                            <div class="action-icons d-flex align-items-center gap-2">
+                                <i class="bi bi-exclamation-triangle text-warning"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="kanban-col">
+                <div class="kanban-header">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="stage-pill-container d-inline-flex align-items-center">
+                            <span class="stage-pill-title">Demo</span>
+                            <span class="badge stage-pill-badge rounded-pill stage-count">0</span>
+                        </div>
+                        <i class="bi bi-plus text-secondary fs-5 cursor-pointer"></i>
+                    </div>
+                    <div class="text-secondary" style="font-size: 12px;">
+                        Weighted value <span class="text-dark fw-medium">$0 <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                    </div>
+                </div>
+                <div class="kanban-body custom-scrollbar-y dropzone" data-stage="demo">
+                    <button class="btn btn-light w-100 text-secondary border-0 bg-transparent shadow-none add-deal-btn">
+                        <i class="bi bi-plus"></i> Add deal
+                    </button>
+                </div>
+            </div>
+
+            <div class="kanban-col">
+                <div class="kanban-header">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="stage-pill-container d-inline-flex align-items-center">
+                            <span class="stage-pill-title">Negotiation</span>
+                            <span class="badge stage-pill-badge rounded-pill stage-count">1</span>
+                        </div>
+                        <i class="bi bi-plus text-secondary fs-5 cursor-pointer"></i>
+                    </div>
+                    <div class="text-secondary" style="font-size: 12px;">
+                        Weighted value <span class="text-dark fw-medium">$2.56K <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                    </div>
+                </div>
+                <div class="kanban-body custom-scrollbar-y dropzone" data-stage="negotiation">
+                    
+                    <div class="deal-card" draggable="true" data-id="deal-4">
+                        <div class="deal-title text-primary fw-medium mb-2">Techcave (sample)</div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="deal-amount fw-bold text-dark">$3,200</span>
+                            <span class="dot-separator">•</span>
+                            <span class="deal-date text-danger"><i class="bi bi-exclamation-circle"></i> 16 Sep, 2026</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <a href="#" class="company-link text-decoration-none text-primary" draggable="false">Techcave (sample)</a>
+                            <span class="dot-separator">•</span>
+                            <span class="badge custom-badge">CRM - Gold pl...</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="deal-notes text-secondary">
+                                <i class="bi bi-file-earmark-text"></i> 1 note
+                            </div>
+                            <div class="action-icons d-flex align-items-center gap-2">
+                                <i class="bi bi-exclamation-triangle text-warning"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="kanban-col">
+                <div class="kanban-header">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <div class="stage-pill-container d-inline-flex align-items-center" style="background-color: #dcfce3;">
+                            <span class="stage-pill-title" style="color: #166534;">Won</span>
+                            <span class="badge stage-pill-badge bg-success rounded-pill stage-count">1</span>
+                        </div>
+                        <i class="bi bi-plus text-secondary fs-5 cursor-pointer"></i>
+                    </div>
+                    <div class="text-secondary" style="font-size: 12px;">
+                        Weighted value <span class="text-dark fw-medium">$3.0K <i class="bi bi-chevron-down ms-1" style="font-size: 10px;"></i></span>
+                    </div>
+                </div>
+                <div class="kanban-body custom-scrollbar-y dropzone" data-stage="won">
+                    
+                    <div class="deal-card" draggable="true" data-id="deal-5">
+                        <div class="deal-title text-primary fw-medium mb-2">Techcave renewal (sample)</div>
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span class="deal-amount fw-bold text-dark">$3,000</span>
+                            <span class="dot-separator">•</span>
+                            <span class="deal-date text-secondary"><i class="bi bi-info-circle"></i> 11 Sep, 2026</span>
+                        </div>
+                        <div class="d-flex align-items-center gap-2 mb-3">
+                            <a href="#" class="company-link text-decoration-none text-primary" draggable="false">Techcave (sample)</a>
+                            <span class="dot-separator">•</span>
+                            <span class="badge custom-badge">CRM - Platinu...</span>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="deal-notes text-secondary">
+                                <i class="bi bi-file-earmark-plus"></i> Add note
+                            </div>
+                            <div class="action-icons d-flex align-items-center gap-2">
+                                <i class="bi bi-exclamation-triangle text-warning"></i>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+                                </div>
+                            </div>
+
+                            <!-- Khối Thư Viện & Phụ Thuộc Cần Nhúng (Mẫu 2) -->
+                            <div class="dependency-card mb-4">
+                                <div class="dependency-header">
+                                    <div class="dependency-title">
+                                        <i class="bi bi-box-seam text-primary fs-5"></i>
+                                        <span>THƯ VIỆN &amp; PHỤ THUỘC CẦN NHÚNG (MẪU 2)</span>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary copy-btn py-1 px-3 rounded-2"
+                                        onclick="copyCode('dep-code-grid2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy Thư Viện
+                                    </button>
+                                </div>
+                                <div class="dependency-body">
+                                    <div class="dep-badges-wrap">
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 CSS (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap Icons (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File grid2.css (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> Bootstrap 5 JS Bundle (Bắt buộc)</span>
+                                        <span class="dep-badge-pill dep-badge-req"><i class="bi bi-check-circle-fill"></i> File grid2.js (Kéo thả Drag &amp; Drop)</span>
+                                    </div>
+
+                                    <div class="dep-code-box">
+                                        <pre><code id="dep-code-grid2">&lt;!-- 1. Bootstrap 5 CSS &amp; Bootstrap Icons (Đặt trong &lt;head&gt;) --&gt;
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+
+&lt;!-- 2. File CSS tùy biến của Grid Kanban Board (Đặt trong &lt;head&gt;) --&gt;
+&lt;link rel="stylesheet" href="grid2.css"&gt;
+
+&lt;!-- 3. Bootstrap 5 JS Bundle &amp; Logic kéo thả Kanban (Đặt trước thẻ đóng &lt;/body&gt;) --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+&lt;script src="grid2.js"&gt;&lt;/script&gt;</code></pre>
+                                    </div>
+
+                                    <div class="dep-note-box alert-info-soft">
+                                        <i class="bi bi-info-circle-fill flex-shrink-0 mt-0.5 fs-6 text-primary"></i>
+                                        <div>
+                                            <strong>Lưu ý quan trọng cho Dev:</strong> Mẫu Kanban Board Mẫu 2 hỗ trợ kéo thả Card qua các giai đoạn (Stages), tự động tính toán đếm số lượng Deals trên từng cột và hỗ trợ Auto-scroll mượt mà khi kéo thẻ ra sát mép màn hình.
+                                        </div>
+                                    </div>
+
+                                    <details class="dep-template-details mt-2">
+                                        <summary class="d-flex align-items-center gap-1">
+                                            <i class="bi bi-file-earmark-code text-secondary"></i>
+                                            <span>Xem khung code mẫu tối thiểu để test riêng (Test Template)</span>
+                                            <span class="badge bg-light text-secondary border ms-1" style="font-size: 11px;">Mở rộng</span>
+                                        </summary>
+                                        <div class="dep-template-box mt-2">
+                                            <div class="d-flex justify-content-between align-items-center px-3 py-1.5 border-bottom border-secondary border-opacity-25" style="background: #1e293b;">
+                                                <span class="text-secondary small" style="font-size: 11px;"><i class="bi bi-code-slash me-1"></i> test_grid2.html</span>
+                                                <button class="btn btn-sm btn-outline-light py-0 px-2 copy-btn" style="font-size: 11px;" onclick="copyCode('template-grid2', this)">
+                                                    <i class="bi bi-clipboard me-1"></i> Copy Template
+                                                </button>
+                                            </div>
+                                            <pre><code id="template-grid2">&lt;!DOCTYPE html&gt;
+&lt;html lang="vi"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Test CRM Kanban Board Mẫu 2&lt;/title&gt;
+    &lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"&gt;
+    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"&gt;
+    &lt;link rel="stylesheet" href="grid2.css"&gt;
+&lt;/head&gt;
+&lt;body class="p-4 bg-light"&gt;
+    &lt;!-- Dán nội dung HTML Kanban Board vào đây --&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"&gt;&lt;/script&gt;
+    &lt;script src="grid2.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                                        </div>
+                                    </details>
+                                </div>
+                            </div>
+
+                            <!-- Khối 1: NỘI DUNG HTML Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-warning fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-html fs-5"></i> NỘI DUNG HTML
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-html-grid2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy HTML
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-html-grid2">&lt;div class=&quot;container-fluid py-4&quot;&gt;
+    &lt;div class=&quot;kanban-board-container custom-scrollbar-x&quot; id=&quot;kanbanContainer&quot;&gt;
+        &lt;div class=&quot;kanban-board&quot;&gt;
+
+            &lt;div class=&quot;kanban-col&quot;&gt;
+                &lt;div class=&quot;kanban-header&quot;&gt;
+                    &lt;div class=&quot;d-flex justify-content-between align-items-center mb-1&quot;&gt;
+                        &lt;div class=&quot;stage-pill-container d-inline-flex align-items-center&quot;&gt;
+                            &lt;span class=&quot;stage-pill-title&quot;&gt;New&lt;/span&gt;
+                            &lt;span class=&quot;badge stage-pill-badge rounded-pill stage-count&quot;&gt;1&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-plus text-secondary fs-5 cursor-pointer&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 12px;&quot;&gt;
+                        Weighted value &lt;span class=&quot;text-dark fw-medium&quot;&gt;$5.6K &lt;i class=&quot;bi bi-chevron-down ms-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;kanban-body custom-scrollbar-y dropzone&quot; data-stage=&quot;new&quot;&gt;
+                    
+                    &lt;div class=&quot;deal-card card-danger&quot; draggable=&quot;true&quot; data-id=&quot;deal-1&quot;&gt;
+                        &lt;div class=&quot;deal-title text-danger fw-medium mb-2&quot;&gt;Widgetz.io (sample)&lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-2&quot;&gt;
+                            &lt;span class=&quot;deal-amount fw-bold text-dark&quot;&gt;$5,600&lt;/span&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;deal-date&quot;&gt;Closes in Nov&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;company-link text-decoration-none text-primary&quot; draggable=&quot;false&quot;&gt;Widgetz.io (sample)&lt;/a&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;badge custom-badge&quot;&gt;CRM - Gold pl...&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
+                            &lt;div class=&quot;deal-notes text-secondary&quot;&gt;
+                                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt; 1 note
+                            &lt;/div&gt;
+                            &lt;div class=&quot;action-icons d-flex align-items-center gap-2&quot;&gt;
+                                &lt;i class=&quot;bi bi-exclamation-circle text-danger&quot;&gt;&lt;/i&gt;
+                                &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;kanban-col&quot;&gt;
+                &lt;div class=&quot;kanban-header&quot;&gt;
+                    &lt;div class=&quot;d-flex justify-content-between align-items-center mb-1&quot;&gt;
+                        &lt;div class=&quot;stage-pill-container d-inline-flex align-items-center&quot;&gt;
+                            &lt;span class=&quot;stage-pill-title&quot;&gt;Qualification&lt;/span&gt;
+                            &lt;span class=&quot;badge stage-pill-badge rounded-pill stage-count&quot;&gt;1&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-plus text-secondary fs-5 cursor-pointer&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 12px;&quot;&gt;
+                        Weighted value &lt;span class=&quot;text-dark fw-medium&quot;&gt;$1.26K &lt;i class=&quot;bi bi-chevron-down ms-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;kanban-body custom-scrollbar-y dropzone&quot; data-stage=&quot;qualification&quot;&gt;
+                    
+                    &lt;div class=&quot;deal-card&quot; draggable=&quot;true&quot; data-id=&quot;deal-2&quot;&gt;
+                        &lt;div class=&quot;deal-title text-primary fw-medium mb-2&quot;&gt;Acme Inc (sample)&lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-2&quot;&gt;
+                            &lt;span class=&quot;deal-amount fw-bold text-dark&quot;&gt;$100&lt;/span&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;deal-date&quot;&gt;Closes today&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;company-link text-decoration-none text-primary&quot; draggable=&quot;false&quot;&gt;Acme Inc (sample)&lt;/a&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;badge custom-badge&quot;&gt;No products&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
+                            &lt;div class=&quot;deal-notes text-secondary&quot;&gt;
+                                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt; 1 note
+                            &lt;/div&gt;
+                            &lt;div class=&quot;action-icons d-flex align-items-center gap-2&quot;&gt;
+                                &lt;i class=&quot;bi bi-exclamation-triangle text-warning&quot;&gt;&lt;/i&gt;
+                                &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;kanban-col&quot;&gt;
+                &lt;div class=&quot;kanban-header&quot;&gt;
+                    &lt;div class=&quot;d-flex justify-content-between align-items-center mb-1&quot;&gt;
+                        &lt;div class=&quot;stage-pill-container d-inline-flex align-items-center&quot;&gt;
+                            &lt;span class=&quot;stage-pill-title&quot;&gt;Discovery&lt;/span&gt;
+                            &lt;span class=&quot;badge stage-pill-badge rounded-pill stage-count&quot;&gt;1&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-plus text-secondary fs-5 cursor-pointer&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 12px;&quot;&gt;
+                        Weighted value &lt;span class=&quot;text-dark fw-medium&quot;&gt;$1.4K &lt;i class=&quot;bi bi-chevron-down ms-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;kanban-body custom-scrollbar-y dropzone&quot; data-stage=&quot;discovery&quot;&gt;
+                    
+                    &lt;div class=&quot;deal-card&quot; draggable=&quot;true&quot; data-id=&quot;deal-3&quot;&gt;
+                        &lt;div class=&quot;deal-title text-primary fw-medium mb-2&quot;&gt;Pivotal Tech (sample)&lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-2&quot;&gt;
+                            &lt;span class=&quot;deal-amount fw-bold text-dark&quot;&gt;$3,500&lt;/span&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;deal-date&quot;&gt;Closes in Oct&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;company-link text-decoration-none text-primary&quot; draggable=&quot;false&quot;&gt;Pivotal Tech (sample)&lt;/a&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;badge custom-badge&quot;&gt;Annual m...&lt;/span&gt;
+                            &lt;span class=&quot;badge custom-badge&quot;&gt;+1&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
+                            &lt;div class=&quot;deal-notes text-secondary&quot;&gt;
+                                &lt;i class=&quot;bi bi-file-earmark-plus&quot;&gt;&lt;/i&gt; Add note
+                            &lt;/div&gt;
+                            &lt;div class=&quot;action-icons d-flex align-items-center gap-2&quot;&gt;
+                                &lt;i class=&quot;bi bi-exclamation-triangle text-warning&quot;&gt;&lt;/i&gt;
+                                &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;kanban-col&quot;&gt;
+                &lt;div class=&quot;kanban-header&quot;&gt;
+                    &lt;div class=&quot;d-flex justify-content-between align-items-center mb-1&quot;&gt;
+                        &lt;div class=&quot;stage-pill-container d-inline-flex align-items-center&quot;&gt;
+                            &lt;span class=&quot;stage-pill-title&quot;&gt;Demo&lt;/span&gt;
+                            &lt;span class=&quot;badge stage-pill-badge rounded-pill stage-count&quot;&gt;0&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-plus text-secondary fs-5 cursor-pointer&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 12px;&quot;&gt;
+                        Weighted value &lt;span class=&quot;text-dark fw-medium&quot;&gt;$0 &lt;i class=&quot;bi bi-chevron-down ms-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;kanban-body custom-scrollbar-y dropzone&quot; data-stage=&quot;demo&quot;&gt;
+                    &lt;button class=&quot;btn btn-light w-100 text-secondary border-0 bg-transparent shadow-none add-deal-btn&quot;&gt;
+                        &lt;i class=&quot;bi bi-plus&quot;&gt;&lt;/i&gt; Add deal
+                    &lt;/button&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;kanban-col&quot;&gt;
+                &lt;div class=&quot;kanban-header&quot;&gt;
+                    &lt;div class=&quot;d-flex justify-content-between align-items-center mb-1&quot;&gt;
+                        &lt;div class=&quot;stage-pill-container d-inline-flex align-items-center&quot;&gt;
+                            &lt;span class=&quot;stage-pill-title&quot;&gt;Negotiation&lt;/span&gt;
+                            &lt;span class=&quot;badge stage-pill-badge rounded-pill stage-count&quot;&gt;1&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-plus text-secondary fs-5 cursor-pointer&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 12px;&quot;&gt;
+                        Weighted value &lt;span class=&quot;text-dark fw-medium&quot;&gt;$2.56K &lt;i class=&quot;bi bi-chevron-down ms-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;kanban-body custom-scrollbar-y dropzone&quot; data-stage=&quot;negotiation&quot;&gt;
+                    
+                    &lt;div class=&quot;deal-card&quot; draggable=&quot;true&quot; data-id=&quot;deal-4&quot;&gt;
+                        &lt;div class=&quot;deal-title text-primary fw-medium mb-2&quot;&gt;Techcave (sample)&lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-2&quot;&gt;
+                            &lt;span class=&quot;deal-amount fw-bold text-dark&quot;&gt;$3,200&lt;/span&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;deal-date text-danger&quot;&gt;&lt;i class=&quot;bi bi-exclamation-circle&quot;&gt;&lt;/i&gt; 16 Sep, 2026&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;company-link text-decoration-none text-primary&quot; draggable=&quot;false&quot;&gt;Techcave (sample)&lt;/a&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;badge custom-badge&quot;&gt;CRM - Gold pl...&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
+                            &lt;div class=&quot;deal-notes text-secondary&quot;&gt;
+                                &lt;i class=&quot;bi bi-file-earmark-text&quot;&gt;&lt;/i&gt; 1 note
+                            &lt;/div&gt;
+                            &lt;div class=&quot;action-icons d-flex align-items-center gap-2&quot;&gt;
+                                &lt;i class=&quot;bi bi-exclamation-triangle text-warning&quot;&gt;&lt;/i&gt;
+                                &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&quot;kanban-col&quot;&gt;
+                &lt;div class=&quot;kanban-header&quot;&gt;
+                    &lt;div class=&quot;d-flex justify-content-between align-items-center mb-1&quot;&gt;
+                        &lt;div class=&quot;stage-pill-container d-inline-flex align-items-center&quot; style=&quot;background-color: #dcfce3;&quot;&gt;
+                            &lt;span class=&quot;stage-pill-title&quot; style=&quot;color: #166534;&quot;&gt;Won&lt;/span&gt;
+                            &lt;span class=&quot;badge stage-pill-badge bg-success rounded-pill stage-count&quot;&gt;1&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;i class=&quot;bi bi-plus text-secondary fs-5 cursor-pointer&quot;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&quot;text-secondary&quot; style=&quot;font-size: 12px;&quot;&gt;
+                        Weighted value &lt;span class=&quot;text-dark fw-medium&quot;&gt;$3.0K &lt;i class=&quot;bi bi-chevron-down ms-1&quot; style=&quot;font-size: 10px;&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;kanban-body custom-scrollbar-y dropzone&quot; data-stage=&quot;won&quot;&gt;
+                    
+                    &lt;div class=&quot;deal-card&quot; draggable=&quot;true&quot; data-id=&quot;deal-5&quot;&gt;
+                        &lt;div class=&quot;deal-title text-primary fw-medium mb-2&quot;&gt;Techcave renewal (sample)&lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-2&quot;&gt;
+                            &lt;span class=&quot;deal-amount fw-bold text-dark&quot;&gt;$3,000&lt;/span&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;deal-date text-secondary&quot;&gt;&lt;i class=&quot;bi bi-info-circle&quot;&gt;&lt;/i&gt; 11 Sep, 2026&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex align-items-center gap-2 mb-3&quot;&gt;
+                            &lt;a href=&quot;#&quot; class=&quot;company-link text-decoration-none text-primary&quot; draggable=&quot;false&quot;&gt;Techcave (sample)&lt;/a&gt;
+                            &lt;span class=&quot;dot-separator&quot;&gt;•&lt;/span&gt;
+                            &lt;span class=&quot;badge custom-badge&quot;&gt;CRM - Platinu...&lt;/span&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&quot;d-flex justify-content-between align-items-center&quot;&gt;
+                            &lt;div class=&quot;deal-notes text-secondary&quot;&gt;
+                                &lt;i class=&quot;bi bi-file-earmark-plus&quot;&gt;&lt;/i&gt; Add note
+                            &lt;/div&gt;
+                            &lt;div class=&quot;action-icons d-flex align-items-center gap-2&quot;&gt;
+                                &lt;i class=&quot;bi bi-exclamation-triangle text-warning&quot;&gt;&lt;/i&gt;
+                                &lt;i class=&quot;bi bi-three-dots-vertical&quot;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 2: NỘI DUNG CSS Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-primary-subtle fw-bold small d-flex align-items-center gap-2" style="color: #60a5fa !important;">
+                                        <i class="bi bi-filetype-css fs-5"></i> NỘI DUNG CSS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-css-grid2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy CSS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-css-grid2">body {
+    background-color: #f3f4f6;
+    font-family: -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, Helvetica, Arial, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.kanban-board-container {
+    height: calc(100vh - 48px);
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 16px;
+    scroll-behavior: auto;
+}
+
+.kanban-board {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 0;
+    padding: 0 16px;
+    height: 100%;
+}
+
+.kanban-col {
+    width: 320px;
+    min-width: 320px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #e2e8f0;
+    background-color: #f8fafc;
+}
+
+.kanban-col:first-child {
+    border-left: 1px solid #e2e8f0;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.kanban-col:last-child {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.kanban-header {
+    padding: 16px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    border-top: 1px solid #e2e8f0;
+}
+
+.kanban-col:first-child .kanban-header {
+    border-top-left-radius: 8px;
+}
+
+.kanban-col:last-child .kanban-header {
+    border-top-right-radius: 8px;
+}
+
+.stage-pill-container {
+    background-color: #eff6ff;
+    border-radius: 20px;
+    padding: 4px 6px 4px 12px;
+}
+
+.stage-pill-title {
+    color: #0f2b5b;
+    font-weight: 600;
+    font-size: 14px;
+    margin-right: 8px;
+}
+
+.stage-pill-badge {
+    background-color: #64748b;
+    color: #ffffff;
+    font-size: 11.5px;
+    font-weight: 600;
+    padding: 4px 8px;
+}
+
+.kanban-body {
+    flex: 1;
+    padding: 12px;
+    overflow-y: auto;
+    background-color: transparent;
+    transition: background-color 0.2s;
+    min-height: 150px;
+}
+
+.deal-card {
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    cursor: grab;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.02);
+    transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.deal-card:hover {
+    box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+    border-color: #cbd5e1;
+}
+
+.deal-card:active {
+    cursor: grabbing;
+}
+
+.card-danger {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+}
+
+.card-danger:hover {
+    border-color: #fca5a5;
+}
+
+.deal-title {
+    font-size: 14.5px;
+}
+
+.deal-amount {
+    font-size: 14px;
+}
+
+.deal-date {
+    font-size: 13px;
+    color: #64748b;
+}
+
+.dot-separator {
+    color: #cbd5e1;
+    font-size: 12px;
+}
+
+.custom-badge {
+    background-color: #f1f5f9;
+    color: #475569;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+.deal-notes {
+    font-size: 13px;
+}
+
+.action-icons i {
+    font-size: 16px;
+    cursor: pointer;
+    color: #94a3b8;
+}
+
+.action-icons i.text-danger { color: #ef4444; }
+.action-icons i.text-warning { color: #f59e0b; }
+
+.add-deal-btn {
+    background-color: #f1f5f9 !important;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.add-deal-btn:hover {
+    background-color: #e2e8f0 !important;
+}
+
+.is-dragging {
+    opacity: 0.4;
+}
+
+.drag-over {
+    background-color: #eff6ff !important;
+}
+
+.drop-placeholder {
+    background-color: #eff6ff;
+    border: 1px dashed #3b82f6;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+    pointer-events: none;
+}
+
+.placeholder-title {
+    background-color: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #1e293b;
+    font-weight: 500;
+    font-size: 14.5px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    width: 100%;
+    margin-bottom: auto;
+}
+
+.placeholder-text {
+    color: #1e3a8a;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: auto;
+}
+
+.custom-scrollbar-x::-webkit-scrollbar {
+    height: 12px;
+}
+.custom-scrollbar-x::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+.custom-scrollbar-x::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 6px;
+    border: 3px solid #f1f5f9;
+}
+
+.custom-scrollbar-y::-webkit-scrollbar {
+    width: 10px;
+}
+.custom-scrollbar-y::-webkit-scrollbar-track {
+    background: transparent;
+}
+.custom-scrollbar-y::-webkit-scrollbar-thumb {
+    background-color: #cbd5e1;
+    border-radius: 5px;
+    border: 2px solid #f8fafc;
+}</code></pre>
+                                </div>
+                            </div>
+
+                            <!-- Khối 3: NỘI DUNG JS Mẫu 2 -->
+                            <div class="code-card mb-4">
+                                <div class="code-header py-2 px-3 d-flex justify-content-between align-items-center">
+                                    <div class="text-success fw-bold small d-flex align-items-center gap-2">
+                                        <i class="bi bi-filetype-js fs-5"></i> NỘI DUNG JS
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-light copy-btn"
+                                        onclick="copyCode('code-js-grid2', this)">
+                                        <i class="bi bi-clipboard me-1"></i> Copy JS
+                                    </button>
+                                </div>
+                                <div class="p-0">
+                                    <pre class="text-light m-0 p-3 code-pre"><code id="code-js-grid2">document.addEventListener(&#039;DOMContentLoaded&#039;, () =&gt; {
+    const cards = document.querySelectorAll(&#039;.deal-card&#039;);
+    const dropzones = document.querySelectorAll(&#039;.dropzone&#039;);
+    const boardContainer = document.getElementById(&#039;kanbanContainer&#039;);
+    
+    let draggedCard = null;
+    let placeholder = document.createElement(&#039;div&#039;);
+    placeholder.classList.add(&#039;drop-placeholder&#039;);
+
+    let autoScrollId = null;
+    let scrollSpeed = 0;
+
+    function startAutoScroll() {
+        if (scrollSpeed !== 0 &amp;&amp; boardContainer) {
+            boardContainer.scrollLeft += scrollSpeed;
+            autoScrollId = requestAnimationFrame(startAutoScroll);
+        } else {
+            cancelAnimationFrame(autoScrollId);
+            autoScrollId = null;
+        }
+    }
+
+    function stopAutoScroll() {
+        scrollSpeed = 0;
+        if (autoScrollId) {
+            cancelAnimationFrame(autoScrollId);
+            autoScrollId = null;
+        }
+    }
+
+    if (boardContainer) {
+        boardContainer.addEventListener(&#039;dragover&#039;, (e) =&gt; {
+            if (!draggedCard) return;
+
+            const threshold = 100;
+            const rect = boardContainer.getBoundingClientRect();
+            
+            const distToLeft = e.clientX - rect.left;
+            const distToRight = rect.right - e.clientX;
+
+            if (distToLeft &lt; threshold) {
+                scrollSpeed = -15 * (1 - distToLeft / threshold) - 3;
+                if (!autoScrollId) startAutoScroll();
+            } 
+            else if (distToRight &lt; threshold) {
+                scrollSpeed = 15 * (1 - distToRight / threshold) + 3;
+                if (!autoScrollId) startAutoScroll();
+            } 
+            else {
+                stopAutoScroll();
+            }
+        });
+    }
+
+    cards.forEach(card =&gt; {
+        card.addEventListener(&#039;dragstart&#039;, (e) =&gt; {
+            draggedCard = card;
+            
+            const title = card.querySelector(&#039;.deal-title&#039;).textContent;
+            const isDanger = card.classList.contains(&#039;card-danger&#039;);
+            
+            placeholder.innerHTML = `
+                &lt;div class=&quot;placeholder-title ${isDanger ? &#039;bg-danger-subtle border-danger-subtle text-danger&#039; : &#039;bg-white border-light&#039;}&quot;&gt;${title}&lt;/div&gt;
+                &lt;div class=&quot;placeholder-text&quot;&gt;Move here&lt;/div&gt;
+            `;
+            
+            setTimeout(() =&gt; {
+                card.classList.add(&#039;is-dragging&#039;);
+            }, 0);
+        });
+
+        card.addEventListener(&#039;dragend&#039;, () =&gt; {
+            card.classList.remove(&#039;is-dragging&#039;);
+            draggedCard = null;
+            stopAutoScroll();
+            
+            if (placeholder.parentNode) {
+                placeholder.parentNode.removeChild(placeholder);
+            }
+            
+            dropzones.forEach(zone =&gt; zone.classList.remove(&#039;drag-over&#039;));
+            updateColumnCounts();
+        });
+    });
+
+    dropzones.forEach(zone =&gt; {
+        zone.addEventListener(&#039;dragover&#039;, e =&gt; {
+            e.preventDefault();
+            zone.classList.add(&#039;drag-over&#039;);
+
+            const afterElement = getDragAfterElement(zone, e.clientY);
+            
+            if (afterElement == null) {
+                zone.appendChild(placeholder);
+            } else {
+                zone.insertBefore(placeholder, afterElement);
+            }
+        });
+
+        zone.addEventListener(&#039;dragleave&#039;, e =&gt; {
+            if (e.target === zone) {
+                zone.classList.remove(&#039;drag-over&#039;);
+            }
+        });
+
+        zone.addEventListener(&#039;drop&#039;, e =&gt; {
+            e.preventDefault();
+            zone.classList.remove(&#039;drag-over&#039;);
+            stopAutoScroll();
+            
+            if (draggedCard) {
+                zone.insertBefore(draggedCard, placeholder);
+                
+                const emptyBtn = zone.querySelector(&#039;.add-deal-btn&#039;);
+                if (emptyBtn) emptyBtn.style.display = &#039;none&#039;;
+            }
+        });
+    });
+
+    function getDragAfterElement(container, y) {
+        const draggableElements = [...container.querySelectorAll(&#039;.deal-card:not(.is-dragging)&#039;)];
+
+        return draggableElements.reduce((closest, child) =&gt; {
+            const box = child.getBoundingClientRect();
+            const offset = y - box.top - box.height / 2;
+            
+            if (offset &lt; 0 &amp;&amp; offset &gt; closest.offset) {
+                return { offset: offset, element: child };
+            } else {
+                return closest;
+            }
+        }, { offset: Number.NEGATIVE_INFINITY }).element;
+    }
+
+    function updateColumnCounts() {
+        document.querySelectorAll(&#039;.kanban-col&#039;).forEach(col =&gt; {
+            const count = col.querySelectorAll(&#039;.deal-card&#039;).length;
+            const badge = col.querySelector(&#039;.stage-count&#039;);
+            if (badge) {
+                badge.textContent = count;
+            }
+            
+            const body = col.querySelector(&#039;.kanban-body&#039;);
+            let emptyBtn = body.querySelector(&#039;.add-deal-btn&#039;);
+            
+            if (count === 0) {
+                if (!emptyBtn) {
+                    body.innerHTML = `&lt;button class=&quot;btn btn-light w-100 text-secondary border-0 bg-transparent shadow-none add-deal-btn&quot;&gt;&lt;i class=&quot;bi bi-plus&quot;&gt;&lt;/i&gt; Add deal&lt;/button&gt;`;
+                } else {
+                    emptyBtn.style.display = &#039;block&#039;;
+                }
+            }
+        });
+    }
+});</code></pre>
                                 </div>
                             </div>
                         </section>
@@ -16355,6 +17368,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                     'accordion4.html', 'breadcrumb.html', 'card4.html',
                     'card5.html', 'card6.html', 'modal6.html',
                     'offcanvas4.html', 'table2.html',
+                    'grid2.html',
                     'carousel4.html', 'list2.html', 'popover5.html',
                     'dropdown5.html', 'topbar.html', 'sidebar.html'
                 ];
@@ -16403,6 +17417,7 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
     <script src="table2.js"></script>
     <!-- Import các file JS của từng Grid component (giữ nguyên không sửa file) -->
     <script src="grid1.js"></script>
+    <script src="grid2.js"></script>
     <!-- Import các file JS của từng List component (giữ nguyên không sửa file) -->
     <script src="list1.js"></script>
     <script src="list2.js"></script>
