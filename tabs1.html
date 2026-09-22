@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CRM Tabs & Views</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+<link rel="stylesheet" href="tabs1.css">
+</head>
+<body>
+
+<div class="container-fluid pt-4 px-0 bg-white d-flex flex-column vh-100">
+    
+    <!-- Tabs Navigation -->
+    <div class="d-flex align-items-end border-bottom px-4 crm-tabs-container flex-wrap">
+        <ul class="nav custom-crm-tabs" id="viewTabs" role="tablist">
+            
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="my-contacts-tab" data-bs-toggle="tab" data-bs-target="#my-contacts" type="button" role="tab" aria-selected="false">
+                    <span class="tab-text">My contacts</span>
+                    <i class="bi bi-x tab-close" title="Close tab"></i>
+                </button>
+            </li>
+            
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="new-contacts-tab" data-bs-toggle="tab" data-bs-target="#new-contacts" type="button" role="tab" aria-selected="false">
+                    <span class="tab-text">New contacts</span>
+                    <i class="bi bi-x tab-close" title="Close tab"></i>
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="all-contacts-tab" data-bs-toggle="tab" data-bs-target="#all-contacts" type="button" role="tab" aria-selected="false">
+                    <span class="tab-text">All contacts</span>
+                    <i class="bi bi-x tab-close" title="Close tab"></i>
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="recently-modified-tab" data-bs-toggle="tab" data-bs-target="#recently-modified" type="button" role="tab" aria-selected="true">
+                    <span class="tab-text">Recently modified</span>
+                    <span class="badge tab-badge ms-2">0</span>
+                    <i class="bi bi-x tab-close" title="Close tab"></i>
+                </button>
+            </li>
+
+        </ul>
+
+        <!-- Add View Dropdown -->
+        <div class="dropdown ms-2 pb-2 add-view-wrapper">
+            <button class="btn btn-add-view d-flex align-items-center gap-1" type="button" id="dropdownAddView" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside">
+                <i class="bi bi-plus text-secondary fs-5" style="line-height: 0;"></i> 11 more... 
+                <kbd class="ms-2">Ctrl O</kbd>
+            </button>
+            
+            <div class="dropdown-menu shadow-lg p-3 view-dropdown-menu">
+                
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="fw-bold text-dark" style="font-size: 15px;">Select a view</span>
+                    <a href="#" class="add-new-view-link d-flex align-items-center gap-1">
+                        <i class="bi bi-plus-circle-fill"></i> Add new view
+                    </a>
+                </div>
+
+                <div class="position-relative mb-3">
+                    <i class="bi bi-search search-icon text-secondary"></i>
+                    <input type="text" class="form-control custom-search-input" id="viewSearchInput" placeholder="Search views">
+                </div>
+
+                <div class="d-flex gap-2 mb-3 overflow-auto hide-scroll pb-1 filter-pills-container">
+                    <button class="btn filter-pill active" data-filter="all">All views</button>
+                    <button class="btn filter-pill" data-filter="default">Default views</button>
+                    <button class="btn filter-pill" data-filter="my">My views</button>
+                    <button class="btn filter-pill" data-filter="other">Other views</button>
+                </div>
+
+                <div class="view-list custom-scrollbar" id="viewListContainer">
+                    <a href="#" class="view-item" data-category="my">My territory contacts</a>
+                    <a href="#" class="view-item" data-category="default">Recently imported</a>
+                    <a href="#" class="view-item" data-category="other">Never contacted</a>
+                    <a href="#" class="view-item" data-category="default">Needs follow-up</a>
+                    <a href="#" class="view-item" data-category="default">Active</a>
+                    <a href="#" class="view-item" data-category="default">Inactive</a>
+                    <a href="#" class="view-item" data-category="other">Recycle Bin</a>
+                    <a href="#" class="view-item" data-category="other">Bounced contacts</a>
+                    <a href="#" class="view-item" data-category="my">My pending deals</a>
+                    <a href="#" class="view-item" data-category="default">All leads</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Tab Contents -->
+    <div class="tab-content p-4 flex-grow-1 view-tabs-content" id="viewTabsContent">
+        <div class="tab-pane fade" id="my-contacts" role="tabpanel">
+            <h5 class="text-dark fw-bold">My contacts</h5>
+            <p class="text-secondary mt-3">Đây là nội dung hiển thị riêng cho tab My contacts.</p>
+        </div>
+        <div class="tab-pane fade" id="new-contacts" role="tabpanel">
+            <h5 class="text-dark fw-bold">New contacts</h5>
+            <p class="text-secondary mt-3">Đây là nội dung hiển thị riêng cho tab New contacts.</p>
+        </div>
+        <div class="tab-pane fade" id="all-contacts" role="tabpanel">
+            <h5 class="text-dark fw-bold">All contacts</h5>
+            <p class="text-secondary mt-3">Đây là nội dung hiển thị riêng cho tab All contacts.</p>
+        </div>
+        <div class="tab-pane fade show active" id="recently-modified" role="tabpanel">
+            <h5 class="text-dark fw-bold">Recently modified</h5>
+            <p class="text-secondary mt-3">Đây là nội dung hiển thị riêng cho tab Recently modified.</p>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="tabs1.js"></script>
+</body>
+</html>
