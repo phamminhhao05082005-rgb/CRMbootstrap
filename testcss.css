@@ -494,26 +494,96 @@ body {
     overflow: visible;
 }
 
-/* Đảm bảo màu sắc nút Filter Contacts (Mẫu 3) giữ chuẩn xanh dương của popovers3.css khi cùng nạp popovers4.css */
+/* Đảm bảo mẫu 3: Filter Contacts (xanh dương) hiển thị độc lập, không bị ảnh hưởng bởi component khác */
+#preview-popovers3 .btn-filter-trigger,
 #preview-popovers3 .btn-trigger {
     background-color: #3b82f6 !important;
-    color: #fff !important;
+    color: #ffffff !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    font-size: 0.95rem !important;
+    padding: 0.5rem 1.15rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+    line-height: 1.5 !important;
 }
-#preview-popovers3 .btn-trigger:hover {
+
+#preview-popovers3 .btn-filter-trigger:hover,
+#preview-popovers3 .btn-filter-trigger:focus,
+#preview-popovers3 .show > .btn-filter-trigger,
+#preview-popovers3 .btn-trigger:hover,
+#preview-popovers3 .btn-trigger:focus,
+#preview-popovers3 .show > .btn-trigger {
     background-color: #2563eb !important;
-    color: #fff !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35) !important;
 }
+
 #preview-popovers3 .btn-action-primary {
     background-color: #3b82f6 !important;
-    color: #fff !important;
+    color: #ffffff !important;
 }
+
 #preview-popovers3 .btn-action-primary:hover {
     background-color: #2563eb !important;
-    color: #fff !important;
+    color: #ffffff !important;
 }
+
 #preview-popovers3 .crm-control:focus {
     border-color: #3b82f6 !important;
     box-shadow: 0 0 0 0.25rem rgba(59, 130, 246, 0.25) !important;
+}
+
+/* Đảm bảo mẫu 4: Quick Note (xanh lá) hiển thị độc lập, không bị ảnh hưởng bởi component khác */
+#preview-popovers4 .btn-note-trigger,
+#preview-popovers4 .btn-trigger {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+    width: auto !important;
+    height: auto !important;
+    min-width: 0 !important;
+    font-size: 0.95rem !important;
+    padding: 0.5rem 1.15rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    white-space: nowrap !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    box-shadow: none !important;
+    line-height: 1.5 !important;
+}
+
+#preview-popovers4 .btn-note-trigger:hover,
+#preview-popovers4 .btn-note-trigger:focus,
+#preview-popovers4 .show > .btn-note-trigger,
+#preview-popovers4 .btn-trigger:hover,
+#preview-popovers4 .btn-trigger:focus,
+#preview-popovers4 .show > .btn-trigger {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35) !important;
+}
+
+#preview-popovers4 .btn-action-primary {
+    background-color: #10b981 !important;
+    color: #ffffff !important;
+}
+
+#preview-popovers4 .btn-action-primary:hover {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+}
+
+#preview-popovers4 .crm-control:focus {
+    border-color: #10b981 !important;
+    box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25) !important;
 }
 
 /* Đảm bảo popover card hiển thị không bị che khuất trong preview */

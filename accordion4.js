@@ -1,14 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const collapseElement = document.getElementById('summaryContent');
-    const toggleBtn = document.querySelector('.collapse-trigger');
+    const collapseElements = document.querySelectorAll('#summaryContent');
+    collapseElements.forEach(collapseElement => {
+        const card = collapseElement.closest('.summary-card');
+        if (!card) return;
+        const toggleBtn = card.querySelector('.collapse-trigger');
+        const collapsedInfo = card.querySelector('.summary-collapsed-info');
 
-    if (collapseElement && toggleBtn) {
         collapseElement.addEventListener('hide.bs.collapse', () => {
-            toggleBtn.classList.add('collapsed');
+            if (toggleBtn) toggleBtn.classList.add('collapsed');
+            card.classList.add('is-collapsed');
+            if (collapsedInfo) collapsedInfo.style.display = 'flex';
         });
 
         collapseElement.addEventListener('show.bs.collapse', () => {
-            toggleBtn.classList.remove('collapsed');
+            if (toggleBtn) toggleBtn.classList.remove('collapsed');
+            card.classList.remove('is-collapsed');
+            if (collapsedInfo) collapsedInfo.style.display = 'none';
         });
-    }
+    });
 });

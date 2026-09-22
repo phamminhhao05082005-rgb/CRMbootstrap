@@ -1,33 +1,44 @@
-.btn-trigger {
+.btn-note-trigger {
     background-color: #10b981;
-    color: #fff;
+    color: #ffffff;
     font-weight: 500;
+    font-size: 0.95rem;
     border: none;
     border-radius: 0.5rem;
-    padding: 0.5rem 1rem;
-    transition: all 0.2s;
+    padding: 0.5rem 1.15rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    width: auto;
+    height: auto;
+    line-height: 1.5;
+    transition: all 0.2s ease-in-out;
 }
 
-.btn-trigger:hover {
-    background-color: #059669;
-    color: #fff;
+.btn-note-trigger:hover,
+.btn-note-trigger:focus,
+.btn-note-trigger:active,
+.show > .btn-note-trigger {
+    background-color: #059669 !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.35) !important;
 }
 
 .crm-popover {
     background-color: #1f2937;
     border: 1px solid #374151;
     border-radius: 0.75rem;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
     padding: 1.25rem;
     min-width: 300px;
     color: #e5e7eb;
-    margin-top: 0.5rem !important;
 }
 
 .crm-popover-title {
     font-size: 1rem;
     font-weight: 600;
-    color: #fff;
+    color: #ffffff;
     margin-bottom: 1rem;
     display: flex;
     align-items: center;
@@ -49,26 +60,30 @@
     font-size: 0.9rem;
 }
 
-.crm-control:focus {
+.crm-control:focus,
+.crm-popover-note .crm-control:focus {
     background-color: #374151;
     border-color: #10b981;
     box-shadow: 0 0 0 0.25rem rgba(16, 185, 129, 0.25);
-    color: #fff;
+    color: #ffffff;
 }
 
 .crm-control::placeholder {
     color: #9ca3af;
 }
 
-.btn-action-primary {
+.btn-action-primary,
+.crm-popover-note .btn-action-primary {
     background-color: #10b981;
-    color: #fff;
+    color: #ffffff;
     font-weight: 500;
     border: none;
     border-radius: 0.5rem;
+    transition: all 0.2s;
 }
 
-.btn-action-primary:hover {
+.btn-action-primary:hover,
+.crm-popover-note .btn-action-primary:hover {
     background-color: #059669;
-    color: #fff;
+    color: #ffffff;
 }
