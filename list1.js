@@ -121,6 +121,19 @@ function initList1() {
             updateUI();
         });
     }
+
+    const loadMoreBtn = document.getElementById('list1LoadMore');
+    if (loadMoreBtn) {
+        loadMoreBtn.addEventListener('click', () => {
+            const originalHtml = loadMoreBtn.innerHTML;
+            loadMoreBtn.disabled = true;
+            loadMoreBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Loading...';
+            setTimeout(() => {
+                loadMoreBtn.disabled = false;
+                loadMoreBtn.innerHTML = originalHtml;
+            }, 800);
+        });
+    }
 }
 
 document.addEventListener('DOMContentLoaded', initList1);

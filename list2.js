@@ -45,4 +45,17 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    const pageLinks = document.querySelectorAll('.inbox-footer .page-item:not(.disabled) .page-link');
+    pageLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const parent = link.closest('.pagination');
+            if (parent) {
+                parent.querySelectorAll('.page-item').forEach(item => item.classList.remove('active'));
+                const pageItem = link.closest('.page-item');
+                if (pageItem) pageItem.classList.add('active');
+            }
+        });
+    });
 });

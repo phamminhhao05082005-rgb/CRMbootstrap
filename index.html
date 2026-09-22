@@ -14521,6 +14521,12 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                                             </div>
                                         </div>
 
+                                        <div class="text-center mt-4 pt-2">
+                                            <button type="button" class="btn btn-outline-primary btn-sm px-4 py-2 rounded-pill fw-medium d-inline-flex align-items-center gap-2 load-more-btn" id="list1LoadMore">
+                                                <i class="bi bi-arrow-clockwise"></i> Load more activities
+                                            </button>
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -14772,8 +14778,19 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
 
         </div>
 
-        <div class="inbox-footer p-3 border-top text-muted" style="font-size: 14px;">
-            Showing 1 - 4 of 4
+        <div class="inbox-footer p-3 border-top bg-light-subtle d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3">
+            <div class="text-muted small">
+                Showing <span class="fw-semibold text-dark">1 - 4</span> of <span class="fw-semibold text-dark">28</span> messages
+            </div>
+            <nav aria-label="Inbox pagination">
+                <ul class="pagination pagination-sm mb-0">
+                    <li class="page-item disabled"><a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="bi bi-chevron-left"></i></a></li>
+                    <li class="page-item active" aria-current="page"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#"><i class="bi bi-chevron-right"></i></a></li>
+                </ul>
+            </nav>
         </div>
         
     </div>
@@ -14972,8 +14989,19 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
 
         &lt;/div&gt;
 
-        &lt;div class=&quot;inbox-footer p-3 border-top text-muted&quot; style=&quot;font-size: 14px;&quot;&gt;
-            Showing 1 - 4 of 4
+        &lt;div class=&quot;inbox-footer p-3 border-top bg-light-subtle d-flex flex-column flex-sm-row align-items-center justify-content-between gap-3&quot;&gt;
+            &lt;div class=&quot;text-muted small&quot;&gt;
+                Showing &lt;span class=&quot;fw-semibold text-dark&quot;&gt;1 - 4&lt;/span&gt; of &lt;span class=&quot;fw-semibold text-dark&quot;&gt;28&lt;/span&gt; messages
+            &lt;/div&gt;
+            &lt;nav aria-label=&quot;Inbox pagination&quot;&gt;
+                &lt;ul class=&quot;pagination pagination-sm mb-0&quot;&gt;
+                    &lt;li class=&quot;page-item disabled&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot; tabindex=&quot;-1&quot; aria-disabled=&quot;true&quot;&gt;&lt;i class=&quot;bi bi-chevron-left&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item active&quot; aria-current=&quot;page&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;1&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;2&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;3&lt;/a&gt;&lt;/li&gt;
+                    &lt;li class=&quot;page-item&quot;&gt;&lt;a class=&quot;page-link&quot; href=&quot;#&quot;&gt;&lt;i class=&quot;bi bi-chevron-right&quot;&gt;&lt;/i&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
         &lt;/div&gt;
         
     &lt;/div&gt;</code></pre>
@@ -15163,6 +15191,33 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
     border-top-color: #e5e7eb !important;
 }
 
+.inbox-footer .pagination .page-link {
+    color: #33475b;
+    border-color: #cbd5e1;
+    padding: 6px 12px;
+    border-radius: 4px;
+    margin: 0 2px;
+    transition: all 0.15s ease;
+}
+
+.inbox-footer .pagination .page-item.active .page-link {
+    background-color: #2563eb;
+    border-color: #2563eb;
+    color: #ffffff;
+}
+
+.inbox-footer .pagination .page-link:hover {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border-color: #94a3b8;
+}
+
+.inbox-footer .pagination .page-item.disabled .page-link {
+    color: #94a3b8;
+    background-color: transparent;
+    border-color: #e2e8f0;
+}
+
 .min-w-0 {
     min-width: 0;
 }</code></pre>
@@ -15224,6 +15279,19 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
                     selectAllCb.checked = false;
                     selectAllCb.indeterminate = true;
                 }
+            }
+        });
+    });
+
+    const pageLinks = document.querySelectorAll(&#039;.inbox-footer .page-item:not(.disabled) .page-link&#039;);
+    pageLinks.forEach(link =&gt; {
+        link.addEventListener(&#039;click&#039;, (e) =&gt; {
+            e.preventDefault();
+            const parent = link.closest(&#039;.pagination&#039;);
+            if (parent) {
+                parent.querySelectorAll(&#039;.page-item&#039;).forEach(item =&gt; item.classList.remove(&#039;active&#039;));
+                const pageItem = link.closest(&#039;.page-item&#039;);
+                if (pageItem) pageItem.classList.add(&#039;active&#039;);
             }
         });
     });

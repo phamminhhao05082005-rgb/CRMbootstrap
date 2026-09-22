@@ -113,3 +113,16 @@
     background-color: #c1c1c1;
     border-radius: 4px;
 }
+
+.load-more-btn {
+    transition: all 0.2s ease;
+    border-color: #3b82f6;
+    color: #3b82f6;
+}
+
+.load-more-btn:hover {
+    background-color: #3b82f6;
+    color: #ffffff;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.2);
+}
