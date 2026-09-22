@@ -20021,19 +20021,22 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
     color: #1d4ed8;
 }
 
-.custom-search-input {
-    padding-left: 36px;
+.custom-search-input,
+.view-dropdown-menu .custom-search-input {
+    padding-left: 36px !important;
     font-size: 14px;
     border-color: #2563eb;
     box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.1);
 }
 
-.custom-search-input:focus {
+.custom-search-input:focus,
+.view-dropdown-menu .custom-search-input:focus {
     border-color: #2563eb;
     box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
 }
 
-.search-icon {
+.search-icon,
+.view-dropdown-menu .search-icon {
     position: absolute;
     top: 50%;
     left: 12px;
@@ -20070,10 +20073,11 @@ input[type=&quot;time&quot;]::-webkit-calendar-picker-indicator {
     display: none;
 }
 
-.view-list {
+.view-list,
+.view-dropdown-menu .view-list {
     max-height: 260px;
     overflow-y: auto;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
 }
 
